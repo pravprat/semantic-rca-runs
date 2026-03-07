@@ -1,0 +1,8 @@
+*.npy
+*.log
+*.gz
+*.zip
+*.parquet
+events.jsonl
+event_embeddings.npy
+hf_cache/
