@@ -1,0 +1,29 @@
+{
+  "graph_version": "incident_graph.v1",
+  "max_gap_seconds": 300,
+  "node_count": 2,
+  "edge_count": 0,
+  "nodes": [
+    {
+      "incident_id": "I1",
+      "root_service": "gatekeeper-system/gatekeeper-admin",
+      "incident_type": "control_plane_failure",
+      "start_time": "2023-01-27T18:28:08.127428+00:00",
+      "end_time": "2023-01-27T18:29:58.127428+00:00",
+      "parent_incidents": [],
+      "child_incidents": [],
+      "is_downstream_incident": false
+    },
+    {
+      "incident_id": "I2",
+      "root_service": "kube-system/deployment-controller",
+      "incident_type": "authorization_or_resource_access",
+      "start_time": "2023-01-27T18:30:58.127428+00:00",
+      "end_time": "2023-01-27T18:31:48.127428+00:00",
+      "parent_incidents": [],
+      "child_incidents": [],
+      "is_downstream_incident": false
+    }
+  ],
+  "edges": []
+}
