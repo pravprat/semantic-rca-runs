@@ -1,0 +1,132 @@
+{
+  "incidents": [
+    {
+      "incident_id": "I1",
+      "start_time": "2023-01-27T18:28:08.127428+00:00",
+      "end_time": "2023-01-27T18:29:58.127428+00:00",
+      "explanations": [
+        {
+          "cluster_id": "C163",
+          "behavior": "Gatekeeper policy evaluation failures",
+          "score": 55.863260276972724,
+          "explanation": [
+            "Behavior: system:serviceaccount:gatekeeper-system:gatekeeper-admin list constrainttemplates (HTTP 404)",
+            "Cluster size: 112 events",
+            "Error burst detected: 108 anomalous events",
+            "Trigger proximity to incident start: 1.0",
+            "Downstream clusters affected: 5"
+          ]
+        },
+        {
+          "cluster_id": "C19",
+          "behavior": "kubernetes-admin get configmaps client failures (HTTP 404)",
+          "score": 28.773044685147777,
+          "explanation": [
+            "Behavior: kubernetes-admin get configmaps (HTTP 404)",
+            "Cluster size: 128 events",
+            "Error burst detected: 114 anomalous events",
+            "Trigger proximity to incident start: 0.578",
+            "Downstream clusters affected: 5"
+          ]
+        },
+        {
+          "cluster_id": "C165",
+          "behavior": "kubernetes-admin get clusterroles client failures (HTTP 404)",
+          "score": 28.42997879569428,
+          "explanation": [
+            "Behavior: kubernetes-admin get clusterroles (HTTP 404)",
+            "Cluster size: 34 events",
+            "Error burst detected: 28 anomalous events",
+            "Trigger proximity to incident start: 0.028"
+          ]
+        },
+        {
+          "cluster_id": "C111",
+          "behavior": "Node RBAC permission failures",
+          "score": 21.053317143667194,
+          "explanation": [
+            "Behavior: system:node:k8s-node-1-perfspec list configmaps (HTTP 403)",
+            "Cluster size: 6 events",
+            "Error burst detected: 5 anomalous events",
+            "Trigger proximity to incident start: 0.681"
+          ]
+        },
+        {
+          "cluster_id": "C131",
+          "behavior": "Service account lookup failures",
+          "score": 20.78336736127624,
+          "explanation": [
+            "Behavior: system:apiserver get serviceaccounts (HTTP 404)",
+            "Cluster size: 16 events",
+            "Error burst detected: 16 anomalous events",
+            "Trigger proximity to incident start: 0.69"
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "I2",
+      "start_time": "2023-01-27T18:30:58.127428+00:00",
+      "end_time": "2023-01-27T18:31:48.127428+00:00",
+      "explanations": [
+        {
+          "cluster_id": "C0",
+          "behavior": "kubernetes-admin get configmaps client failures (HTTP 404)",
+          "score": 44.46207613766254,
+          "explanation": [
+            "Behavior: kubernetes-admin get configmaps (HTTP 404)",
+            "Cluster size: 90 events",
+            "Error burst detected: 90 anomalous events",
+            "Trigger proximity to incident start: 0.955"
+          ]
+        },
+        {
+          "cluster_id": "C117",
+          "behavior": "k8s-node-1-perfspec patch events client failures (HTTP 404)",
+          "score": 28.786368956217053,
+          "explanation": [
+            "Behavior: system:node:k8s-node-1-perfspec patch events (HTTP 404)",
+            "Cluster size: 4 events",
+            "Error burst detected: 4 anomalous events",
+            "Trigger proximity to incident start: 0.616"
+          ]
+        },
+        {
+          "cluster_id": "C15",
+          "behavior": "argocd-applicationset-controller get secrets operations (HTTP 200)",
+          "score": 27.18074080349866,
+          "explanation": [
+            "Behavior: system:serviceaccount:argo-cd:argocd-applicationset-controller get secrets (HTTP 200)",
+            "Cluster size: 99 events",
+            "Error burst detected: 23 anomalous events",
+            "Trigger proximity to incident start: 0.951",
+            "Downstream clusters affected: 5"
+          ]
+        },
+        {
+          "cluster_id": "C182",
+          "behavior": "Secret lookup failures",
+          "score": 27.114123575926747,
+          "explanation": [
+            "Behavior: kubernetes-admin get secrets (HTTP 404)",
+            "Cluster size: 27 events",
+            "Error burst detected: 13 anomalous events",
+            "Trigger proximity to incident start: 0.733",
+            "Downstream clusters affected: 5"
+          ]
+        },
+        {
+          "cluster_id": "C188",
+          "behavior": "kubernetes-admin get clusterroles client failures (HTTP 404)",
+          "score": 27.07874075621705,
+          "explanation": [
+            "Behavior: kubernetes-admin get clusterroles (HTTP 404)",
+            "Cluster size: 4 events",
+            "Error burst detected: 4 anomalous events",
+            "Trigger proximity to incident start: 0.331"
+          ]
+        }
+      ]
+    }
+  ]
+}
