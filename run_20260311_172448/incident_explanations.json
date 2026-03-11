@@ -1,0 +1,65 @@
+{
+  "incidents": [
+    {
+      "incident_id": "I1",
+      "start_time": "2025-10-24T23:50:00.933281+00:00",
+      "end_time": "2025-10-24T23:50:10.933281+00:00",
+      "explanations": [
+        {
+          "cluster_id": "C16",
+          "behavior": "kube-apiserver server failures (HTTP 502)",
+          "score": 45.1104145718096,
+          "narrative": {
+            "root_cause": "milvus service_failure",
+            "behavior": "kube-apiserver server failures (HTTP 502)",
+            "trigger_event": "W1024 23:56:04.473710       1 reflector.go:569] storage/cacher.go:/milvus.io/milvuses: failed to list milvus.io/v1alpha1, Kind=Milvus: conversion webhook for milvus.io/v1beta1, Kind=Milvus failed: Post \"https://aide-system-milvus-operator-webhook-service.aide-system.svc:443/convert?timeout=30s\": proxy error from 127.0.0.1:9345 while dialing 10.42.193.206:9443, code 502: 502 Bad Gateway",
+            "propagation_clusters": [],
+            "blast_radius": 0
+          },
+          "explanation": [
+            "Behavior: kube-apiserver   (HTTP 502)",
+            "Cluster size: 19 events",
+            "Error burst detected: 19 anomalous events",
+            "Trigger proximity to incident start: 0.977"
+          ]
+        },
+        {
+          "cluster_id": "C6",
+          "behavior": "kube-apiserver server failures (HTTP 502)",
+          "score": 28.478071268073435,
+          "narrative": {
+            "root_cause": "milvus service_failure",
+            "behavior": "kube-apiserver server failures (HTTP 502)",
+            "trigger_event": "E1024 23:56:04.473736       1 cacher.go:478] cacher (milvuses.milvus.io): unexpected ListAndWatch error: failed to list milvus.io/v1alpha1, Kind=Milvus: conversion webhook for milvus.io/v1beta1, Kind=Milvus failed: Post \"https://aide-system-milvus-operator-webhook-service.aide-system.svc:443/convert?timeout=30s\": proxy error from 127.0.0.1:9345 while dialing 10.42.193.206:9443, code 502: 502 Bad Gateway; reinitializing...",
+            "propagation_clusters": [],
+            "blast_radius": 0
+          },
+          "explanation": [
+            "Behavior: kube-apiserver   (HTTP 502)",
+            "Cluster size: 1190 events",
+            "Error burst detected: 1190 anomalous events",
+            "Trigger proximity to incident start: 1.0"
+          ]
+        },
+        {
+          "cluster_id": "C15",
+          "behavior": "kube-apiserver server failures (HTTP 502)",
+          "score": 27.665745662979763,
+          "narrative": {
+            "root_cause": "milvus service_failure",
+            "behavior": "kube-apiserver server failures (HTTP 502)",
+            "trigger_event": "W1024 23:56:56.296325       1 reflector.go:569] storage/cacher.go:/milvus.io/milvuses: failed to list milvus.io/v1alpha1, Kind=Milvus: conversion webhook for milvus.io/v1beta1, Kind=Milvus failed: Post \"https://aide-system-milvus-operator-webhook-service.aide-system.svc:443/convert?timeout=30s\": proxy error from 127.0.0.1:9345 while dialing 10.42.193.206:9443, code 502: 502 Bad Gateway",
+            "propagation_clusters": [],
+            "blast_radius": 0
+          },
+          "explanation": [
+            "Behavior: kube-apiserver   (HTTP 502)",
+            "Cluster size: 1162 events",
+            "Error burst detected: 1162 anomalous events",
+            "Trigger proximity to incident start: 1.0"
+          ]
+        }
+      ]
+    }
+  ]
+}
