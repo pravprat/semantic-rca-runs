@@ -1,0 +1,624 @@
+{
+  "bundle_version": "step9.v2",
+  "artifacts_used": {
+    "events": "events.jsonl",
+    "clusters": "clusters.json",
+    "graph": "graph.json",
+    "trigger_stats": "cluster_trigger_stats.json",
+    "incident_root_causes": "incident_root_causes.json"
+  },
+  "incidents": [
+    {
+      "incident_id": "I1",
+      "incident_window": {
+        "start_time": "2023-01-27T18:28:08.127428+00:00",
+        "end_time": "2023-01-27T18:29:58.127428+00:00"
+      },
+      "root_cause": {
+        "cluster_id": "C163",
+        "score": 59.863260276972724,
+        "confidence": {
+          "value": 0.723,
+          "label": "medium"
+        },
+        "cluster_summary": {
+          "cluster_id": "C163",
+          "size": 112,
+          "cluster_type": "candidate",
+          "first_seen_ts": "2023-01-27T18:28:08.160137Z",
+          "last_seen_ts": "2023-01-27T18:32:11.560097Z",
+          "top_services": [
+            {
+              "service": "gatekeeper-system/gatekeeper-admin",
+              "count": 98
+            },
+            {
+              "service": "system:apiserver",
+              "count": 2
+            }
+          ],
+          "http_class_counts": {
+            "2xx": 4,
+            "5xx": 1,
+            "4xx": 95
+          },
+          "example_events": [
+            "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.275179Z,system:apiserver,get,serviceaccounts,,gatekeeper-admin,,/api/v1/namespaces/gatekeeper-system/serviceaccounts/gatekeeper-admin,6d97e14a-a2b1-4b92-a994-e88b1e153a5d,ResponseComplete,200,,,",
+            "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.275380Z,system:apiserver,get,serviceaccounts,,gatekeeper-admin,,/api/v1/namespaces/gatekeeper-system/serviceaccounts/gatekeeper-admin,36a5da58-1e6c-4aa5-a51b-caa19681a3a8,ResponseComplete,200,,,",
+            "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.160137Z,system:serviceaccount:gatekeeper-system:gatekeeper-admin,list,constrainttemplatepodstatuses,,,,/apis/status.gatekeeper.sh/v1beta1/constrainttemplatepodstatuses?resourceVersion=6135955,50f3513d-2e69-4dca-b5f8-a9a058273a8e,ResponseComplete,503,,,"
+          ]
+        },
+        "representative_event": {
+          "timestamp": "2023-01-27T18:28:22.470778Z",
+          "service": "gatekeeper-system/gatekeeper-admin",
+          "response_code": 404,
+          "text": "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:22.470778Z,system:serviceaccount:gatekeeper-system:gatekeeper-admin,list,assignmetadata,,,,/apis/mutations.gatekeeper.sh/v1/assignmetadata?resourceVersion=6135961,2c893351-f825-40f8-9bf7-19ff1de0fb4f,ResponseComplete,404,,,"
+        },
+        "first_seen_event": {
+          "timestamp": "2023-01-27T18:28:08.160137Z",
+          "service": "gatekeeper-system/gatekeeper-admin",
+          "response_code": 503,
+          "text": "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.160137Z,system:serviceaccount:gatekeeper-system:gatekeeper-admin,list,constrainttemplatepodstatuses,,,,/apis/status.gatekeeper.sh/v1beta1/constrainttemplatepodstatuses?resourceVersion=6135955,50f3513d-2e69-4dca-b5f8-a9a058273a8e,ResponseComplete,503,,,"
+        },
+        "signals": {
+          "trigger_score": 2.912427,
+          "error_count": 108,
+          "trigger_proximity": 0.9997240363636364,
+          "in_weight": 5.0,
+          "out_weight": 10.950000000000001,
+          "severity_counts": {
+            "ERROR": 1,
+            "WARN": 107,
+            "INFO": 4,
+            "OTHER": 0
+          },
+          "trigger_stats": {
+            "first_seen": "2023-01-27T18:28:08.160137+00:00",
+            "last_seen": "2023-01-27T18:32:11.560097+00:00",
+            "event_count": 112,
+            "error_count": 108,
+            "duration_seconds": 243.39996,
+            "error_rate": 0.964286,
+            "severity": 3.0,
+            "cluster_rate_eps": 0.460148,
+            "global_rate_eps": 67.788921,
+            "burst_factor": 0.006788,
+            "trigger_score": 2.912427
+          }
+        },
+        "graph_context": {
+          "incoming_edges": [],
+          "outgoing_edges": [
+            {
+              "to": "C18",
+              "relation": "precedes",
+              "weight": 0.48999999999999994,
+              "confidence": 0.24499999999999997
+            }
+          ],
+          "in_degree": 0,
+          "out_degree": 1
+        },
+        "why_ranked_first": [
+          "highest composite RCA score for this incident",
+          "strong downstream influence relative to incoming influence",
+          "appears early relative to incident onset",
+          "shows abnormal trigger/error behavior"
+        ]
+      },
+      "other_candidates": [
+        {
+          "cluster_id": "C31",
+          "score": 30.98595923574128,
+          "confidence": {
+            "value": 0.479,
+            "label": "low"
+          },
+          "trigger_score": 0.182022,
+          "error_count": 222,
+          "cluster_summary": {
+            "cluster_id": "C31",
+            "size": 1343,
+            "cluster_type": "contextual",
+            "first_seen_ts": "2023-01-27T18:29:05.133630Z",
+            "last_seen_ts": "2023-01-27T18:32:11.260480Z",
+            "top_services": [
+              {
+                "service": "kube-prometheus-stack/my-kube-prometheus-stack-operator",
+                "count": 98
+              },
+              {
+                "service": "kube-prometheus-stack/my-kube-prometheus-stack-admission",
+                "count": 1
+              },
+              {
+                "service": "kube-prometheus-stack/my-kube-prometheus-stack-kube-state-metrics",
+                "count": 1
+              }
+            ],
+            "http_class_counts": {
+              "2xx": 78,
+              "4xx": 22
+            },
+            "example_events": [
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:29:05.133630Z,system:serviceaccount:kube-prometheus-stack:my-kube-prometheus-stack-admission,get,secrets,,my-kube-prometheus-stack-admission,,/api/v1/namespaces/kube-prometheus-stack/secrets/my-kube-prometheus-stack-admission,4d45f263-8e27-4907-bbab-3941a4879f89,ResponseComplete,200,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:29:10.491883Z,system:serviceaccount:kube-prometheus-stack:my-kube-prometheus-stack-kube-state-metrics,get,,,,,/version,22ee2b66-f12d-45d6-9e0e-53c70d6348f6,ResponseComplete,200,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:29:10.815807Z,system:serviceaccount:kube-prometheus-stack:my-kube-prometheus-stack-operator,get,,,,,/apis/discovery.k8s.io,5768be14-5100-4053-af13-a8ed35c47676,ResponseComplete,200,,,"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2023-01-27T18:29:12.022671Z",
+            "service": "kube-prometheus-stack/my-kube-prometheus-stack-operator",
+            "response_code": 200,
+            "text": "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:29:12.022671Z,system:serviceaccount:kube-prometheus-stack:my-kube-prometheus-stack-operator,update,secrets,,prometheus-my-kube-prometheus-stack-prometheus,,/api/v1/namespaces/kube-prometheus-stack/secrets/prometheus-my-kube-prometheus-stack-prometheus,a8c7090c-c03f-429d-b2a7-0805a0e74172,ResponseComplete,200,,,"
+          }
+        },
+        {
+          "cluster_id": "C165",
+          "score": 30.42997879569428,
+          "confidence": {
+            "value": 0.355,
+            "label": "low"
+          },
+          "trigger_score": 3.240151,
+          "error_count": 28,
+          "cluster_summary": {
+            "cluster_id": "C165",
+            "size": 34,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2023-01-27T18:29:55.101864Z",
+            "last_seen_ts": "2023-01-27T18:29:56.474271Z",
+            "top_services": [
+              {
+                "service": "kubernetes-admin",
+                "count": 34
+              }
+            ],
+            "http_class_counts": {
+              "4xx": 28,
+              "2xx": 6
+            },
+            "example_events": [
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:29:55.101864Z,kubernetes-admin,get,clusterroles,,my-cert-manager-cainjector,,/apis/rbac.authorization.k8s.io/v1/clusterroles/my-cert-manager-cainjector,3fb358fd-9628-4655-a887-4375aa541e0f,ResponseComplete,404,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:29:55.104157Z,kubernetes-admin,get,clusterroles,,my-cert-manager-controller-issuers,,/apis/rbac.authorization.k8s.io/v1/clusterroles/my-cert-manager-controller-issuers,a0fda94e-45a8-4c33-af33-d5fcebae5a98,ResponseComplete,404,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:29:55.106421Z,kubernetes-admin,get,clusterroles,,my-cert-manager-controller-clusterissuers,,/apis/rbac.authorization.k8s.io/v1/clusterroles/my-cert-manager-controller-clusterissuers,e5ab2764-0c6c-4df3-a57c-d26c5c79351d,ResponseComplete,404,,,"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2023-01-27T18:29:56.281482Z",
+            "service": "kubernetes-admin",
+            "response_code": 200,
+            "text": "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:29:56.281482Z,kubernetes-admin,delete,rolebindings,,my-cert-manager-startupapicheck:create-cert,,/apis/rbac.authorization.k8s.io/v1/namespaces/cert-manager/rolebindings/my-cert-manager-startupapicheck:create-cert,bae1136b-888d-4fd1-b29a-a5f0bcbfed83,ResponseComplete,200,,,"
+          }
+        },
+        {
+          "cluster_id": "C18",
+          "score": 28.450214355039588,
+          "confidence": {
+            "value": 0.464,
+            "label": "low"
+          },
+          "trigger_score": 1.135805,
+          "error_count": 17,
+          "cluster_summary": {
+            "cluster_id": "C18",
+            "size": 30,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2023-01-27T18:28:43.778767Z",
+            "last_seen_ts": "2023-01-27T18:32:06.493940Z",
+            "top_services": [
+              {
+                "service": "kubernetes-admin",
+                "count": 29
+              },
+              {
+                "service": "system:kube-controller-manager",
+                "count": 1
+              }
+            ],
+            "http_class_counts": {
+              "2xx": 13,
+              "4xx": 17
+            },
+            "example_events": [
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:43.778767Z,system:kube-controller-manager,list,customresourcedefinitions,,,,/apis/apiextensions.k8s.io/v1/customresourcedefinitions?limit=500&resourceVersion=0,5fe506e9-ee6f-4934-adc3-2a129defc622,ResponseComplete,200,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:47.909502Z,kubernetes-admin,create,customresourcedefinitions,,alertmanagerconfigs.monitoring.coreos.com,,/apis/apiextensions.k8s.io/v1/customresourcedefinitions?fieldManager=helm,68e32d5e-d001-4651-ae3c-00b45521c45b,ResponseComplete,409,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:48.168177Z,kubernetes-admin,create,customresourcedefinitions,,alertmanagers.monitoring.coreos.com,,/apis/apiextensions.k8s.io/v1/customresourcedefinitions?fieldManager=helm,c0052758-5488-48e4-8585-c5305d06eba8,ResponseComplete,409,,,"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2023-01-27T18:28:47.909502Z",
+            "service": "kubernetes-admin",
+            "response_code": 409,
+            "text": "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:47.909502Z,kubernetes-admin,create,customresourcedefinitions,,alertmanagerconfigs.monitoring.coreos.com,,/apis/apiextensions.k8s.io/v1/customresourcedefinitions?fieldManager=helm,68e32d5e-d001-4651-ae3c-00b45521c45b,ResponseComplete,409,,,"
+          }
+        },
+        {
+          "cluster_id": "C19",
+          "score": 27.109072478639135,
+          "confidence": {
+            "value": 0.417,
+            "label": "low"
+          },
+          "trigger_score": 2.713861,
+          "error_count": 114,
+          "cluster_summary": {
+            "cluster_id": "C19",
+            "size": 128,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2023-01-27T18:28:54.549269Z",
+            "last_seen_ts": "2023-01-27T18:30:53.768514Z",
+            "top_services": [
+              {
+                "service": "kubernetes-admin",
+                "count": 95
+              },
+              {
+                "service": "system:kube-controller-manager",
+                "count": 5
+              }
+            ],
+            "http_class_counts": {
+              "4xx": 95,
+              "2xx": 5
+            },
+            "example_events": [
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:54.549269Z,kubernetes-admin,get,serviceaccounts,,my-kube-prometheus-stack-grafana,,/api/v1/namespaces/kube-prometheus-stack/serviceaccounts/my-kube-prometheus-stack-grafana,b219e125-d49e-4c2b-aa6e-21a887f7f636,ResponseComplete,404,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:54.553760Z,kubernetes-admin,get,serviceaccounts,,my-kube-prometheus-stack-kube-state-metrics,,/api/v1/namespaces/kube-prometheus-stack/serviceaccounts/my-kube-prometheus-stack-kube-state-metrics,0fd08a16-4e76-491f-bc94-7cd9ca6bccb2,ResponseComplete,404,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:54.559809Z,kubernetes-admin,get,serviceaccounts,,my-kube-prometheus-stack-prometheus-node-exporter,,/api/v1/namespaces/kube-prometheus-stack/serviceaccounts/my-kube-prometheus-stack-prometheus-node-exporter,1aec01e0-d3dd-478b-be93-90c6213900e3,ResponseComplete,404,,,"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2023-01-27T18:30:53.643535Z",
+            "service": "kubernetes-admin",
+            "response_code": 404,
+            "text": "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:30:53.643535Z,kubernetes-admin,get,daemonsets,,my-prometheus-prometheus-node-exporter,,/apis/apps/v1/namespaces/prometheus/daemonsets/my-prometheus-prometheus-node-exporter,ce1a81bc-6a06-49f4-bfd5-00ef222f137d,ResponseComplete,404,,,"
+          }
+        }
+      ],
+      "timeline": [
+        {
+          "timestamp": "2023-01-27T18:28:08.160137Z",
+          "cluster_id": "C163",
+          "score": 59.863260276972724,
+          "service": "gatekeeper-system/gatekeeper-admin",
+          "response_code": 503,
+          "summary": "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.160137Z,system:serviceaccount:gatekeeper-system:gatekeeper-admin,list,constrainttemplatepodstatuses,,,,/apis/status.gatekeeper.sh/v1beta1/constrainttemplatepodstatuses?resourceVersion=6135955,50f3513d-2e69-4dca-b5f8-a9a058273a8e,ResponseComplete,503,,,"
+        },
+        {
+          "timestamp": "2023-01-27T18:28:43.778767Z",
+          "cluster_id": "C18",
+          "score": 28.450214355039588,
+          "service": "system:kube-controller-manager",
+          "response_code": 200,
+          "summary": "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:43.778767Z,system:kube-controller-manager,list,customresourcedefinitions,,,,/apis/apiextensions.k8s.io/v1/customresourcedefinitions?limit=500&resourceVersion=0,5fe506e9-ee6f-4934-adc3-2a129defc622,ResponseComplete,200,,,"
+        },
+        {
+          "timestamp": "2023-01-27T18:28:54.549269Z",
+          "cluster_id": "C19",
+          "score": 27.109072478639135,
+          "service": "kubernetes-admin",
+          "response_code": 404,
+          "summary": "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:54.549269Z,kubernetes-admin,get,serviceaccounts,,my-kube-prometheus-stack-grafana,,/api/v1/namespaces/kube-prometheus-stack/serviceaccounts/my-kube-prometheus-stack-grafana,b219e125-d49e-4c2b-aa6e-21a887f7f636,ResponseComplete,404,,,"
+        },
+        {
+          "timestamp": "2023-01-27T18:29:05.133630Z",
+          "cluster_id": "C31",
+          "score": 30.98595923574128,
+          "service": "kube-prometheus-stack/my-kube-prometheus-stack-admission",
+          "response_code": 200,
+          "summary": "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:29:05.133630Z,system:serviceaccount:kube-prometheus-stack:my-kube-prometheus-stack-admission,get,secrets,,my-kube-prometheus-stack-admission,,/api/v1/namespaces/kube-prometheus-stack/secrets/my-kube-prometheus-stack-admission,4d45f263-8e27-4907-bbab-3941a4879f89,ResponseComplete,200,,,"
+        },
+        {
+          "timestamp": "2023-01-27T18:29:55.101864Z",
+          "cluster_id": "C165",
+          "score": 30.42997879569428,
+          "service": "kubernetes-admin",
+          "response_code": 404,
+          "summary": "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:29:55.101864Z,kubernetes-admin,get,clusterroles,,my-cert-manager-cainjector,,/apis/rbac.authorization.k8s.io/v1/clusterroles/my-cert-manager-cainjector,3fb358fd-9628-4655-a887-4375aa541e0f,ResponseComplete,404,,,"
+        }
+      ],
+      "stats": {
+        "candidate_count": 5,
+        "has_root_cause": true
+      }
+    },
+    {
+      "incident_id": "I2",
+      "incident_window": {
+        "start_time": "2023-01-27T18:30:58.127428+00:00",
+        "end_time": "2023-01-27T18:31:48.127428+00:00"
+      },
+      "root_cause": {
+        "cluster_id": "C0",
+        "score": 48.46207613766254,
+        "confidence": {
+          "value": 0.614,
+          "label": "medium"
+        },
+        "cluster_summary": {
+          "cluster_id": "C0",
+          "size": 90,
+          "cluster_type": "candidate",
+          "first_seen_ts": "2023-01-27T18:31:05.897828Z",
+          "last_seen_ts": "2023-01-27T18:31:07.610333Z",
+          "top_services": [
+            {
+              "service": "kubernetes-admin",
+              "count": 90
+            }
+          ],
+          "http_class_counts": {
+            "4xx": 90
+          },
+          "example_events": [
+            "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:31:06.563331Z,kubernetes-admin,get,secrets,,argocd-notifications-secret,,/api/v1/namespaces/argo-cd/secrets/argocd-notifications-secret,46e5ff61-5bc9-4c76-92b0-9cb74840cdf8,ResponseComplete,404,,,",
+            "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:31:06.579356Z,kubernetes-admin,get,secrets,,argocd-secret,,/api/v1/namespaces/argo-cd/secrets/argocd-secret,d2d53226-820b-4323-87c4-840f8b4fd48c,ResponseComplete,404,,,",
+            "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:31:06.591658Z,kubernetes-admin,get,configmaps,,argocd-cm,,/api/v1/namespaces/argo-cd/configmaps/argocd-cm,a059b8d2-6f8f-49d8-86c8-9168e1ae6481,ResponseComplete,404,,,"
+          ]
+        },
+        "representative_event": {
+          "timestamp": "2023-01-27T18:31:06.032926Z",
+          "service": "kubernetes-admin",
+          "response_code": 404,
+          "text": "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:31:06.032926Z,kubernetes-admin,get,rolebindings,,my-argo-cd-argocd-applicationset-controller,,/apis/rbac.authorization.k8s.io/v1/namespaces/argo-cd/rolebindings/my-argo-cd-argocd-applicationset-controller,ffb58937-bfd6-4945-b8d0-ce40f76d14ba,ResponseComplete,404,,,"
+        },
+        "first_seen_event": {
+          "timestamp": "2023-01-27T18:31:05.897828Z",
+          "service": "kubernetes-admin",
+          "response_code": 404,
+          "text": "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:31:05.897828Z,kubernetes-admin,get,serviceaccounts,,argocd-application-controller,,/api/v1/namespaces/argo-cd/serviceaccounts/argocd-application-controller,9fa13790-8f95-410b-8f01-f751a31f579c,ResponseComplete,404,,,"
+        },
+        "signals": {
+          "trigger_score": 4.721854,
+          "error_count": 90,
+          "trigger_proximity": 0.9549606666666667,
+          "in_weight": 0.0,
+          "out_weight": 0.0,
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 90,
+            "INFO": 0,
+            "OTHER": 0
+          },
+          "trigger_stats": {
+            "first_seen": "2023-01-27T18:31:05.897828+00:00",
+            "last_seen": "2023-01-27T18:31:07.610333+00:00",
+            "event_count": 90,
+            "error_count": 90,
+            "duration_seconds": 1.712505,
+            "error_rate": 1.0,
+            "severity": 3.0,
+            "cluster_rate_eps": 52.554591,
+            "global_rate_eps": 67.788921,
+            "burst_factor": 0.775268,
+            "trigger_score": 4.721854
+          }
+        },
+        "graph_context": {
+          "incoming_edges": [],
+          "outgoing_edges": [],
+          "in_degree": 0,
+          "out_degree": 0
+        },
+        "why_ranked_first": [
+          "highest composite RCA score for this incident",
+          "strong downstream influence relative to incoming influence",
+          "appears early relative to incident onset",
+          "shows abnormal trigger/error behavior"
+        ]
+      },
+      "other_candidates": [
+        {
+          "cluster_id": "C117",
+          "score": 32.78636895621705,
+          "confidence": {
+            "value": 0.368,
+            "label": "low"
+          },
+          "trigger_score": 3.171994,
+          "error_count": 4,
+          "cluster_summary": {
+            "cluster_id": "C117",
+            "size": 4,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2023-01-27T18:31:26.258728Z",
+            "last_seen_ts": "2023-01-27T18:31:26.299083Z",
+            "top_services": [
+              {
+                "service": "system:node:k8s-node-1-perfspec",
+                "count": 2
+              },
+              {
+                "service": "system:node:k8s-node-2-perfspec",
+                "count": 2
+              }
+            ],
+            "http_class_counts": {
+              "4xx": 4
+            },
+            "example_events": [
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:31:26.258728Z,system:node:k8s-node-1-perfspec,patch,events,,my-loki-logs-8mj42.173e3c8107533d12,,/api/v1/namespaces/loki/events/my-loki-logs-8mj42.173e3c8107533d12,cd45b930-0e98-4f16-a8e7-a20bd0704371,ResponseComplete,404,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:31:26.285401Z,system:node:k8s-node-1-perfspec,create,events,,my-loki-logs-8mj42.173e3c8107533d12,,/api/v1/namespaces/loki/events,cd4c339c-5da5-4e36-842e-f51243096dcc,ResponseComplete,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:31:26.295182Z,system:node:k8s-node-2-perfspec,patch,events,,my-loki-logs-psflx.173e3bd1729e54a4,,/api/v1/namespaces/loki/events/my-loki-logs-psflx.173e3bd1729e54a4,ab1dbac3-440c-4ab3-98be-b3ee89268e8f,ResponseComplete,404,,,"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2023-01-27T18:31:26.258728Z",
+            "service": "system:node:k8s-node-1-perfspec",
+            "response_code": 404,
+            "text": "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:31:26.258728Z,system:node:k8s-node-1-perfspec,patch,events,,my-loki-logs-8mj42.173e3c8107533d12,,/api/v1/namespaces/loki/events/my-loki-logs-8mj42.173e3c8107533d12,cd45b930-0e98-4f16-a8e7-a20bd0704371,ResponseComplete,404,,,"
+          }
+        },
+        {
+          "cluster_id": "C188",
+          "score": 29.07874075621705,
+          "confidence": {
+            "value": 0.325,
+            "label": "low"
+          },
+          "trigger_score": 3.171994,
+          "error_count": 4,
+          "cluster_summary": {
+            "cluster_id": "C188",
+            "size": 4,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2023-01-27T18:31:43.335010Z",
+            "last_seen_ts": "2023-01-27T18:31:43.341039Z",
+            "top_services": [
+              {
+                "service": "kubernetes-admin",
+                "count": 4
+              }
+            ],
+            "http_class_counts": {
+              "4xx": 4
+            },
+            "example_events": [
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:31:43.335010Z,kubernetes-admin,get,clusterroles,,my-kubernetes-dashboard-metrics,,/apis/rbac.authorization.k8s.io/v1/clusterroles/my-kubernetes-dashboard-metrics,01744a2d-f34e-476a-94dc-99afb9360bc7,ResponseComplete,404,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:31:43.336935Z,kubernetes-admin,get,clusterrolebindings,,my-kubernetes-dashboard-metrics,,/apis/rbac.authorization.k8s.io/v1/clusterrolebindings/my-kubernetes-dashboard-metrics,eec9e005-338b-49c2-a708-71dd1746d923,ResponseComplete,404,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:31:43.338849Z,kubernetes-admin,get,roles,,my-kubernetes-dashboard,,/apis/rbac.authorization.k8s.io/v1/namespaces/kubernetes-dashboard/roles/my-kubernetes-dashboard,d84403f7-4689-44e6-8554-e65c909a698e,ResponseComplete,404,,,"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2023-01-27T18:31:43.341039Z",
+            "service": "kubernetes-admin",
+            "response_code": 404,
+            "text": "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:31:43.341039Z,kubernetes-admin,get,rolebindings,,my-kubernetes-dashboard,,/apis/rbac.authorization.k8s.io/v1/namespaces/kubernetes-dashboard/rolebindings/my-kubernetes-dashboard,a1b98046-602c-48e2-9576-fcff631acd91,ResponseComplete,404,,,"
+          }
+        },
+        {
+          "cluster_id": "C163",
+          "score": 27.869148345186122,
+          "confidence": {
+            "value": 0.618,
+            "label": "medium"
+          },
+          "trigger_score": 2.912427,
+          "error_count": 108,
+          "cluster_summary": {
+            "cluster_id": "C163",
+            "size": 112,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2023-01-27T18:28:08.160137Z",
+            "last_seen_ts": "2023-01-27T18:32:11.560097Z",
+            "top_services": [
+              {
+                "service": "gatekeeper-system/gatekeeper-admin",
+                "count": 98
+              },
+              {
+                "service": "system:apiserver",
+                "count": 2
+              }
+            ],
+            "http_class_counts": {
+              "2xx": 4,
+              "5xx": 1,
+              "4xx": 95
+            },
+            "example_events": [
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.275179Z,system:apiserver,get,serviceaccounts,,gatekeeper-admin,,/api/v1/namespaces/gatekeeper-system/serviceaccounts/gatekeeper-admin,6d97e14a-a2b1-4b92-a994-e88b1e153a5d,ResponseComplete,200,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.275380Z,system:apiserver,get,serviceaccounts,,gatekeeper-admin,,/api/v1/namespaces/gatekeeper-system/serviceaccounts/gatekeeper-admin,36a5da58-1e6c-4aa5-a51b-caa19681a3a8,ResponseComplete,200,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.160137Z,system:serviceaccount:gatekeeper-system:gatekeeper-admin,list,constrainttemplatepodstatuses,,,,/apis/status.gatekeeper.sh/v1beta1/constrainttemplatepodstatuses?resourceVersion=6135955,50f3513d-2e69-4dca-b5f8-a9a058273a8e,ResponseComplete,503,,,"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2023-01-27T18:28:22.470778Z",
+            "service": "gatekeeper-system/gatekeeper-admin",
+            "response_code": 404,
+            "text": "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:22.470778Z,system:serviceaccount:gatekeeper-system:gatekeeper-admin,list,assignmetadata,,,,/apis/mutations.gatekeeper.sh/v1/assignmetadata?resourceVersion=6135961,2c893351-f825-40f8-9bf7-19ff1de0fb4f,ResponseComplete,404,,,"
+          }
+        },
+        {
+          "cluster_id": "C182",
+          "score": 25.96797965567298,
+          "confidence": {
+            "value": 0.307,
+            "label": "low"
+          },
+          "trigger_score": 1.268982,
+          "error_count": 13,
+          "cluster_summary": {
+            "cluster_id": "C182",
+            "size": 27,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2023-01-27T18:31:19.213478Z",
+            "last_seen_ts": "2023-01-27T18:31:20.278194Z",
+            "top_services": [
+              {
+                "service": "kubernetes-admin",
+                "count": 26
+              },
+              {
+                "service": "system:kube-controller-manager",
+                "count": 1
+              }
+            ],
+            "http_class_counts": {
+              "2xx": 14,
+              "4xx": 13
+            },
+            "example_events": [
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:31:19.213478Z,kubernetes-admin,list,secrets,,,,/api/v1/namespaces/redis/secrets?labelSelector=name%3Dmy-redis%2Cowner%3Dhelm,75f33575-3d70-435b-ab5e-252b4de6883d,ResponseComplete,200,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:31:19.348486Z,kubernetes-admin,get,secrets,,my-redis,,/api/v1/namespaces/redis/secrets/my-redis,6ba9c295-21d8-43ce-8e5d-26cb1ea5eab0,ResponseComplete,404,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:31:19.430437Z,kubernetes-admin,get,secrets,,my-redis,,/api/v1/namespaces/redis/secrets/my-redis,c5bd4338-d453-42a9-bd5c-4e3872161228,ResponseComplete,404,,,"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2023-01-27T18:31:20.098948Z",
+            "service": "kubernetes-admin",
+            "response_code": 201,
+            "text": "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:31:20.098948Z,kubernetes-admin,create,secrets,,my-redis,,/api/v1/namespaces/redis/secrets?fieldManager=helm,70542958-e2f3-40e2-9ca1-6fd476f12d40,ResponseComplete,201,,,"
+          }
+        }
+      ],
+      "timeline": [
+        {
+          "timestamp": "2023-01-27T18:28:08.160137Z",
+          "cluster_id": "C163",
+          "score": 27.869148345186122,
+          "service": "gatekeeper-system/gatekeeper-admin",
+          "response_code": 503,
+          "summary": "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.160137Z,system:serviceaccount:gatekeeper-system:gatekeeper-admin,list,constrainttemplatepodstatuses,,,,/apis/status.gatekeeper.sh/v1beta1/constrainttemplatepodstatuses?resourceVersion=6135955,50f3513d-2e69-4dca-b5f8-a9a058273a8e,ResponseComplete,503,,,"
+        },
+        {
+          "timestamp": "2023-01-27T18:31:05.897828Z",
+          "cluster_id": "C0",
+          "score": 48.46207613766254,
+          "service": "kubernetes-admin",
+          "response_code": 404,
+          "summary": "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:31:05.897828Z,kubernetes-admin,get,serviceaccounts,,argocd-application-controller,,/api/v1/namespaces/argo-cd/serviceaccounts/argocd-application-controller,9fa13790-8f95-410b-8f01-f751a31f579c,ResponseComplete,404,,,"
+        },
+        {
+          "timestamp": "2023-01-27T18:31:19.213478Z",
+          "cluster_id": "C182",
+          "score": 25.96797965567298,
+          "service": "kubernetes-admin",
+          "response_code": 200,
+          "summary": "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:31:19.213478Z,kubernetes-admin,list,secrets,,,,/api/v1/namespaces/redis/secrets?labelSelector=name%3Dmy-redis%2Cowner%3Dhelm,75f33575-3d70-435b-ab5e-252b4de6883d,ResponseComplete,200,,,"
+        },
+        {
+          "timestamp": "2023-01-27T18:31:26.258728Z",
+          "cluster_id": "C117",
+          "score": 32.78636895621705,
+          "service": "system:node:k8s-node-1-perfspec",
+          "response_code": 404,
+          "summary": "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:31:26.258728Z,system:node:k8s-node-1-perfspec,patch,events,,my-loki-logs-8mj42.173e3c8107533d12,,/api/v1/namespaces/loki/events/my-loki-logs-8mj42.173e3c8107533d12,cd45b930-0e98-4f16-a8e7-a20bd0704371,ResponseComplete,404,,,"
+        },
+        {
+          "timestamp": "2023-01-27T18:31:43.335010Z",
+          "cluster_id": "C188",
+          "score": 29.07874075621705,
+          "service": "kubernetes-admin",
+          "response_code": 404,
+          "summary": "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:31:43.335010Z,kubernetes-admin,get,clusterroles,,my-kubernetes-dashboard-metrics,,/apis/rbac.authorization.k8s.io/v1/clusterroles/my-kubernetes-dashboard-metrics,01744a2d-f34e-476a-94dc-99afb9360bc7,ResponseComplete,404,,,"
+        }
+      ],
+      "stats": {
+        "candidate_count": 5,
+        "has_root_cause": true
+      }
+    }
+  ]
+}
