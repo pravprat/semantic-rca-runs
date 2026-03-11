@@ -1,0 +1,11 @@
+{
+  "bundle_version": "step9.v2",
+  "artifacts_used": {
+    "events": "events.jsonl",
+    "clusters": "clusters.json",
+    "graph": "graph.json",
+    "trigger_stats": "cluster_trigger_stats.json",
+    "incident_root_causes": "incident_root_causes.json"
+  },
+  "incidents": []
+}
