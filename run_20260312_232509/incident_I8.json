@@ -1,0 +1,101 @@
+{
+  "incident_id": "I8",
+  "incident_window": {
+    "start_time": "2026-02-18T00:00:09.538476+00:00",
+    "end_time": "2026-02-18T00:12:54.543744+00:00"
+  },
+  "root_cause": {
+    "cluster_id": "C183",
+    "score": 7.187197881665908,
+    "confidence": {
+      "value": 0.129,
+      "label": "low"
+    },
+    "cluster_summary": {
+      "cluster_id": "C183",
+      "size": 52,
+      "cluster_type": "candidate",
+      "first_seen_ts": "2026-02-18T00:00:09.53847657Z",
+      "last_seen_ts": "2026-02-18T00:12:54.543744925Z",
+      "top_services": [
+        {
+          "service": "metrics-server",
+          "count": 52
+        }
+      ],
+      "http_class_counts": {
+        "unknown": 52
+      },
+      "example_events": [
+        "E0218 00:00:09.538378       1 scraper.go:149] \"Failed to scrape node\" err=\"Get \\\"https://192.168.113.135:10250/metrics/resource\\\": dial tcp 192.168.113.135:10250: connect: connection refused\" node=\"sti32-dcn-vsimrtp113-02\"",
+        "E0218 00:00:24.536732       1 scraper.go:149] \"Failed to scrape node\" err=\"Get \\\"https://192.168.113.135:10250/metrics/resource\\\": dial tcp 192.168.113.135:10250: connect: connection refused\" node=\"sti32-dcn-vsimrtp113-02\"",
+        "E0218 00:00:39.540960       1 scraper.go:149] \"Failed to scrape node\" err=\"Get \\\"https://192.168.113.135:10250/metrics/resource\\\": dial tcp 192.168.113.135:10250: connect: connection refused\" node=\"sti32-dcn-vsimrtp113-02\""
+      ]
+    },
+    "representative_event": {
+      "timestamp": "2026-02-18T00:06:24.533498369Z",
+      "service": "metrics-server",
+      "response_code": null,
+      "text": "E0218 00:06:24.533392       1 scraper.go:149] \"Failed to scrape node\" err=\"Get \\\"https://192.168.113.135:10250/metrics/resource\\\": dial tcp 192.168.113.135:10250: connect: connection refused\" node=\"sti32-dcn-vsimrtp113-02\""
+    },
+    "first_seen_event": {
+      "timestamp": "2026-02-18T00:00:09.53847657Z",
+      "service": "metrics-server",
+      "response_code": null,
+      "text": "E0218 00:00:09.538378       1 scraper.go:149] \"Failed to scrape node\" err=\"Get \\\"https://192.168.113.135:10250/metrics/resource\\\": dial tcp 192.168.113.135:10250: connect: connection refused\" node=\"sti32-dcn-vsimrtp113-02\""
+    },
+    "signals": {
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "trigger_proximity": 1.0,
+      "in_weight": 0.0,
+      "out_weight": 0.0,
+      "severity_counts": {
+        "ERROR": 52,
+        "WARN": 0,
+        "INFO": 0,
+        "OTHER": 0
+      },
+      "trigger_stats": {
+        "first_seen": "2026-02-18T00:00:09.538476+00:00",
+        "last_seen": "2026-02-18T00:12:54.543744+00:00",
+        "event_count": 52,
+        "error_count": 0,
+        "duration_seconds": 765.005268,
+        "error_rate": 0.0,
+        "severity": 0.2,
+        "cluster_rate_eps": 0.067973,
+        "global_rate_eps": 66.056206,
+        "burst_factor": 0.001029,
+        "trigger_score": 0.0
+      }
+    },
+    "graph_context": {
+      "incoming_edges": [],
+      "outgoing_edges": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    "why_ranked_first": [
+      "highest composite RCA score for this incident",
+      "strong downstream influence relative to incoming influence",
+      "appears early relative to incident onset",
+      "shows abnormal trigger/error behavior"
+    ]
+  },
+  "other_candidates": [],
+  "timeline": [
+    {
+      "timestamp": "2026-02-18T00:00:09.53847657Z",
+      "cluster_id": "C183",
+      "score": 7.187197881665908,
+      "service": "metrics-server",
+      "response_code": null,
+      "summary": "E0218 00:00:09.538378       1 scraper.go:149] \"Failed to scrape node\" err=\"Get \\\"https://192.168.113.135:10250/metrics/resource\\\": dial tcp 192.168.113.135:10250: connect: connection refused\" node=\"sti32-dcn-vsimrtp113-02\""
+    }
+  ],
+  "stats": {
+    "candidate_count": 1,
+    "has_root_cause": true
+  }
+}

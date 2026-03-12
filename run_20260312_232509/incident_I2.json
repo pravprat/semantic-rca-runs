@@ -1,0 +1,277 @@
+{
+  "incident_id": "I2",
+  "incident_window": {
+    "start_time": "2026-02-18T00:00:00.227247+00:00",
+    "end_time": "2026-02-18T00:12:52.289768+00:00"
+  },
+  "root_cause": {
+    "cluster_id": "C1619",
+    "score": 15.351667966435791,
+    "confidence": {
+      "value": 0.311,
+      "label": "low"
+    },
+    "cluster_summary": {
+      "cluster_id": "C1619",
+      "size": 61,
+      "cluster_type": "candidate",
+      "first_seen_ts": "2026-02-18T00:00:00.227247211Z",
+      "last_seen_ts": "2026-02-18T00:12:47.441610814Z",
+      "top_services": [
+        {
+          "service": "proxy",
+          "count": 61
+        }
+      ],
+      "http_class_counts": {
+        "unknown": 61
+      },
+      "example_events": [
+        "[2026/02/18 00:00:00.227 +00:00] [INFO] [resolver/resolver_with_discoverer.go:133] [\"new grpc resolver registered\"] [component=grpc-resolver] [scheme=milvus-session] [role=milvus/meta/session/rootcoord] [exclusive=true] [id=22]",
+        "[2026/02/18 00:00:36.089 +00:00] [INFO] [resolver/resolver_with_discoverer.go:133] [\"new grpc resolver registered\"] [component=grpc-resolver] [scheme=milvus-session] [role=milvus/meta/session/rootcoord] [exclusive=true] [id=20]",
+        "[2026/02/18 00:01:15.919 +00:00] [INFO] [resolver/resolver_with_discoverer.go:133] [\"new grpc resolver registered\"] [component=grpc-resolver] [scheme=milvus-session] [role=milvus/meta/session/rootcoord] [exclusive=true] [id=23]"
+      ]
+    },
+    "representative_event": {
+      "timestamp": "2026-02-18T00:10:36.365249265Z",
+      "service": "proxy",
+      "response_code": null,
+      "text": "[2026/02/18 00:10:36.365 +00:00] [INFO] [resolver/resolver_with_discoverer.go:133] [\"new grpc resolver registered\"] [component=grpc-resolver] [scheme=milvus-session] [role=milvus/meta/session/rootcoord] [exclusive=true] [id=21]"
+    },
+    "first_seen_event": {
+      "timestamp": "2026-02-18T00:00:00.227247211Z",
+      "service": "proxy",
+      "response_code": null,
+      "text": "[2026/02/18 00:00:00.227 +00:00] [INFO] [resolver/resolver_with_discoverer.go:133] [\"new grpc resolver registered\"] [component=grpc-resolver] [scheme=milvus-session] [role=milvus/meta/session/rootcoord] [exclusive=true] [id=22]"
+    },
+    "signals": {
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "trigger_proximity": 1.0,
+      "in_weight": 0.0,
+      "out_weight": 109.50000000000001,
+      "severity_counts": {
+        "ERROR": 0,
+        "WARN": 0,
+        "INFO": 61,
+        "OTHER": 0
+      },
+      "trigger_stats": {
+        "first_seen": "2026-02-18T00:00:00.227247+00:00",
+        "last_seen": "2026-02-18T00:12:47.441610+00:00",
+        "event_count": 61,
+        "error_count": 0,
+        "duration_seconds": 767.214363,
+        "error_rate": 0.0,
+        "severity": 0.2,
+        "cluster_rate_eps": 0.079508,
+        "global_rate_eps": 66.056206,
+        "burst_factor": 0.001204,
+        "trigger_score": 0.0
+      }
+    },
+    "graph_context": {
+      "incoming_edges": [],
+      "outgoing_edges": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    "why_ranked_first": [
+      "highest composite RCA score for this incident",
+      "strong downstream influence relative to incoming influence",
+      "appears early relative to incident onset",
+      "shows abnormal trigger/error behavior"
+    ]
+  },
+  "other_candidates": [
+    {
+      "cluster_id": "C1351",
+      "score": 12.087372191160929,
+      "confidence": {
+        "value": 0.294,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C1351",
+        "size": 4,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-18T00:00:31.672663012Z",
+        "last_seen_ts": "2026-02-18T00:11:51.817903303Z",
+        "top_services": [
+          {
+            "service": "proxy",
+            "count": 4
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 4
+        },
+        "example_events": [
+          "SIGNO: 11; SIGNAME: Segmentation fault; SI_CODE: 1; SI_ADDR: 0xa8"
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-18T00:00:31.672663012Z",
+        "service": "proxy",
+        "response_code": null,
+        "text": "SIGNO: 11; SIGNAME: Segmentation fault; SI_CODE: 1; SI_ADDR: 0xa8"
+      }
+    },
+    {
+      "cluster_id": "C2149",
+      "score": 12.087372186498095,
+      "confidence": {
+        "value": 0.294,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C2149",
+        "size": 4,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-18T00:00:31.672665639Z",
+        "last_seen_ts": "2026-02-18T00:11:51.817905678Z",
+        "top_services": [
+          {
+            "service": "proxy",
+            "count": 4
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 4
+        },
+        "example_events": [
+          "BACKTRACE:"
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-18T00:00:31.672665639Z",
+        "service": "proxy",
+        "response_code": null,
+        "text": "BACKTRACE:"
+      }
+    },
+    {
+      "cluster_id": "C2077",
+      "score": 11.98420747453042,
+      "confidence": {
+        "value": 0.288,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C2077",
+        "size": 4,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-18T00:01:15.922447899Z",
+        "last_seen_ts": "2026-02-18T00:12:36.413354581Z",
+        "top_services": [
+          {
+            "service": "proxy",
+            "count": 4
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 4
+        },
+        "example_events": [
+          "goroutine 285 gp=0xc000802540 m=8 mp=0xc000800008 [running]:",
+          "goroutine 289 gp=0xc000103c00 m=3 mp=0xc0000c9008 [running]:",
+          "goroutine 279 gp=0xc000e02700 m=3 mp=0xc0000c9008 [running]:"
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-18T00:01:49.125758645Z",
+        "service": "proxy",
+        "response_code": null,
+        "text": "goroutine 289 gp=0xc000103c00 m=3 mp=0xc0000c9008 [running]:"
+      }
+    },
+    {
+      "cluster_id": "C2109",
+      "score": 11.98420699892127,
+      "confidence": {
+        "value": 0.288,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C2109",
+        "size": 4,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-18T00:01:15.922651223Z",
+        "last_seen_ts": "2026-02-18T00:12:36.41367112Z",
+        "top_services": [
+          {
+            "service": "proxy",
+            "count": 4
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 4
+        },
+        "example_events": [
+          "goroutine 18 gp=0xc000102380 m=nil [GC sweep wait]:",
+          "goroutine 3 gp=0xc000003340 m=nil [GC sweep wait]:"
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-18T00:01:49.126117645Z",
+        "service": "proxy",
+        "response_code": null,
+        "text": "goroutine 3 gp=0xc000003340 m=nil [GC sweep wait]:"
+      }
+    }
+  ],
+  "timeline": [
+    {
+      "timestamp": "2026-02-18T00:00:00.227247211Z",
+      "cluster_id": "C1619",
+      "score": 15.351667966435791,
+      "service": "proxy",
+      "response_code": null,
+      "summary": "[2026/02/18 00:00:00.227 +00:00] [INFO] [resolver/resolver_with_discoverer.go:133] [\"new grpc resolver registered\"] [component=grpc-resolver] [scheme=milvus-session] [role=milvus/meta/session/rootcoord] [exclusive=true] [id=22]"
+    },
+    {
+      "timestamp": "2026-02-18T00:00:31.672663012Z",
+      "cluster_id": "C1351",
+      "score": 12.087372191160929,
+      "service": "proxy",
+      "response_code": null,
+      "summary": "SIGNO: 11; SIGNAME: Segmentation fault; SI_CODE: 1; SI_ADDR: 0xa8"
+    },
+    {
+      "timestamp": "2026-02-18T00:00:31.672665639Z",
+      "cluster_id": "C2149",
+      "score": 12.087372186498095,
+      "service": "proxy",
+      "response_code": null,
+      "summary": "BACKTRACE:"
+    },
+    {
+      "timestamp": "2026-02-18T00:01:15.922447899Z",
+      "cluster_id": "C2077",
+      "score": 11.98420747453042,
+      "service": "proxy",
+      "response_code": null,
+      "summary": "goroutine 285 gp=0xc000802540 m=8 mp=0xc000800008 [running]:"
+    },
+    {
+      "timestamp": "2026-02-18T00:01:15.922651223Z",
+      "cluster_id": "C2109",
+      "score": 11.98420699892127,
+      "service": "proxy",
+      "response_code": null,
+      "summary": "goroutine 18 gp=0xc000102380 m=nil [GC sweep wait]:"
+    }
+  ],
+  "stats": {
+    "candidate_count": 5,
+    "has_root_cause": true
+  }
+}

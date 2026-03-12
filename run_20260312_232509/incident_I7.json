@@ -1,0 +1,281 @@
+{
+  "incident_id": "I7",
+  "incident_window": {
+    "start_time": "2026-02-17T23:59:40.512419+00:00",
+    "end_time": "2026-02-18T00:10:03.763798+00:00"
+  },
+  "root_cause": {
+    "cluster_id": "C1015",
+    "score": 16.316353377417897,
+    "confidence": {
+      "value": 0.315,
+      "label": "low"
+    },
+    "cluster_summary": {
+      "cluster_id": "C1015",
+      "size": 7,
+      "cluster_type": "candidate",
+      "first_seen_ts": "2026-02-17T23:59:45.765046768Z",
+      "last_seen_ts": "2026-02-18T00:10:03.763798782Z",
+      "top_services": [
+        {
+          "service": "policy-engine-chart",
+          "count": 7
+        }
+      ],
+      "http_class_counts": {
+        "unknown": 7
+      },
+      "example_events": [
+        "2026/02/17 23:59:45 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }",
+        "2026/02/18 00:02:45 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }",
+        "2026/02/18 00:03:18 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }"
+      ]
+    },
+    "representative_event": {
+      "timestamp": "2026-02-18T00:04:52.77920242Z",
+      "service": "policy-engine-chart",
+      "response_code": null,
+      "text": "2026/02/18 00:04:52 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }"
+    },
+    "first_seen_event": {
+      "timestamp": "2026-02-17T23:59:45.765046768Z",
+      "service": "policy-engine-chart",
+      "response_code": null,
+      "text": "2026/02/17 23:59:45 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }"
+    },
+    "signals": {
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "trigger_proximity": 1.0,
+      "in_weight": 0.0,
+      "out_weight": 28.849999999999994,
+      "severity_counts": {
+        "ERROR": 7,
+        "WARN": 0,
+        "INFO": 0,
+        "OTHER": 0
+      },
+      "trigger_stats": {
+        "first_seen": "2026-02-17T23:59:45.765046+00:00",
+        "last_seen": "2026-02-18T00:10:03.763798+00:00",
+        "event_count": 7,
+        "error_count": 0,
+        "duration_seconds": 617.998752,
+        "error_rate": 0.0,
+        "severity": 0.2,
+        "cluster_rate_eps": 0.011327,
+        "global_rate_eps": 66.056206,
+        "burst_factor": 0.000171,
+        "trigger_score": 0.0
+      }
+    },
+    "graph_context": {
+      "incoming_edges": [],
+      "outgoing_edges": [
+        {
+          "to": "C1058",
+          "relation": "co_occurs",
+          "weight": 15.0,
+          "confidence": 1.0
+        }
+      ],
+      "in_degree": 0,
+      "out_degree": 1
+    },
+    "why_ranked_first": [
+      "highest composite RCA score for this incident",
+      "strong downstream influence relative to incoming influence",
+      "appears early relative to incident onset",
+      "shows abnormal trigger/error behavior"
+    ]
+  },
+  "other_candidates": [
+    {
+      "cluster_id": "C1089",
+      "score": 14.002067663132184,
+      "confidence": {
+        "value": 0.306,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C1089",
+        "size": 7,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-17T23:59:40.512753Z",
+        "last_seen_ts": "2026-02-18T00:09:58.511536Z",
+        "top_services": [
+          {
+            "service": "policy-engine-chart",
+            "count": 7
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 7
+        },
+        "example_events": [
+          "HTTP server starting at ':8080'"
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-17T23:59:40.512753Z",
+        "service": "policy-engine-chart",
+        "response_code": null,
+        "text": "HTTP server starting at ':8080'"
+      }
+    },
+    {
+      "cluster_id": "C1058",
+      "score": 13.989255788449842,
+      "confidence": {
+        "value": 0.306,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C1058",
+        "size": 7,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-17T23:59:40.763873Z",
+        "last_seen_ts": "2026-02-18T00:09:58.762707Z",
+        "top_services": [
+          {
+            "service": "policy-engine-chart",
+            "count": 7
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 7
+        },
+        "example_events": [
+          "HTTP server is ready and accepting connections"
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-17T23:59:40.763873Z",
+        "service": "policy-engine-chart",
+        "response_code": null,
+        "text": "HTTP server is ready and accepting connections"
+      }
+    },
+    {
+      "cluster_id": "C1110",
+      "score": 8.73679916255413,
+      "confidence": {
+        "value": 0.135,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C1110",
+        "size": 7,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-17T23:59:40.512419Z",
+        "last_seen_ts": "2026-02-18T00:09:58.51127Z",
+        "top_services": [
+          {
+            "service": "policy-engine-chart",
+            "count": 7
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 7
+        },
+        "example_events": [
+          "Initializing health probes"
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-18T00:09:58.51127Z",
+        "service": "policy-engine-chart",
+        "response_code": null,
+        "text": "Initializing health probes"
+      }
+    },
+    {
+      "cluster_id": "C394",
+      "score": 7.049065550072173,
+      "confidence": {
+        "value": 0.128,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C394",
+        "size": 7,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-17T23:59:40.764184Z",
+        "last_seen_ts": "2026-02-18T00:09:58.76296Z",
+        "top_services": [
+          {
+            "service": "policy-engine-chart",
+            "count": 7
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 7
+        },
+        "example_events": [
+          "[job.JobService] Created gRPC connection to job-tracker:9090 with load balancing, keepalive (1m30s), and retry (max 10 attempts)"
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-17T23:59:40.764184Z",
+        "service": "policy-engine-chart",
+        "response_code": null,
+        "text": "[job.JobService] Created gRPC connection to job-tracker:9090 with load balancing, keepalive (1m30s), and retry (max 10 attempts)"
+      }
+    }
+  ],
+  "timeline": [
+    {
+      "timestamp": "2026-02-17T23:59:40.512419Z",
+      "cluster_id": "C1110",
+      "score": 8.73679916255413,
+      "service": "policy-engine-chart",
+      "response_code": null,
+      "summary": "Initializing health probes"
+    },
+    {
+      "timestamp": "2026-02-17T23:59:40.512753Z",
+      "cluster_id": "C1089",
+      "score": 14.002067663132184,
+      "service": "policy-engine-chart",
+      "response_code": null,
+      "summary": "HTTP server starting at ':8080'"
+    },
+    {
+      "timestamp": "2026-02-17T23:59:40.763873Z",
+      "cluster_id": "C1058",
+      "score": 13.989255788449842,
+      "service": "policy-engine-chart",
+      "response_code": null,
+      "summary": "HTTP server is ready and accepting connections"
+    },
+    {
+      "timestamp": "2026-02-17T23:59:40.764184Z",
+      "cluster_id": "C394",
+      "score": 7.049065550072173,
+      "service": "policy-engine-chart",
+      "response_code": null,
+      "summary": "[job.JobService] Created gRPC connection to job-tracker:9090 with load balancing, keepalive (1m30s), and retry (max 10 attempts)"
+    },
+    {
+      "timestamp": "2026-02-17T23:59:45.765046768Z",
+      "cluster_id": "C1015",
+      "score": 16.316353377417897,
+      "service": "policy-engine-chart",
+      "response_code": null,
+      "summary": "2026/02/17 23:59:45 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }"
+    }
+  ],
+  "stats": {
+    "candidate_count": 5,
+    "has_root_cause": true
+  }
+}

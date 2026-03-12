@@ -1,0 +1,272 @@
+{
+  "incident_id": "I9",
+  "incident_window": {
+    "start_time": "2026-02-17T23:59:16.447354+00:00",
+    "end_time": "2026-02-18T00:11:42.798579+00:00"
+  },
+  "root_cause": {
+    "cluster_id": "C648",
+    "score": 14.355688123495813,
+    "confidence": {
+      "value": 0.217,
+      "label": "low"
+    },
+    "cluster_summary": {
+      "cluster_id": "C648",
+      "size": 7,
+      "cluster_type": "candidate",
+      "first_seen_ts": "2026-02-17T23:59:16.447354Z",
+      "last_seen_ts": "2026-02-18T00:10:07.501943Z",
+      "top_services": [
+        {
+          "service": "vector-store-chart",
+          "count": 7
+        }
+      ],
+      "http_class_counts": {
+        "unknown": 7
+      },
+      "example_events": [
+        "S3Credentials retrieved successfully from k8s secret"
+      ]
+    },
+    "representative_event": {
+      "timestamp": "2026-02-17T23:59:16.447354Z",
+      "service": "vector-store-chart",
+      "response_code": null,
+      "text": "S3Credentials retrieved successfully from k8s secret"
+    },
+    "first_seen_event": {
+      "timestamp": "2026-02-17T23:59:16.447354Z",
+      "service": "vector-store-chart",
+      "response_code": null,
+      "text": "S3Credentials retrieved successfully from k8s secret"
+    },
+    "signals": {
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "trigger_proximity": 1.0,
+      "in_weight": 0.0,
+      "out_weight": 3.99,
+      "severity_counts": {
+        "ERROR": 0,
+        "WARN": 0,
+        "INFO": 7,
+        "OTHER": 0
+      },
+      "trigger_stats": {
+        "first_seen": "2026-02-17T23:59:16.447354+00:00",
+        "last_seen": "2026-02-18T00:10:07.501943+00:00",
+        "event_count": 7,
+        "error_count": 0,
+        "duration_seconds": 651.054589,
+        "error_rate": 0.0,
+        "severity": 0.2,
+        "cluster_rate_eps": 0.010752,
+        "global_rate_eps": 66.056206,
+        "burst_factor": 0.000163,
+        "trigger_score": 0.0
+      }
+    },
+    "graph_context": {
+      "incoming_edges": [],
+      "outgoing_edges": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    "why_ranked_first": [
+      "highest composite RCA score for this incident",
+      "strong downstream influence relative to incoming influence",
+      "appears early relative to incident onset",
+      "shows abnormal trigger/error behavior"
+    ]
+  },
+  "other_candidates": [
+    {
+      "cluster_id": "C1053",
+      "score": 13.282112931306987,
+      "confidence": {
+        "value": 0.303,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C1053",
+        "size": 7,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-17T23:59:16.45237Z",
+        "last_seen_ts": "2026-02-18T00:10:07.506535Z",
+        "top_services": [
+          {
+            "service": "vector-store-chart",
+            "count": 7
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 7
+        },
+        "example_events": [
+          "Metric Map successfully initialized with"
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-18T00:07:22.457717Z",
+        "service": "vector-store-chart",
+        "response_code": null,
+        "text": "Metric Map successfully initialized with"
+      }
+    },
+    {
+      "cluster_id": "C1051",
+      "score": 13.062830980638669,
+      "confidence": {
+        "value": 0.212,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C1051",
+        "size": 7,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-17T23:59:16.453375Z",
+        "last_seen_ts": "2026-02-18T00:10:07.53843Z",
+        "top_services": [
+          {
+            "service": "vector-store-chart",
+            "count": 7
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 7
+        },
+        "example_events": [
+          "Health check endpoints registered"
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-18T00:04:31.542134Z",
+        "service": "vector-store-chart",
+        "response_code": null,
+        "text": "Health check endpoints registered"
+      }
+    },
+    {
+      "cluster_id": "C1087",
+      "score": 13.062830980638669,
+      "confidence": {
+        "value": 0.212,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C1087",
+        "size": 7,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-17T23:59:16.453389Z",
+        "last_seen_ts": "2026-02-18T00:10:07.538438Z",
+        "top_services": [
+          {
+            "service": "vector-store-chart",
+            "count": 7
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 7
+        },
+        "example_events": [
+          "HTTP server configured at ':8080' (probes only)"
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-17T23:59:16.453389Z",
+        "service": "vector-store-chart",
+        "response_code": null,
+        "text": "HTTP server configured at ':8080' (probes only)"
+      }
+    },
+    {
+      "cluster_id": "C970",
+      "score": 13.062830980638669,
+      "confidence": {
+        "value": 0.212,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C970",
+        "size": 7,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-17T23:59:16.703974Z",
+        "last_seen_ts": "2026-02-18T00:10:07.78956Z",
+        "top_services": [
+          {
+            "service": "vector-store-chart",
+            "count": 7
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 7
+        },
+        "example_events": [
+          "Connecting to Milvus"
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-17T23:59:16.703974Z",
+        "service": "vector-store-chart",
+        "response_code": null,
+        "text": "Connecting to Milvus"
+      }
+    }
+  ],
+  "timeline": [
+    {
+      "timestamp": "2026-02-17T23:59:16.447354Z",
+      "cluster_id": "C648",
+      "score": 14.355688123495813,
+      "service": "vector-store-chart",
+      "response_code": null,
+      "summary": "S3Credentials retrieved successfully from k8s secret"
+    },
+    {
+      "timestamp": "2026-02-17T23:59:16.45237Z",
+      "cluster_id": "C1053",
+      "score": 13.282112931306987,
+      "service": "vector-store-chart",
+      "response_code": null,
+      "summary": "Metric Map successfully initialized with"
+    },
+    {
+      "timestamp": "2026-02-17T23:59:16.453375Z",
+      "cluster_id": "C1051",
+      "score": 13.062830980638669,
+      "service": "vector-store-chart",
+      "response_code": null,
+      "summary": "Health check endpoints registered"
+    },
+    {
+      "timestamp": "2026-02-17T23:59:16.453389Z",
+      "cluster_id": "C1087",
+      "score": 13.062830980638669,
+      "service": "vector-store-chart",
+      "response_code": null,
+      "summary": "HTTP server configured at ':8080' (probes only)"
+    },
+    {
+      "timestamp": "2026-02-17T23:59:16.703974Z",
+      "cluster_id": "C970",
+      "score": 13.062830980638669,
+      "service": "vector-store-chart",
+      "response_code": null,
+      "summary": "Connecting to Milvus"
+    }
+  ],
+  "stats": {
+    "candidate_count": 5,
+    "has_root_cause": true
+  }
+}

@@ -1,0 +1,324 @@
+{
+  "incident_id": "I1",
+  "incident_window": {
+    "start_time": "2026-02-17T23:59:59.884238+00:00",
+    "end_time": "2026-02-18T00:12:59.534236+00:00"
+  },
+  "root_cause": {
+    "cluster_id": "C1166",
+    "score": 13.137805546557363,
+    "confidence": {
+      "value": 0.302,
+      "label": "low"
+    },
+    "cluster_summary": {
+      "cluster_id": "C1166",
+      "size": 5,
+      "cluster_type": "candidate",
+      "first_seen_ts": "2026-02-18T00:00:01.754539802Z",
+      "last_seen_ts": "2026-02-18T00:10:15.718801351Z",
+      "top_services": [
+        {
+          "service": "mongodb",
+          "count": 5
+        }
+      ],
+      "http_class_counts": {
+        "unknown": 5
+      },
+      "example_events": [
+        "\u001b[38;5;6mmongodb \u001b[38;5;5m00:00:01.75 \u001b[0m\u001b[38;5;2mINFO \u001b[0m ==> ** MongoDB Sharded setup finished! **",
+        "\u001b[38;5;6mmongodb \u001b[38;5;5m00:02:15.61 \u001b[0m\u001b[38;5;2mINFO \u001b[0m ==> ** MongoDB Sharded setup finished! **",
+        "\u001b[38;5;6mmongodb \u001b[38;5;5m00:05:09.74 \u001b[0m\u001b[38;5;2mINFO \u001b[0m ==> ** MongoDB Sharded setup finished! **"
+      ]
+    },
+    "representative_event": {
+      "timestamp": "2026-02-18T00:05:09.742966979Z",
+      "service": "mongodb",
+      "response_code": null,
+      "text": "\u001b[38;5;6mmongodb \u001b[38;5;5m00:05:09.74 \u001b[0m\u001b[38;5;2mINFO \u001b[0m ==> ** MongoDB Sharded setup finished! **"
+    },
+    "first_seen_event": {
+      "timestamp": "2026-02-18T00:00:01.754539802Z",
+      "service": "mongodb",
+      "response_code": null,
+      "text": "\u001b[38;5;6mmongodb \u001b[38;5;5m00:00:01.75 \u001b[0m\u001b[38;5;2mINFO \u001b[0m ==> ** MongoDB Sharded setup finished! **"
+    },
+    "signals": {
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "trigger_proximity": 0.9984006592660827,
+      "in_weight": 66.15,
+      "out_weight": 525.6,
+      "severity_counts": {
+        "ERROR": 0,
+        "WARN": 0,
+        "INFO": 5,
+        "OTHER": 0
+      },
+      "trigger_stats": {
+        "first_seen": "2026-02-18T00:00:01.754539+00:00",
+        "last_seen": "2026-02-18T00:10:15.718801+00:00",
+        "event_count": 5,
+        "error_count": 0,
+        "duration_seconds": 613.964262,
+        "error_rate": 0.0,
+        "severity": 0.2,
+        "cluster_rate_eps": 0.008144,
+        "global_rate_eps": 66.056206,
+        "burst_factor": 0.000123,
+        "trigger_score": 0.0
+      }
+    },
+    "graph_context": {
+      "incoming_edges": [
+        {
+          "from": "C1006",
+          "relation": "precedes",
+          "weight": 46.690000000000005,
+          "confidence": 1.0
+        },
+        {
+          "from": "C800",
+          "relation": "precedes",
+          "weight": 6.7,
+          "confidence": 0.6090909090909091
+        },
+        {
+          "from": "C532",
+          "relation": "precedes",
+          "weight": 5.960000000000001,
+          "confidence": 0.5418181818181819
+        },
+        {
+          "from": "C677",
+          "relation": "precedes",
+          "weight": 4.0,
+          "confidence": 0.36363636363636365
+        }
+      ],
+      "outgoing_edges": [
+        {
+          "to": "C1006",
+          "relation": "precedes",
+          "weight": 34.63,
+          "confidence": 1.0
+        },
+        {
+          "to": "C677",
+          "relation": "precedes",
+          "weight": 18.7,
+          "confidence": 1.0
+        },
+        {
+          "to": "C800",
+          "relation": "precedes",
+          "weight": 8.0,
+          "confidence": 0.7272727272727273
+        },
+        {
+          "to": "C532",
+          "relation": "precedes",
+          "weight": 3.08,
+          "confidence": 0.28
+        }
+      ],
+      "in_degree": 4,
+      "out_degree": 4
+    },
+    "why_ranked_first": [
+      "highest composite RCA score for this incident",
+      "strong downstream influence relative to incoming influence",
+      "appears early relative to incident onset",
+      "shows abnormal trigger/error behavior"
+    ]
+  },
+  "other_candidates": [
+    {
+      "cluster_id": "C800",
+      "score": 12.98414348263535,
+      "confidence": {
+        "value": 0.291,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C800",
+        "size": 38,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-18T00:01:28.372724475Z",
+        "last_seen_ts": "2026-02-18T00:10:58.373064492Z",
+        "top_services": [
+          {
+            "service": "mongodb",
+            "count": 38
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 38
+        },
+        "example_events": [
+          "Error receiving request from client. Ending connection from remote"
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-18T00:01:28.372724475Z",
+        "service": "mongodb",
+        "response_code": null,
+        "text": "Error receiving request from client. Ending connection from remote"
+      }
+    },
+    {
+      "cluster_id": "C1006",
+      "score": 11.827080900821596,
+      "confidence": {
+        "value": 0.293,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C1006",
+        "size": 59,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-18T00:00:34.884188668Z",
+        "last_seen_ts": "2026-02-18T00:11:46.887195623Z",
+        "top_services": [
+          {
+            "service": "mongodb",
+            "count": 59
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 59
+        },
+        "example_events": [
+          "Connecting"
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-18T00:00:34.884188668Z",
+        "service": "mongodb",
+        "response_code": null,
+        "text": "Connecting"
+      }
+    },
+    {
+      "cluster_id": "C532",
+      "score": 10.40904546039762,
+      "confidence": {
+        "value": 0.267,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C532",
+        "size": 39,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-18T00:03:12.79814645Z",
+        "last_seen_ts": "2026-02-18T00:12:48.391514427Z",
+        "top_services": [
+          {
+            "service": "mongodb",
+            "count": 39
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 39
+        },
+        "example_events": [
+          "timeout reached before the port went into state \"inuse\""
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-18T00:03:12.79814645Z",
+        "service": "mongodb",
+        "response_code": null,
+        "text": "timeout reached before the port went into state \"inuse\""
+      }
+    },
+    {
+      "cluster_id": "C677",
+      "score": 9.691244747229103,
+      "confidence": {
+        "value": 0.271,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C677",
+        "size": 19,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-18T00:02:15.449814177Z",
+        "last_seen_ts": "2026-02-18T00:11:32.129453777Z",
+        "top_services": [
+          {
+            "service": "mongodb",
+            "count": 19
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 19
+        },
+        "example_events": [
+          "WiredTiger message"
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-18T00:02:15.449814177Z",
+        "service": "mongodb",
+        "response_code": null,
+        "text": "WiredTiger message"
+      }
+    }
+  ],
+  "timeline": [
+    {
+      "timestamp": "2026-02-18T00:00:01.754539802Z",
+      "cluster_id": "C1166",
+      "score": 13.137805546557363,
+      "service": "mongodb",
+      "response_code": null,
+      "summary": "\u001b[38;5;6mmongodb \u001b[38;5;5m00:00:01.75 \u001b[0m\u001b[38;5;2mINFO \u001b[0m ==> ** MongoDB Sharded setup finished! **"
+    },
+    {
+      "timestamp": "2026-02-18T00:00:34.884188668Z",
+      "cluster_id": "C1006",
+      "score": 11.827080900821596,
+      "service": "mongodb",
+      "response_code": null,
+      "summary": "Connecting"
+    },
+    {
+      "timestamp": "2026-02-18T00:01:28.372724475Z",
+      "cluster_id": "C800",
+      "score": 12.98414348263535,
+      "service": "mongodb",
+      "response_code": null,
+      "summary": "Error receiving request from client. Ending connection from remote"
+    },
+    {
+      "timestamp": "2026-02-18T00:02:15.449814177Z",
+      "cluster_id": "C677",
+      "score": 9.691244747229103,
+      "service": "mongodb",
+      "response_code": null,
+      "summary": "WiredTiger message"
+    },
+    {
+      "timestamp": "2026-02-18T00:03:12.79814645Z",
+      "cluster_id": "C532",
+      "score": 10.40904546039762,
+      "service": "mongodb",
+      "response_code": null,
+      "summary": "timeout reached before the port went into state \"inuse\""
+    }
+  ],
+  "stats": {
+    "candidate_count": 5,
+    "has_root_cause": true
+  }
+}

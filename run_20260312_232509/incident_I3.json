@@ -1,0 +1,101 @@
+{
+  "incident_id": "I3",
+  "incident_window": {
+    "start_time": "2026-02-18T00:00:00.029922+00:00",
+    "end_time": "2026-02-18T00:12:52.091208+00:00"
+  },
+  "root_cause": {
+    "cluster_id": "C1",
+    "score": 7.17391487451511,
+    "confidence": {
+      "value": 0.129,
+      "label": "low"
+    },
+    "cluster_summary": {
+      "cluster_id": "C1",
+      "size": 42,
+      "cluster_type": "candidate",
+      "first_seen_ts": "2026-02-18T00:00:00.029922139Z",
+      "last_seen_ts": "2026-02-18T00:12:52.091208968Z",
+      "top_services": [
+        {
+          "service": "vault",
+          "count": 42
+        }
+      ],
+      "http_class_counts": {
+        "unknown": 42
+      },
+      "example_events": [
+        "2026-02-18T00:00:00.029Z [ERROR] storage.raft: failed to appendEntries to: peer=\"{Voter cc796202-190e-52be-242d-2222d9293346 vault-2.vault-internal:8201}\" error=\"msgpack decode error [pos 3536]: read tcp 10.42.173.159:33020->10.42.76.232:8201: i/o timeout\"",
+        "2026-02-18T00:00:20.333Z [ERROR] storage.raft: failed to appendEntries to: peer=\"{Voter cc796202-190e-52be-242d-2222d9293346 vault-2.vault-internal:8201}\" error=\"msgpack decode error [pos 3672]: read tcp 10.42.173.159:46522->10.42.76.232:8201: i/o timeout\"",
+        "2026-02-18T00:00:40.667Z [ERROR] storage.raft: failed to appendEntries to: peer=\"{Voter cc796202-190e-52be-242d-2222d9293346 vault-2.vault-internal:8201}\" error=\"msgpack decode error [pos 3808]: read tcp 10.42.173.159:60918->10.42.76.232:8201: i/o timeout\""
+      ]
+    },
+    "representative_event": {
+      "timestamp": "2026-02-18T00:11:30.803162011Z",
+      "service": "vault",
+      "response_code": null,
+      "text": "2026-02-18T00:11:30.802Z [ERROR] storage.raft: failed to appendEntries to: peer=\"{Voter cc796202-190e-52be-242d-2222d9293346 vault-2.vault-internal:8201}\" error=\"msgpack decode error [pos 3536]: read tcp 10.42.173.159:43516->10.42.76.232:8201: i/o timeout\""
+    },
+    "first_seen_event": {
+      "timestamp": "2026-02-18T00:00:00.029922139Z",
+      "service": "vault",
+      "response_code": null,
+      "text": "2026-02-18T00:00:00.029Z [ERROR] storage.raft: failed to appendEntries to: peer=\"{Voter cc796202-190e-52be-242d-2222d9293346 vault-2.vault-internal:8201}\" error=\"msgpack decode error [pos 3536]: read tcp 10.42.173.159:33020->10.42.76.232:8201: i/o timeout\""
+    },
+    "signals": {
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "trigger_proximity": 1.0,
+      "in_weight": 0.0,
+      "out_weight": 0.0,
+      "severity_counts": {
+        "ERROR": 39,
+        "WARN": 3,
+        "INFO": 0,
+        "OTHER": 0
+      },
+      "trigger_stats": {
+        "first_seen": "2026-02-18T00:00:00.029922+00:00",
+        "last_seen": "2026-02-18T00:12:52.091208+00:00",
+        "event_count": 42,
+        "error_count": 0,
+        "duration_seconds": 772.061286,
+        "error_rate": 0.0,
+        "severity": 0.2,
+        "cluster_rate_eps": 0.0544,
+        "global_rate_eps": 66.056206,
+        "burst_factor": 0.000824,
+        "trigger_score": 0.0
+      }
+    },
+    "graph_context": {
+      "incoming_edges": [],
+      "outgoing_edges": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    "why_ranked_first": [
+      "highest composite RCA score for this incident",
+      "strong downstream influence relative to incoming influence",
+      "appears early relative to incident onset",
+      "shows abnormal trigger/error behavior"
+    ]
+  },
+  "other_candidates": [],
+  "timeline": [
+    {
+      "timestamp": "2026-02-18T00:00:00.029922139Z",
+      "cluster_id": "C1",
+      "score": 7.17391487451511,
+      "service": "vault",
+      "response_code": null,
+      "summary": "2026-02-18T00:00:00.029Z [ERROR] storage.raft: failed to appendEntries to: peer=\"{Voter cc796202-190e-52be-242d-2222d9293346 vault-2.vault-internal:8201}\" error=\"msgpack decode error [pos 3536]: read tcp 10.42.173.159:33020->10.42.76.232:8201: i/o timeout\""
+    }
+  ],
+  "stats": {
+    "candidate_count": 1,
+    "has_root_cause": true
+  }
+}

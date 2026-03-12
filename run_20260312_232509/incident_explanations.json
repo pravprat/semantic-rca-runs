@@ -1,0 +1,1545 @@
+{
+  "incidents": [
+    {
+      "incident_id": "I1",
+      "start_time": "2026-02-17T23:59:59.884238+00:00",
+      "end_time": "2026-02-18T00:12:59.534236+00:00",
+      "explanations": [
+        {
+          "cluster_id": "C1166",
+          "behavior": "mongodb activity",
+          "score": 13.137805546557363,
+          "narrative": {
+            "root_cause": "mongodb normal_operation",
+            "behavior": "mongodb activity",
+            "trigger_event": "\u001b[38;5;6mmongodb \u001b[38;5;5m00:05:09.74 \u001b[0m\u001b[38;5;2mINFO \u001b[0m ==> ** MongoDB Sharded setup finished! **",
+            "propagation_clusters": [
+              "C1006",
+              "C1058",
+              "C1080",
+              "C1083",
+              "C112",
+              "C1190",
+              "C128",
+              "C1280",
+              "C1342",
+              "C1349",
+              "C1444",
+              "C1455",
+              "C151",
+              "C1555",
+              "C1619",
+              "C1744",
+              "C1779",
+              "C179",
+              "C182",
+              "C1822",
+              "C1842",
+              "C1894",
+              "C305",
+              "C383",
+              "C39",
+              "C420",
+              "C48",
+              "C49",
+              "C490",
+              "C501",
+              "C521",
+              "C527",
+              "C532",
+              "C570",
+              "C590",
+              "C677",
+              "C70",
+              "C788",
+              "C800",
+              "C802",
+              "C853",
+              "C99"
+            ],
+            "blast_radius": 42
+          },
+          "explanation": [
+            "Behavior: mongodb   (HTTP )",
+            "Cluster size: 5 events",
+            "Trigger proximity to incident start: 0.998",
+            "Downstream clusters affected: 42"
+          ]
+        },
+        {
+          "cluster_id": "C800",
+          "behavior": "mongodb activity",
+          "score": 12.98414348263535,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "mongodb activity",
+            "trigger_event": "Error receiving request from client. Ending connection from remote",
+            "propagation_clusters": [
+              "C1006",
+              "C1053",
+              "C1058",
+              "C1166",
+              "C1167",
+              "C1190",
+              "C128",
+              "C1308",
+              "C1367",
+              "C1403",
+              "C1423",
+              "C1555",
+              "C1619",
+              "C1744",
+              "C179",
+              "C1842",
+              "C1894",
+              "C305",
+              "C383",
+              "C39",
+              "C420",
+              "C48",
+              "C490",
+              "C521",
+              "C590",
+              "C677",
+              "C70",
+              "C788",
+              "C802",
+              "C853",
+              "C99"
+            ],
+            "blast_radius": 31
+          },
+          "explanation": [
+            "Behavior: mongodb   (HTTP )",
+            "Cluster size: 38 events",
+            "Trigger proximity to incident start: 0.887",
+            "Downstream clusters affected: 31"
+          ]
+        },
+        {
+          "cluster_id": "C1006",
+          "behavior": "mongodb activity",
+          "score": 11.827080900821596,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "mongodb activity",
+            "trigger_event": "Connecting",
+            "propagation_clusters": [
+              "C1013",
+              "C1018",
+              "C1019",
+              "C1053",
+              "C1058",
+              "C108",
+              "C1083",
+              "C112",
+              "C1125",
+              "C116",
+              "C1166",
+              "C1167",
+              "C1190",
+              "C1251",
+              "C1253",
+              "C128",
+              "C1280",
+              "C1308",
+              "C1319",
+              "C1321",
+              "C1342",
+              "C1351",
+              "C1367",
+              "C1395",
+              "C1403",
+              "C1423",
+              "C1455",
+              "C1488",
+              "C1499",
+              "C1523",
+              "C154",
+              "C1555",
+              "C1561",
+              "C1563",
+              "C1609",
+              "C1619",
+              "C1632",
+              "C1639",
+              "C1640",
+              "C1669",
+              "C1677",
+              "C1697",
+              "C1715",
+              "C1727",
+              "C1731",
+              "C1744",
+              "C1753",
+              "C1779",
+              "C179",
+              "C180",
+              "C1816",
+              "C182",
+              "C1822",
+              "C1842",
+              "C185",
+              "C1894",
+              "C1911",
+              "C1928",
+              "C1939",
+              "C1955",
+              "C1971",
+              "C2012",
+              "C2014",
+              "C2023",
+              "C2029",
+              "C2034",
+              "C2044",
+              "C2077",
+              "C2109",
+              "C2149",
+              "C216",
+              "C2387",
+              "C2487",
+              "C281",
+              "C284",
+              "C305",
+              "C375",
+              "C381",
+              "C383",
+              "C39",
+              "C391",
+              "C417",
+              "C420",
+              "C427",
+              "C455",
+              "C48",
+              "C487",
+              "C49",
+              "C490",
+              "C51",
+              "C521",
+              "C524",
+              "C532",
+              "C590",
+              "C595",
+              "C677",
+              "C70",
+              "C76",
+              "C788",
+              "C800",
+              "C802",
+              "C815",
+              "C853",
+              "C858",
+              "C864",
+              "C871",
+              "C873",
+              "C941",
+              "C99"
+            ],
+            "blast_radius": 109
+          },
+          "explanation": [
+            "Behavior: mongodb   (HTTP )",
+            "Cluster size: 59 events",
+            "Trigger proximity to incident start: 0.956",
+            "Downstream clusters affected: 109"
+          ]
+        },
+        {
+          "cluster_id": "C532",
+          "behavior": "mongodb activity",
+          "score": 10.40904546039762,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "mongodb activity",
+            "trigger_event": "timeout reached before the port went into state \"inuse\"",
+            "propagation_clusters": [
+              "C1006",
+              "C1053",
+              "C1058",
+              "C1083",
+              "C112",
+              "C1166",
+              "C1167",
+              "C1190",
+              "C1321",
+              "C1403",
+              "C1423",
+              "C1455",
+              "C1488",
+              "C154",
+              "C1677",
+              "C1731",
+              "C1744",
+              "C1753",
+              "C180",
+              "C1928",
+              "C2014",
+              "C305",
+              "C383",
+              "C39",
+              "C391",
+              "C417",
+              "C48",
+              "C490",
+              "C521",
+              "C524",
+              "C590",
+              "C677",
+              "C70",
+              "C788",
+              "C800",
+              "C802",
+              "C853",
+              "C873",
+              "C941",
+              "C99"
+            ],
+            "blast_radius": 40
+          },
+          "explanation": [
+            "Behavior: mongodb   (HTTP )",
+            "Cluster size: 39 events",
+            "Trigger proximity to incident start: 0.753",
+            "Downstream clusters affected: 40"
+          ]
+        },
+        {
+          "cluster_id": "C677",
+          "behavior": "mongodb activity",
+          "score": 9.691244747229103,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "mongodb activity",
+            "trigger_event": "WiredTiger message",
+            "propagation_clusters": [
+              "C1006",
+              "C1053",
+              "C1058",
+              "C1083",
+              "C112",
+              "C1166",
+              "C1167",
+              "C1251",
+              "C128",
+              "C1280",
+              "C1321",
+              "C1403",
+              "C1423",
+              "C1455",
+              "C1488",
+              "C154",
+              "C1611",
+              "C1619",
+              "C1632",
+              "C1677",
+              "C1731",
+              "C1744",
+              "C1753",
+              "C1779",
+              "C180",
+              "C1822",
+              "C1842",
+              "C1894",
+              "C1911",
+              "C305",
+              "C39",
+              "C417",
+              "C420",
+              "C48",
+              "C49",
+              "C490",
+              "C521",
+              "C524",
+              "C532",
+              "C70",
+              "C788",
+              "C800",
+              "C802",
+              "C853",
+              "C873",
+              "C941",
+              "C99"
+            ],
+            "blast_radius": 47
+          },
+          "explanation": [
+            "Behavior: mongodb   (HTTP )",
+            "Cluster size: 19 events",
+            "Trigger proximity to incident start: 0.827",
+            "Downstream clusters affected: 47"
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "I2",
+      "start_time": "2026-02-18T00:00:00.227247+00:00",
+      "end_time": "2026-02-18T00:12:52.289768+00:00",
+      "explanations": [
+        {
+          "cluster_id": "C1619",
+          "behavior": "proxy activity",
+          "score": 15.351667966435791,
+          "narrative": {
+            "root_cause": "milvus normal_operation",
+            "behavior": "proxy activity",
+            "trigger_event": "[2026/02/18 00:10:36.365 +00:00] [INFO] [resolver/resolver_with_discoverer.go:133] [\"new grpc resolver registered\"] [component=grpc-resolver] [scheme=milvus-session] [role=milvus/meta/session/rootcoord] [exclusive=true] [id=21]",
+            "propagation_clusters": [
+              "C1006",
+              "C1053",
+              "C1080",
+              "C1083",
+              "C1166",
+              "C1321",
+              "C1367",
+              "C1444",
+              "C1455",
+              "C1677",
+              "C1731",
+              "C1744",
+              "C1753",
+              "C179",
+              "C1842",
+              "C2012",
+              "C305",
+              "C381",
+              "C39",
+              "C427",
+              "C48",
+              "C490",
+              "C521",
+              "C590",
+              "C677",
+              "C70",
+              "C802",
+              "C941",
+              "C99"
+            ],
+            "blast_radius": 29
+          },
+          "explanation": [
+            "Behavior: proxy   (HTTP )",
+            "Cluster size: 61 events",
+            "Trigger proximity to incident start: 1.0",
+            "Downstream clusters affected: 29"
+          ]
+        },
+        {
+          "cluster_id": "C1351",
+          "behavior": "proxy activity",
+          "score": 12.087372191160929,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "proxy activity",
+            "trigger_event": "SIGNO: 11; SIGNAME: Segmentation fault; SI_CODE: 1; SI_ADDR: 0xa8",
+            "propagation_clusters": [
+              "C1125",
+              "C1340",
+              "C1744",
+              "C2077",
+              "C2109",
+              "C2387",
+              "C2487",
+              "C39",
+              "C48",
+              "C490",
+              "C99"
+            ],
+            "blast_radius": 11
+          },
+          "explanation": [
+            "Behavior: proxy   (HTTP )",
+            "Cluster size: 4 events",
+            "Trigger proximity to incident start: 0.959",
+            "Downstream clusters affected: 11"
+          ]
+        },
+        {
+          "cluster_id": "C2149",
+          "behavior": "proxy activity",
+          "score": 12.087372186498095,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "proxy activity",
+            "trigger_event": "BACKTRACE:",
+            "propagation_clusters": [
+              "C1125",
+              "C1340",
+              "C1744",
+              "C2077",
+              "C2109",
+              "C2387",
+              "C2487",
+              "C39",
+              "C48",
+              "C490",
+              "C590",
+              "C99"
+            ],
+            "blast_radius": 12
+          },
+          "explanation": [
+            "Behavior: proxy   (HTTP )",
+            "Cluster size: 4 events",
+            "Trigger proximity to incident start: 0.959",
+            "Downstream clusters affected: 12"
+          ]
+        },
+        {
+          "cluster_id": "C2077",
+          "behavior": "proxy activity",
+          "score": 11.98420747453042,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "proxy activity",
+            "trigger_event": "goroutine 289 gp=0xc000103c00 m=3 mp=0xc0000c9008 [running]:",
+            "propagation_clusters": [
+              "C1005",
+              "C1006",
+              "C1018",
+              "C1083",
+              "C112",
+              "C1125",
+              "C1166",
+              "C1167",
+              "C1223",
+              "C1321",
+              "C1340",
+              "C1624",
+              "C1673",
+              "C1677",
+              "C1731",
+              "C1744",
+              "C2071",
+              "C2109",
+              "C2251",
+              "C2284",
+              "C2312",
+              "C2387",
+              "C2487",
+              "C305",
+              "C356",
+              "C375",
+              "C383",
+              "C39",
+              "C420",
+              "C427",
+              "C455",
+              "C48",
+              "C482",
+              "C490",
+              "C521",
+              "C524",
+              "C590",
+              "C677",
+              "C70",
+              "C76",
+              "C788",
+              "C815",
+              "C853",
+              "C941",
+              "C99"
+            ],
+            "blast_radius": 45
+          },
+          "explanation": [
+            "Behavior: proxy   (HTTP )",
+            "Cluster size: 4 events",
+            "Trigger proximity to incident start: 0.902",
+            "Downstream clusters affected: 45"
+          ]
+        },
+        {
+          "cluster_id": "C2109",
+          "behavior": "proxy activity",
+          "score": 11.98420699892127,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "proxy activity",
+            "trigger_event": "goroutine 3 gp=0xc000003340 m=nil [GC sweep wait]:",
+            "propagation_clusters": [
+              "C1005",
+              "C1006",
+              "C1018",
+              "C1083",
+              "C112",
+              "C1125",
+              "C1166",
+              "C1167",
+              "C1223",
+              "C1321",
+              "C1340",
+              "C1624",
+              "C1673",
+              "C1677",
+              "C1731",
+              "C1744",
+              "C2071",
+              "C2077",
+              "C2251",
+              "C2284",
+              "C2312",
+              "C2387",
+              "C2487",
+              "C305",
+              "C356",
+              "C375",
+              "C383",
+              "C39",
+              "C420",
+              "C427",
+              "C455",
+              "C48",
+              "C482",
+              "C490",
+              "C521",
+              "C524",
+              "C590",
+              "C677",
+              "C70",
+              "C76",
+              "C788",
+              "C815",
+              "C853",
+              "C941",
+              "C99"
+            ],
+            "blast_radius": 45
+          },
+          "explanation": [
+            "Behavior: proxy   (HTTP )",
+            "Cluster size: 4 events",
+            "Trigger proximity to incident start: 0.902",
+            "Downstream clusters affected: 45"
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "I3",
+      "start_time": "2026-02-18T00:00:00.029922+00:00",
+      "end_time": "2026-02-18T00:12:52.091208+00:00",
+      "explanations": [
+        {
+          "cluster_id": "C1",
+          "behavior": "server activity",
+          "score": 7.17391487451511,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "server activity",
+            "trigger_event": "2026-02-18T00:11:30.802Z [ERROR] storage.raft: failed to appendEntries to: peer=\"{Voter cc796202-190e-52be-242d-2222d9293346 vault-2.vault-internal:8201}\" error=\"msgpack decode error [pos 3536]: read tcp 10.42.173.159:43516->10.42.76.232:8201: i/o timeout\"",
+            "propagation_clusters": [],
+            "blast_radius": 0
+          },
+          "explanation": [
+            "Behavior: server   (HTTP )",
+            "Cluster size: 42 events",
+            "Trigger proximity to incident start: 1.0"
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "I4",
+      "start_time": "2026-02-18T00:00:00.235139+00:00",
+      "end_time": "2026-02-18T00:12:59.734973+00:00",
+      "explanations": [
+        {
+          "cluster_id": "C146",
+          "behavior": "etcd activity",
+          "score": 11.02513784393137,
+          "narrative": {
+            "root_cause": "etcd normal_operation",
+            "behavior": "etcd activity",
+            "trigger_event": "trace[1456590038] linearizableReadLoop",
+            "propagation_clusters": [
+              "C1167",
+              "C1319",
+              "C2077",
+              "C2109",
+              "C2387",
+              "C2487",
+              "C39",
+              "C48",
+              "C521",
+              "C590",
+              "C802",
+              "C99"
+            ],
+            "blast_radius": 12
+          },
+          "explanation": [
+            "Behavior: etcd   (HTTP )",
+            "Cluster size: 5 events",
+            "Trigger proximity to incident start: 0.936",
+            "Downstream clusters affected: 12"
+          ]
+        },
+        {
+          "cluster_id": "C66",
+          "behavior": "etcd activity",
+          "score": 7.7055809512343005,
+          "narrative": {
+            "root_cause": "etcd normal_operation",
+            "behavior": "etcd activity",
+            "trigger_event": "failed to reach the peer URL",
+            "propagation_clusters": [],
+            "blast_radius": 0
+          },
+          "explanation": [
+            "Behavior: etcd   (HTTP )",
+            "Cluster size: 195 events",
+            "Trigger proximity to incident start: 1.0"
+          ]
+        },
+        {
+          "cluster_id": "C65",
+          "behavior": "etcd activity",
+          "score": 7.705580780355495,
+          "narrative": {
+            "root_cause": "etcd normal_operation",
+            "behavior": "etcd activity",
+            "trigger_event": "failed to get version",
+            "propagation_clusters": [],
+            "blast_radius": 0
+          },
+          "explanation": [
+            "Behavior: etcd   (HTTP )",
+            "Cluster size: 195 events",
+            "Trigger proximity to incident start: 1.0"
+          ]
+        },
+        {
+          "cluster_id": "C2",
+          "behavior": "etcd activity",
+          "score": 7.577544245211762,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "etcd activity",
+            "trigger_event": "dropped internal Raft message since sending buffer is full (overloaded network)",
+            "propagation_clusters": [],
+            "blast_radius": 0
+          },
+          "explanation": [
+            "Behavior: etcd   (HTTP )",
+            "Cluster size: 108 events",
+            "Trigger proximity to incident start: 0.997"
+          ]
+        },
+        {
+          "cluster_id": "C88",
+          "behavior": "etcd activity",
+          "score": 6.519987123819616,
+          "narrative": {
+            "root_cause": "etcd normal_operation",
+            "behavior": "etcd activity",
+            "trigger_event": "storing new hash",
+            "propagation_clusters": [],
+            "blast_radius": 0
+          },
+          "explanation": [
+            "Behavior: etcd   (HTTP )",
+            "Cluster size: 6 events",
+            "Trigger proximity to incident start: 0.998"
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "I5",
+      "start_time": "2026-02-18T00:00:06.996853+00:00",
+      "end_time": "2026-02-18T00:12:45.940965+00:00",
+      "explanations": [
+        {
+          "cluster_id": "C929",
+          "behavior": "metrics activity",
+          "score": 7.216518636744404,
+          "narrative": {
+            "root_cause": "mongodb normal_operation",
+            "behavior": "metrics activity",
+            "trigger_event": "time=\"2026-02-18T00:08:40Z\" level=error msg=\"Cannot connect to MongoDB: cannot connect to MongoDB: server selection error: server selection timeout, current topology: { Type: Single, Servers: [{ Addr: localhost:27017, Type: Unknown, Last error: dial tcp [::1]:27017: connect: connection refused }, ] }\"",
+            "propagation_clusters": [],
+            "blast_radius": 0
+          },
+          "explanation": [
+            "Behavior: metrics   (HTTP )",
+            "Cluster size: 156 events",
+            "Trigger proximity to incident start: 1.0"
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "I6",
+      "start_time": "2026-02-17T23:59:41.845137+00:00",
+      "end_time": "2026-02-18T00:10:14.093645+00:00",
+      "explanations": [
+        {
+          "cluster_id": "C1013",
+          "behavior": "utility activity",
+          "score": 16.785684359878413,
+          "narrative": {
+            "root_cause": "mongodb normal_operation",
+            "behavior": "utility activity",
+            "trigger_event": "2026/02/18 00:10:14 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }",
+            "propagation_clusters": [
+              "C1080",
+              "C1166",
+              "C1444",
+              "C1744",
+              "C179",
+              "C383",
+              "C48",
+              "C490",
+              "C521",
+              "C527",
+              "C802",
+              "C99"
+            ],
+            "blast_radius": 12
+          },
+          "explanation": [
+            "Behavior: utility   (HTTP )",
+            "Cluster size: 8 events",
+            "Trigger proximity to incident start: 1.0",
+            "Downstream clusters affected: 12"
+          ]
+        },
+        {
+          "cluster_id": "C358",
+          "behavior": "utility activity",
+          "score": 13.648496234560756,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "utility activity",
+            "trigger_event": "[job.JobService] Created gRPC connection to job-tracker:9090 with load balancing, keepalive (1m30s), and retry (max 10 attempts)",
+            "propagation_clusters": [
+              "C0",
+              "C1013",
+              "C1080",
+              "C112",
+              "C1166",
+              "C1619",
+              "C1733",
+              "C1744",
+              "C179",
+              "C383",
+              "C39",
+              "C48",
+              "C490",
+              "C524",
+              "C527",
+              "C751",
+              "C788",
+              "C802",
+              "C99"
+            ],
+            "blast_radius": 19
+          },
+          "explanation": [
+            "Behavior: utility   (HTTP )",
+            "Cluster size: 8 events",
+            "Trigger proximity to incident start: 1.0",
+            "Downstream clusters affected: 19"
+          ]
+        },
+        {
+          "cluster_id": "C933",
+          "behavior": "utility activity",
+          "score": 13.648496234560756,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "utility activity",
+            "trigger_event": "Waiting for HTTP server to be ready...",
+            "propagation_clusters": [
+              "C0",
+              "C1013",
+              "C1080",
+              "C112",
+              "C1166",
+              "C1619",
+              "C1733",
+              "C1744",
+              "C179",
+              "C383",
+              "C39",
+              "C48",
+              "C490",
+              "C524",
+              "C527",
+              "C751",
+              "C788",
+              "C802",
+              "C99"
+            ],
+            "blast_radius": 19
+          },
+          "explanation": [
+            "Behavior: utility   (HTTP )",
+            "Cluster size: 8 events",
+            "Trigger proximity to incident start: 1.0",
+            "Downstream clusters affected: 19"
+          ]
+        },
+        {
+          "cluster_id": "C975",
+          "behavior": "utility activity",
+          "score": 13.648496234560756,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "utility activity",
+            "trigger_event": "HTTP server configured at ':8080' (probes only)",
+            "propagation_clusters": [
+              "C0",
+              "C1013",
+              "C1080",
+              "C112",
+              "C1166",
+              "C1619",
+              "C1733",
+              "C1744",
+              "C179",
+              "C383",
+              "C39",
+              "C48",
+              "C490",
+              "C524",
+              "C527",
+              "C751",
+              "C788",
+              "C802",
+              "C99"
+            ],
+            "blast_radius": 19
+          },
+          "explanation": [
+            "Behavior: utility   (HTTP )",
+            "Cluster size: 8 events",
+            "Trigger proximity to incident start: 1.0",
+            "Downstream clusters affected: 19"
+          ]
+        },
+        {
+          "cluster_id": "C976",
+          "behavior": "utility activity",
+          "score": 13.635684359878413,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "utility activity",
+            "trigger_event": "HTTP server starting at ':8080'",
+            "propagation_clusters": [
+              "C1080",
+              "C112",
+              "C1166",
+              "C1744",
+              "C179",
+              "C39",
+              "C48",
+              "C490",
+              "C524",
+              "C527",
+              "C788",
+              "C802",
+              "C99"
+            ],
+            "blast_radius": 13
+          },
+          "explanation": [
+            "Behavior: utility   (HTTP )",
+            "Cluster size: 8 events",
+            "Trigger proximity to incident start: 1.0",
+            "Downstream clusters affected: 13"
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "I7",
+      "start_time": "2026-02-17T23:59:40.512419+00:00",
+      "end_time": "2026-02-18T00:10:03.763798+00:00",
+      "explanations": [
+        {
+          "cluster_id": "C1015",
+          "behavior": "policy-engine-chart activity",
+          "score": 16.316353377417897,
+          "narrative": {
+            "root_cause": "mongodb normal_operation",
+            "behavior": "policy-engine-chart activity",
+            "trigger_event": "2026/02/18 00:04:52 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }",
+            "propagation_clusters": [
+              "C0",
+              "C1013",
+              "C1080",
+              "C112",
+              "C1166",
+              "C1619",
+              "C1733",
+              "C1744",
+              "C179",
+              "C383",
+              "C39",
+              "C48",
+              "C490",
+              "C524",
+              "C527",
+              "C751",
+              "C788",
+              "C802",
+              "C99"
+            ],
+            "blast_radius": 19
+          },
+          "explanation": [
+            "Behavior: policy-engine-chart   (HTTP )",
+            "Cluster size: 7 events",
+            "Trigger proximity to incident start: 1.0",
+            "Downstream clusters affected: 19"
+          ]
+        },
+        {
+          "cluster_id": "C1089",
+          "behavior": "policy-engine-chart activity",
+          "score": 14.002067663132184,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "policy-engine-chart activity",
+            "trigger_event": "HTTP server starting at ':8080'",
+            "propagation_clusters": [
+              "C0",
+              "C1013",
+              "C1080",
+              "C1166",
+              "C1619",
+              "C1733",
+              "C1744",
+              "C179",
+              "C383",
+              "C39",
+              "C48",
+              "C490",
+              "C524",
+              "C527",
+              "C751",
+              "C802",
+              "C99"
+            ],
+            "blast_radius": 17
+          },
+          "explanation": [
+            "Behavior: policy-engine-chart   (HTTP )",
+            "Cluster size: 7 events",
+            "Trigger proximity to incident start: 1.0",
+            "Downstream clusters affected: 17"
+          ]
+        },
+        {
+          "cluster_id": "C1058",
+          "behavior": "policy-engine-chart activity",
+          "score": 13.989255788449842,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "policy-engine-chart activity",
+            "trigger_event": "HTTP server is ready and accepting connections",
+            "propagation_clusters": [
+              "C1006",
+              "C1053",
+              "C1083",
+              "C1166",
+              "C1190",
+              "C1251",
+              "C1321",
+              "C1523",
+              "C1609",
+              "C1611",
+              "C1632",
+              "C1677",
+              "C1731",
+              "C1744",
+              "C179",
+              "C1842",
+              "C1894",
+              "C1911",
+              "C1931",
+              "C1955",
+              "C1971",
+              "C2012",
+              "C2023",
+              "C2034",
+              "C305",
+              "C381",
+              "C383",
+              "C39",
+              "C420",
+              "C48",
+              "C490",
+              "C521",
+              "C524",
+              "C532",
+              "C590",
+              "C677",
+              "C70",
+              "C788",
+              "C800",
+              "C802",
+              "C853",
+              "C941",
+              "C99"
+            ],
+            "blast_radius": 43
+          },
+          "explanation": [
+            "Behavior: policy-engine-chart   (HTTP )",
+            "Cluster size: 7 events",
+            "Trigger proximity to incident start: 1.0",
+            "Downstream clusters affected: 43"
+          ]
+        },
+        {
+          "cluster_id": "C1110",
+          "behavior": "policy-engine-chart activity",
+          "score": 8.73679916255413,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "policy-engine-chart activity",
+            "trigger_event": "Initializing health probes",
+            "propagation_clusters": [],
+            "blast_radius": 0
+          },
+          "explanation": [
+            "Behavior: policy-engine-chart   (HTTP )",
+            "Cluster size: 7 events",
+            "Trigger proximity to incident start: 1.0"
+          ]
+        },
+        {
+          "cluster_id": "C394",
+          "behavior": "policy-engine-chart activity",
+          "score": 7.049065550072173,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "policy-engine-chart activity",
+            "trigger_event": "[job.JobService] Created gRPC connection to job-tracker:9090 with load balancing, keepalive (1m30s), and retry (max 10 attempts)",
+            "propagation_clusters": [],
+            "blast_radius": 0
+          },
+          "explanation": [
+            "Behavior: policy-engine-chart   (HTTP )",
+            "Cluster size: 7 events",
+            "Trigger proximity to incident start: 1.0"
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "I8",
+      "start_time": "2026-02-18T00:00:09.538476+00:00",
+      "end_time": "2026-02-18T00:12:54.543744+00:00",
+      "explanations": [
+        {
+          "cluster_id": "C183",
+          "behavior": "metrics-server activity",
+          "score": 7.187197881665908,
+          "narrative": {
+            "root_cause": "dcn normal_operation",
+            "behavior": "metrics-server activity",
+            "trigger_event": "E0218 00:06:24.533392       1 scraper.go:149] \"Failed to scrape node\" err=\"Get \\\"https://192.168.113.135:10250/metrics/resource\\\": dial tcp 192.168.113.135:10250: connect: connection refused\" node=\"sti32-dcn-vsimrtp113-02\"",
+            "propagation_clusters": [],
+            "blast_radius": 0
+          },
+          "explanation": [
+            "Behavior: metrics-server   (HTTP )",
+            "Cluster size: 52 events",
+            "Trigger proximity to incident start: 1.0"
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "I9",
+      "start_time": "2026-02-17T23:59:16.447354+00:00",
+      "end_time": "2026-02-18T00:11:42.798579+00:00",
+      "explanations": [
+        {
+          "cluster_id": "C648",
+          "behavior": "vector-store-chart activity",
+          "score": 14.355688123495813,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "vector-store-chart activity",
+            "trigger_event": "S3Credentials retrieved successfully from k8s secret",
+            "propagation_clusters": [
+              "C1013",
+              "C1015",
+              "C1089",
+              "C358",
+              "C933",
+              "C975"
+            ],
+            "blast_radius": 6
+          },
+          "explanation": [
+            "Behavior: vector-store-chart   (HTTP )",
+            "Cluster size: 7 events",
+            "Trigger proximity to incident start: 1.0",
+            "Downstream clusters affected: 6"
+          ]
+        },
+        {
+          "cluster_id": "C1053",
+          "behavior": "vector-store-chart activity",
+          "score": 13.282112931306987,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "vector-store-chart activity",
+            "trigger_event": "Metric Map successfully initialized with",
+            "propagation_clusters": [
+              "C1006",
+              "C1013",
+              "C1058",
+              "C1083",
+              "C112",
+              "C116",
+              "C1166",
+              "C1251",
+              "C1319",
+              "C1342",
+              "C1395",
+              "C1455",
+              "C1619",
+              "C1632",
+              "C1727",
+              "C1744",
+              "C179",
+              "C1822",
+              "C1894",
+              "C1911",
+              "C1964",
+              "C2077",
+              "C2109",
+              "C216",
+              "C2387",
+              "C2487",
+              "C281",
+              "C305",
+              "C383",
+              "C39",
+              "C417",
+              "C420",
+              "C48",
+              "C490",
+              "C521",
+              "C524",
+              "C532",
+              "C590",
+              "C677",
+              "C70",
+              "C800",
+              "C802",
+              "C853",
+              "C873",
+              "C99"
+            ],
+            "blast_radius": 45
+          },
+          "explanation": [
+            "Behavior: vector-store-chart   (HTTP )",
+            "Cluster size: 7 events",
+            "Trigger proximity to incident start: 1.0",
+            "Downstream clusters affected: 45"
+          ]
+        },
+        {
+          "cluster_id": "C1051",
+          "behavior": "vector-store-chart activity",
+          "score": 13.062830980638669,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "vector-store-chart activity",
+            "trigger_event": "Health check endpoints registered",
+            "propagation_clusters": [
+              "C1013",
+              "C1015",
+              "C1089",
+              "C358",
+              "C933",
+              "C975"
+            ],
+            "blast_radius": 6
+          },
+          "explanation": [
+            "Behavior: vector-store-chart   (HTTP )",
+            "Cluster size: 7 events",
+            "Trigger proximity to incident start: 1.0",
+            "Downstream clusters affected: 6"
+          ]
+        },
+        {
+          "cluster_id": "C1087",
+          "behavior": "vector-store-chart activity",
+          "score": 13.062830980638669,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "vector-store-chart activity",
+            "trigger_event": "HTTP server configured at ':8080' (probes only)",
+            "propagation_clusters": [
+              "C1013",
+              "C1015",
+              "C1089",
+              "C358",
+              "C933",
+              "C975"
+            ],
+            "blast_radius": 6
+          },
+          "explanation": [
+            "Behavior: vector-store-chart   (HTTP )",
+            "Cluster size: 7 events",
+            "Trigger proximity to incident start: 1.0",
+            "Downstream clusters affected: 6"
+          ]
+        },
+        {
+          "cluster_id": "C970",
+          "behavior": "vector-store-chart activity",
+          "score": 13.062830980638669,
+          "narrative": {
+            "root_cause": "milvus normal_operation",
+            "behavior": "vector-store-chart activity",
+            "trigger_event": "Connecting to Milvus",
+            "propagation_clusters": [
+              "C1013",
+              "C1015",
+              "C1089",
+              "C358",
+              "C933",
+              "C975"
+            ],
+            "blast_radius": 6
+          },
+          "explanation": [
+            "Behavior: vector-store-chart   (HTTP )",
+            "Cluster size: 7 events",
+            "Trigger proximity to incident start: 1.0",
+            "Downstream clusters affected: 6"
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "I10",
+      "start_time": "2026-02-18T00:00:46.039785+00:00",
+      "end_time": "2026-02-18T00:11:14.199804+00:00",
+      "explanations": [
+        {
+          "cluster_id": "C424",
+          "behavior": "metadata-chart activity",
+          "score": 8.73679916255413,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "metadata-chart activity",
+            "trigger_event": "[job.JobService] Created gRPC connection to job-tracker:9090 with load balancing, keepalive (1m30s), and retry (max 10 attempts)",
+            "propagation_clusters": [],
+            "blast_radius": 0
+          },
+          "explanation": [
+            "Behavior: metadata-chart   (HTTP )",
+            "Cluster size: 7 events",
+            "Trigger proximity to incident start: 1.0"
+          ]
+        },
+        {
+          "cluster_id": "C1046",
+          "behavior": "metadata-chart activity",
+          "score": 8.071028272858497,
+          "narrative": {
+            "root_cause": "mongodb normal_operation",
+            "behavior": "metadata-chart activity",
+            "trigger_event": "2026/02/18 00:08:38 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }",
+            "propagation_clusters": [],
+            "blast_radius": 0
+          },
+          "explanation": [
+            "Behavior: metadata-chart   (HTTP )",
+            "Cluster size: 7 events",
+            "Trigger proximity to incident start: 1.0"
+          ]
+        },
+        {
+          "cluster_id": "C1022",
+          "behavior": "metadata-chart activity",
+          "score": 7.049065550072173,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "metadata-chart activity",
+            "trigger_event": "Waiting for HTTP server to be ready...",
+            "propagation_clusters": [],
+            "blast_radius": 0
+          },
+          "explanation": [
+            "Behavior: metadata-chart   (HTTP )",
+            "Cluster size: 7 events",
+            "Trigger proximity to incident start: 1.0"
+          ]
+        },
+        {
+          "cluster_id": "C1090",
+          "behavior": "metadata-chart activity",
+          "score": 7.049065550072173,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "metadata-chart activity",
+            "trigger_event": "HTTP server is ready and accepting connections",
+            "propagation_clusters": [],
+            "blast_radius": 0
+          },
+          "explanation": [
+            "Behavior: metadata-chart   (HTTP )",
+            "Cluster size: 7 events",
+            "Trigger proximity to incident start: 1.0"
+          ]
+        },
+        {
+          "cluster_id": "C1169",
+          "behavior": "metadata-chart activity",
+          "score": 7.049065550072173,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "metadata-chart activity",
+            "trigger_event": "HTTP server starting at ':8080'",
+            "propagation_clusters": [],
+            "blast_radius": 0
+          },
+          "explanation": [
+            "Behavior: metadata-chart   (HTTP )",
+            "Cluster size: 7 events",
+            "Trigger proximity to incident start: 1.0"
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "I11",
+      "start_time": "2026-02-18T00:00:25.564343+00:00",
+      "end_time": "2026-02-18T00:09:27.390826+00:00",
+      "explanations": [
+        {
+          "cluster_id": "C305",
+          "behavior": "ontap-monitor-chart activity",
+          "score": 15.407215382945717,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "ontap-monitor-chart activity",
+            "trigger_event": "Failed to connect to ONTAP AMQP: read tcp 10.42.7.217:32784->192.168.113.98:5668: read: connection reset by peer",
+            "propagation_clusters": [
+              "C1006",
+              "C1053",
+              "C1058",
+              "C1083",
+              "C112",
+              "C1251",
+              "C128",
+              "C1319",
+              "C1611",
+              "C1632",
+              "C1744",
+              "C182",
+              "C1842",
+              "C1894",
+              "C1911",
+              "C2023",
+              "C383",
+              "C39",
+              "C420",
+              "C48",
+              "C490",
+              "C521",
+              "C524",
+              "C590",
+              "C677",
+              "C70",
+              "C788",
+              "C802",
+              "C853",
+              "C99"
+            ],
+            "blast_radius": 30
+          },
+          "explanation": [
+            "Behavior: ontap-monitor-chart   (HTTP )",
+            "Cluster size: 38 events",
+            "Trigger proximity to incident start: 0.991",
+            "Downstream clusters affected: 30"
+          ]
+        },
+        {
+          "cluster_id": "C1052",
+          "behavior": "ontap-monitor-chart activity",
+          "score": 8.869667176665487,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "ontap-monitor-chart activity",
+            "trigger_event": "Health check endpoints registered",
+            "propagation_clusters": [],
+            "blast_radius": 0
+          },
+          "explanation": [
+            "Behavior: ontap-monitor-chart   (HTTP )",
+            "Cluster size: 4 events",
+            "Trigger proximity to incident start: 1.0"
+          ]
+        },
+        {
+          "cluster_id": "C1084",
+          "behavior": "ontap-monitor-chart activity",
+          "score": 6.869667176665487,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "ontap-monitor-chart activity",
+            "trigger_event": "Initialized ONTAP Monitor Services",
+            "propagation_clusters": [],
+            "blast_radius": 0
+          },
+          "explanation": [
+            "Behavior: ontap-monitor-chart   (HTTP )",
+            "Cluster size: 4 events",
+            "Trigger proximity to incident start: 1.0"
+          ]
+        },
+        {
+          "cluster_id": "C1085",
+          "behavior": "ontap-monitor-chart activity",
+          "score": 6.869667176665487,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "ontap-monitor-chart activity",
+            "trigger_event": "Initialized SnapPubSub Service",
+            "propagation_clusters": [],
+            "blast_radius": 0
+          },
+          "explanation": [
+            "Behavior: ontap-monitor-chart   (HTTP )",
+            "Cluster size: 4 events",
+            "Trigger proximity to incident start: 1.0"
+          ]
+        },
+        {
+          "cluster_id": "C326",
+          "behavior": "ontap-monitor-chart activity",
+          "score": 6.869667176665487,
+          "narrative": {
+            "root_cause": "Unknown Component normal_operation",
+            "behavior": "ontap-monitor-chart activity",
+            "trigger_event": "[file-metadata.SnapshotMetadataService] Created gRPC connection to file-metadata:9090 with load balancing, keepalive (1m30s), and retry (max 10 attempts)",
+            "propagation_clusters": [],
+            "blast_radius": 0
+          },
+          "explanation": [
+            "Behavior: ontap-monitor-chart   (HTTP )",
+            "Cluster size: 4 events",
+            "Trigger proximity to incident start: 1.0"
+          ]
+        }
+      ]
+    }
+  ]
+}

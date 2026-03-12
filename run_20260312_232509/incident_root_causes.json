@@ -1,0 +1,5806 @@
+{
+  "incidents": [
+    {
+      "incident_id": "I1",
+      "seed_cluster": null,
+      "clusters": [
+        "C10",
+        "C1005",
+        "C1006",
+        "C1007",
+        "C1008",
+        "C1012",
+        "C1016",
+        "C1017",
+        "C1082",
+        "C1083",
+        "C1106",
+        "C1132",
+        "C1165",
+        "C1166",
+        "C177",
+        "C20",
+        "C21",
+        "C228",
+        "C290",
+        "C31",
+        "C323",
+        "C324",
+        "C325",
+        "C356",
+        "C392",
+        "C484",
+        "C485",
+        "C508",
+        "C532",
+        "C534",
+        "C535",
+        "C569",
+        "C642",
+        "C643",
+        "C645",
+        "C646",
+        "C647",
+        "C676",
+        "C677",
+        "C679",
+        "C680",
+        "C681",
+        "C682",
+        "C683",
+        "C722",
+        "C723",
+        "C765",
+        "C799",
+        "C800",
+        "C801",
+        "C803",
+        "C804",
+        "C805",
+        "C833",
+        "C834",
+        "C877",
+        "C878",
+        "C879",
+        "C880",
+        "C9",
+        "C924",
+        "C927",
+        "C930",
+        "C931",
+        "C932",
+        "C965",
+        "C966",
+        "C967",
+        "C968",
+        "C969"
+      ],
+      "start_time": "2026-02-17T23:59:59.884238+00:00",
+      "end_time": "2026-02-18T00:12:59.534236+00:00",
+      "root_cause_candidates": [
+        {
+          "cluster_id": "C1166",
+          "score": 13.137805546557363,
+          "cluster_signature": "mongodb:unknown",
+          "cluster_type": "candidate",
+          "size": 5,
+          "in_weight": 66.15,
+          "out_weight": 525.6,
+          "representative_index": 23638,
+          "representative_raw_text": "\u001b[38;5;6mmongodb \u001b[38;5;5m00:05:09.74 \u001b[0m\u001b[38;5;2mINFO \u001b[0m ==> ** MongoDB Sharded setup finished! **",
+          "evidence_neighbors": [
+            {
+              "cluster_id": "C48",
+              "weight": 99.52000000000001
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 89.14999999999999
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 57.269999999999996
+            },
+            {
+              "cluster_id": "C70",
+              "weight": 41.44
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 35.55
+            }
+          ],
+          "downstream_neighbors": [
+            {
+              "cluster_id": "C1006",
+              "weight": 34.63
+            },
+            {
+              "cluster_id": "C1058",
+              "weight": 3.1499999999999995
+            },
+            {
+              "cluster_id": "C1080",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1083",
+              "weight": 12.940000000000001
+            },
+            {
+              "cluster_id": "C112",
+              "weight": 1.7
+            },
+            {
+              "cluster_id": "C1190",
+              "weight": 9.0
+            },
+            {
+              "cluster_id": "C128",
+              "weight": 6.6000000000000005
+            },
+            {
+              "cluster_id": "C1280",
+              "weight": 0.9799999999999999
+            },
+            {
+              "cluster_id": "C1342",
+              "weight": 1.4
+            },
+            {
+              "cluster_id": "C1349",
+              "weight": 2.0
+            },
+            {
+              "cluster_id": "C1444",
+              "weight": 4.6899999999999995
+            },
+            {
+              "cluster_id": "C1455",
+              "weight": 3.4299999999999993
+            },
+            {
+              "cluster_id": "C151",
+              "weight": 2.0
+            },
+            {
+              "cluster_id": "C1555",
+              "weight": 5.9
+            },
+            {
+              "cluster_id": "C1619",
+              "weight": 5.39
+            },
+            {
+              "cluster_id": "C1744",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1779",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C179",
+              "weight": 17.4
+            },
+            {
+              "cluster_id": "C182",
+              "weight": 3.0999999999999996
+            },
+            {
+              "cluster_id": "C1822",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C1842",
+              "weight": 4.8999999999999995
+            },
+            {
+              "cluster_id": "C1894",
+              "weight": 3.4299999999999993
+            },
+            {
+              "cluster_id": "C305",
+              "weight": 7.8
+            },
+            {
+              "cluster_id": "C383",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 57.269999999999996
+            },
+            {
+              "cluster_id": "C420",
+              "weight": 7.789999999999999
+            },
+            {
+              "cluster_id": "C48",
+              "weight": 99.52000000000001
+            },
+            {
+              "cluster_id": "C49",
+              "weight": 0.9799999999999999
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 35.55
+            },
+            {
+              "cluster_id": "C501",
+              "weight": 2.0
+            },
+            {
+              "cluster_id": "C521",
+              "weight": 10.08
+            },
+            {
+              "cluster_id": "C527",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C532",
+              "weight": 3.08
+            },
+            {
+              "cluster_id": "C570",
+              "weight": 2.0
+            },
+            {
+              "cluster_id": "C590",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C677",
+              "weight": 18.7
+            },
+            {
+              "cluster_id": "C70",
+              "weight": 41.44
+            },
+            {
+              "cluster_id": "C788",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C800",
+              "weight": 8.0
+            },
+            {
+              "cluster_id": "C802",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C853",
+              "weight": 11.41
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 89.14999999999999
+            }
+          ],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 5,
+            "OTHER": 0
+          },
+          "change_score": -0.2,
+          "trigger_proximity": 0.9984006592660827,
+          "incident_start": "2026-02-17T23:59:59.884238Z",
+          "abnormal_start": "2026-02-18T00:00:00.507613Z",
+          "cluster_first_seen": "2026-02-18T00:00:01.754539Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.00039866050071758893,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "mongodb activity",
+          "dominant_actor": "mongodb",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 5,
+          "behavior_signature": "mongodb|||",
+          "semantic_label": "mongodb operational activity",
+          "component": "mongodb",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C800",
+          "score": 12.98414348263535,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 38,
+          "in_weight": 40.17,
+          "out_weight": 197.09999999999997,
+          "representative_index": 5592,
+          "representative_raw_text": "Error receiving request from client. Ending connection from remote",
+          "evidence_neighbors": [
+            {
+              "cluster_id": "C48",
+              "weight": 39.42
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 24.97
+            },
+            {
+              "cluster_id": "C1006",
+              "weight": 18.689999999999998
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 16.06
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 12.399999999999999
+            }
+          ],
+          "downstream_neighbors": [
+            {
+              "cluster_id": "C1006",
+              "weight": 18.689999999999998
+            },
+            {
+              "cluster_id": "C1053",
+              "weight": 4.0
+            },
+            {
+              "cluster_id": "C1058",
+              "weight": 1.4
+            },
+            {
+              "cluster_id": "C1166",
+              "weight": 6.7
+            },
+            {
+              "cluster_id": "C1167",
+              "weight": 3.57
+            },
+            {
+              "cluster_id": "C1190",
+              "weight": 1.89
+            },
+            {
+              "cluster_id": "C128",
+              "weight": 5.0
+            },
+            {
+              "cluster_id": "C1308",
+              "weight": 1.4699999999999998
+            },
+            {
+              "cluster_id": "C1367",
+              "weight": 2.9399999999999995
+            },
+            {
+              "cluster_id": "C1403",
+              "weight": 3.7
+            },
+            {
+              "cluster_id": "C1423",
+              "weight": 3.0
+            },
+            {
+              "cluster_id": "C1555",
+              "weight": 0.9799999999999999
+            },
+            {
+              "cluster_id": "C1619",
+              "weight": 5.0
+            },
+            {
+              "cluster_id": "C1744",
+              "weight": 4.0
+            },
+            {
+              "cluster_id": "C179",
+              "weight": 1.89
+            },
+            {
+              "cluster_id": "C1842",
+              "weight": 4.2
+            },
+            {
+              "cluster_id": "C1894",
+              "weight": 0.9799999999999999
+            },
+            {
+              "cluster_id": "C305",
+              "weight": 1.4699999999999998
+            },
+            {
+              "cluster_id": "C383",
+              "weight": 2.7
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 12.399999999999999
+            },
+            {
+              "cluster_id": "C420",
+              "weight": 5.0
+            },
+            {
+              "cluster_id": "C48",
+              "weight": 39.42
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 16.06
+            },
+            {
+              "cluster_id": "C521",
+              "weight": 3.87
+            },
+            {
+              "cluster_id": "C590",
+              "weight": 2.9399999999999995
+            },
+            {
+              "cluster_id": "C677",
+              "weight": 3.079999999999999
+            },
+            {
+              "cluster_id": "C70",
+              "weight": 9.84
+            },
+            {
+              "cluster_id": "C788",
+              "weight": 3.9799999999999995
+            },
+            {
+              "cluster_id": "C802",
+              "weight": 0.9799999999999999
+            },
+            {
+              "cluster_id": "C853",
+              "weight": 0.9799999999999999
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 24.97
+            }
+          ],
+          "severity_counts": {
+            "ERROR": 38,
+            "WARN": 0,
+            "INFO": 0,
+            "OTHER": 0
+          },
+          "change_score": -0.10526315789473684,
+          "trigger_proximity": 0.8873018518240283,
+          "incident_start": "2026-02-17T23:59:59.884238Z",
+          "abnormal_start": "2026-02-18T00:00:00.507613Z",
+          "cluster_first_seen": "2026-02-18T00:01:28.372724Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.0030298198054536755,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "mongodb activity",
+          "dominant_actor": "mongodb",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 38,
+          "behavior_signature": "mongodb|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C1006",
+          "score": 11.827080900821596,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 59,
+          "in_weight": 159.03,
+          "out_weight": 2855.090000000001,
+          "representative_index": 1708,
+          "representative_raw_text": "Connecting",
+          "evidence_neighbors": [
+            {
+              "cluster_id": "C48",
+              "weight": 518.4800000000001
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 511.84000000000015
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 212.21999999999989
+            },
+            {
+              "cluster_id": "C70",
+              "weight": 164.94
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 133.4
+            }
+          ],
+          "downstream_neighbors": [
+            {
+              "cluster_id": "C1013",
+              "weight": 1.7
+            },
+            {
+              "cluster_id": "C1018",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C1019",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1053",
+              "weight": 38.26
+            },
+            {
+              "cluster_id": "C1058",
+              "weight": 20.63
+            },
+            {
+              "cluster_id": "C108",
+              "weight": 2.4499999999999997
+            },
+            {
+              "cluster_id": "C1083",
+              "weight": 59.54999999999999
+            },
+            {
+              "cluster_id": "C112",
+              "weight": 7.36
+            },
+            {
+              "cluster_id": "C1125",
+              "weight": 2.9399999999999995
+            },
+            {
+              "cluster_id": "C116",
+              "weight": 2.4
+            },
+            {
+              "cluster_id": "C1166",
+              "weight": 46.690000000000005
+            },
+            {
+              "cluster_id": "C1167",
+              "weight": 38.91
+            },
+            {
+              "cluster_id": "C1190",
+              "weight": 19.919999999999998
+            },
+            {
+              "cluster_id": "C1251",
+              "weight": 3.9199999999999995
+            },
+            {
+              "cluster_id": "C1253",
+              "weight": 9.7
+            },
+            {
+              "cluster_id": "C128",
+              "weight": 13.639999999999997
+            },
+            {
+              "cluster_id": "C1280",
+              "weight": 7.15
+            },
+            {
+              "cluster_id": "C1308",
+              "weight": 17.559999999999995
+            },
+            {
+              "cluster_id": "C1319",
+              "weight": 7.280000000000001
+            },
+            {
+              "cluster_id": "C1321",
+              "weight": 15.469999999999999
+            },
+            {
+              "cluster_id": "C1342",
+              "weight": 2.38
+            },
+            {
+              "cluster_id": "C1351",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1367",
+              "weight": 4.2
+            },
+            {
+              "cluster_id": "C1395",
+              "weight": 5.0
+            },
+            {
+              "cluster_id": "C1403",
+              "weight": 10.410000000000002
+            },
+            {
+              "cluster_id": "C1423",
+              "weight": 9.41
+            },
+            {
+              "cluster_id": "C1455",
+              "weight": 13.829999999999998
+            },
+            {
+              "cluster_id": "C1488",
+              "weight": 3.59
+            },
+            {
+              "cluster_id": "C1499",
+              "weight": 10.1
+            },
+            {
+              "cluster_id": "C1523",
+              "weight": 14.099999999999998
+            },
+            {
+              "cluster_id": "C154",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C1555",
+              "weight": 16.119999999999997
+            },
+            {
+              "cluster_id": "C1561",
+              "weight": 18.0
+            },
+            {
+              "cluster_id": "C1563",
+              "weight": 6.65
+            },
+            {
+              "cluster_id": "C1609",
+              "weight": 20.999999999999996
+            },
+            {
+              "cluster_id": "C1619",
+              "weight": 11.009999999999998
+            },
+            {
+              "cluster_id": "C1632",
+              "weight": 1.9599999999999997
+            },
+            {
+              "cluster_id": "C1639",
+              "weight": 18.49
+            },
+            {
+              "cluster_id": "C1640",
+              "weight": 4.1
+            },
+            {
+              "cluster_id": "C1669",
+              "weight": 1.4699999999999998
+            },
+            {
+              "cluster_id": "C1677",
+              "weight": 17.569999999999997
+            },
+            {
+              "cluster_id": "C1697",
+              "weight": 10.82
+            },
+            {
+              "cluster_id": "C1715",
+              "weight": 12.599999999999996
+            },
+            {
+              "cluster_id": "C1727",
+              "weight": 1.7
+            },
+            {
+              "cluster_id": "C1731",
+              "weight": 17.569999999999997
+            },
+            {
+              "cluster_id": "C1744",
+              "weight": 85.67999999999999
+            },
+            {
+              "cluster_id": "C1753",
+              "weight": 6.9
+            },
+            {
+              "cluster_id": "C1779",
+              "weight": 2.19
+            },
+            {
+              "cluster_id": "C179",
+              "weight": 30.539999999999996
+            },
+            {
+              "cluster_id": "C180",
+              "weight": 4.2
+            },
+            {
+              "cluster_id": "C1816",
+              "weight": 10.7
+            },
+            {
+              "cluster_id": "C182",
+              "weight": 6.29
+            },
+            {
+              "cluster_id": "C1822",
+              "weight": 1.19
+            },
+            {
+              "cluster_id": "C1842",
+              "weight": 18.380000000000003
+            },
+            {
+              "cluster_id": "C185",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C1894",
+              "weight": 3.4299999999999993
+            },
+            {
+              "cluster_id": "C1911",
+              "weight": 9.659999999999998
+            },
+            {
+              "cluster_id": "C1928",
+              "weight": 2.4499999999999997
+            },
+            {
+              "cluster_id": "C1939",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C1955",
+              "weight": 15.329999999999998
+            },
+            {
+              "cluster_id": "C1971",
+              "weight": 28.470000000000002
+            },
+            {
+              "cluster_id": "C2012",
+              "weight": 10.0
+            },
+            {
+              "cluster_id": "C2014",
+              "weight": 6.510000000000001
+            },
+            {
+              "cluster_id": "C2023",
+              "weight": 3.08
+            },
+            {
+              "cluster_id": "C2029",
+              "weight": 1.9599999999999997
+            },
+            {
+              "cluster_id": "C2034",
+              "weight": 18.699999999999996
+            },
+            {
+              "cluster_id": "C2044",
+              "weight": 10.7
+            },
+            {
+              "cluster_id": "C2077",
+              "weight": 4.2
+            },
+            {
+              "cluster_id": "C2109",
+              "weight": 4.2
+            },
+            {
+              "cluster_id": "C2149",
+              "weight": 4.0
+            },
+            {
+              "cluster_id": "C216",
+              "weight": 1.7
+            },
+            {
+              "cluster_id": "C2387",
+              "weight": 4.2
+            },
+            {
+              "cluster_id": "C2487",
+              "weight": 4.2
+            },
+            {
+              "cluster_id": "C281",
+              "weight": 2.0999999999999996
+            },
+            {
+              "cluster_id": "C284",
+              "weight": 7.430000000000001
+            },
+            {
+              "cluster_id": "C305",
+              "weight": 10.5
+            },
+            {
+              "cluster_id": "C375",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C381",
+              "weight": 1.19
+            },
+            {
+              "cluster_id": "C383",
+              "weight": 49.41
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 212.21999999999989
+            },
+            {
+              "cluster_id": "C391",
+              "weight": 2.0
+            },
+            {
+              "cluster_id": "C417",
+              "weight": 5.96
+            },
+            {
+              "cluster_id": "C420",
+              "weight": 25.519999999999996
+            },
+            {
+              "cluster_id": "C427",
+              "weight": 1.19
+            },
+            {
+              "cluster_id": "C455",
+              "weight": 4.57
+            },
+            {
+              "cluster_id": "C48",
+              "weight": 518.4800000000001
+            },
+            {
+              "cluster_id": "C487",
+              "weight": 6.66
+            },
+            {
+              "cluster_id": "C49",
+              "weight": 7.15
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 133.4
+            },
+            {
+              "cluster_id": "C51",
+              "weight": 17.769999999999996
+            },
+            {
+              "cluster_id": "C521",
+              "weight": 52.48
+            },
+            {
+              "cluster_id": "C524",
+              "weight": 16.18
+            },
+            {
+              "cluster_id": "C532",
+              "weight": 26.769999999999996
+            },
+            {
+              "cluster_id": "C590",
+              "weight": 20.649999999999995
+            },
+            {
+              "cluster_id": "C595",
+              "weight": 16.279999999999998
+            },
+            {
+              "cluster_id": "C677",
+              "weight": 50.85
+            },
+            {
+              "cluster_id": "C70",
+              "weight": 164.94
+            },
+            {
+              "cluster_id": "C76",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C788",
+              "weight": 32.92
+            },
+            {
+              "cluster_id": "C800",
+              "weight": 22.580000000000002
+            },
+            {
+              "cluster_id": "C802",
+              "weight": 11.549999999999997
+            },
+            {
+              "cluster_id": "C815",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C853",
+              "weight": 44.92
+            },
+            {
+              "cluster_id": "C858",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C864",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C871",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C873",
+              "weight": 3.8499999999999996
+            },
+            {
+              "cluster_id": "C941",
+              "weight": 17.569999999999997
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 511.84000000000015
+            }
+          ],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 0,
+            "OTHER": 59
+          },
+          "change_score": -0.0847457627118644,
+          "trigger_proximity": 0.9559076828215421,
+          "incident_start": "2026-02-17T23:59:59.884238Z",
+          "abnormal_start": "2026-02-18T00:00:00.507613Z",
+          "cluster_first_seen": "2026-02-18T00:00:34.884188Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.004704193908467549,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "mongodb activity",
+          "dominant_actor": "mongodb",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 59,
+          "behavior_signature": "mongodb|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C532",
+          "score": 10.40904546039762,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 39,
+          "in_weight": 39.849999999999994,
+          "out_weight": 284.21000000000004,
+          "representative_index": 18862,
+          "representative_raw_text": "timeout reached before the port went into state \"inuse\"",
+          "evidence_neighbors": [
+            {
+              "cluster_id": "C48",
+              "weight": 55.45
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 41.79
+            },
+            {
+              "cluster_id": "C1006",
+              "weight": 27.27
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 26.049999999999997
+            },
+            {
+              "cluster_id": "C1167",
+              "weight": 9.85
+            }
+          ],
+          "downstream_neighbors": [
+            {
+              "cluster_id": "C1006",
+              "weight": 27.27
+            },
+            {
+              "cluster_id": "C1053",
+              "weight": 9.39
+            },
+            {
+              "cluster_id": "C1058",
+              "weight": 7.45
+            },
+            {
+              "cluster_id": "C1083",
+              "weight": 1.7
+            },
+            {
+              "cluster_id": "C112",
+              "weight": 2.7
+            },
+            {
+              "cluster_id": "C1166",
+              "weight": 5.960000000000001
+            },
+            {
+              "cluster_id": "C1167",
+              "weight": 9.85
+            },
+            {
+              "cluster_id": "C1190",
+              "weight": 0.9799999999999999
+            },
+            {
+              "cluster_id": "C1321",
+              "weight": 2.4699999999999998
+            },
+            {
+              "cluster_id": "C1403",
+              "weight": 3.78
+            },
+            {
+              "cluster_id": "C1423",
+              "weight": 3.78
+            },
+            {
+              "cluster_id": "C1455",
+              "weight": 3.4000000000000004
+            },
+            {
+              "cluster_id": "C1488",
+              "weight": 3.0
+            },
+            {
+              "cluster_id": "C154",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1677",
+              "weight": 2.4699999999999998
+            },
+            {
+              "cluster_id": "C1731",
+              "weight": 2.4699999999999998
+            },
+            {
+              "cluster_id": "C1744",
+              "weight": 4.49
+            },
+            {
+              "cluster_id": "C1753",
+              "weight": 1.4
+            },
+            {
+              "cluster_id": "C180",
+              "weight": 3.4000000000000004
+            },
+            {
+              "cluster_id": "C1928",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C2014",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C305",
+              "weight": 1.19
+            },
+            {
+              "cluster_id": "C383",
+              "weight": 2.38
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 26.049999999999997
+            },
+            {
+              "cluster_id": "C391",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C417",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C48",
+              "weight": 55.45
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 7.28
+            },
+            {
+              "cluster_id": "C521",
+              "weight": 6.1
+            },
+            {
+              "cluster_id": "C524",
+              "weight": 3.8
+            },
+            {
+              "cluster_id": "C590",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C677",
+              "weight": 3.5
+            },
+            {
+              "cluster_id": "C70",
+              "weight": 8.879999999999999
+            },
+            {
+              "cluster_id": "C788",
+              "weight": 4.6899999999999995
+            },
+            {
+              "cluster_id": "C800",
+              "weight": 3.4000000000000004
+            },
+            {
+              "cluster_id": "C802",
+              "weight": 4.9
+            },
+            {
+              "cluster_id": "C853",
+              "weight": 7.49
+            },
+            {
+              "cluster_id": "C873",
+              "weight": 4.2
+            },
+            {
+              "cluster_id": "C941",
+              "weight": 2.4699999999999998
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 41.79
+            }
+          ],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 0,
+            "OTHER": 39
+          },
+          "change_score": 0.23076923076923078,
+          "trigger_proximity": 0.7533630045619522,
+          "incident_start": "2026-02-17T23:59:59.884238Z",
+          "abnormal_start": "2026-02-18T00:00:00.507613Z",
+          "cluster_first_seen": "2026-02-18T00:03:12.798146Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.0031095519055971935,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "mongodb activity",
+          "dominant_actor": "mongodb",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 39,
+          "behavior_signature": "mongodb|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C677",
+          "score": 9.691244747229103,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 19,
+          "in_weight": 77.81,
+          "out_weight": 531.6499999999999,
+          "representative_index": 13062,
+          "representative_raw_text": "WiredTiger message",
+          "evidence_neighbors": [
+            {
+              "cluster_id": "C48",
+              "weight": 106.31
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 76.57
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 44.82000000000001
+            },
+            {
+              "cluster_id": "C70",
+              "weight": 42.57000000000001
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 28.21
+            }
+          ],
+          "downstream_neighbors": [
+            {
+              "cluster_id": "C1006",
+              "weight": 24.24
+            },
+            {
+              "cluster_id": "C1053",
+              "weight": 18.450000000000003
+            },
+            {
+              "cluster_id": "C1058",
+              "weight": 8.780000000000001
+            },
+            {
+              "cluster_id": "C1083",
+              "weight": 14.64
+            },
+            {
+              "cluster_id": "C112",
+              "weight": 2.8
+            },
+            {
+              "cluster_id": "C1166",
+              "weight": 4.0
+            },
+            {
+              "cluster_id": "C1167",
+              "weight": 2.0
+            },
+            {
+              "cluster_id": "C1251",
+              "weight": 4.8999999999999995
+            },
+            {
+              "cluster_id": "C128",
+              "weight": 2.8
+            },
+            {
+              "cluster_id": "C1280",
+              "weight": 2.7
+            },
+            {
+              "cluster_id": "C1321",
+              "weight": 2.4499999999999997
+            },
+            {
+              "cluster_id": "C1403",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C1423",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C1455",
+              "weight": 5.49
+            },
+            {
+              "cluster_id": "C1488",
+              "weight": 2.0999999999999996
+            },
+            {
+              "cluster_id": "C154",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C1611",
+              "weight": 2.9399999999999995
+            },
+            {
+              "cluster_id": "C1619",
+              "weight": 3.2899999999999996
+            },
+            {
+              "cluster_id": "C1632",
+              "weight": 4.8999999999999995
+            },
+            {
+              "cluster_id": "C1677",
+              "weight": 2.4499999999999997
+            },
+            {
+              "cluster_id": "C1731",
+              "weight": 2.4499999999999997
+            },
+            {
+              "cluster_id": "C1744",
+              "weight": 23.449999999999996
+            },
+            {
+              "cluster_id": "C1753",
+              "weight": 3.5
+            },
+            {
+              "cluster_id": "C1779",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C180",
+              "weight": 2.4499999999999997
+            },
+            {
+              "cluster_id": "C1822",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1842",
+              "weight": 2.9399999999999995
+            },
+            {
+              "cluster_id": "C1894",
+              "weight": 6.16
+            },
+            {
+              "cluster_id": "C1911",
+              "weight": 11.249999999999998
+            },
+            {
+              "cluster_id": "C305",
+              "weight": 5.470000000000001
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 44.82000000000001
+            },
+            {
+              "cluster_id": "C417",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C420",
+              "weight": 4.99
+            },
+            {
+              "cluster_id": "C48",
+              "weight": 106.31
+            },
+            {
+              "cluster_id": "C49",
+              "weight": 2.7
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 28.21
+            },
+            {
+              "cluster_id": "C521",
+              "weight": 17.78
+            },
+            {
+              "cluster_id": "C524",
+              "weight": 1.9599999999999997
+            },
+            {
+              "cluster_id": "C532",
+              "weight": 4.4
+            },
+            {
+              "cluster_id": "C70",
+              "weight": 42.57000000000001
+            },
+            {
+              "cluster_id": "C788",
+              "weight": 7.349999999999998
+            },
+            {
+              "cluster_id": "C800",
+              "weight": 6.19
+            },
+            {
+              "cluster_id": "C802",
+              "weight": 6.6
+            },
+            {
+              "cluster_id": "C853",
+              "weight": 7.580000000000001
+            },
+            {
+              "cluster_id": "C873",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C941",
+              "weight": 2.4499999999999997
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 76.57
+            }
+          ],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 0,
+            "OTHER": 19
+          },
+          "change_score": -0.05263157894736842,
+          "trigger_proximity": 0.8269195134404399,
+          "incident_start": "2026-02-17T23:59:59.884238Z",
+          "abnormal_start": "2026-02-18T00:00:00.507613Z",
+          "cluster_first_seen": "2026-02-18T00:02:15.449814Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.0015149099027268378,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "mongodb activity",
+          "dominant_actor": "mongodb",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 19,
+          "behavior_signature": "mongodb|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        }
+      ]
+    },
+    {
+      "incident_id": "I2",
+      "seed_cluster": null,
+      "clusters": [
+        "C1091",
+        "C1092",
+        "C1115",
+        "C1116",
+        "C1138",
+        "C1139",
+        "C1140",
+        "C1194",
+        "C1195",
+        "C1217",
+        "C1218",
+        "C1219",
+        "C1284",
+        "C1285",
+        "C1286",
+        "C1287",
+        "C129",
+        "C130",
+        "C1350",
+        "C1351",
+        "C1385",
+        "C1412",
+        "C1413",
+        "C1414",
+        "C1429",
+        "C1506",
+        "C1557",
+        "C1573",
+        "C1589",
+        "C1590",
+        "C1603",
+        "C1604",
+        "C1605",
+        "C1606",
+        "C1618",
+        "C1619",
+        "C1657",
+        "C1658",
+        "C1659",
+        "C1675",
+        "C1676",
+        "C1719",
+        "C1720",
+        "C1728",
+        "C1729",
+        "C1755",
+        "C1756",
+        "C1757",
+        "C1764",
+        "C1765",
+        "C1766",
+        "C1774",
+        "C1775",
+        "C1776",
+        "C1777",
+        "C1778",
+        "C1790",
+        "C1791",
+        "C1799",
+        "C1800",
+        "C1809",
+        "C1810",
+        "C1824",
+        "C1825",
+        "C1832",
+        "C1833",
+        "C1846",
+        "C1874",
+        "C1877",
+        "C1886",
+        "C1897",
+        "C1898",
+        "C1899",
+        "C1900",
+        "C1912",
+        "C1935",
+        "C1950",
+        "C1974",
+        "C1975",
+        "C1987",
+        "C1988",
+        "C1989",
+        "C1990",
+        "C2004",
+        "C2005",
+        "C2006",
+        "C2036",
+        "C2046",
+        "C2047",
+        "C2048",
+        "C2058",
+        "C2076",
+        "C2077",
+        "C2078",
+        "C2079",
+        "C2084",
+        "C2085",
+        "C2086",
+        "C2087",
+        "C2088",
+        "C2089",
+        "C2109",
+        "C2110",
+        "C2120",
+        "C2121",
+        "C2122",
+        "C2123",
+        "C2124",
+        "C2125",
+        "C2128",
+        "C2129",
+        "C2130",
+        "C2131",
+        "C2132",
+        "C2133",
+        "C2134",
+        "C2135",
+        "C2149",
+        "C2150",
+        "C2154",
+        "C2155",
+        "C2156",
+        "C2157",
+        "C2158",
+        "C2159",
+        "C2160",
+        "C2161",
+        "C2163",
+        "C2165",
+        "C2166",
+        "C2167",
+        "C2168",
+        "C2169",
+        "C217",
+        "C2170",
+        "C2171",
+        "C2173",
+        "C2174",
+        "C2175",
+        "C2176",
+        "C2177",
+        "C2178",
+        "C2179",
+        "C2180",
+        "C2181",
+        "C2182",
+        "C2183",
+        "C2184",
+        "C2187",
+        "C2188",
+        "C2189",
+        "C2190",
+        "C2191",
+        "C2192",
+        "C2193",
+        "C2194",
+        "C2195",
+        "C2196",
+        "C2197",
+        "C2198",
+        "C2199",
+        "C2200",
+        "C2201",
+        "C2202",
+        "C2203",
+        "C2204",
+        "C2205",
+        "C2209",
+        "C2210",
+        "C2211",
+        "C2212",
+        "C2213",
+        "C2214",
+        "C2215",
+        "C2216",
+        "C2217",
+        "C2218",
+        "C2219",
+        "C2223",
+        "C2224",
+        "C2225",
+        "C2234",
+        "C2240",
+        "C2241",
+        "C2242",
+        "C2243",
+        "C2244",
+        "C2254",
+        "C2255",
+        "C2261",
+        "C2267",
+        "C2268",
+        "C2269",
+        "C2289",
+        "C2290",
+        "C2300",
+        "C2301",
+        "C2311",
+        "C2315",
+        "C2317",
+        "C2318",
+        "C2326",
+        "C2327",
+        "C2331",
+        "C2332",
+        "C2333",
+        "C2337",
+        "C2338",
+        "C2339",
+        "C2340",
+        "C2345",
+        "C2346",
+        "C2347",
+        "C2350",
+        "C2351",
+        "C2352",
+        "C2353",
+        "C2354",
+        "C2357",
+        "C2358",
+        "C2359",
+        "C2360",
+        "C2364",
+        "C2366",
+        "C2367",
+        "C2368",
+        "C2369",
+        "C2370",
+        "C2372",
+        "C2373",
+        "C2374",
+        "C2375",
+        "C2378",
+        "C2379",
+        "C2381",
+        "C2382",
+        "C2387",
+        "C2389",
+        "C2390",
+        "C2391",
+        "C2395",
+        "C2396",
+        "C2401",
+        "C2402",
+        "C2403",
+        "C2408",
+        "C2409",
+        "C2410",
+        "C2411",
+        "C2412",
+        "C2413",
+        "C2414",
+        "C2415",
+        "C2416",
+        "C2417",
+        "C2418",
+        "C2419",
+        "C2420",
+        "C2421",
+        "C2422",
+        "C2423",
+        "C2424",
+        "C2425",
+        "C2426",
+        "C2427",
+        "C2428",
+        "C2429",
+        "C2430",
+        "C2431",
+        "C2432",
+        "C2433",
+        "C2434",
+        "C2435",
+        "C2436",
+        "C2437",
+        "C2438",
+        "C2439",
+        "C2440",
+        "C2441",
+        "C2442",
+        "C2443",
+        "C2444",
+        "C2445",
+        "C2446",
+        "C2447",
+        "C2448",
+        "C2449",
+        "C2450",
+        "C2451",
+        "C2452",
+        "C2453",
+        "C2454",
+        "C2455",
+        "C2456",
+        "C2457",
+        "C2458",
+        "C2459",
+        "C2460",
+        "C2461",
+        "C2462",
+        "C2463",
+        "C2464",
+        "C2465",
+        "C2466",
+        "C2467",
+        "C2468",
+        "C2469",
+        "C247",
+        "C2470",
+        "C2471",
+        "C2472",
+        "C2473",
+        "C2474",
+        "C2475",
+        "C2476",
+        "C2477",
+        "C2478",
+        "C2479",
+        "C248",
+        "C2480",
+        "C2481",
+        "C2482",
+        "C2483",
+        "C2484",
+        "C2485",
+        "C2486",
+        "C2487",
+        "C2488",
+        "C2489",
+        "C249",
+        "C2490",
+        "C2491",
+        "C2492",
+        "C2493",
+        "C2494",
+        "C2495",
+        "C2496",
+        "C2497",
+        "C2498",
+        "C2499",
+        "C250",
+        "C2500",
+        "C2501",
+        "C2502",
+        "C2503",
+        "C2504",
+        "C2505",
+        "C2506",
+        "C2507",
+        "C2508",
+        "C2509",
+        "C2510",
+        "C2511",
+        "C2512",
+        "C2513",
+        "C2514",
+        "C2515",
+        "C2516",
+        "C2517",
+        "C2518",
+        "C2519",
+        "C2520",
+        "C2521",
+        "C2522",
+        "C2523",
+        "C2524",
+        "C2525",
+        "C2526",
+        "C2527",
+        "C2528",
+        "C2529",
+        "C2530",
+        "C2531",
+        "C2532",
+        "C2533",
+        "C2534",
+        "C2535",
+        "C2536",
+        "C2537",
+        "C2538",
+        "C2539",
+        "C2540",
+        "C2541",
+        "C2542",
+        "C2543",
+        "C2544",
+        "C2545",
+        "C2546",
+        "C2547",
+        "C2548",
+        "C2549",
+        "C2550",
+        "C2551",
+        "C2552",
+        "C2553",
+        "C2554",
+        "C271",
+        "C272",
+        "C273",
+        "C274",
+        "C357",
+        "C486",
+        "C509",
+        "C510",
+        "C536",
+        "C537",
+        "C538",
+        "C576",
+        "C577",
+        "C578",
+        "C579",
+        "C580",
+        "C609",
+        "C610",
+        "C611",
+        "C612",
+        "C766",
+        "C835",
+        "C836",
+        "C884"
+      ],
+      "start_time": "2026-02-18T00:00:00.227247+00:00",
+      "end_time": "2026-02-18T00:12:52.289768+00:00",
+      "root_cause_candidates": [
+        {
+          "cluster_id": "C1619",
+          "score": 15.351667966435791,
+          "cluster_signature": "milvus:unknown",
+          "cluster_type": "candidate",
+          "size": 61,
+          "in_weight": 0.0,
+          "out_weight": 109.50000000000001,
+          "representative_index": 41652,
+          "representative_raw_text": "[2026/02/18 00:10:36.365 +00:00] [INFO] [resolver/resolver_with_discoverer.go:133] [\"new grpc resolver registered\"] [component=grpc-resolver] [scheme=milvus-session] [role=milvus/meta/session/rootcoord] [exclusive=true] [id=21]",
+          "evidence_neighbors": [
+            {
+              "cluster_id": "C48",
+              "weight": 20.71
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 15.279999999999998
+            },
+            {
+              "cluster_id": "C70",
+              "weight": 7.98
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 7.38
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 7.090000000000001
+            }
+          ],
+          "downstream_neighbors": [
+            {
+              "cluster_id": "C1006",
+              "weight": 3.4899999999999998
+            },
+            {
+              "cluster_id": "C1053",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1080",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1083",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C1166",
+              "weight": 2.0
+            },
+            {
+              "cluster_id": "C1321",
+              "weight": 4.129999999999999
+            },
+            {
+              "cluster_id": "C1367",
+              "weight": 3.5
+            },
+            {
+              "cluster_id": "C1444",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C1455",
+              "weight": 2.7
+            },
+            {
+              "cluster_id": "C1677",
+              "weight": 4.129999999999999
+            },
+            {
+              "cluster_id": "C1731",
+              "weight": 4.129999999999999
+            },
+            {
+              "cluster_id": "C1744",
+              "weight": 2.0
+            },
+            {
+              "cluster_id": "C1753",
+              "weight": 1.4
+            },
+            {
+              "cluster_id": "C179",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C1842",
+              "weight": 5.0
+            },
+            {
+              "cluster_id": "C2012",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C305",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C381",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 7.090000000000001
+            },
+            {
+              "cluster_id": "C427",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C48",
+              "weight": 20.71
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 7.38
+            },
+            {
+              "cluster_id": "C521",
+              "weight": 1.89
+            },
+            {
+              "cluster_id": "C590",
+              "weight": 4.5
+            },
+            {
+              "cluster_id": "C677",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C70",
+              "weight": 7.98
+            },
+            {
+              "cluster_id": "C802",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C941",
+              "weight": 4.129999999999999
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 15.279999999999998
+            }
+          ],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 61,
+            "OTHER": 0
+          },
+          "change_score": -0.11475409836065574,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-18T00:00:00.227247Z",
+          "abnormal_start": "2026-02-18T00:00:00.227342Z",
+          "cluster_first_seen": "2026-02-18T00:00:00.227247Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.008834178131788559,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "proxy activity",
+          "dominant_actor": "proxy",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 61,
+          "behavior_signature": "proxy|||",
+          "semantic_label": "milvus operational activity",
+          "component": "milvus",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C1351",
+          "score": 12.087372191160929,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 4,
+          "in_weight": 0.0,
+          "out_weight": 10.949999999999998,
+          "representative_index": 1557,
+          "representative_raw_text": "SIGNO: 11; SIGNAME: Segmentation fault; SI_CODE: 1; SI_ADDR: 0xa8",
+          "evidence_neighbors": [
+            {
+              "cluster_id": "C48",
+              "weight": 2.19
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 1.19
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 1.19
+            },
+            {
+              "cluster_id": "C2077",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C2109",
+              "weight": 1.0
+            }
+          ],
+          "downstream_neighbors": [
+            {
+              "cluster_id": "C1125",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C1340",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C1744",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C2077",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C2109",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C2387",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C2487",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 1.19
+            },
+            {
+              "cluster_id": "C48",
+              "weight": 2.19
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 1.19
+            }
+          ],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 0,
+            "OTHER": 4
+          },
+          "change_score": 0.0,
+          "trigger_proximity": 0.9592710173791741,
+          "incident_start": "2026-02-18T00:00:00.227247Z",
+          "abnormal_start": "2026-02-18T00:00:00.227342Z",
+          "cluster_first_seen": "2026-02-18T00:00:31.672663Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.0005792903692976104,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "proxy activity",
+          "dominant_actor": "proxy",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 4,
+          "behavior_signature": "proxy|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C2149",
+          "score": 12.087372186498095,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 4,
+          "in_weight": 0.0,
+          "out_weight": 43.79999999999999,
+          "representative_index": 1558,
+          "representative_raw_text": "BACKTRACE:",
+          "evidence_neighbors": [
+            {
+              "cluster_id": "C48",
+              "weight": 8.76
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 4.76
+            },
+            {
+              "cluster_id": "C2077",
+              "weight": 4.0
+            },
+            {
+              "cluster_id": "C2109",
+              "weight": 4.0
+            },
+            {
+              "cluster_id": "C2387",
+              "weight": 4.0
+            }
+          ],
+          "downstream_neighbors": [
+            {
+              "cluster_id": "C1125",
+              "weight": 2.8
+            },
+            {
+              "cluster_id": "C1340",
+              "weight": 1.9599999999999997
+            },
+            {
+              "cluster_id": "C1744",
+              "weight": 1.9599999999999997
+            },
+            {
+              "cluster_id": "C2077",
+              "weight": 4.0
+            },
+            {
+              "cluster_id": "C2109",
+              "weight": 4.0
+            },
+            {
+              "cluster_id": "C2387",
+              "weight": 4.0
+            },
+            {
+              "cluster_id": "C2487",
+              "weight": 4.0
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 3.29
+            },
+            {
+              "cluster_id": "C48",
+              "weight": 8.76
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 2.8
+            },
+            {
+              "cluster_id": "C590",
+              "weight": 1.4699999999999998
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 4.76
+            }
+          ],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 0,
+            "OTHER": 4
+          },
+          "change_score": 0.0,
+          "trigger_proximity": 0.9592710147887104,
+          "incident_start": "2026-02-18T00:00:00.227247Z",
+          "abnormal_start": "2026-02-18T00:00:00.227342Z",
+          "cluster_first_seen": "2026-02-18T00:00:31.672665Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.0005792903692976104,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "proxy activity",
+          "dominant_actor": "proxy",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 4,
+          "behavior_signature": "proxy|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C2077",
+          "score": 11.98420747453042,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 4,
+          "in_weight": 24.110000000000003,
+          "out_weight": 336.78,
+          "representative_index": 6508,
+          "representative_raw_text": "goroutine 289 gp=0xc000103c00 m=3 mp=0xc0000c9008 [running]:",
+          "evidence_neighbors": [
+            {
+              "cluster_id": "C48",
+              "weight": 60.3
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 53.3
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 21.310000000000002
+            },
+            {
+              "cluster_id": "C1006",
+              "weight": 18.41
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 15.499999999999996
+            }
+          ],
+          "downstream_neighbors": [
+            {
+              "cluster_id": "C1005",
+              "weight": 1.4
+            },
+            {
+              "cluster_id": "C1006",
+              "weight": 18.41
+            },
+            {
+              "cluster_id": "C1018",
+              "weight": 2.0999999999999996
+            },
+            {
+              "cluster_id": "C1083",
+              "weight": 1.9599999999999997
+            },
+            {
+              "cluster_id": "C112",
+              "weight": 1.4
+            },
+            {
+              "cluster_id": "C1125",
+              "weight": 6.0
+            },
+            {
+              "cluster_id": "C1166",
+              "weight": 5.529999999999999
+            },
+            {
+              "cluster_id": "C1167",
+              "weight": 9.0
+            },
+            {
+              "cluster_id": "C1223",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C1321",
+              "weight": 4.829999999999999
+            },
+            {
+              "cluster_id": "C1340",
+              "weight": 4.2
+            },
+            {
+              "cluster_id": "C1624",
+              "weight": 1.4
+            },
+            {
+              "cluster_id": "C1673",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C1677",
+              "weight": 6.44
+            },
+            {
+              "cluster_id": "C1731",
+              "weight": 5.81
+            },
+            {
+              "cluster_id": "C1744",
+              "weight": 11.499999999999998
+            },
+            {
+              "cluster_id": "C2071",
+              "weight": 10.799999999999999
+            },
+            {
+              "cluster_id": "C2109",
+              "weight": 3.919999999999999
+            },
+            {
+              "cluster_id": "C2251",
+              "weight": 2.0999999999999996
+            },
+            {
+              "cluster_id": "C2284",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C2312",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C2387",
+              "weight": 3.919999999999999
+            },
+            {
+              "cluster_id": "C2487",
+              "weight": 4.409999999999999
+            },
+            {
+              "cluster_id": "C305",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C356",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C375",
+              "weight": 2.8
+            },
+            {
+              "cluster_id": "C383",
+              "weight": 7.000000000000001
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 21.310000000000002
+            },
+            {
+              "cluster_id": "C420",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C427",
+              "weight": 2.8
+            },
+            {
+              "cluster_id": "C455",
+              "weight": 4.7
+            },
+            {
+              "cluster_id": "C48",
+              "weight": 60.3
+            },
+            {
+              "cluster_id": "C482",
+              "weight": 1.4
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 15.499999999999996
+            },
+            {
+              "cluster_id": "C521",
+              "weight": 10.0
+            },
+            {
+              "cluster_id": "C524",
+              "weight": 3.0
+            },
+            {
+              "cluster_id": "C590",
+              "weight": 9.5
+            },
+            {
+              "cluster_id": "C677",
+              "weight": 2.9399999999999995
+            },
+            {
+              "cluster_id": "C70",
+              "weight": 6.0
+            },
+            {
+              "cluster_id": "C76",
+              "weight": 1.4
+            },
+            {
+              "cluster_id": "C788",
+              "weight": 8.5
+            },
+            {
+              "cluster_id": "C815",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C853",
+              "weight": 10.7
+            },
+            {
+              "cluster_id": "C941",
+              "weight": 5.319999999999999
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 53.3
+            }
+          ],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 0,
+            "OTHER": 4
+          },
+          "change_score": 0.0,
+          "trigger_proximity": 0.9019572859177812,
+          "incident_start": "2026-02-18T00:00:00.227247Z",
+          "abnormal_start": "2026-02-18T00:00:00.227342Z",
+          "cluster_first_seen": "2026-02-18T00:01:15.922447Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.0005792903692976104,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "proxy activity",
+          "dominant_actor": "proxy",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 4,
+          "behavior_signature": "proxy|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C2109",
+          "score": 11.98420699892127,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 4,
+          "in_weight": 16.759999999999994,
+          "out_weight": 284.48,
+          "representative_index": 6560,
+          "representative_raw_text": "goroutine 3 gp=0xc000003340 m=nil [GC sweep wait]:",
+          "evidence_neighbors": [
+            {
+              "cluster_id": "C48",
+              "weight": 51.800000000000004
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 42.35
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 15.499999999999996
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 13.86
+            },
+            {
+              "cluster_id": "C1744",
+              "weight": 11.499999999999998
+            }
+          ],
+          "downstream_neighbors": [
+            {
+              "cluster_id": "C1005",
+              "weight": 1.4
+            },
+            {
+              "cluster_id": "C1006",
+              "weight": 7.459999999999999
+            },
+            {
+              "cluster_id": "C1018",
+              "weight": 2.0999999999999996
+            },
+            {
+              "cluster_id": "C1083",
+              "weight": 1.9599999999999997
+            },
+            {
+              "cluster_id": "C112",
+              "weight": 1.4
+            },
+            {
+              "cluster_id": "C1125",
+              "weight": 6.0
+            },
+            {
+              "cluster_id": "C1166",
+              "weight": 3.0799999999999996
+            },
+            {
+              "cluster_id": "C1167",
+              "weight": 9.0
+            },
+            {
+              "cluster_id": "C1223",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C1321",
+              "weight": 4.829999999999999
+            },
+            {
+              "cluster_id": "C1340",
+              "weight": 4.2
+            },
+            {
+              "cluster_id": "C1624",
+              "weight": 1.4
+            },
+            {
+              "cluster_id": "C1673",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C1677",
+              "weight": 6.44
+            },
+            {
+              "cluster_id": "C1731",
+              "weight": 5.81
+            },
+            {
+              "cluster_id": "C1744",
+              "weight": 11.499999999999998
+            },
+            {
+              "cluster_id": "C2071",
+              "weight": 10.799999999999999
+            },
+            {
+              "cluster_id": "C2077",
+              "weight": 6.37
+            },
+            {
+              "cluster_id": "C2251",
+              "weight": 2.0999999999999996
+            },
+            {
+              "cluster_id": "C2284",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C2312",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C2387",
+              "weight": 3.919999999999999
+            },
+            {
+              "cluster_id": "C2487",
+              "weight": 4.409999999999999
+            },
+            {
+              "cluster_id": "C305",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C356",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C375",
+              "weight": 2.8
+            },
+            {
+              "cluster_id": "C383",
+              "weight": 3.5
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 13.86
+            },
+            {
+              "cluster_id": "C420",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C427",
+              "weight": 2.8
+            },
+            {
+              "cluster_id": "C455",
+              "weight": 4.7
+            },
+            {
+              "cluster_id": "C48",
+              "weight": 51.800000000000004
+            },
+            {
+              "cluster_id": "C482",
+              "weight": 1.4
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 15.499999999999996
+            },
+            {
+              "cluster_id": "C521",
+              "weight": 5.0
+            },
+            {
+              "cluster_id": "C524",
+              "weight": 3.0
+            },
+            {
+              "cluster_id": "C590",
+              "weight": 9.5
+            },
+            {
+              "cluster_id": "C677",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C70",
+              "weight": 6.0
+            },
+            {
+              "cluster_id": "C76",
+              "weight": 1.4
+            },
+            {
+              "cluster_id": "C788",
+              "weight": 5.0
+            },
+            {
+              "cluster_id": "C815",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C853",
+              "weight": 10.7
+            },
+            {
+              "cluster_id": "C941",
+              "weight": 5.319999999999999
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 42.35
+            }
+          ],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 0,
+            "OTHER": 4
+          },
+          "change_score": 0.0,
+          "trigger_proximity": 0.9019570216904752,
+          "incident_start": "2026-02-18T00:00:00.227247Z",
+          "abnormal_start": "2026-02-18T00:00:00.227342Z",
+          "cluster_first_seen": "2026-02-18T00:01:15.922651Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.0005792903692976104,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "proxy activity",
+          "dominant_actor": "proxy",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 4,
+          "behavior_signature": "proxy|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        }
+      ]
+    },
+    {
+      "incident_id": "I3",
+      "seed_cluster": null,
+      "clusters": [
+        "C1"
+      ],
+      "start_time": "2026-02-18T00:00:00.029922+00:00",
+      "end_time": "2026-02-18T00:12:52.091208+00:00",
+      "root_cause_candidates": [
+        {
+          "cluster_id": "C1",
+          "score": 7.17391487451511,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 42,
+          "in_weight": 0.0,
+          "out_weight": 0.0,
+          "representative_index": 47416,
+          "representative_raw_text": "2026-02-18T00:11:30.802Z [ERROR] storage.raft: failed to appendEntries to: peer=\"{Voter cc796202-190e-52be-242d-2222d9293346 vault-2.vault-internal:8201}\" error=\"msgpack decode error [pos 3536]: read tcp 10.42.173.159:43516->10.42.76.232:8201: i/o timeout\"",
+          "evidence_neighbors": [],
+          "downstream_neighbors": [],
+          "severity_counts": {
+            "ERROR": 39,
+            "WARN": 3,
+            "INFO": 0,
+            "OTHER": 0
+          },
+          "change_score": 0.0,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-18T00:00:00.029922Z",
+          "abnormal_start": "2026-02-18T00:00:00.029922Z",
+          "cluster_first_seen": "2026-02-18T00:00:00.029922Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 1.0,
+          "success_guard": 1.0,
+          "background_penalty": 0.3,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "server activity",
+          "dominant_actor": "server",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 42,
+          "behavior_signature": "server|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        }
+      ]
+    },
+    {
+      "incident_id": "I4",
+      "seed_cluster": null,
+      "clusters": [
+        "C100",
+        "C113",
+        "C133",
+        "C146",
+        "C147",
+        "C2",
+        "C3",
+        "C62",
+        "C63",
+        "C64",
+        "C65",
+        "C66",
+        "C87",
+        "C88",
+        "C89"
+      ],
+      "start_time": "2026-02-18T00:00:00.235139+00:00",
+      "end_time": "2026-02-18T00:12:59.734973+00:00",
+      "root_cause_candidates": [
+        {
+          "cluster_id": "C146",
+          "score": 11.02513784393137,
+          "cluster_signature": "etcd:unknown",
+          "cluster_type": "candidate",
+          "size": 5,
+          "in_weight": 0.0,
+          "out_weight": 10.950000000000001,
+          "representative_index": 2268,
+          "representative_raw_text": "trace[1456590038] linearizableReadLoop",
+          "evidence_neighbors": [
+            {
+              "cluster_id": "C48",
+              "weight": 2.19
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 1.49
+            },
+            {
+              "cluster_id": "C1319",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C590",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C802",
+              "weight": 1.0
+            }
+          ],
+          "downstream_neighbors": [
+            {
+              "cluster_id": "C1167",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C1319",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C2077",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C2109",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C2387",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C2487",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C48",
+              "weight": 2.19
+            },
+            {
+              "cluster_id": "C521",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C590",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C802",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 1.49
+            }
+          ],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 5,
+            "OTHER": 0
+          },
+          "change_score": -0.2,
+          "trigger_proximity": 0.9358074911405305,
+          "incident_start": "2026-02-18T00:00:00.235139Z",
+          "abnormal_start": "2026-02-18T00:00:00.258007Z",
+          "cluster_first_seen": "2026-02-18T00:00:50.296057Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.0018011527377521613,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "etcd activity",
+          "dominant_actor": "etcd",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 5,
+          "behavior_signature": "etcd|||",
+          "semantic_label": "etcd operational activity",
+          "component": "etcd",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C66",
+          "score": 7.7055809512343005,
+          "cluster_signature": "etcd:unknown",
+          "cluster_type": "candidate",
+          "size": 195,
+          "in_weight": 0.0,
+          "out_weight": 0.0,
+          "representative_index": 75,
+          "representative_raw_text": "failed to reach the peer URL",
+          "evidence_neighbors": [],
+          "downstream_neighbors": [],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 195,
+            "INFO": 0,
+            "OTHER": 0
+          },
+          "change_score": 0.005128205128205128,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-18T00:00:00.235139Z",
+          "abnormal_start": "2026-02-18T00:00:00.258007Z",
+          "cluster_first_seen": "2026-02-18T00:00:00.258007Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.07024495677233429,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "etcd activity",
+          "dominant_actor": "etcd",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 195,
+          "behavior_signature": "etcd|||",
+          "semantic_label": "etcd operational activity",
+          "component": "etcd",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C65",
+          "score": 7.705580780355495,
+          "cluster_signature": "etcd:unknown",
+          "cluster_type": "candidate",
+          "size": 195,
+          "in_weight": 0.0,
+          "out_weight": 0.0,
+          "representative_index": 76,
+          "representative_raw_text": "failed to get version",
+          "evidence_neighbors": [],
+          "downstream_neighbors": [],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 195,
+            "INFO": 0,
+            "OTHER": 0
+          },
+          "change_score": 0.005128205128205128,
+          "trigger_proximity": 0.9999999050673306,
+          "incident_start": "2026-02-18T00:00:00.235139Z",
+          "abnormal_start": "2026-02-18T00:00:00.258007Z",
+          "cluster_first_seen": "2026-02-18T00:00:00.258081Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.07024495677233429,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "etcd activity",
+          "dominant_actor": "etcd",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 195,
+          "behavior_signature": "etcd|||",
+          "semantic_label": "etcd operational activity",
+          "component": "etcd",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C2",
+          "score": 7.577544245211762,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 108,
+          "in_weight": 0.0,
+          "out_weight": 0.0,
+          "representative_index": 180,
+          "representative_raw_text": "dropped internal Raft message since sending buffer is full (overloaded network)",
+          "evidence_neighbors": [],
+          "downstream_neighbors": [],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 108,
+            "INFO": 0,
+            "OTHER": 0
+          },
+          "change_score": -0.037037037037037035,
+          "trigger_proximity": 0.9968223508306738,
+          "incident_start": "2026-02-18T00:00:00.235139Z",
+          "abnormal_start": "2026-02-18T00:00:00.258007Z",
+          "cluster_first_seen": "2026-02-18T00:00:02.734984Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.03890489913544669,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "etcd activity",
+          "dominant_actor": "etcd",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 108,
+          "behavior_signature": "etcd|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C88",
+          "score": 6.519987123819616,
+          "cluster_signature": "etcd:unknown",
+          "cluster_type": "candidate",
+          "size": 6,
+          "in_weight": 0.0,
+          "out_weight": 0.0,
+          "representative_index": 21776,
+          "representative_raw_text": "storing new hash",
+          "evidence_neighbors": [],
+          "downstream_neighbors": [],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 6,
+            "OTHER": 0
+          },
+          "change_score": -0.3333333333333333,
+          "trigger_proximity": 0.9976511605004396,
+          "incident_start": "2026-02-18T00:00:00.235139Z",
+          "abnormal_start": "2026-02-18T00:00:00.258007Z",
+          "cluster_first_seen": "2026-02-18T00:00:02.088927Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.002161383285302594,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "etcd activity",
+          "dominant_actor": "etcd",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 6,
+          "behavior_signature": "etcd|||",
+          "semantic_label": "etcd operational activity",
+          "component": "etcd",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        }
+      ]
+    },
+    {
+      "incident_id": "I5",
+      "seed_cluster": null,
+      "clusters": [
+        "C929"
+      ],
+      "start_time": "2026-02-18T00:00:06.996853+00:00",
+      "end_time": "2026-02-18T00:12:45.940965+00:00",
+      "root_cause_candidates": [
+        {
+          "cluster_id": "C929",
+          "score": 7.216518636744404,
+          "cluster_signature": "mongodb:unknown",
+          "cluster_type": "candidate",
+          "size": 156,
+          "in_weight": 0.0,
+          "out_weight": 0.0,
+          "representative_index": 32969,
+          "representative_raw_text": "time=\"2026-02-18T00:08:40Z\" level=error msg=\"Cannot connect to MongoDB: cannot connect to MongoDB: server selection error: server selection timeout, current topology: { Type: Single, Servers: [{ Addr: localhost:27017, Type: Unknown, Last error: dial tcp [::1]:27017: connect: connection refused }, ] }\"",
+          "evidence_neighbors": [],
+          "downstream_neighbors": [],
+          "severity_counts": {
+            "ERROR": 156,
+            "WARN": 0,
+            "INFO": 0,
+            "OTHER": 0
+          },
+          "change_score": 0.0,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-18T00:00:06.996853Z",
+          "abnormal_start": "2026-02-18T00:00:06.996853Z",
+          "cluster_first_seen": "2026-02-18T00:00:06.996853Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 1.0,
+          "success_guard": 1.0,
+          "background_penalty": 0.3,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "metrics activity",
+          "dominant_actor": "metrics",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 156,
+          "behavior_signature": "metrics|||",
+          "semantic_label": "mongodb operational activity",
+          "component": "mongodb",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        }
+      ]
+    },
+    {
+      "incident_id": "I6",
+      "seed_cluster": null,
+      "clusters": [
+        "C1013",
+        "C1049",
+        "C1050",
+        "C358",
+        "C933",
+        "C975",
+        "C976",
+        "C980"
+      ],
+      "start_time": "2026-02-17T23:59:41.845137+00:00",
+      "end_time": "2026-02-18T00:10:14.093645+00:00",
+      "root_cause_candidates": [
+        {
+          "cluster_id": "C1013",
+          "score": 16.785684359878413,
+          "cluster_signature": "mongodb:unknown",
+          "cluster_type": "candidate",
+          "size": 8,
+          "in_weight": 3.0,
+          "out_weight": 10.949999999999998,
+          "representative_index": 40752,
+          "representative_raw_text": "2026/02/18 00:10:14 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }",
+          "evidence_neighbors": [
+            {
+              "cluster_id": "C48",
+              "weight": 2.19
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 1.19
+            },
+            {
+              "cluster_id": "C1080",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1166",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1744",
+              "weight": 1.0
+            }
+          ],
+          "downstream_neighbors": [
+            {
+              "cluster_id": "C1080",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1166",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1444",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C1744",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C179",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C383",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C48",
+              "weight": 2.19
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C521",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C527",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C802",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 1.19
+            }
+          ],
+          "severity_counts": {
+            "ERROR": 8,
+            "WARN": 0,
+            "INFO": 0,
+            "OTHER": 0
+          },
+          "change_score": 0.25,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-17T23:59:41.845137Z",
+          "abnormal_start": "2026-02-17T23:59:47.096923Z",
+          "cluster_first_seen": "2026-02-17T23:59:47.096923Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.125,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "utility activity",
+          "dominant_actor": "utility",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 8,
+          "behavior_signature": "utility|||",
+          "semantic_label": "mongodb operational activity",
+          "component": "mongodb",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C358",
+          "score": 13.648496234560756,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 8,
+          "in_weight": 0.0,
+          "out_weight": 28.849999999999994,
+          "representative_index": 495,
+          "representative_raw_text": "[job.JobService] Created gRPC connection to job-tracker:9090 with load balancing, keepalive (1m30s), and retry (max 10 attempts)",
+          "evidence_neighbors": [
+            {
+              "cluster_id": "C48",
+              "weight": 3.57
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 2.4699999999999998
+            },
+            {
+              "cluster_id": "C1166",
+              "weight": 2.4
+            },
+            {
+              "cluster_id": "C1080",
+              "weight": 2.0999999999999996
+            },
+            {
+              "cluster_id": "C1744",
+              "weight": 2.0999999999999996
+            }
+          ],
+          "downstream_neighbors": [
+            {
+              "cluster_id": "C0",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1013",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1080",
+              "weight": 2.0999999999999996
+            },
+            {
+              "cluster_id": "C112",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1166",
+              "weight": 2.4
+            },
+            {
+              "cluster_id": "C1619",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1733",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1744",
+              "weight": 2.0999999999999996
+            },
+            {
+              "cluster_id": "C179",
+              "weight": 0.9799999999999999
+            },
+            {
+              "cluster_id": "C383",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 0.9799999999999999
+            },
+            {
+              "cluster_id": "C48",
+              "weight": 3.57
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 1.4699999999999998
+            },
+            {
+              "cluster_id": "C524",
+              "weight": 2.0
+            },
+            {
+              "cluster_id": "C527",
+              "weight": 1.49
+            },
+            {
+              "cluster_id": "C751",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C788",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C802",
+              "weight": 2.0999999999999996
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 2.4699999999999998
+            }
+          ],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 8,
+            "OTHER": 0
+          },
+          "change_score": 0.0,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-17T23:59:41.845137Z",
+          "abnormal_start": "2026-02-17T23:59:47.096923Z",
+          "cluster_first_seen": "2026-02-17T23:59:42.096246Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.125,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "utility activity",
+          "dominant_actor": "utility",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 8,
+          "behavior_signature": "utility|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C933",
+          "score": 13.648496234560756,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 8,
+          "in_weight": 0.0,
+          "out_weight": 28.849999999999994,
+          "representative_index": 492,
+          "representative_raw_text": "Waiting for HTTP server to be ready...",
+          "evidence_neighbors": [
+            {
+              "cluster_id": "C48",
+              "weight": 3.57
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 2.4699999999999998
+            },
+            {
+              "cluster_id": "C1166",
+              "weight": 2.4
+            },
+            {
+              "cluster_id": "C1080",
+              "weight": 2.0999999999999996
+            },
+            {
+              "cluster_id": "C1744",
+              "weight": 2.0999999999999996
+            }
+          ],
+          "downstream_neighbors": [
+            {
+              "cluster_id": "C0",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1013",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1080",
+              "weight": 2.0999999999999996
+            },
+            {
+              "cluster_id": "C112",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1166",
+              "weight": 2.4
+            },
+            {
+              "cluster_id": "C1619",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1733",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1744",
+              "weight": 2.0999999999999996
+            },
+            {
+              "cluster_id": "C179",
+              "weight": 0.9799999999999999
+            },
+            {
+              "cluster_id": "C383",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 0.9799999999999999
+            },
+            {
+              "cluster_id": "C48",
+              "weight": 3.57
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 1.4699999999999998
+            },
+            {
+              "cluster_id": "C524",
+              "weight": 2.0
+            },
+            {
+              "cluster_id": "C527",
+              "weight": 1.49
+            },
+            {
+              "cluster_id": "C751",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C788",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C802",
+              "weight": 2.0999999999999996
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 2.4699999999999998
+            }
+          ],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 8,
+            "OTHER": 0
+          },
+          "change_score": 0.0,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-17T23:59:41.845137Z",
+          "abnormal_start": "2026-02-17T23:59:47.096923Z",
+          "cluster_first_seen": "2026-02-17T23:59:41.845334Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.125,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "utility activity",
+          "dominant_actor": "utility",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 8,
+          "behavior_signature": "utility|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C975",
+          "score": 13.648496234560756,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 8,
+          "in_weight": 0.0,
+          "out_weight": 28.849999999999994,
+          "representative_index": 491,
+          "representative_raw_text": "HTTP server configured at ':8080' (probes only)",
+          "evidence_neighbors": [
+            {
+              "cluster_id": "C48",
+              "weight": 3.57
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 2.4699999999999998
+            },
+            {
+              "cluster_id": "C1166",
+              "weight": 2.4
+            },
+            {
+              "cluster_id": "C1080",
+              "weight": 2.0999999999999996
+            },
+            {
+              "cluster_id": "C1744",
+              "weight": 2.0999999999999996
+            }
+          ],
+          "downstream_neighbors": [
+            {
+              "cluster_id": "C0",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1013",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1080",
+              "weight": 2.0999999999999996
+            },
+            {
+              "cluster_id": "C112",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1166",
+              "weight": 2.4
+            },
+            {
+              "cluster_id": "C1619",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1733",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1744",
+              "weight": 2.0999999999999996
+            },
+            {
+              "cluster_id": "C179",
+              "weight": 0.9799999999999999
+            },
+            {
+              "cluster_id": "C383",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 0.9799999999999999
+            },
+            {
+              "cluster_id": "C48",
+              "weight": 3.57
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 1.4699999999999998
+            },
+            {
+              "cluster_id": "C524",
+              "weight": 2.0
+            },
+            {
+              "cluster_id": "C527",
+              "weight": 1.49
+            },
+            {
+              "cluster_id": "C751",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C788",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C802",
+              "weight": 2.0999999999999996
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 2.4699999999999998
+            }
+          ],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 8,
+            "OTHER": 0
+          },
+          "change_score": 0.0,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-17T23:59:41.845137Z",
+          "abnormal_start": "2026-02-17T23:59:47.096923Z",
+          "cluster_first_seen": "2026-02-17T23:59:41.845322Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.125,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "utility activity",
+          "dominant_actor": "utility",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 8,
+          "behavior_signature": "utility|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C976",
+          "score": 13.635684359878413,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 8,
+          "in_weight": 0.0,
+          "out_weight": 10.95,
+          "representative_index": 493,
+          "representative_raw_text": "HTTP server starting at ':8080'",
+          "evidence_neighbors": [
+            {
+              "cluster_id": "C99",
+              "weight": 1.49
+            },
+            {
+              "cluster_id": "C48",
+              "weight": 1.19
+            },
+            {
+              "cluster_id": "C112",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1166",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C524",
+              "weight": 1.0
+            }
+          ],
+          "downstream_neighbors": [
+            {
+              "cluster_id": "C1080",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C112",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1166",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1744",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C179",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C48",
+              "weight": 1.19
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C524",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C527",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C788",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C802",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 1.49
+            }
+          ],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 8,
+            "OTHER": 0
+          },
+          "change_score": 0.0,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-17T23:59:41.845137Z",
+          "abnormal_start": "2026-02-17T23:59:47.096923Z",
+          "cluster_first_seen": "2026-02-17T23:59:41.845446Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.125,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "utility activity",
+          "dominant_actor": "utility",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 8,
+          "behavior_signature": "utility|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        }
+      ]
+    },
+    {
+      "incident_id": "I7",
+      "seed_cluster": null,
+      "clusters": [
+        "C1015",
+        "C1058",
+        "C1088",
+        "C1089",
+        "C1109",
+        "C1110",
+        "C394",
+        "C807"
+      ],
+      "start_time": "2026-02-17T23:59:40.512419+00:00",
+      "end_time": "2026-02-18T00:10:03.763798+00:00",
+      "root_cause_candidates": [
+        {
+          "cluster_id": "C1015",
+          "score": 16.316353377417897,
+          "cluster_signature": "mongodb:unknown",
+          "cluster_type": "candidate",
+          "size": 7,
+          "in_weight": 0.0,
+          "out_weight": 28.849999999999994,
+          "representative_index": 23535,
+          "representative_raw_text": "2026/02/18 00:04:52 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }",
+          "evidence_neighbors": [
+            {
+              "cluster_id": "C48",
+              "weight": 3.57
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 2.4699999999999998
+            },
+            {
+              "cluster_id": "C1166",
+              "weight": 2.4
+            },
+            {
+              "cluster_id": "C1080",
+              "weight": 2.0999999999999996
+            },
+            {
+              "cluster_id": "C1744",
+              "weight": 2.0999999999999996
+            }
+          ],
+          "downstream_neighbors": [
+            {
+              "cluster_id": "C0",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1013",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1080",
+              "weight": 2.0999999999999996
+            },
+            {
+              "cluster_id": "C112",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1166",
+              "weight": 2.4
+            },
+            {
+              "cluster_id": "C1619",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1733",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1744",
+              "weight": 2.0999999999999996
+            },
+            {
+              "cluster_id": "C179",
+              "weight": 0.9799999999999999
+            },
+            {
+              "cluster_id": "C383",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 0.9799999999999999
+            },
+            {
+              "cluster_id": "C48",
+              "weight": 3.57
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 1.4699999999999998
+            },
+            {
+              "cluster_id": "C524",
+              "weight": 2.0
+            },
+            {
+              "cluster_id": "C527",
+              "weight": 1.49
+            },
+            {
+              "cluster_id": "C751",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C788",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C802",
+              "weight": 2.0999999999999996
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 2.4699999999999998
+            }
+          ],
+          "severity_counts": {
+            "ERROR": 7,
+            "WARN": 0,
+            "INFO": 0,
+            "OTHER": 0
+          },
+          "change_score": 0.14285714285714285,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-17T23:59:40.512419Z",
+          "abnormal_start": "2026-02-17T23:59:45.765046Z",
+          "cluster_first_seen": "2026-02-17T23:59:45.765046Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.125,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "policy-engine-chart activity",
+          "dominant_actor": "policy-engine-chart",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 7,
+          "behavior_signature": "policy-engine-chart|||",
+          "semantic_label": "mongodb operational activity",
+          "component": "mongodb",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C1089",
+          "score": 14.002067663132184,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 7,
+          "in_weight": 0.0,
+          "out_weight": 17.900000000000002,
+          "representative_index": 506,
+          "representative_raw_text": "HTTP server starting at ':8080'",
+          "evidence_neighbors": [
+            {
+              "cluster_id": "C48",
+              "weight": 2.38
+            },
+            {
+              "cluster_id": "C1080",
+              "weight": 1.4
+            },
+            {
+              "cluster_id": "C1166",
+              "weight": 1.4
+            },
+            {
+              "cluster_id": "C1744",
+              "weight": 1.4
+            },
+            {
+              "cluster_id": "C802",
+              "weight": 1.4
+            }
+          ],
+          "downstream_neighbors": [
+            {
+              "cluster_id": "C0",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1013",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1080",
+              "weight": 1.4
+            },
+            {
+              "cluster_id": "C1166",
+              "weight": 1.4
+            },
+            {
+              "cluster_id": "C1619",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1733",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1744",
+              "weight": 1.4
+            },
+            {
+              "cluster_id": "C179",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C383",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C48",
+              "weight": 2.38
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 0.9799999999999999
+            },
+            {
+              "cluster_id": "C524",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C527",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C751",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C802",
+              "weight": 1.4
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 0.9799999999999999
+            }
+          ],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 7,
+            "OTHER": 0
+          },
+          "change_score": 0.14285714285714285,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-17T23:59:40.512419Z",
+          "abnormal_start": "2026-02-17T23:59:45.765046Z",
+          "cluster_first_seen": "2026-02-17T23:59:40.512753Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.125,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "policy-engine-chart activity",
+          "dominant_actor": "policy-engine-chart",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 7,
+          "behavior_signature": "policy-engine-chart|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C1058",
+          "score": 13.989255788449842,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 7,
+          "in_weight": 0.0,
+          "out_weight": 359.88,
+          "representative_index": 507,
+          "representative_raw_text": "HTTP server is ready and accepting connections",
+          "evidence_neighbors": [
+            {
+              "cluster_id": "C99",
+              "weight": 63.970000000000006
+            },
+            {
+              "cluster_id": "C48",
+              "weight": 58.150000000000006
+            },
+            {
+              "cluster_id": "C1006",
+              "weight": 38.39
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 23.089999999999996
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 16.87
+            }
+          ],
+          "downstream_neighbors": [
+            {
+              "cluster_id": "C1006",
+              "weight": 38.39
+            },
+            {
+              "cluster_id": "C1053",
+              "weight": 8.0
+            },
+            {
+              "cluster_id": "C1083",
+              "weight": 3.0
+            },
+            {
+              "cluster_id": "C1166",
+              "weight": 7.000000000000001
+            },
+            {
+              "cluster_id": "C1190",
+              "weight": 5.81
+            },
+            {
+              "cluster_id": "C1251",
+              "weight": 0.9799999999999999
+            },
+            {
+              "cluster_id": "C1321",
+              "weight": 1.4
+            },
+            {
+              "cluster_id": "C1523",
+              "weight": 6.0
+            },
+            {
+              "cluster_id": "C1609",
+              "weight": 7.2
+            },
+            {
+              "cluster_id": "C1611",
+              "weight": 2.8
+            },
+            {
+              "cluster_id": "C1632",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C1677",
+              "weight": 1.4
+            },
+            {
+              "cluster_id": "C1731",
+              "weight": 1.4
+            },
+            {
+              "cluster_id": "C1744",
+              "weight": 13.599999999999996
+            },
+            {
+              "cluster_id": "C179",
+              "weight": 4.8999999999999995
+            },
+            {
+              "cluster_id": "C1842",
+              "weight": 2.0
+            },
+            {
+              "cluster_id": "C1894",
+              "weight": 4.0
+            },
+            {
+              "cluster_id": "C1911",
+              "weight": 7.07
+            },
+            {
+              "cluster_id": "C1931",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C1955",
+              "weight": 2.9399999999999995
+            },
+            {
+              "cluster_id": "C1971",
+              "weight": 2.9399999999999995
+            },
+            {
+              "cluster_id": "C2012",
+              "weight": 6.0
+            },
+            {
+              "cluster_id": "C2023",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C2034",
+              "weight": 4.2
+            },
+            {
+              "cluster_id": "C305",
+              "weight": 2.0
+            },
+            {
+              "cluster_id": "C381",
+              "weight": 0.9799999999999999
+            },
+            {
+              "cluster_id": "C383",
+              "weight": 9.280000000000001
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 23.089999999999996
+            },
+            {
+              "cluster_id": "C420",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C48",
+              "weight": 58.150000000000006
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 16.87
+            },
+            {
+              "cluster_id": "C521",
+              "weight": 10.9
+            },
+            {
+              "cluster_id": "C524",
+              "weight": 5.890000000000001
+            },
+            {
+              "cluster_id": "C532",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C590",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C677",
+              "weight": 9.0
+            },
+            {
+              "cluster_id": "C70",
+              "weight": 11.239999999999998
+            },
+            {
+              "cluster_id": "C788",
+              "weight": 4.0
+            },
+            {
+              "cluster_id": "C800",
+              "weight": 2.0
+            },
+            {
+              "cluster_id": "C802",
+              "weight": 4.0
+            },
+            {
+              "cluster_id": "C853",
+              "weight": 2.0
+            },
+            {
+              "cluster_id": "C941",
+              "weight": 1.4
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 63.970000000000006
+            }
+          ],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 7,
+            "OTHER": 0
+          },
+          "change_score": 0.14285714285714285,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-17T23:59:40.512419Z",
+          "abnormal_start": "2026-02-17T23:59:45.765046Z",
+          "cluster_first_seen": "2026-02-17T23:59:40.763873Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.125,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "policy-engine-chart activity",
+          "dominant_actor": "policy-engine-chart",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 7,
+          "behavior_signature": "policy-engine-chart|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C1110",
+          "score": 8.73679916255413,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 7,
+          "in_weight": 0.0,
+          "out_weight": 0.0,
+          "representative_index": 36798,
+          "representative_raw_text": "Initializing health probes",
+          "evidence_neighbors": [],
+          "downstream_neighbors": [],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 7,
+            "OTHER": 0
+          },
+          "change_score": -0.14285714285714285,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-17T23:59:40.512419Z",
+          "abnormal_start": "2026-02-17T23:59:45.765046Z",
+          "cluster_first_seen": "2026-02-17T23:59:40.512419Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.125,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "policy-engine-chart activity",
+          "dominant_actor": "policy-engine-chart",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 7,
+          "behavior_signature": "policy-engine-chart|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C394",
+          "score": 7.049065550072173,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 7,
+          "in_weight": 0.0,
+          "out_weight": 0.0,
+          "representative_index": 508,
+          "representative_raw_text": "[job.JobService] Created gRPC connection to job-tracker:9090 with load balancing, keepalive (1m30s), and retry (max 10 attempts)",
+          "evidence_neighbors": [],
+          "downstream_neighbors": [],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 7,
+            "OTHER": 0
+          },
+          "change_score": 0.14285714285714285,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-17T23:59:40.512419Z",
+          "abnormal_start": "2026-02-17T23:59:45.765046Z",
+          "cluster_first_seen": "2026-02-17T23:59:40.764184Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.125,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "policy-engine-chart activity",
+          "dominant_actor": "policy-engine-chart",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 7,
+          "behavior_signature": "policy-engine-chart|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        }
+      ]
+    },
+    {
+      "incident_id": "I8",
+      "seed_cluster": null,
+      "clusters": [
+        "C183"
+      ],
+      "start_time": "2026-02-18T00:00:09.538476+00:00",
+      "end_time": "2026-02-18T00:12:54.543744+00:00",
+      "root_cause_candidates": [
+        {
+          "cluster_id": "C183",
+          "score": 7.187197881665908,
+          "cluster_signature": "dcn:unknown",
+          "cluster_type": "candidate",
+          "size": 52,
+          "in_weight": 0.0,
+          "out_weight": 0.0,
+          "representative_index": 27049,
+          "representative_raw_text": "E0218 00:06:24.533392       1 scraper.go:149] \"Failed to scrape node\" err=\"Get \\\"https://192.168.113.135:10250/metrics/resource\\\": dial tcp 192.168.113.135:10250: connect: connection refused\" node=\"sti32-dcn-vsimrtp113-02\"",
+          "evidence_neighbors": [],
+          "downstream_neighbors": [],
+          "severity_counts": {
+            "ERROR": 52,
+            "WARN": 0,
+            "INFO": 0,
+            "OTHER": 0
+          },
+          "change_score": 0.0,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-18T00:00:09.538476Z",
+          "abnormal_start": "2026-02-18T00:00:09.538476Z",
+          "cluster_first_seen": "2026-02-18T00:00:09.538476Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 1.0,
+          "success_guard": 1.0,
+          "background_penalty": 0.3,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "metrics-server activity",
+          "dominant_actor": "metrics-server",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 52,
+          "behavior_signature": "metrics-server|||",
+          "semantic_label": "dcn operational activity",
+          "component": "dcn",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        }
+      ]
+    },
+    {
+      "incident_id": "I9",
+      "seed_cluster": null,
+      "clusters": [
+        "C1020",
+        "C1051",
+        "C1053",
+        "C1054",
+        "C1055",
+        "C1056",
+        "C1057",
+        "C1086",
+        "C1087",
+        "C571",
+        "C572",
+        "C648",
+        "C881",
+        "C970",
+        "C974"
+      ],
+      "start_time": "2026-02-17T23:59:16.447354+00:00",
+      "end_time": "2026-02-18T00:11:42.798579+00:00",
+      "root_cause_candidates": [
+        {
+          "cluster_id": "C648",
+          "score": 14.355688123495813,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 7,
+          "in_weight": 0.0,
+          "out_weight": 3.99,
+          "representative_index": 773,
+          "representative_raw_text": "S3Credentials retrieved successfully from k8s secret",
+          "evidence_neighbors": [
+            {
+              "cluster_id": "C1015",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C1089",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C358",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C933",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C975",
+              "weight": 0.7
+            }
+          ],
+          "downstream_neighbors": [
+            {
+              "cluster_id": "C1013",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C1015",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C1089",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C358",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C933",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C975",
+              "weight": 0.7
+            }
+          ],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 7,
+            "OTHER": 0
+          },
+          "change_score": -0.14285714285714285,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-17T23:59:16.447354Z",
+          "abnormal_start": "2026-02-18T00:02:16.704558Z",
+          "cluster_first_seen": "2026-02-17T23:59:16.447354Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.0707070707070707,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "vector-store-chart activity",
+          "dominant_actor": "vector-store-chart",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 7,
+          "behavior_signature": "vector-store-chart|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C1053",
+          "score": 13.282112931306987,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 7,
+          "in_weight": 0.0,
+          "out_weight": 563.45,
+          "representative_index": 31700,
+          "representative_raw_text": "Metric Map successfully initialized with",
+          "evidence_neighbors": [
+            {
+              "cluster_id": "C48",
+              "weight": 102.14
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 98.38000000000002
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 50.82000000000001
+            },
+            {
+              "cluster_id": "C1006",
+              "weight": 37.21
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 32.269999999999996
+            }
+          ],
+          "downstream_neighbors": [
+            {
+              "cluster_id": "C1006",
+              "weight": 37.21
+            },
+            {
+              "cluster_id": "C1013",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1058",
+              "weight": 10.459999999999999
+            },
+            {
+              "cluster_id": "C1083",
+              "weight": 6.6499999999999995
+            },
+            {
+              "cluster_id": "C112",
+              "weight": 1.49
+            },
+            {
+              "cluster_id": "C116",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1166",
+              "weight": 7.45
+            },
+            {
+              "cluster_id": "C1251",
+              "weight": 10.659999999999998
+            },
+            {
+              "cluster_id": "C1319",
+              "weight": 10.399999999999999
+            },
+            {
+              "cluster_id": "C1342",
+              "weight": 1.4
+            },
+            {
+              "cluster_id": "C1395",
+              "weight": 3.4299999999999993
+            },
+            {
+              "cluster_id": "C1455",
+              "weight": 0.9799999999999999
+            },
+            {
+              "cluster_id": "C1619",
+              "weight": 1.4
+            },
+            {
+              "cluster_id": "C1632",
+              "weight": 7.700000000000001
+            },
+            {
+              "cluster_id": "C1727",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1744",
+              "weight": 11.0
+            },
+            {
+              "cluster_id": "C179",
+              "weight": 8.0
+            },
+            {
+              "cluster_id": "C1822",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C1894",
+              "weight": 3.4299999999999993
+            },
+            {
+              "cluster_id": "C1911",
+              "weight": 4.0
+            },
+            {
+              "cluster_id": "C1964",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C2077",
+              "weight": 4.409999999999999
+            },
+            {
+              "cluster_id": "C2109",
+              "weight": 4.409999999999999
+            },
+            {
+              "cluster_id": "C216",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C2387",
+              "weight": 4.409999999999999
+            },
+            {
+              "cluster_id": "C2487",
+              "weight": 4.409999999999999
+            },
+            {
+              "cluster_id": "C281",
+              "weight": 3.0
+            },
+            {
+              "cluster_id": "C305",
+              "weight": 6.8
+            },
+            {
+              "cluster_id": "C383",
+              "weight": 9.31
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 50.82000000000001
+            },
+            {
+              "cluster_id": "C417",
+              "weight": 4.0
+            },
+            {
+              "cluster_id": "C420",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C48",
+              "weight": 102.14
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 32.269999999999996
+            },
+            {
+              "cluster_id": "C521",
+              "weight": 22.880000000000003
+            },
+            {
+              "cluster_id": "C524",
+              "weight": 6.649999999999999
+            },
+            {
+              "cluster_id": "C532",
+              "weight": 6.1
+            },
+            {
+              "cluster_id": "C590",
+              "weight": 9.1
+            },
+            {
+              "cluster_id": "C677",
+              "weight": 13.45
+            },
+            {
+              "cluster_id": "C70",
+              "weight": 26.769999999999996
+            },
+            {
+              "cluster_id": "C800",
+              "weight": 3.6799999999999997
+            },
+            {
+              "cluster_id": "C802",
+              "weight": 8.0
+            },
+            {
+              "cluster_id": "C853",
+              "weight": 9.91
+            },
+            {
+              "cluster_id": "C873",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 98.38000000000002
+            }
+          ],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 7,
+            "OTHER": 0
+          },
+          "change_score": -0.14285714285714285,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-17T23:59:16.447354Z",
+          "abnormal_start": "2026-02-18T00:02:16.704558Z",
+          "cluster_first_seen": "2026-02-17T23:59:16.452370Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.0707070707070707,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "vector-store-chart activity",
+          "dominant_actor": "vector-store-chart",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 7,
+          "behavior_signature": "vector-store-chart|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C1051",
+          "score": 13.062830980638669,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 7,
+          "in_weight": 0.0,
+          "out_weight": 3.99,
+          "representative_index": 23545,
+          "representative_raw_text": "Health check endpoints registered",
+          "evidence_neighbors": [
+            {
+              "cluster_id": "C1015",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C1089",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C358",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C933",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C975",
+              "weight": 0.7
+            }
+          ],
+          "downstream_neighbors": [
+            {
+              "cluster_id": "C1013",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C1015",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C1089",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C358",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C933",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C975",
+              "weight": 0.7
+            }
+          ],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 7,
+            "OTHER": 0
+          },
+          "change_score": 0.14285714285714285,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-17T23:59:16.447354Z",
+          "abnormal_start": "2026-02-18T00:02:16.704558Z",
+          "cluster_first_seen": "2026-02-17T23:59:16.453375Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.0707070707070707,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "vector-store-chart activity",
+          "dominant_actor": "vector-store-chart",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 7,
+          "behavior_signature": "vector-store-chart|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C1087",
+          "score": 13.062830980638669,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 7,
+          "in_weight": 0.0,
+          "out_weight": 3.99,
+          "representative_index": 780,
+          "representative_raw_text": "HTTP server configured at ':8080' (probes only)",
+          "evidence_neighbors": [
+            {
+              "cluster_id": "C1015",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C1089",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C358",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C933",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C975",
+              "weight": 0.7
+            }
+          ],
+          "downstream_neighbors": [
+            {
+              "cluster_id": "C1013",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C1015",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C1089",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C358",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C933",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C975",
+              "weight": 0.7
+            }
+          ],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 7,
+            "OTHER": 0
+          },
+          "change_score": 0.14285714285714285,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-17T23:59:16.447354Z",
+          "abnormal_start": "2026-02-18T00:02:16.704558Z",
+          "cluster_first_seen": "2026-02-17T23:59:16.453389Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.0707070707070707,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "vector-store-chart activity",
+          "dominant_actor": "vector-store-chart",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 7,
+          "behavior_signature": "vector-store-chart|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C970",
+          "score": 13.062830980638669,
+          "cluster_signature": "milvus:unknown",
+          "cluster_type": "candidate",
+          "size": 7,
+          "in_weight": 0.0,
+          "out_weight": 3.99,
+          "representative_index": 785,
+          "representative_raw_text": "Connecting to Milvus",
+          "evidence_neighbors": [
+            {
+              "cluster_id": "C1015",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C1089",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C358",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C933",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C975",
+              "weight": 0.7
+            }
+          ],
+          "downstream_neighbors": [
+            {
+              "cluster_id": "C1013",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C1015",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C1089",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C358",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C933",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C975",
+              "weight": 0.7
+            }
+          ],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 7,
+            "OTHER": 0
+          },
+          "change_score": 0.14285714285714285,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-17T23:59:16.447354Z",
+          "abnormal_start": "2026-02-18T00:02:16.704558Z",
+          "cluster_first_seen": "2026-02-17T23:59:16.703974Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.0707070707070707,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "vector-store-chart activity",
+          "dominant_actor": "vector-store-chart",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 7,
+          "behavior_signature": "vector-store-chart|||",
+          "semantic_label": "milvus operational activity",
+          "component": "milvus",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        }
+      ]
+    },
+    {
+      "incident_id": "I10",
+      "seed_cluster": null,
+      "clusters": [
+        "C1022",
+        "C1046",
+        "C1090",
+        "C1111",
+        "C1112",
+        "C1133",
+        "C1135",
+        "C1169",
+        "C424",
+        "C806"
+      ],
+      "start_time": "2026-02-18T00:00:46.039785+00:00",
+      "end_time": "2026-02-18T00:11:14.199804+00:00",
+      "root_cause_candidates": [
+        {
+          "cluster_id": "C424",
+          "score": 8.73679916255413,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 7,
+          "in_weight": 0.0,
+          "out_weight": 0.0,
+          "representative_index": 3127,
+          "representative_raw_text": "[job.JobService] Created gRPC connection to job-tracker:9090 with load balancing, keepalive (1m30s), and retry (max 10 attempts)",
+          "evidence_neighbors": [],
+          "downstream_neighbors": [],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 7,
+            "OTHER": 0
+          },
+          "change_score": -0.14285714285714285,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-18T00:00:46.039785Z",
+          "abnormal_start": "2026-02-18T00:00:51.291103Z",
+          "cluster_first_seen": "2026-02-18T00:00:46.039785Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.1,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "metadata-chart activity",
+          "dominant_actor": "metadata-chart",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 7,
+          "behavior_signature": "metadata-chart|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C1046",
+          "score": 8.071028272858497,
+          "cluster_signature": "mongodb:unknown",
+          "cluster_type": "candidate",
+          "size": 7,
+          "in_weight": 0.0,
+          "out_weight": 0.0,
+          "representative_index": 34036,
+          "representative_raw_text": "2026/02/18 00:08:38 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }",
+          "evidence_neighbors": [],
+          "downstream_neighbors": [],
+          "severity_counts": {
+            "ERROR": 7,
+            "WARN": 0,
+            "INFO": 0,
+            "OTHER": 0
+          },
+          "change_score": 0.14285714285714285,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-18T00:00:46.039785Z",
+          "abnormal_start": "2026-02-18T00:00:51.291103Z",
+          "cluster_first_seen": "2026-02-18T00:00:51.291103Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.1,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "metadata-chart activity",
+          "dominant_actor": "metadata-chart",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 7,
+          "behavior_signature": "metadata-chart|||",
+          "semantic_label": "mongodb operational activity",
+          "component": "mongodb",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C1022",
+          "score": 7.049065550072173,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 7,
+          "in_weight": 0.0,
+          "out_weight": 0.0,
+          "representative_index": 3132,
+          "representative_raw_text": "Waiting for HTTP server to be ready...",
+          "evidence_neighbors": [],
+          "downstream_neighbors": [],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 7,
+            "OTHER": 0
+          },
+          "change_score": 0.14285714285714285,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-18T00:00:46.039785Z",
+          "abnormal_start": "2026-02-18T00:00:51.291103Z",
+          "cluster_first_seen": "2026-02-18T00:00:46.039947Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.1,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "metadata-chart activity",
+          "dominant_actor": "metadata-chart",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 7,
+          "behavior_signature": "metadata-chart|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C1090",
+          "score": 7.049065550072173,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 7,
+          "in_weight": 0.0,
+          "out_weight": 0.0,
+          "representative_index": 18729,
+          "representative_raw_text": "HTTP server is ready and accepting connections",
+          "evidence_neighbors": [],
+          "downstream_neighbors": [],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 7,
+            "OTHER": 0
+          },
+          "change_score": 0.14285714285714285,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-18T00:00:46.039785Z",
+          "abnormal_start": "2026-02-18T00:00:51.291103Z",
+          "cluster_first_seen": "2026-02-18T00:00:46.290357Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.1,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "metadata-chart activity",
+          "dominant_actor": "metadata-chart",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 7,
+          "behavior_signature": "metadata-chart|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C1169",
+          "score": 7.049065550072173,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 7,
+          "in_weight": 0.0,
+          "out_weight": 0.0,
+          "representative_index": 3133,
+          "representative_raw_text": "HTTP server starting at ':8080'",
+          "evidence_neighbors": [],
+          "downstream_neighbors": [],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 7,
+            "OTHER": 0
+          },
+          "change_score": 0.14285714285714285,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-18T00:00:46.039785Z",
+          "abnormal_start": "2026-02-18T00:00:51.291103Z",
+          "cluster_first_seen": "2026-02-18T00:00:46.040055Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.1,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "metadata-chart activity",
+          "dominant_actor": "metadata-chart",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 7,
+          "behavior_signature": "metadata-chart|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        }
+      ]
+    },
+    {
+      "incident_id": "I11",
+      "seed_cluster": null,
+      "clusters": [
+        "C1052",
+        "C1084",
+        "C1085",
+        "C161",
+        "C184",
+        "C185",
+        "C186",
+        "C187",
+        "C305",
+        "C306",
+        "C326",
+        "C684"
+      ],
+      "start_time": "2026-02-18T00:00:25.564343+00:00",
+      "end_time": "2026-02-18T00:09:27.390826+00:00",
+      "root_cause_candidates": [
+        {
+          "cluster_id": "C305",
+          "score": 15.407215382945717,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 38,
+          "in_weight": 0.0,
+          "out_weight": 131.39999999999998,
+          "representative_index": 3447,
+          "representative_raw_text": "Failed to connect to ONTAP AMQP: read tcp 10.42.7.217:32784->192.168.113.98:5668: read: connection reset by peer",
+          "evidence_neighbors": [
+            {
+              "cluster_id": "C48",
+              "weight": 26.28
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 23.299999999999997
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 8.55
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 8.36
+            },
+            {
+              "cluster_id": "C521",
+              "weight": 8.2
+            }
+          ],
+          "downstream_neighbors": [
+            {
+              "cluster_id": "C1006",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1053",
+              "weight": 3.0
+            },
+            {
+              "cluster_id": "C1058",
+              "weight": 2.8
+            },
+            {
+              "cluster_id": "C1083",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C112",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C1251",
+              "weight": 0.9799999999999999
+            },
+            {
+              "cluster_id": "C128",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1319",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C1611",
+              "weight": 2.8
+            },
+            {
+              "cluster_id": "C1632",
+              "weight": 0.9799999999999999
+            },
+            {
+              "cluster_id": "C1744",
+              "weight": 3.4
+            },
+            {
+              "cluster_id": "C182",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C1842",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C1894",
+              "weight": 5.960000000000001
+            },
+            {
+              "cluster_id": "C1911",
+              "weight": 1.7
+            },
+            {
+              "cluster_id": "C2023",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C383",
+              "weight": 0.48999999999999994
+            },
+            {
+              "cluster_id": "C39",
+              "weight": 8.55
+            },
+            {
+              "cluster_id": "C420",
+              "weight": 1.0
+            },
+            {
+              "cluster_id": "C48",
+              "weight": 26.28
+            },
+            {
+              "cluster_id": "C490",
+              "weight": 8.36
+            },
+            {
+              "cluster_id": "C521",
+              "weight": 8.2
+            },
+            {
+              "cluster_id": "C524",
+              "weight": 0.9799999999999999
+            },
+            {
+              "cluster_id": "C590",
+              "weight": 0.7
+            },
+            {
+              "cluster_id": "C677",
+              "weight": 1.9599999999999997
+            },
+            {
+              "cluster_id": "C70",
+              "weight": 7.7
+            },
+            {
+              "cluster_id": "C788",
+              "weight": 4.759999999999999
+            },
+            {
+              "cluster_id": "C802",
+              "weight": 5.249999999999999
+            },
+            {
+              "cluster_id": "C853",
+              "weight": 6.380000000000001
+            },
+            {
+              "cluster_id": "C99",
+              "weight": 23.299999999999997
+            }
+          ],
+          "severity_counts": {
+            "ERROR": 38,
+            "WARN": 0,
+            "INFO": 0,
+            "OTHER": 0
+          },
+          "change_score": -0.05263157894736842,
+          "trigger_proximity": 0.9907628490724769,
+          "incident_start": "2026-02-18T00:00:25.564343Z",
+          "abnormal_start": "2026-02-18T00:00:25.637790Z",
+          "cluster_first_seen": "2026-02-18T00:00:30.642723Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.18181818181818182,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "ontap-monitor-chart activity",
+          "dominant_actor": "ontap-monitor-chart",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 38,
+          "behavior_signature": "ontap-monitor-chart|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C1052",
+          "score": 8.869667176665487,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 4,
+          "in_weight": 0.0,
+          "out_weight": 0.0,
+          "representative_index": 12792,
+          "representative_raw_text": "Health check endpoints registered",
+          "evidence_neighbors": [],
+          "downstream_neighbors": [],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 4,
+            "OTHER": 0
+          },
+          "change_score": 0.0,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-18T00:00:25.564343Z",
+          "abnormal_start": "2026-02-18T00:00:25.637790Z",
+          "cluster_first_seen": "2026-02-18T00:00:25.564343Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.019138755980861243,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "ontap-monitor-chart activity",
+          "dominant_actor": "ontap-monitor-chart",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 4,
+          "behavior_signature": "ontap-monitor-chart|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C1084",
+          "score": 6.869667176665487,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 4,
+          "in_weight": 0.0,
+          "out_weight": 0.0,
+          "representative_index": 3147,
+          "representative_raw_text": "Initialized ONTAP Monitor Services",
+          "evidence_neighbors": [],
+          "downstream_neighbors": [],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 4,
+            "OTHER": 0
+          },
+          "change_score": 0.0,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-18T00:00:25.564343Z",
+          "abnormal_start": "2026-02-18T00:00:25.637790Z",
+          "cluster_first_seen": "2026-02-18T00:00:25.564528Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.019138755980861243,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "ontap-monitor-chart activity",
+          "dominant_actor": "ontap-monitor-chart",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 4,
+          "behavior_signature": "ontap-monitor-chart|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C1085",
+          "score": 6.869667176665487,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 4,
+          "in_weight": 0.0,
+          "out_weight": 0.0,
+          "representative_index": 12795,
+          "representative_raw_text": "Initialized SnapPubSub Service",
+          "evidence_neighbors": [],
+          "downstream_neighbors": [],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 4,
+            "OTHER": 0
+          },
+          "change_score": 0.0,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-18T00:00:25.564343Z",
+          "abnormal_start": "2026-02-18T00:00:25.637790Z",
+          "cluster_first_seen": "2026-02-18T00:00:25.564523Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.019138755980861243,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "ontap-monitor-chart activity",
+          "dominant_actor": "ontap-monitor-chart",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 4,
+          "behavior_signature": "ontap-monitor-chart|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        },
+        {
+          "cluster_id": "C326",
+          "score": 6.869667176665487,
+          "cluster_signature": "Unknown Component:unknown",
+          "cluster_type": "candidate",
+          "size": 4,
+          "in_weight": 0.0,
+          "out_weight": 0.0,
+          "representative_index": 3144,
+          "representative_raw_text": "[file-metadata.SnapshotMetadataService] Created gRPC connection to file-metadata:9090 with load balancing, keepalive (1m30s), and retry (max 10 attempts)",
+          "evidence_neighbors": [],
+          "downstream_neighbors": [],
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 4,
+            "OTHER": 0
+          },
+          "change_score": 0.0,
+          "trigger_proximity": 1.0,
+          "incident_start": "2026-02-18T00:00:25.564343Z",
+          "abnormal_start": "2026-02-18T00:00:25.637790Z",
+          "cluster_first_seen": "2026-02-18T00:00:25.564509Z",
+          "http_class": "2xx",
+          "http_multiplier": 0.6,
+          "baseline_rate": 0.019138755980861243,
+          "success_guard": 1.0,
+          "background_penalty": 1.0,
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_severity": "0.2",
+          "cluster_behavior": "ontap-monitor-chart activity",
+          "dominant_actor": "ontap-monitor-chart",
+          "dominant_operation": "",
+          "dominant_resource": "",
+          "dominant_status": "",
+          "frequency": 4,
+          "behavior_signature": "ontap-monitor-chart|||",
+          "semantic_label": "Unknown Component operational activity",
+          "component": "Unknown Component",
+          "failure_mode": "normal_operation",
+          "status_class": "unknown"
+        }
+      ]
+    }
+  ]
+}

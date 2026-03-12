@@ -1,0 +1,101 @@
+{
+  "incident_id": "I5",
+  "incident_window": {
+    "start_time": "2026-02-18T00:00:06.996853+00:00",
+    "end_time": "2026-02-18T00:12:45.940965+00:00"
+  },
+  "root_cause": {
+    "cluster_id": "C929",
+    "score": 7.216518636744404,
+    "confidence": {
+      "value": 0.129,
+      "label": "low"
+    },
+    "cluster_summary": {
+      "cluster_id": "C929",
+      "size": 156,
+      "cluster_type": "candidate",
+      "first_seen_ts": "2026-02-18T00:00:06.996853924Z",
+      "last_seen_ts": "2026-02-18T00:12:45.940965263Z",
+      "top_services": [
+        {
+          "service": "metrics",
+          "count": 100
+        }
+      ],
+      "http_class_counts": {
+        "unknown": 100
+      },
+      "example_events": [
+        "time=\"2026-02-18T00:00:06Z\" level=error msg=\"Cannot connect to MongoDB: cannot connect to MongoDB: server selection error: server selection timeout, current topology: { Type: Single, Servers: [{ Addr: localhost:27017, Type: Unknown, Last error: dial tcp [::1]:27017: connect: connection refused }, ] }\"",
+        "time=\"2026-02-18T00:00:10Z\" level=error msg=\"Cannot connect to MongoDB: cannot connect to MongoDB: server selection error: server selection timeout, current topology: { Type: Single, Servers: [{ Addr: localhost:27017, Type: Unknown, Last error: dial tcp [::1]:27017: connect: connection refused }, ] }\"",
+        "time=\"2026-02-18T00:00:13Z\" level=error msg=\"Cannot connect to MongoDB: cannot connect to MongoDB: server selection error: server selection timeout, current topology: { Type: Single, Servers: [{ Addr: localhost:27017, Type: Unknown, Last error: dial tcp [::1]:27017: connect: connection refused }, ] }\""
+      ]
+    },
+    "representative_event": {
+      "timestamp": "2026-02-18T00:08:40.552359059Z",
+      "service": "metrics",
+      "response_code": null,
+      "text": "time=\"2026-02-18T00:08:40Z\" level=error msg=\"Cannot connect to MongoDB: cannot connect to MongoDB: server selection error: server selection timeout, current topology: { Type: Single, Servers: [{ Addr: localhost:27017, Type: Unknown, Last error: dial tcp [::1]:27017: connect: connection refused }, ] }\""
+    },
+    "first_seen_event": {
+      "timestamp": "2026-02-18T00:00:06.996853924Z",
+      "service": "metrics",
+      "response_code": null,
+      "text": "time=\"2026-02-18T00:00:06Z\" level=error msg=\"Cannot connect to MongoDB: cannot connect to MongoDB: server selection error: server selection timeout, current topology: { Type: Single, Servers: [{ Addr: localhost:27017, Type: Unknown, Last error: dial tcp [::1]:27017: connect: connection refused }, ] }\""
+    },
+    "signals": {
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "trigger_proximity": 1.0,
+      "in_weight": 0.0,
+      "out_weight": 0.0,
+      "severity_counts": {
+        "ERROR": 156,
+        "WARN": 0,
+        "INFO": 0,
+        "OTHER": 0
+      },
+      "trigger_stats": {
+        "first_seen": "2026-02-18T00:00:06.996853+00:00",
+        "last_seen": "2026-02-18T00:12:45.940965+00:00",
+        "event_count": 156,
+        "error_count": 0,
+        "duration_seconds": 758.944112,
+        "error_rate": 0.0,
+        "severity": 0.2,
+        "cluster_rate_eps": 0.205549,
+        "global_rate_eps": 66.056206,
+        "burst_factor": 0.003112,
+        "trigger_score": 0.0
+      }
+    },
+    "graph_context": {
+      "incoming_edges": [],
+      "outgoing_edges": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    "why_ranked_first": [
+      "highest composite RCA score for this incident",
+      "strong downstream influence relative to incoming influence",
+      "appears early relative to incident onset",
+      "shows abnormal trigger/error behavior"
+    ]
+  },
+  "other_candidates": [],
+  "timeline": [
+    {
+      "timestamp": "2026-02-18T00:00:06.996853924Z",
+      "cluster_id": "C929",
+      "score": 7.216518636744404,
+      "service": "metrics",
+      "response_code": null,
+      "summary": "time=\"2026-02-18T00:00:06Z\" level=error msg=\"Cannot connect to MongoDB: cannot connect to MongoDB: server selection error: server selection timeout, current topology: { Type: Single, Servers: [{ Addr: localhost:27017, Type: Unknown, Last error: dial tcp [::1]:27017: connect: connection refused }, ] }\""
+    }
+  ],
+  "stats": {
+    "candidate_count": 1,
+    "has_root_cause": true
+  }
+}
