@@ -1,1 +1,0 @@
-# Semantic RCA Explanation Report
