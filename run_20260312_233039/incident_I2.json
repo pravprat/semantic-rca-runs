@@ -1,0 +1,332 @@
+{
+  "incident_id": "I2",
+  "incident_window": {
+    "start_time": "2026-02-18T00:00:00.227247+00:00",
+    "end_time": "2026-02-18T00:12:52.289768+00:00"
+  },
+  "root_cause": {
+    "cluster_id": "C2344",
+    "score": 13.322393122967947,
+    "confidence": {
+      "value": 0.293,
+      "label": "low"
+    },
+    "cluster_summary": {
+      "cluster_id": "C2344",
+      "size": 10,
+      "cluster_type": "candidate",
+      "first_seen_ts": "2026-02-18T00:01:15.923123922Z",
+      "last_seen_ts": "2026-02-18T00:12:36.414178432Z",
+      "top_services": [
+        {
+          "service": "proxy",
+          "count": 10
+        }
+      ],
+      "http_class_counts": {
+        "unknown": 10
+      },
+      "example_events": [
+        "goroutine 4 gp=0xc000003c00 m=nil [GC worker (idle), 10 minutes]:",
+        "goroutine 5 gp=0xc000003dc0 m=nil [GC worker (idle), 10 minutes]:",
+        "goroutine 12 gp=0xc0001faa80 m=nil [GC worker (idle), 10 minutes]:"
+      ]
+    },
+    "representative_event": {
+      "timestamp": "2026-02-18T00:01:15.923320448Z",
+      "service": "proxy",
+      "response_code": null,
+      "text": "goroutine 5 gp=0xc000003dc0 m=nil [GC worker (idle), 10 minutes]:"
+    },
+    "first_seen_event": {
+      "timestamp": "2026-02-18T00:01:15.923123922Z",
+      "service": "proxy",
+      "response_code": null,
+      "text": "goroutine 4 gp=0xc000003c00 m=nil [GC worker (idle), 10 minutes]:"
+    },
+    "signals": {
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "trigger_proximity": 0.9019564103410221,
+      "in_weight": 15.29,
+      "out_weight": 336.7799999999999,
+      "severity_counts": {
+        "ERROR": 0,
+        "WARN": 0,
+        "INFO": 0,
+        "OTHER": 10
+      },
+      "trigger_stats": {
+        "first_seen": "2026-02-18T00:01:15.923123+00:00",
+        "last_seen": "2026-02-18T00:12:36.414178+00:00",
+        "event_count": 10,
+        "error_count": 0,
+        "duration_seconds": 680.491055,
+        "error_rate": 0.0,
+        "severity": 0.2,
+        "cluster_rate_eps": 0.014695,
+        "global_rate_eps": 66.056206,
+        "burst_factor": 0.000222,
+        "trigger_score": 0.0
+      }
+    },
+    "graph_context": {
+      "incoming_edges": [
+        {
+          "from": "C2203",
+          "relation": "precedes",
+          "weight": 6.37,
+          "confidence": 0.5790909090909091
+        },
+        {
+          "from": "C275",
+          "relation": "precedes",
+          "weight": 5.0,
+          "confidence": 0.45454545454545453
+        },
+        {
+          "from": "C2570",
+          "relation": "precedes",
+          "weight": 3.4299999999999993,
+          "confidence": 0.31181818181818177
+        },
+        {
+          "from": "C2471",
+          "relation": "precedes",
+          "weight": 0.48999999999999994,
+          "confidence": 0.04454545454545454
+        }
+      ],
+      "outgoing_edges": [
+        {
+          "to": "C2203",
+          "relation": "precedes",
+          "weight": 6.37,
+          "confidence": 0.5790909090909091
+        },
+        {
+          "to": "C275",
+          "relation": "precedes",
+          "weight": 5.0,
+          "confidence": 0.45454545454545453
+        },
+        {
+          "to": "C2570",
+          "relation": "precedes",
+          "weight": 3.919999999999999,
+          "confidence": 0.35636363636363627
+        },
+        {
+          "to": "C2471",
+          "relation": "precedes",
+          "weight": 2.4499999999999997,
+          "confidence": 0.2227272727272727
+        }
+      ],
+      "in_degree": 4,
+      "out_degree": 4
+    },
+    "why_ranked_first": [
+      "highest composite RCA score for this incident",
+      "strong downstream influence relative to incoming influence",
+      "appears early relative to incident onset",
+      "shows abnormal trigger/error behavior"
+    ]
+  },
+  "other_candidates": [
+    {
+      "cluster_id": "C275",
+      "score": 12.473554641623544,
+      "confidence": {
+        "value": 0.286,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C275",
+        "size": 42,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-18T00:01:49.126062604Z",
+        "last_seen_ts": "2026-02-18T00:12:36.421872267Z",
+        "top_services": [
+          {
+            "service": "proxy",
+            "count": 42
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 42
+        },
+        "example_events": [
+          "all.logs: [1771372909.126062604, {\"time\":\"2026-02-18T00:01:49.126062604Z\",\"stream\":\"stderr\",\"_p\":\"F\",\"log\":\"\",\"kubernetes\":{\"pod_name\":\"milvus-milvus-proxy-8d464b548-ns6vc\",\"namespace_name\":\"aide-system\",\"pod_id\":\"e6707083-0971-454f-8f38-2acc6ce64dc0\",\"labels\":{\"app.kubernetes.io/component\":\"proxy\",\"app.kubernetes.io/instance\":\"milvus\",\"app.kubernetes.io/managed-by\":\"milvus-operator\",\"app.kubernetes.io/name\":\"milvus\",\"milvus.io/service\":\"true\",\"pod-template-hash\":\"8d464b548\"},\"annotations\":{\"checksum/config\":\"d67acb2b1b11c614cfaa633c1d06d07386e08f37deb3397d4d812b83e8405430\",\"cni.projectcalico.org/containerID\":\"415cd207ef835855482f515081572e875227251ebbbc8d035d4f739b404ceb30\",\"cni.projectcalico.org/podIP\":\"10.42.173.135/32\",\"cni.projectcalico.org/podIPs\":\"10.42.173.135/32\",\"milvus.io/using-configmap\":\"milvus\"},\"host\":\"sti32-dcn-vsimrtp113-03\",\"pod_ip\":\"10.42.173.135\",\"container_name\":\"proxy\",\"docker_id\":\"45252100a7db639187de3901193824c462c551743be6c2a61476fbf2b7f36fa1\",\"container_hash\":\"sha256:81ebb625ec9f0671060e846bf6f609723be68e379a4bc5c19bc289f07ae82516\",\"container_image\":\"docker.repo.eng.netapp.com/globalcicd/aidp/ai-data-platform/milvusdb/milvus:ntap-v2.5.11-51-cpu\"}}]",
+          "all.logs: [1771372909.126688827, {\"time\":\"2026-02-18T00:01:49.126688827Z\",\"stream\":\"stderr\",\"_p\":\"F\",\"log\":\"\",\"kubernetes\":{\"pod_name\":\"milvus-milvus-proxy-8d464b548-ns6vc\",\"namespace_name\":\"aide-system\",\"pod_id\":\"e6707083-0971-454f-8f38-2acc6ce64dc0\",\"labels\":{\"app.kubernetes.io/component\":\"proxy\",\"app.kubernetes.io/instance\":\"milvus\",\"app.kubernetes.io/managed-by\":\"milvus-operator\",\"app.kubernetes.io/name\":\"milvus\",\"milvus.io/service\":\"true\",\"pod-template-hash\":\"8d464b548\"},\"annotations\":{\"checksum/config\":\"d67acb2b1b11c614cfaa633c1d06d07386e08f37deb3397d4d812b83e8405430\",\"cni.projectcalico.org/containerID\":\"415cd207ef835855482f515081572e875227251ebbbc8d035d4f739b404ceb30\",\"cni.projectcalico.org/podIP\":\"10.42.173.135/32\",\"cni.projectcalico.org/podIPs\":\"10.42.173.135/32\",\"milvus.io/using-configmap\":\"milvus\"},\"host\":\"sti32-dcn-vsimrtp113-03\",\"pod_ip\":\"10.42.173.135\",\"container_name\":\"proxy\",\"docker_id\":\"45252100a7db639187de3901193824c462c551743be6c2a61476fbf2b7f36fa1\",\"container_hash\":\"sha256:81ebb625ec9f0671060e846bf6f609723be68e379a4bc5c19bc289f07ae82516\",\"container_image\":\"docker.repo.eng.netapp.com/globalcicd/aidp/ai-data-platform/milvusdb/milvus:ntap-v2.5.11-51-cpu\"}}]",
+          "all.logs: [1771372909.126887347, {\"time\":\"2026-02-18T00:01:49.126887347Z\",\"stream\":\"stderr\",\"_p\":\"F\",\"log\":\"\",\"kubernetes\":{\"pod_name\":\"milvus-milvus-proxy-8d464b548-ns6vc\",\"namespace_name\":\"aide-system\",\"pod_id\":\"e6707083-0971-454f-8f38-2acc6ce64dc0\",\"labels\":{\"app.kubernetes.io/component\":\"proxy\",\"app.kubernetes.io/instance\":\"milvus\",\"app.kubernetes.io/managed-by\":\"milvus-operator\",\"app.kubernetes.io/name\":\"milvus\",\"milvus.io/service\":\"true\",\"pod-template-hash\":\"8d464b548\"},\"annotations\":{\"checksum/config\":\"d67acb2b1b11c614cfaa633c1d06d07386e08f37deb3397d4d812b83e8405430\",\"cni.projectcalico.org/containerID\":\"415cd207ef835855482f515081572e875227251ebbbc8d035d4f739b404ceb30\",\"cni.projectcalico.org/podIP\":\"10.42.173.135/32\",\"cni.projectcalico.org/podIPs\":\"10.42.173.135/32\",\"milvus.io/using-configmap\":\"milvus\"},\"host\":\"sti32-dcn-vsimrtp113-03\",\"pod_ip\":\"10.42.173.135\",\"container_name\":\"proxy\",\"docker_id\":\"45252100a7db639187de3901193824c462c551743be6c2a61476fbf2b7f36fa1\",\"container_hash\":\"sha256:81ebb625ec9f0671060e846bf6f609723be68e379a4bc5c19bc289f07ae82516\",\"container_image\":\"docker.repo.eng.netapp.com/globalcicd/aidp/ai-data-platform/milvusdb/milvus:ntap-v2.5.11-51-cpu\"}}]"
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-18T00:12:36.413668196Z",
+        "service": "proxy",
+        "response_code": null,
+        "text": "all.logs: [1771373556.413668196, {\"time\":\"2026-02-18T00:12:36.413668196Z\",\"stream\":\"stderr\",\"_p\":\"F\",\"log\":\"\",\"kubernetes\":{\"pod_name\":\"milvus-milvus-proxy-8d464b548-ns6vc\",\"namespace_name\":\"aide-system\",\"pod_id\":\"e6707083-0971-454f-8f38-2acc6ce64dc0\",\"labels\":{\"app.kubernetes.io/component\":\"proxy\",\"app.kubernetes.io/instance\":\"milvus\",\"app.kubernetes.io/managed-by\":\"milvus-operator\",\"app.kubernetes.io/name\":\"milvus\",\"milvus.io/service\":\"true\",\"pod-template-hash\":\"8d464b548\"},\"annotations\":{\"checksum/config\":\"d67acb2b1b11c614cfaa633c1d06d07386e08f37deb3397d4d812b83e8405430\",\"cni.projectcalico.org/containerID\":\"415cd207ef835855482f515081572e875227251ebbbc8d035d4f739b404ceb30\",\"cni.projectcalico.org/podIP\":\"10.42.173.135/32\",\"cni.projectcalico.org/podIPs\":\"10.42.173.135/32\",\"milvus.io/using-configmap\":\"milvus\"},\"host\":\"sti32-dcn-vsimrtp113-03\",\"pod_ip\":\"10.42.173.135\",\"container_name\":\"proxy\",\"docker_id\":\"45252100a7db639187de3901193824c462c551743be6c2a61476fbf2b7f36fa1\",\"container_hash\":\"sha256:81ebb625ec9f0671060e846bf6f609723be68e379a4bc5c19bc289f07ae82516\",\"container_image\":\"docker.repo.eng.netapp.com/globalcicd/aidp/ai-data-platform/milvusdb/milvus:ntap-v2.5.11-51-cpu\"}}]"
+      }
+    },
+    {
+      "cluster_id": "C2570",
+      "score": 12.122394360950592,
+      "confidence": {
+        "value": 0.289,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C2570",
+        "size": 8,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-18T00:01:15.92259218Z",
+        "last_seen_ts": "2026-02-18T00:12:36.419155245Z",
+        "top_services": [
+          {
+            "service": "proxy",
+            "count": 8
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 8
+        },
+        "example_events": [
+          "/build/cmd/main.go:97 +0x24d fp=0xc001a55f50 sp=0xc001a55cd8 pc=0x53bad0d",
+          "/build/internal/distributed/rootcoord/client/client.go:97 +0x76 fp=0xc001e4aec0 sp=0xc001e4adb8 pc=0x46a0396",
+          "/build/cmd/main.go:97 +0x24d fp=0xc0019e5f50 sp=0xc0019e5cd8 pc=0x53bad0d"
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-18T00:01:15.92259218Z",
+        "service": "proxy",
+        "response_code": null,
+        "text": "/build/cmd/main.go:97 +0x24d fp=0xc001a55f50 sp=0xc001a55cd8 pc=0x53bad0d"
+      }
+    },
+    {
+      "cluster_id": "C2471",
+      "score": 12.122386611319131,
+      "confidence": {
+        "value": 0.289,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C2471",
+        "size": 36,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-18T00:01:15.925916921Z",
+        "last_seen_ts": "2026-02-18T00:12:36.421255029Z",
+        "top_services": [
+          {
+            "service": "proxy",
+            "count": 36
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 36
+        },
+        "example_events": [
+          "/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.1.linux-amd64/src/net/fd_posix.go:55 +0x25 fp=0xc001a17ca8 sp=0xc001a17c60 pc=0x20eda45",
+          "/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.1.linux-amd64/src/net/fd_posix.go:55 +0x25 fp=0xc000b5eca8 sp=0xc000b5ec60 pc=0x20eda45",
+          "/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.1.linux-amd64/src/net/fd_posix.go:55 +0x25 fp=0xc001a1dca8 sp=0xc001a1dc60 pc=0x20eda45"
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-18T00:01:15.925916921Z",
+        "service": "proxy",
+        "response_code": null,
+        "text": "/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.1.linux-amd64/src/net/fd_posix.go:55 +0x25 fp=0xc001a17ca8 sp=0xc001a17c60 pc=0x20eda45"
+      }
+    },
+    {
+      "cluster_id": "C2203",
+      "score": 12.122381598771712,
+      "confidence": {
+        "value": 0.289,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C2203",
+        "size": 24,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-18T00:01:15.928066589Z",
+        "last_seen_ts": "2026-02-18T00:12:36.421033799Z",
+        "top_services": [
+          {
+            "service": "proxy",
+            "count": 24
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 24
+        },
+        "example_events": [
+          "net.(*TCPListener).accept(0xc000fc7d40)",
+          "net.(*TCPListener).Accept(0xc000fc7d40)",
+          "net.(*TCPListener).accept(0xc000c6ff40)"
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-18T00:01:15.928066589Z",
+        "service": "proxy",
+        "response_code": null,
+        "text": "net.(*TCPListener).accept(0xc000fc7d40)"
+      }
+    }
+  ],
+  "timeline": [
+    {
+      "timestamp": "2026-02-18T00:01:15.92259218Z",
+      "cluster_id": "C2570",
+      "score": 12.122394360950592,
+      "service": "proxy",
+      "response_code": null,
+      "summary": "/build/cmd/main.go:97 +0x24d fp=0xc001a55f50 sp=0xc001a55cd8 pc=0x53bad0d"
+    },
+    {
+      "timestamp": "2026-02-18T00:01:15.923123922Z",
+      "cluster_id": "C2344",
+      "score": 13.322393122967947,
+      "service": "proxy",
+      "response_code": null,
+      "summary": "goroutine 4 gp=0xc000003c00 m=nil [GC worker (idle), 10 minutes]:"
+    },
+    {
+      "timestamp": "2026-02-18T00:01:15.925916921Z",
+      "cluster_id": "C2471",
+      "score": 12.122386611319131,
+      "service": "proxy",
+      "response_code": null,
+      "summary": "/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.1.linux-amd64/src/net/fd_posix.go:55 +0x25 fp=0xc001a17ca8 sp=0xc001a17c60 pc=0x20eda45"
+    },
+    {
+      "timestamp": "2026-02-18T00:01:15.928066589Z",
+      "cluster_id": "C2203",
+      "score": 12.122381598771712,
+      "service": "proxy",
+      "response_code": null,
+      "summary": "net.(*TCPListener).accept(0xc000fc7d40)"
+    },
+    {
+      "timestamp": "2026-02-18T00:01:49.126062604Z",
+      "cluster_id": "C275",
+      "score": 12.473554641623544,
+      "service": "proxy",
+      "response_code": null,
+      "summary": "all.logs: [1771372909.126062604, {\"time\":\"2026-02-18T00:01:49.126062604Z\",\"stream\":\"stderr\",\"_p\":\"F\",\"log\":\"\",\"kubernetes\":{\"pod_name\":\"milvus-milvus-proxy-8d464b548-ns6vc\",\"namespace_name\":\"aide-system\",\"pod_id\":\"e6707083-0971-454f-8f38-2acc6ce64dc0\",\"labels\":{\"app.kubernetes.io/component\":\"proxy\",\"app.kubernetes.io/instance\":\"milvus\",\"app.kubernetes.io/managed-by\":\"milvus-operator\",\"app.kubernetes.io/name\":\"milvus\",\"milvus.io/service\":\"true\",\"pod-template-hash\":\"8d464b548\"},\"annotations\":{\"checksum/config\":\"d67acb2b1b11c614cfaa633c1d06d07386e08f37deb3397d4d812b83e8405430\",\"cni.projectcalico.org/containerID\":\"415cd207ef835855482f515081572e875227251ebbbc8d035d4f739b404ceb30\",\"cni.projectcalico.org/podIP\":\"10.42.173.135/32\",\"cni.projectcalico.org/podIPs\":\"10.42.173.135/32\",\"milvus.io/using-configmap\":\"milvus\"},\"host\":\"sti32-dcn-vsimrtp113-03\",\"pod_ip\":\"10.42.173.135\",\"container_name\":\"proxy\",\"docker_id\":\"45252100a7db639187de3901193824c462c551743be6c2a61476fbf2b7f36fa1\",\"container_hash\":\"sha256:81ebb625ec9f0671060e846bf6f609723be68e379a4bc5c19bc289f07ae82516\",\"container_image\":\"docker.repo.eng.netapp.com/globalcicd/aidp/ai-data-platform/milvusdb/milvus:ntap-v2.5.11-51-cpu\"}}]"
+    }
+  ],
+  "stats": {
+    "candidate_count": 5,
+    "has_root_cause": true
+  }
+}

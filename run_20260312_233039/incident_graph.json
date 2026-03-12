@@ -1,0 +1,119 @@
+{
+  "graph_version": "incident_graph.v1",
+  "max_gap_seconds": 300,
+  "node_count": 11,
+  "edge_count": 0,
+  "nodes": [
+    {
+      "incident_id": "I1",
+      "root_service": "mongodb",
+      "incident_type": "operational_anomaly",
+      "start_time": "2026-02-17T23:59:59.884238+00:00",
+      "end_time": "2026-02-18T00:12:59.534236+00:00",
+      "parent_incidents": [],
+      "child_incidents": [],
+      "is_downstream_incident": false
+    },
+    {
+      "incident_id": "I2",
+      "root_service": "proxy",
+      "incident_type": "operational_anomaly",
+      "start_time": "2026-02-18T00:00:00.227247+00:00",
+      "end_time": "2026-02-18T00:12:52.289768+00:00",
+      "parent_incidents": [],
+      "child_incidents": [],
+      "is_downstream_incident": false
+    },
+    {
+      "incident_id": "I3",
+      "root_service": "vault",
+      "incident_type": "operational_anomaly",
+      "start_time": "2026-02-18T00:00:00.029922+00:00",
+      "end_time": "2026-02-18T00:12:52.091208+00:00",
+      "parent_incidents": [],
+      "child_incidents": [],
+      "is_downstream_incident": false
+    },
+    {
+      "incident_id": "I4",
+      "root_service": "etcd",
+      "incident_type": "operational_anomaly",
+      "start_time": "2026-02-18T00:00:00.235139+00:00",
+      "end_time": "2026-02-18T00:12:59.734973+00:00",
+      "parent_incidents": [],
+      "child_incidents": [],
+      "is_downstream_incident": false
+    },
+    {
+      "incident_id": "I5",
+      "root_service": "metrics",
+      "incident_type": "operational_anomaly",
+      "start_time": "2026-02-18T00:00:06.996853+00:00",
+      "end_time": "2026-02-18T00:12:45.940965+00:00",
+      "parent_incidents": [],
+      "child_incidents": [],
+      "is_downstream_incident": false
+    },
+    {
+      "incident_id": "I6",
+      "root_service": "utility",
+      "incident_type": "operational_anomaly",
+      "start_time": "2026-02-17T23:59:41.845137+00:00",
+      "end_time": "2026-02-18T00:10:14.093645+00:00",
+      "parent_incidents": [],
+      "child_incidents": [],
+      "is_downstream_incident": false
+    },
+    {
+      "incident_id": "I7",
+      "root_service": "policy-engine-chart",
+      "incident_type": "operational_anomaly",
+      "start_time": "2026-02-17T23:59:40.512419+00:00",
+      "end_time": "2026-02-18T00:10:03.763798+00:00",
+      "parent_incidents": [],
+      "child_incidents": [],
+      "is_downstream_incident": false
+    },
+    {
+      "incident_id": "I8",
+      "root_service": "metrics-server",
+      "incident_type": "operational_anomaly",
+      "start_time": "2026-02-18T00:00:09.538476+00:00",
+      "end_time": "2026-02-18T00:12:54.543744+00:00",
+      "parent_incidents": [],
+      "child_incidents": [],
+      "is_downstream_incident": false
+    },
+    {
+      "incident_id": "I9",
+      "root_service": "vector-store-chart",
+      "incident_type": "operational_anomaly",
+      "start_time": "2026-02-17T23:59:16.447354+00:00",
+      "end_time": "2026-02-18T00:11:42.798579+00:00",
+      "parent_incidents": [],
+      "child_incidents": [],
+      "is_downstream_incident": false
+    },
+    {
+      "incident_id": "I10",
+      "root_service": "metadata-chart",
+      "incident_type": "operational_anomaly",
+      "start_time": "2026-02-18T00:00:46.039785+00:00",
+      "end_time": "2026-02-18T00:11:14.199804+00:00",
+      "parent_incidents": [],
+      "child_incidents": [],
+      "is_downstream_incident": false
+    },
+    {
+      "incident_id": "I11",
+      "root_service": "ontap-monitor-chart",
+      "incident_type": "operational_anomaly",
+      "start_time": "2026-02-18T00:00:25.564343+00:00",
+      "end_time": "2026-02-18T00:09:27.390826+00:00",
+      "parent_incidents": [],
+      "child_incidents": [],
+      "is_downstream_incident": false
+    }
+  ],
+  "edges": []
+}

@@ -1,0 +1,2636 @@
+{
+  "bundle_version": "step9.v2",
+  "artifacts_used": {
+    "events": "events.jsonl",
+    "clusters": "clusters.json",
+    "graph": "graph.json",
+    "trigger_stats": "cluster_trigger_stats.json",
+    "incident_root_causes": "incident_root_causes.json"
+  },
+  "incidents": [
+    {
+      "incident_id": "I1",
+      "incident_window": {
+        "start_time": "2026-02-17T23:59:59.884238+00:00",
+        "end_time": "2026-02-18T00:12:59.534236+00:00"
+      },
+      "root_cause": {
+        "cluster_id": "C1166",
+        "score": 16.41243262067807,
+        "confidence": {
+          "value": 0.314,
+          "label": "low"
+        },
+        "cluster_summary": {
+          "cluster_id": "C1166",
+          "size": 14,
+          "cluster_type": "candidate",
+          "first_seen_ts": "2026-02-18T00:00:13.196896981Z",
+          "last_seen_ts": "2026-02-18T00:12:58.373387195Z",
+          "top_services": [
+            {
+              "service": "mongodb",
+              "count": 14
+            }
+          ],
+          "http_class_counts": {
+            "unknown": 14
+          },
+          "example_events": [
+            "Error receiving request from client. Ending connection from remote"
+          ]
+        },
+        "representative_event": {
+          "timestamp": "2026-02-18T00:00:13.196896981Z",
+          "service": "mongodb",
+          "response_code": null,
+          "text": "Error receiving request from client. Ending connection from remote"
+        },
+        "first_seen_event": {
+          "timestamp": "2026-02-18T00:00:13.196896981Z",
+          "service": "mongodb",
+          "response_code": null,
+          "text": "Error receiving request from client. Ending connection from remote"
+        },
+        "signals": {
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_proximity": 0.9837243852593456,
+          "in_weight": 118.07999999999997,
+          "out_weight": 615.11,
+          "severity_counts": {
+            "ERROR": 14,
+            "WARN": 0,
+            "INFO": 0,
+            "OTHER": 0
+          },
+          "trigger_stats": {
+            "first_seen": "2026-02-18T00:00:13.196896+00:00",
+            "last_seen": "2026-02-18T00:12:58.373387+00:00",
+            "event_count": 14,
+            "error_count": 0,
+            "duration_seconds": 765.176491,
+            "error_rate": 0.0,
+            "severity": 0.2,
+            "cluster_rate_eps": 0.018296,
+            "global_rate_eps": 66.056206,
+            "burst_factor": 0.000277,
+            "trigger_score": 0.0
+          }
+        },
+        "graph_context": {
+          "incoming_edges": [
+            {
+              "from": "C770",
+              "relation": "precedes",
+              "weight": 106.47999999999998,
+              "confidence": 1.0
+            },
+            {
+              "from": "C1228",
+              "relation": "precedes",
+              "weight": 4.2,
+              "confidence": 0.38181818181818183
+            },
+            {
+              "from": "C427",
+              "relation": "precedes",
+              "weight": 0.7,
+              "confidence": 0.06363636363636363
+            }
+          ],
+          "outgoing_edges": [
+            {
+              "to": "C770",
+              "relation": "precedes",
+              "weight": 97.63999999999999,
+              "confidence": 1.0
+            },
+            {
+              "to": "C1228",
+              "relation": "precedes",
+              "weight": 3.8,
+              "confidence": 0.34545454545454546
+            }
+          ],
+          "in_degree": 3,
+          "out_degree": 2
+        },
+        "why_ranked_first": [
+          "highest composite RCA score for this incident",
+          "strong downstream influence relative to incoming influence",
+          "appears early relative to incident onset",
+          "shows abnormal trigger/error behavior"
+        ]
+      },
+      "other_candidates": [
+        {
+          "cluster_id": "C770",
+          "score": 15.95293983989676,
+          "confidence": {
+            "value": 0.313,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C770",
+            "size": 1588,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-18T00:00:04.964364903Z",
+            "last_seen_ts": "2026-02-18T00:12:58.925734246Z",
+            "top_services": [
+              {
+                "service": "mongodb",
+                "count": 100
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 100
+            },
+            "example_events": [
+              "Host failed in replica set"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-18T00:00:04.964364903Z",
+            "service": "mongodb",
+            "response_code": null,
+            "text": "Host failed in replica set"
+          }
+        },
+        {
+          "cluster_id": "C427",
+          "score": 15.613781610061048,
+          "confidence": {
+            "value": 0.312,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C427",
+            "size": 778,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-18T00:00:00.50761364Z",
+            "last_seen_ts": "2026-02-18T00:12:59.307765884Z",
+            "top_services": [
+              {
+                "service": "mongodb",
+                "count": 100
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 100
+            },
+            "example_events": [
+              "Heartbeat failed after max retries"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-18T00:00:00.50761364Z",
+            "service": "mongodb",
+            "response_code": null,
+            "text": "Heartbeat failed after max retries"
+          }
+        },
+        {
+          "cluster_id": "C681",
+          "score": 14.713889568139917,
+          "confidence": {
+            "value": 0.308,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C681",
+            "size": 14,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-18T00:00:06.378137557Z",
+            "last_seen_ts": "2026-02-18T00:11:04.417283031Z",
+            "top_services": [
+              {
+                "service": "mongodb",
+                "count": 14
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 14
+            },
+            "example_events": [
+              "The ident was successfully dropped"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-18T00:00:06.378137557Z",
+            "service": "mongodb",
+            "response_code": null,
+            "text": "The ident was successfully dropped"
+          }
+        },
+        {
+          "cluster_id": "C1228",
+          "score": 14.091535128648065,
+          "confidence": {
+            "value": 0.306,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C1228",
+            "size": 972,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-18T00:00:04.754796998Z",
+            "last_seen_ts": "2026-02-18T00:12:58.37339761Z",
+            "top_services": [
+              {
+                "service": "mongodb",
+                "count": 100
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 100
+            },
+            "example_events": [
+              "Connection ended"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-18T00:00:04.754796998Z",
+            "service": "mongodb",
+            "response_code": null,
+            "text": "Connection ended"
+          }
+        }
+      ],
+      "timeline": [
+        {
+          "timestamp": "2026-02-18T00:00:00.50761364Z",
+          "cluster_id": "C427",
+          "score": 15.613781610061048,
+          "service": "mongodb",
+          "response_code": null,
+          "summary": "Heartbeat failed after max retries"
+        },
+        {
+          "timestamp": "2026-02-18T00:00:04.754796998Z",
+          "cluster_id": "C1228",
+          "score": 14.091535128648065,
+          "service": "mongodb",
+          "response_code": null,
+          "summary": "Connection ended"
+        },
+        {
+          "timestamp": "2026-02-18T00:00:04.964364903Z",
+          "cluster_id": "C770",
+          "score": 15.95293983989676,
+          "service": "mongodb",
+          "response_code": null,
+          "summary": "Host failed in replica set"
+        },
+        {
+          "timestamp": "2026-02-18T00:00:06.378137557Z",
+          "cluster_id": "C681",
+          "score": 14.713889568139917,
+          "service": "mongodb",
+          "response_code": null,
+          "summary": "The ident was successfully dropped"
+        },
+        {
+          "timestamp": "2026-02-18T00:00:13.196896981Z",
+          "cluster_id": "C1166",
+          "score": 16.41243262067807,
+          "service": "mongodb",
+          "response_code": null,
+          "summary": "Error receiving request from client. Ending connection from remote"
+        }
+      ],
+      "stats": {
+        "candidate_count": 5,
+        "has_root_cause": true
+      }
+    },
+    {
+      "incident_id": "I2",
+      "incident_window": {
+        "start_time": "2026-02-18T00:00:00.227247+00:00",
+        "end_time": "2026-02-18T00:12:52.289768+00:00"
+      },
+      "root_cause": {
+        "cluster_id": "C2344",
+        "score": 13.322393122967947,
+        "confidence": {
+          "value": 0.293,
+          "label": "low"
+        },
+        "cluster_summary": {
+          "cluster_id": "C2344",
+          "size": 10,
+          "cluster_type": "candidate",
+          "first_seen_ts": "2026-02-18T00:01:15.923123922Z",
+          "last_seen_ts": "2026-02-18T00:12:36.414178432Z",
+          "top_services": [
+            {
+              "service": "proxy",
+              "count": 10
+            }
+          ],
+          "http_class_counts": {
+            "unknown": 10
+          },
+          "example_events": [
+            "goroutine 4 gp=0xc000003c00 m=nil [GC worker (idle), 10 minutes]:",
+            "goroutine 5 gp=0xc000003dc0 m=nil [GC worker (idle), 10 minutes]:",
+            "goroutine 12 gp=0xc0001faa80 m=nil [GC worker (idle), 10 minutes]:"
+          ]
+        },
+        "representative_event": {
+          "timestamp": "2026-02-18T00:01:15.923320448Z",
+          "service": "proxy",
+          "response_code": null,
+          "text": "goroutine 5 gp=0xc000003dc0 m=nil [GC worker (idle), 10 minutes]:"
+        },
+        "first_seen_event": {
+          "timestamp": "2026-02-18T00:01:15.923123922Z",
+          "service": "proxy",
+          "response_code": null,
+          "text": "goroutine 4 gp=0xc000003c00 m=nil [GC worker (idle), 10 minutes]:"
+        },
+        "signals": {
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_proximity": 0.9019564103410221,
+          "in_weight": 15.29,
+          "out_weight": 336.7799999999999,
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 0,
+            "OTHER": 10
+          },
+          "trigger_stats": {
+            "first_seen": "2026-02-18T00:01:15.923123+00:00",
+            "last_seen": "2026-02-18T00:12:36.414178+00:00",
+            "event_count": 10,
+            "error_count": 0,
+            "duration_seconds": 680.491055,
+            "error_rate": 0.0,
+            "severity": 0.2,
+            "cluster_rate_eps": 0.014695,
+            "global_rate_eps": 66.056206,
+            "burst_factor": 0.000222,
+            "trigger_score": 0.0
+          }
+        },
+        "graph_context": {
+          "incoming_edges": [
+            {
+              "from": "C2203",
+              "relation": "precedes",
+              "weight": 6.37,
+              "confidence": 0.5790909090909091
+            },
+            {
+              "from": "C275",
+              "relation": "precedes",
+              "weight": 5.0,
+              "confidence": 0.45454545454545453
+            },
+            {
+              "from": "C2570",
+              "relation": "precedes",
+              "weight": 3.4299999999999993,
+              "confidence": 0.31181818181818177
+            },
+            {
+              "from": "C2471",
+              "relation": "precedes",
+              "weight": 0.48999999999999994,
+              "confidence": 0.04454545454545454
+            }
+          ],
+          "outgoing_edges": [
+            {
+              "to": "C2203",
+              "relation": "precedes",
+              "weight": 6.37,
+              "confidence": 0.5790909090909091
+            },
+            {
+              "to": "C275",
+              "relation": "precedes",
+              "weight": 5.0,
+              "confidence": 0.45454545454545453
+            },
+            {
+              "to": "C2570",
+              "relation": "precedes",
+              "weight": 3.919999999999999,
+              "confidence": 0.35636363636363627
+            },
+            {
+              "to": "C2471",
+              "relation": "precedes",
+              "weight": 2.4499999999999997,
+              "confidence": 0.2227272727272727
+            }
+          ],
+          "in_degree": 4,
+          "out_degree": 4
+        },
+        "why_ranked_first": [
+          "highest composite RCA score for this incident",
+          "strong downstream influence relative to incoming influence",
+          "appears early relative to incident onset",
+          "shows abnormal trigger/error behavior"
+        ]
+      },
+      "other_candidates": [
+        {
+          "cluster_id": "C275",
+          "score": 12.473554641623544,
+          "confidence": {
+            "value": 0.286,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C275",
+            "size": 42,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-18T00:01:49.126062604Z",
+            "last_seen_ts": "2026-02-18T00:12:36.421872267Z",
+            "top_services": [
+              {
+                "service": "proxy",
+                "count": 42
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 42
+            },
+            "example_events": [
+              "all.logs: [1771372909.126062604, {\"time\":\"2026-02-18T00:01:49.126062604Z\",\"stream\":\"stderr\",\"_p\":\"F\",\"log\":\"\",\"kubernetes\":{\"pod_name\":\"milvus-milvus-proxy-8d464b548-ns6vc\",\"namespace_name\":\"aide-system\",\"pod_id\":\"e6707083-0971-454f-8f38-2acc6ce64dc0\",\"labels\":{\"app.kubernetes.io/component\":\"proxy\",\"app.kubernetes.io/instance\":\"milvus\",\"app.kubernetes.io/managed-by\":\"milvus-operator\",\"app.kubernetes.io/name\":\"milvus\",\"milvus.io/service\":\"true\",\"pod-template-hash\":\"8d464b548\"},\"annotations\":{\"checksum/config\":\"d67acb2b1b11c614cfaa633c1d06d07386e08f37deb3397d4d812b83e8405430\",\"cni.projectcalico.org/containerID\":\"415cd207ef835855482f515081572e875227251ebbbc8d035d4f739b404ceb30\",\"cni.projectcalico.org/podIP\":\"10.42.173.135/32\",\"cni.projectcalico.org/podIPs\":\"10.42.173.135/32\",\"milvus.io/using-configmap\":\"milvus\"},\"host\":\"sti32-dcn-vsimrtp113-03\",\"pod_ip\":\"10.42.173.135\",\"container_name\":\"proxy\",\"docker_id\":\"45252100a7db639187de3901193824c462c551743be6c2a61476fbf2b7f36fa1\",\"container_hash\":\"sha256:81ebb625ec9f0671060e846bf6f609723be68e379a4bc5c19bc289f07ae82516\",\"container_image\":\"docker.repo.eng.netapp.com/globalcicd/aidp/ai-data-platform/milvusdb/milvus:ntap-v2.5.11-51-cpu\"}}]",
+              "all.logs: [1771372909.126688827, {\"time\":\"2026-02-18T00:01:49.126688827Z\",\"stream\":\"stderr\",\"_p\":\"F\",\"log\":\"\",\"kubernetes\":{\"pod_name\":\"milvus-milvus-proxy-8d464b548-ns6vc\",\"namespace_name\":\"aide-system\",\"pod_id\":\"e6707083-0971-454f-8f38-2acc6ce64dc0\",\"labels\":{\"app.kubernetes.io/component\":\"proxy\",\"app.kubernetes.io/instance\":\"milvus\",\"app.kubernetes.io/managed-by\":\"milvus-operator\",\"app.kubernetes.io/name\":\"milvus\",\"milvus.io/service\":\"true\",\"pod-template-hash\":\"8d464b548\"},\"annotations\":{\"checksum/config\":\"d67acb2b1b11c614cfaa633c1d06d07386e08f37deb3397d4d812b83e8405430\",\"cni.projectcalico.org/containerID\":\"415cd207ef835855482f515081572e875227251ebbbc8d035d4f739b404ceb30\",\"cni.projectcalico.org/podIP\":\"10.42.173.135/32\",\"cni.projectcalico.org/podIPs\":\"10.42.173.135/32\",\"milvus.io/using-configmap\":\"milvus\"},\"host\":\"sti32-dcn-vsimrtp113-03\",\"pod_ip\":\"10.42.173.135\",\"container_name\":\"proxy\",\"docker_id\":\"45252100a7db639187de3901193824c462c551743be6c2a61476fbf2b7f36fa1\",\"container_hash\":\"sha256:81ebb625ec9f0671060e846bf6f609723be68e379a4bc5c19bc289f07ae82516\",\"container_image\":\"docker.repo.eng.netapp.com/globalcicd/aidp/ai-data-platform/milvusdb/milvus:ntap-v2.5.11-51-cpu\"}}]",
+              "all.logs: [1771372909.126887347, {\"time\":\"2026-02-18T00:01:49.126887347Z\",\"stream\":\"stderr\",\"_p\":\"F\",\"log\":\"\",\"kubernetes\":{\"pod_name\":\"milvus-milvus-proxy-8d464b548-ns6vc\",\"namespace_name\":\"aide-system\",\"pod_id\":\"e6707083-0971-454f-8f38-2acc6ce64dc0\",\"labels\":{\"app.kubernetes.io/component\":\"proxy\",\"app.kubernetes.io/instance\":\"milvus\",\"app.kubernetes.io/managed-by\":\"milvus-operator\",\"app.kubernetes.io/name\":\"milvus\",\"milvus.io/service\":\"true\",\"pod-template-hash\":\"8d464b548\"},\"annotations\":{\"checksum/config\":\"d67acb2b1b11c614cfaa633c1d06d07386e08f37deb3397d4d812b83e8405430\",\"cni.projectcalico.org/containerID\":\"415cd207ef835855482f515081572e875227251ebbbc8d035d4f739b404ceb30\",\"cni.projectcalico.org/podIP\":\"10.42.173.135/32\",\"cni.projectcalico.org/podIPs\":\"10.42.173.135/32\",\"milvus.io/using-configmap\":\"milvus\"},\"host\":\"sti32-dcn-vsimrtp113-03\",\"pod_ip\":\"10.42.173.135\",\"container_name\":\"proxy\",\"docker_id\":\"45252100a7db639187de3901193824c462c551743be6c2a61476fbf2b7f36fa1\",\"container_hash\":\"sha256:81ebb625ec9f0671060e846bf6f609723be68e379a4bc5c19bc289f07ae82516\",\"container_image\":\"docker.repo.eng.netapp.com/globalcicd/aidp/ai-data-platform/milvusdb/milvus:ntap-v2.5.11-51-cpu\"}}]"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-18T00:12:36.413668196Z",
+            "service": "proxy",
+            "response_code": null,
+            "text": "all.logs: [1771373556.413668196, {\"time\":\"2026-02-18T00:12:36.413668196Z\",\"stream\":\"stderr\",\"_p\":\"F\",\"log\":\"\",\"kubernetes\":{\"pod_name\":\"milvus-milvus-proxy-8d464b548-ns6vc\",\"namespace_name\":\"aide-system\",\"pod_id\":\"e6707083-0971-454f-8f38-2acc6ce64dc0\",\"labels\":{\"app.kubernetes.io/component\":\"proxy\",\"app.kubernetes.io/instance\":\"milvus\",\"app.kubernetes.io/managed-by\":\"milvus-operator\",\"app.kubernetes.io/name\":\"milvus\",\"milvus.io/service\":\"true\",\"pod-template-hash\":\"8d464b548\"},\"annotations\":{\"checksum/config\":\"d67acb2b1b11c614cfaa633c1d06d07386e08f37deb3397d4d812b83e8405430\",\"cni.projectcalico.org/containerID\":\"415cd207ef835855482f515081572e875227251ebbbc8d035d4f739b404ceb30\",\"cni.projectcalico.org/podIP\":\"10.42.173.135/32\",\"cni.projectcalico.org/podIPs\":\"10.42.173.135/32\",\"milvus.io/using-configmap\":\"milvus\"},\"host\":\"sti32-dcn-vsimrtp113-03\",\"pod_ip\":\"10.42.173.135\",\"container_name\":\"proxy\",\"docker_id\":\"45252100a7db639187de3901193824c462c551743be6c2a61476fbf2b7f36fa1\",\"container_hash\":\"sha256:81ebb625ec9f0671060e846bf6f609723be68e379a4bc5c19bc289f07ae82516\",\"container_image\":\"docker.repo.eng.netapp.com/globalcicd/aidp/ai-data-platform/milvusdb/milvus:ntap-v2.5.11-51-cpu\"}}]"
+          }
+        },
+        {
+          "cluster_id": "C2570",
+          "score": 12.122394360950592,
+          "confidence": {
+            "value": 0.289,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C2570",
+            "size": 8,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-18T00:01:15.92259218Z",
+            "last_seen_ts": "2026-02-18T00:12:36.419155245Z",
+            "top_services": [
+              {
+                "service": "proxy",
+                "count": 8
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 8
+            },
+            "example_events": [
+              "/build/cmd/main.go:97 +0x24d fp=0xc001a55f50 sp=0xc001a55cd8 pc=0x53bad0d",
+              "/build/internal/distributed/rootcoord/client/client.go:97 +0x76 fp=0xc001e4aec0 sp=0xc001e4adb8 pc=0x46a0396",
+              "/build/cmd/main.go:97 +0x24d fp=0xc0019e5f50 sp=0xc0019e5cd8 pc=0x53bad0d"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-18T00:01:15.92259218Z",
+            "service": "proxy",
+            "response_code": null,
+            "text": "/build/cmd/main.go:97 +0x24d fp=0xc001a55f50 sp=0xc001a55cd8 pc=0x53bad0d"
+          }
+        },
+        {
+          "cluster_id": "C2471",
+          "score": 12.122386611319131,
+          "confidence": {
+            "value": 0.289,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C2471",
+            "size": 36,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-18T00:01:15.925916921Z",
+            "last_seen_ts": "2026-02-18T00:12:36.421255029Z",
+            "top_services": [
+              {
+                "service": "proxy",
+                "count": 36
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 36
+            },
+            "example_events": [
+              "/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.1.linux-amd64/src/net/fd_posix.go:55 +0x25 fp=0xc001a17ca8 sp=0xc001a17c60 pc=0x20eda45",
+              "/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.1.linux-amd64/src/net/fd_posix.go:55 +0x25 fp=0xc000b5eca8 sp=0xc000b5ec60 pc=0x20eda45",
+              "/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.1.linux-amd64/src/net/fd_posix.go:55 +0x25 fp=0xc001a1dca8 sp=0xc001a1dc60 pc=0x20eda45"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-18T00:01:15.925916921Z",
+            "service": "proxy",
+            "response_code": null,
+            "text": "/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.1.linux-amd64/src/net/fd_posix.go:55 +0x25 fp=0xc001a17ca8 sp=0xc001a17c60 pc=0x20eda45"
+          }
+        },
+        {
+          "cluster_id": "C2203",
+          "score": 12.122381598771712,
+          "confidence": {
+            "value": 0.289,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C2203",
+            "size": 24,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-18T00:01:15.928066589Z",
+            "last_seen_ts": "2026-02-18T00:12:36.421033799Z",
+            "top_services": [
+              {
+                "service": "proxy",
+                "count": 24
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 24
+            },
+            "example_events": [
+              "net.(*TCPListener).accept(0xc000fc7d40)",
+              "net.(*TCPListener).Accept(0xc000fc7d40)",
+              "net.(*TCPListener).accept(0xc000c6ff40)"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-18T00:01:15.928066589Z",
+            "service": "proxy",
+            "response_code": null,
+            "text": "net.(*TCPListener).accept(0xc000fc7d40)"
+          }
+        }
+      ],
+      "timeline": [
+        {
+          "timestamp": "2026-02-18T00:01:15.92259218Z",
+          "cluster_id": "C2570",
+          "score": 12.122394360950592,
+          "service": "proxy",
+          "response_code": null,
+          "summary": "/build/cmd/main.go:97 +0x24d fp=0xc001a55f50 sp=0xc001a55cd8 pc=0x53bad0d"
+        },
+        {
+          "timestamp": "2026-02-18T00:01:15.923123922Z",
+          "cluster_id": "C2344",
+          "score": 13.322393122967947,
+          "service": "proxy",
+          "response_code": null,
+          "summary": "goroutine 4 gp=0xc000003c00 m=nil [GC worker (idle), 10 minutes]:"
+        },
+        {
+          "timestamp": "2026-02-18T00:01:15.925916921Z",
+          "cluster_id": "C2471",
+          "score": 12.122386611319131,
+          "service": "proxy",
+          "response_code": null,
+          "summary": "/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.1.linux-amd64/src/net/fd_posix.go:55 +0x25 fp=0xc001a17ca8 sp=0xc001a17c60 pc=0x20eda45"
+        },
+        {
+          "timestamp": "2026-02-18T00:01:15.928066589Z",
+          "cluster_id": "C2203",
+          "score": 12.122381598771712,
+          "service": "proxy",
+          "response_code": null,
+          "summary": "net.(*TCPListener).accept(0xc000fc7d40)"
+        },
+        {
+          "timestamp": "2026-02-18T00:01:49.126062604Z",
+          "cluster_id": "C275",
+          "score": 12.473554641623544,
+          "service": "proxy",
+          "response_code": null,
+          "summary": "all.logs: [1771372909.126062604, {\"time\":\"2026-02-18T00:01:49.126062604Z\",\"stream\":\"stderr\",\"_p\":\"F\",\"log\":\"\",\"kubernetes\":{\"pod_name\":\"milvus-milvus-proxy-8d464b548-ns6vc\",\"namespace_name\":\"aide-system\",\"pod_id\":\"e6707083-0971-454f-8f38-2acc6ce64dc0\",\"labels\":{\"app.kubernetes.io/component\":\"proxy\",\"app.kubernetes.io/instance\":\"milvus\",\"app.kubernetes.io/managed-by\":\"milvus-operator\",\"app.kubernetes.io/name\":\"milvus\",\"milvus.io/service\":\"true\",\"pod-template-hash\":\"8d464b548\"},\"annotations\":{\"checksum/config\":\"d67acb2b1b11c614cfaa633c1d06d07386e08f37deb3397d4d812b83e8405430\",\"cni.projectcalico.org/containerID\":\"415cd207ef835855482f515081572e875227251ebbbc8d035d4f739b404ceb30\",\"cni.projectcalico.org/podIP\":\"10.42.173.135/32\",\"cni.projectcalico.org/podIPs\":\"10.42.173.135/32\",\"milvus.io/using-configmap\":\"milvus\"},\"host\":\"sti32-dcn-vsimrtp113-03\",\"pod_ip\":\"10.42.173.135\",\"container_name\":\"proxy\",\"docker_id\":\"45252100a7db639187de3901193824c462c551743be6c2a61476fbf2b7f36fa1\",\"container_hash\":\"sha256:81ebb625ec9f0671060e846bf6f609723be68e379a4bc5c19bc289f07ae82516\",\"container_image\":\"docker.repo.eng.netapp.com/globalcicd/aidp/ai-data-platform/milvusdb/milvus:ntap-v2.5.11-51-cpu\"}}]"
+        }
+      ],
+      "stats": {
+        "candidate_count": 5,
+        "has_root_cause": true
+      }
+    },
+    {
+      "incident_id": "I3",
+      "incident_window": {
+        "start_time": "2026-02-18T00:00:00.029922+00:00",
+        "end_time": "2026-02-18T00:12:52.091208+00:00"
+      },
+      "root_cause": {
+        "cluster_id": "C2",
+        "score": 17.74530015578268,
+        "confidence": {
+          "value": 0.321,
+          "label": "low"
+        },
+        "cluster_summary": {
+          "cluster_id": "C2",
+          "size": 42,
+          "cluster_type": "candidate",
+          "first_seen_ts": "2026-02-18T00:00:00.029922139Z",
+          "last_seen_ts": "2026-02-18T00:12:52.091208968Z",
+          "top_services": [
+            {
+              "service": "vault",
+              "count": 42
+            }
+          ],
+          "http_class_counts": {
+            "unknown": 42
+          },
+          "example_events": [
+            "2026-02-18T00:00:00.029Z [ERROR] storage.raft: failed to appendEntries to: peer=\"{Voter cc796202-190e-52be-242d-2222d9293346 vault-2.vault-internal:8201}\" error=\"msgpack decode error [pos 3536]: read tcp 10.42.173.159:33020->10.42.76.232:8201: i/o timeout\"",
+            "2026-02-18T00:00:20.333Z [ERROR] storage.raft: failed to appendEntries to: peer=\"{Voter cc796202-190e-52be-242d-2222d9293346 vault-2.vault-internal:8201}\" error=\"msgpack decode error [pos 3672]: read tcp 10.42.173.159:46522->10.42.76.232:8201: i/o timeout\"",
+            "2026-02-18T00:00:40.667Z [ERROR] storage.raft: failed to appendEntries to: peer=\"{Voter cc796202-190e-52be-242d-2222d9293346 vault-2.vault-internal:8201}\" error=\"msgpack decode error [pos 3808]: read tcp 10.42.173.159:60918->10.42.76.232:8201: i/o timeout\""
+          ]
+        },
+        "representative_event": {
+          "timestamp": "2026-02-18T00:12:31.75070989Z",
+          "service": "vault",
+          "response_code": null,
+          "text": "2026-02-18T00:12:31.750Z [ERROR] storage.raft: failed to appendEntries to: peer=\"{Voter cc796202-190e-52be-242d-2222d9293346 vault-2.vault-internal:8201}\" error=\"msgpack decode error [pos 3672]: read tcp 10.42.173.159:38978->10.42.76.232:8201: i/o timeout\""
+        },
+        "first_seen_event": {
+          "timestamp": "2026-02-18T00:00:00.029922139Z",
+          "service": "vault",
+          "response_code": null,
+          "text": "2026-02-18T00:00:00.029Z [ERROR] storage.raft: failed to appendEntries to: peer=\"{Voter cc796202-190e-52be-242d-2222d9293346 vault-2.vault-internal:8201}\" error=\"msgpack decode error [pos 3536]: read tcp 10.42.173.159:33020->10.42.76.232:8201: i/o timeout\""
+        },
+        "signals": {
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_proximity": 1.0,
+          "in_weight": 0.0,
+          "out_weight": 10.95,
+          "severity_counts": {
+            "ERROR": 39,
+            "WARN": 3,
+            "INFO": 0,
+            "OTHER": 0
+          },
+          "trigger_stats": {
+            "first_seen": "2026-02-18T00:00:00.029922+00:00",
+            "last_seen": "2026-02-18T00:12:52.091208+00:00",
+            "event_count": 42,
+            "error_count": 0,
+            "duration_seconds": 772.061286,
+            "error_rate": 0.0,
+            "severity": 0.2,
+            "cluster_rate_eps": 0.0544,
+            "global_rate_eps": 66.056206,
+            "burst_factor": 0.000824,
+            "trigger_score": 0.0
+          }
+        },
+        "graph_context": {
+          "incoming_edges": [],
+          "outgoing_edges": [],
+          "in_degree": 0,
+          "out_degree": 0
+        },
+        "why_ranked_first": [
+          "highest composite RCA score for this incident",
+          "strong downstream influence relative to incoming influence",
+          "appears early relative to incident onset",
+          "shows abnormal trigger/error behavior"
+        ]
+      },
+      "other_candidates": [],
+      "timeline": [
+        {
+          "timestamp": "2026-02-18T00:00:00.029922139Z",
+          "cluster_id": "C2",
+          "score": 17.74530015578268,
+          "service": "vault",
+          "response_code": null,
+          "summary": "2026-02-18T00:00:00.029Z [ERROR] storage.raft: failed to appendEntries to: peer=\"{Voter cc796202-190e-52be-242d-2222d9293346 vault-2.vault-internal:8201}\" error=\"msgpack decode error [pos 3536]: read tcp 10.42.173.159:33020->10.42.76.232:8201: i/o timeout\""
+        }
+      ],
+      "stats": {
+        "candidate_count": 1,
+        "has_root_cause": true
+      }
+    },
+    {
+      "incident_id": "I4",
+      "incident_window": {
+        "start_time": "2026-02-18T00:00:00.235139+00:00",
+        "end_time": "2026-02-18T00:12:59.734973+00:00"
+      },
+      "root_cause": {
+        "cluster_id": "C80",
+        "score": 7.7055809512343005,
+        "confidence": {
+          "value": 0.131,
+          "label": "low"
+        },
+        "cluster_summary": {
+          "cluster_id": "C80",
+          "size": 195,
+          "cluster_type": "candidate",
+          "first_seen_ts": "2026-02-18T00:00:00.258007902Z",
+          "last_seen_ts": "2026-02-18T00:12:56.581195799Z",
+          "top_services": [
+            {
+              "service": "etcd",
+              "count": 100
+            }
+          ],
+          "http_class_counts": {
+            "unknown": 100
+          },
+          "example_events": [
+            "failed to reach the peer URL"
+          ]
+        },
+        "representative_event": {
+          "timestamp": "2026-02-18T00:00:00.258007902Z",
+          "service": "etcd",
+          "response_code": null,
+          "text": "failed to reach the peer URL"
+        },
+        "first_seen_event": {
+          "timestamp": "2026-02-18T00:00:00.258007902Z",
+          "service": "etcd",
+          "response_code": null,
+          "text": "failed to reach the peer URL"
+        },
+        "signals": {
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_proximity": 1.0,
+          "in_weight": 0.0,
+          "out_weight": 0.0,
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 195,
+            "INFO": 0,
+            "OTHER": 0
+          },
+          "trigger_stats": {
+            "first_seen": "2026-02-18T00:00:00.258007+00:00",
+            "last_seen": "2026-02-18T00:12:56.581195+00:00",
+            "event_count": 195,
+            "error_count": 0,
+            "duration_seconds": 776.323188,
+            "error_rate": 0.0,
+            "severity": 0.2,
+            "cluster_rate_eps": 0.251184,
+            "global_rate_eps": 66.056206,
+            "burst_factor": 0.003803,
+            "trigger_score": 0.0
+          }
+        },
+        "graph_context": {
+          "incoming_edges": [],
+          "outgoing_edges": [],
+          "in_degree": 0,
+          "out_degree": 0
+        },
+        "why_ranked_first": [
+          "highest composite RCA score for this incident",
+          "strong downstream influence relative to incoming influence",
+          "appears early relative to incident onset",
+          "shows abnormal trigger/error behavior"
+        ]
+      },
+      "other_candidates": [
+        {
+          "cluster_id": "C79",
+          "score": 7.705580780355495,
+          "confidence": {
+            "value": 0.131,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C79",
+            "size": 195,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-18T00:00:00.258081718Z",
+            "last_seen_ts": "2026-02-18T00:12:56.581225911Z",
+            "top_services": [
+              {
+                "service": "etcd",
+                "count": 100
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 100
+            },
+            "example_events": [
+              "failed to get version"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-18T00:00:00.258081718Z",
+            "service": "etcd",
+            "response_code": null,
+            "text": "failed to get version"
+          }
+        },
+        {
+          "cluster_id": "C11",
+          "score": 7.577544245211762,
+          "confidence": {
+            "value": 0.13,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C11",
+            "size": 108,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-18T00:00:02.73498476Z",
+            "last_seen_ts": "2026-02-18T00:12:52.735246984Z",
+            "top_services": [
+              {
+                "service": "etcd",
+                "count": 100
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 100
+            },
+            "example_events": [
+              "dropped internal Raft message since sending buffer is full (overloaded network)"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-18T00:00:02.73498476Z",
+            "service": "etcd",
+            "response_code": null,
+            "text": "dropped internal Raft message since sending buffer is full (overloaded network)"
+          }
+        },
+        {
+          "cluster_id": "C114",
+          "score": 6.519987123819616,
+          "confidence": {
+            "value": 0.126,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C114",
+            "size": 6,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-18T00:00:02.088927262Z",
+            "last_seen_ts": "2026-02-18T00:09:21.579961889Z",
+            "top_services": [
+              {
+                "service": "etcd",
+                "count": 6
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 6
+            },
+            "example_events": [
+              "sending database sha256 checksum to client",
+              "storing new hash"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-18T00:04:21.57110276Z",
+            "service": "etcd",
+            "response_code": null,
+            "text": "storing new hash"
+          }
+        },
+        {
+          "cluster_id": "C115",
+          "score": 6.0637143584837485,
+          "confidence": {
+            "value": 0.124,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C115",
+            "size": 4,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-18T00:00:01.861367939Z",
+            "last_seen_ts": "2026-02-18T00:00:04.11288881Z",
+            "top_services": [
+              {
+                "service": "etcd",
+                "count": 4
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 4
+            },
+            "example_events": [
+              "sending database snapshot to client",
+              "successfully sent database snapshot to client"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-18T00:00:01.861367939Z",
+            "service": "etcd",
+            "response_code": null,
+            "text": "sending database snapshot to client"
+          }
+        }
+      ],
+      "timeline": [
+        {
+          "timestamp": "2026-02-18T00:00:00.258007902Z",
+          "cluster_id": "C80",
+          "score": 7.7055809512343005,
+          "service": "etcd",
+          "response_code": null,
+          "summary": "failed to reach the peer URL"
+        },
+        {
+          "timestamp": "2026-02-18T00:00:00.258081718Z",
+          "cluster_id": "C79",
+          "score": 7.705580780355495,
+          "service": "etcd",
+          "response_code": null,
+          "summary": "failed to get version"
+        },
+        {
+          "timestamp": "2026-02-18T00:00:01.861367939Z",
+          "cluster_id": "C115",
+          "score": 6.0637143584837485,
+          "service": "etcd",
+          "response_code": null,
+          "summary": "sending database snapshot to client"
+        },
+        {
+          "timestamp": "2026-02-18T00:00:02.088927262Z",
+          "cluster_id": "C114",
+          "score": 6.519987123819616,
+          "service": "etcd",
+          "response_code": null,
+          "summary": "sending database sha256 checksum to client"
+        },
+        {
+          "timestamp": "2026-02-18T00:00:02.73498476Z",
+          "cluster_id": "C11",
+          "score": 7.577544245211762,
+          "service": "etcd",
+          "response_code": null,
+          "summary": "dropped internal Raft message since sending buffer is full (overloaded network)"
+        }
+      ],
+      "stats": {
+        "candidate_count": 5,
+        "has_root_cause": true
+      }
+    },
+    {
+      "incident_id": "I5",
+      "incident_window": {
+        "start_time": "2026-02-18T00:00:06.996853+00:00",
+        "end_time": "2026-02-18T00:12:45.940965+00:00"
+      },
+      "root_cause": {
+        "cluster_id": "C1078",
+        "score": 17.79887158435411,
+        "confidence": {
+          "value": 0.321,
+          "label": "low"
+        },
+        "cluster_summary": {
+          "cluster_id": "C1078",
+          "size": 156,
+          "cluster_type": "candidate",
+          "first_seen_ts": "2026-02-18T00:00:06.996853924Z",
+          "last_seen_ts": "2026-02-18T00:12:45.940965263Z",
+          "top_services": [
+            {
+              "service": "metrics",
+              "count": 100
+            }
+          ],
+          "http_class_counts": {
+            "unknown": 100
+          },
+          "example_events": [
+            "time=\"2026-02-18T00:00:06Z\" level=error msg=\"Cannot connect to MongoDB: cannot connect to MongoDB: server selection error: server selection timeout, current topology: { Type: Single, Servers: [{ Addr: localhost:27017, Type: Unknown, Last error: dial tcp [::1]:27017: connect: connection refused }, ] }\"",
+            "time=\"2026-02-18T00:00:10Z\" level=error msg=\"Cannot connect to MongoDB: cannot connect to MongoDB: server selection error: server selection timeout, current topology: { Type: Single, Servers: [{ Addr: localhost:27017, Type: Unknown, Last error: dial tcp [::1]:27017: connect: connection refused }, ] }\"",
+            "time=\"2026-02-18T00:00:13Z\" level=error msg=\"Cannot connect to MongoDB: cannot connect to MongoDB: server selection error: server selection timeout, current topology: { Type: Single, Servers: [{ Addr: localhost:27017, Type: Unknown, Last error: dial tcp [::1]:27017: connect: connection refused }, ] }\""
+          ]
+        },
+        "representative_event": {
+          "timestamp": "2026-02-18T00:06:36.99694626Z",
+          "service": "metrics",
+          "response_code": null,
+          "text": "time=\"2026-02-18T00:06:36Z\" level=error msg=\"Cannot connect to MongoDB: cannot connect to MongoDB: server selection error: server selection timeout, current topology: { Type: Single, Servers: [{ Addr: localhost:27017, Type: Unknown, Last error: dial tcp [::1]:27017: connect: connection refused }, ] }\""
+        },
+        "first_seen_event": {
+          "timestamp": "2026-02-18T00:00:06.996853924Z",
+          "service": "metrics",
+          "response_code": null,
+          "text": "time=\"2026-02-18T00:00:06Z\" level=error msg=\"Cannot connect to MongoDB: cannot connect to MongoDB: server selection error: server selection timeout, current topology: { Type: Single, Servers: [{ Addr: localhost:27017, Type: Unknown, Last error: dial tcp [::1]:27017: connect: connection refused }, ] }\""
+        },
+        "signals": {
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_proximity": 1.0,
+          "in_weight": 0.0,
+          "out_weight": 1647.6100000000006,
+          "severity_counts": {
+            "ERROR": 156,
+            "WARN": 0,
+            "INFO": 0,
+            "OTHER": 0
+          },
+          "trigger_stats": {
+            "first_seen": "2026-02-18T00:00:06.996853+00:00",
+            "last_seen": "2026-02-18T00:12:45.940965+00:00",
+            "event_count": 156,
+            "error_count": 0,
+            "duration_seconds": 758.944112,
+            "error_rate": 0.0,
+            "severity": 0.2,
+            "cluster_rate_eps": 0.205549,
+            "global_rate_eps": 66.056206,
+            "burst_factor": 0.003112,
+            "trigger_score": 0.0
+          }
+        },
+        "graph_context": {
+          "incoming_edges": [],
+          "outgoing_edges": [],
+          "in_degree": 0,
+          "out_degree": 0
+        },
+        "why_ranked_first": [
+          "highest composite RCA score for this incident",
+          "strong downstream influence relative to incoming influence",
+          "appears early relative to incident onset",
+          "shows abnormal trigger/error behavior"
+        ]
+      },
+      "other_candidates": [],
+      "timeline": [
+        {
+          "timestamp": "2026-02-18T00:00:06.996853924Z",
+          "cluster_id": "C1078",
+          "score": 17.79887158435411,
+          "service": "metrics",
+          "response_code": null,
+          "summary": "time=\"2026-02-18T00:00:06Z\" level=error msg=\"Cannot connect to MongoDB: cannot connect to MongoDB: server selection error: server selection timeout, current topology: { Type: Single, Servers: [{ Addr: localhost:27017, Type: Unknown, Last error: dial tcp [::1]:27017: connect: connection refused }, ] }\""
+        }
+      ],
+      "stats": {
+        "candidate_count": 1,
+        "has_root_cause": true
+      }
+    },
+    {
+      "incident_id": "I6",
+      "incident_window": {
+        "start_time": "2026-02-17T23:59:41.845137+00:00",
+        "end_time": "2026-02-18T00:10:14.093645+00:00"
+      },
+      "root_cause": {
+        "cluster_id": "C1146",
+        "score": 16.92387158435411,
+        "confidence": {
+          "value": 0.317,
+          "label": "low"
+        },
+        "cluster_summary": {
+          "cluster_id": "C1146",
+          "size": 8,
+          "cluster_type": "candidate",
+          "first_seen_ts": "2026-02-17T23:59:47.096923363Z",
+          "last_seen_ts": "2026-02-18T00:10:14.093645317Z",
+          "top_services": [
+            {
+              "service": "utility",
+              "count": 8
+            }
+          ],
+          "http_class_counts": {
+            "unknown": 8
+          },
+          "example_events": [
+            "2026/02/17 23:59:51 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }",
+            "2026/02/17 23:59:47 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }",
+            "2026/02/18 00:03:51 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }"
+          ]
+        },
+        "representative_event": {
+          "timestamp": "2026-02-18T00:10:14.093645317Z",
+          "service": "utility",
+          "response_code": null,
+          "text": "2026/02/18 00:10:14 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }"
+        },
+        "first_seen_event": {
+          "timestamp": "2026-02-17T23:59:47.096923363Z",
+          "service": "utility",
+          "response_code": null,
+          "text": "2026/02/17 23:59:47 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }"
+        },
+        "signals": {
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_proximity": 1.0,
+          "in_weight": 2.0,
+          "out_weight": 10.95,
+          "severity_counts": {
+            "ERROR": 8,
+            "WARN": 0,
+            "INFO": 0,
+            "OTHER": 0
+          },
+          "trigger_stats": {
+            "first_seen": "2026-02-17T23:59:47.096923+00:00",
+            "last_seen": "2026-02-18T00:10:14.093645+00:00",
+            "event_count": 8,
+            "error_count": 0,
+            "duration_seconds": 626.996722,
+            "error_rate": 0.0,
+            "severity": 0.2,
+            "cluster_rate_eps": 0.012759,
+            "global_rate_eps": 66.056206,
+            "burst_factor": 0.000193,
+            "trigger_score": 0.0
+          }
+        },
+        "graph_context": {
+          "incoming_edges": [
+            {
+              "from": "C406",
+              "relation": "precedes",
+              "weight": 1.0,
+              "confidence": 0.09090909090909091
+            },
+            {
+              "from": "C842",
+              "relation": "precedes",
+              "weight": 1.0,
+              "confidence": 0.09090909090909091
+            }
+          ],
+          "outgoing_edges": [
+            {
+              "to": "C406",
+              "relation": "co_occurs",
+              "weight": 2.0,
+              "confidence": 0.18181818181818182
+            },
+            {
+              "to": "C815",
+              "relation": "co_occurs",
+              "weight": 1.0,
+              "confidence": 0.09090909090909091
+            },
+            {
+              "to": "C842",
+              "relation": "co_occurs",
+              "weight": 1.0,
+              "confidence": 0.09090909090909091
+            }
+          ],
+          "in_degree": 2,
+          "out_degree": 3
+        },
+        "why_ranked_first": [
+          "highest composite RCA score for this incident",
+          "strong downstream influence relative to incoming influence",
+          "appears early relative to incident onset",
+          "shows abnormal trigger/error behavior"
+        ]
+      },
+      "other_candidates": [
+        {
+          "cluster_id": "C406",
+          "score": 13.773871584354108,
+          "confidence": {
+            "value": 0.305,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C406",
+            "size": 8,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-17T23:59:42.096246Z",
+            "last_seen_ts": "2026-02-18T00:10:09.092712Z",
+            "top_services": [
+              {
+                "service": "utility",
+                "count": 8
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 8
+            },
+            "example_events": [
+              "[job.JobService] Created gRPC connection to job-tracker:9090 with load balancing, keepalive (1m30s), and retry (max 10 attempts)"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-17T23:59:46.259952Z",
+            "service": "utility",
+            "response_code": null,
+            "text": "[job.JobService] Created gRPC connection to job-tracker:9090 with load balancing, keepalive (1m30s), and retry (max 10 attempts)"
+          }
+        },
+        {
+          "cluster_id": "C815",
+          "score": 13.773871584354108,
+          "confidence": {
+            "value": 0.305,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C815",
+            "size": 8,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-17T23:59:41.845334Z",
+            "last_seen_ts": "2026-02-18T00:10:08.842071Z",
+            "top_services": [
+              {
+                "service": "utility",
+                "count": 8
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 8
+            },
+            "example_events": [
+              "Waiting for HTTP server to be ready..."
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-17T23:59:46.008274Z",
+            "service": "utility",
+            "response_code": null,
+            "text": "Waiting for HTTP server to be ready..."
+          }
+        },
+        {
+          "cluster_id": "C842",
+          "score": 13.773871584354108,
+          "confidence": {
+            "value": 0.305,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C842",
+            "size": 8,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-17T23:59:41.845322Z",
+            "last_seen_ts": "2026-02-18T00:10:08.842048Z",
+            "top_services": [
+              {
+                "service": "utility",
+                "count": 8
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 8
+            },
+            "example_events": [
+              "HTTP server configured at ':8080' (probes only)"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-17T23:59:46.008259Z",
+            "service": "utility",
+            "response_code": null,
+            "text": "HTTP server configured at ':8080' (probes only)"
+          }
+        },
+        {
+          "cluster_id": "C843",
+          "score": 13.773871584354108,
+          "confidence": {
+            "value": 0.305,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C843",
+            "size": 8,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-17T23:59:41.845446Z",
+            "last_seen_ts": "2026-02-18T00:10:08.842169Z",
+            "top_services": [
+              {
+                "service": "utility",
+                "count": 8
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 8
+            },
+            "example_events": [
+              "HTTP server starting at ':8080'"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-17T23:59:46.00844Z",
+            "service": "utility",
+            "response_code": null,
+            "text": "HTTP server starting at ':8080'"
+          }
+        }
+      ],
+      "timeline": [
+        {
+          "timestamp": "2026-02-17T23:59:41.845322Z",
+          "cluster_id": "C842",
+          "score": 13.773871584354108,
+          "service": "utility",
+          "response_code": null,
+          "summary": "HTTP server configured at ':8080' (probes only)"
+        },
+        {
+          "timestamp": "2026-02-17T23:59:41.845334Z",
+          "cluster_id": "C815",
+          "score": 13.773871584354108,
+          "service": "utility",
+          "response_code": null,
+          "summary": "Waiting for HTTP server to be ready..."
+        },
+        {
+          "timestamp": "2026-02-17T23:59:41.845446Z",
+          "cluster_id": "C843",
+          "score": 13.773871584354108,
+          "service": "utility",
+          "response_code": null,
+          "summary": "HTTP server starting at ':8080'"
+        },
+        {
+          "timestamp": "2026-02-17T23:59:42.096246Z",
+          "cluster_id": "C406",
+          "score": 13.773871584354108,
+          "service": "utility",
+          "response_code": null,
+          "summary": "[job.JobService] Created gRPC connection to job-tracker:9090 with load balancing, keepalive (1m30s), and retry (max 10 attempts)"
+        },
+        {
+          "timestamp": "2026-02-17T23:59:47.096923363Z",
+          "cluster_id": "C1146",
+          "score": 16.92387158435411,
+          "service": "utility",
+          "response_code": null,
+          "summary": "2026/02/17 23:59:47 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }"
+        }
+      ],
+      "stats": {
+        "candidate_count": 5,
+        "has_root_cause": true
+      }
+    },
+    {
+      "incident_id": "I7",
+      "incident_window": {
+        "start_time": "2026-02-17T23:59:40.512419+00:00",
+        "end_time": "2026-02-18T00:10:03.763798+00:00"
+      },
+      "root_cause": {
+        "cluster_id": "C1028",
+        "score": 15.42030015578268,
+        "confidence": {
+          "value": 0.312,
+          "label": "low"
+        },
+        "cluster_summary": {
+          "cluster_id": "C1028",
+          "size": 7,
+          "cluster_type": "candidate",
+          "first_seen_ts": "2026-02-17T23:59:40.512419Z",
+          "last_seen_ts": "2026-02-18T00:09:58.51127Z",
+          "top_services": [
+            {
+              "service": "policy-engine-chart",
+              "count": 7
+            }
+          ],
+          "http_class_counts": {
+            "unknown": 7
+          },
+          "example_events": [
+            "Initializing health probes"
+          ]
+        },
+        "representative_event": {
+          "timestamp": "2026-02-17T23:59:40.512419Z",
+          "service": "policy-engine-chart",
+          "response_code": null,
+          "text": "Initializing health probes"
+        },
+        "first_seen_event": {
+          "timestamp": "2026-02-17T23:59:40.512419Z",
+          "service": "policy-engine-chart",
+          "response_code": null,
+          "text": "Initializing health probes"
+        },
+        "signals": {
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_proximity": 1.0,
+          "in_weight": 0.0,
+          "out_weight": 17.900000000000002,
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 7,
+            "OTHER": 0
+          },
+          "trigger_stats": {
+            "first_seen": "2026-02-17T23:59:40.512419+00:00",
+            "last_seen": "2026-02-18T00:09:58.511270+00:00",
+            "event_count": 7,
+            "error_count": 0,
+            "duration_seconds": 617.998851,
+            "error_rate": 0.0,
+            "severity": 0.2,
+            "cluster_rate_eps": 0.011327,
+            "global_rate_eps": 66.056206,
+            "burst_factor": 0.000171,
+            "trigger_score": 0.0
+          }
+        },
+        "graph_context": {
+          "incoming_edges": [],
+          "outgoing_edges": [
+            {
+              "to": "C1148",
+              "relation": "co_occurs",
+              "weight": 2.0,
+              "confidence": 0.18181818181818182
+            },
+            {
+              "to": "C428",
+              "relation": "co_occurs",
+              "weight": 1.0,
+              "confidence": 0.09090909090909091
+            }
+          ],
+          "in_degree": 0,
+          "out_degree": 2
+        },
+        "why_ranked_first": [
+          "highest composite RCA score for this incident",
+          "strong downstream influence relative to incoming influence",
+          "appears early relative to incident onset",
+          "shows abnormal trigger/error behavior"
+        ]
+      },
+      "other_candidates": [
+        {
+          "cluster_id": "C961",
+          "score": 14.127443012925538,
+          "confidence": {
+            "value": 0.307,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C961",
+            "size": 7,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-17T23:59:40.512753Z",
+            "last_seen_ts": "2026-02-18T00:09:58.511536Z",
+            "top_services": [
+              {
+                "service": "policy-engine-chart",
+                "count": 7
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 7
+            },
+            "example_events": [
+              "HTTP server starting at ':8080'"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-18T00:02:40.441735Z",
+            "service": "policy-engine-chart",
+            "response_code": null,
+            "text": "HTTP server starting at ':8080'"
+          }
+        },
+        {
+          "cluster_id": "C960",
+          "score": 13.42030015578268,
+          "confidence": {
+            "value": 0.304,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C960",
+            "size": 7,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-17T23:59:40.512626Z",
+            "last_seen_ts": "2026-02-18T00:09:58.511418Z",
+            "top_services": [
+              {
+                "service": "policy-engine-chart",
+                "count": 7
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 7
+            },
+            "example_events": [
+              "HTTP server configured at ':8080' (probes only)"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-17T23:59:40.512626Z",
+            "service": "policy-engine-chart",
+            "response_code": null,
+            "text": "HTTP server configured at ':8080' (probes only)"
+          }
+        },
+        {
+          "cluster_id": "C1148",
+          "score": 8.071028272858497,
+          "confidence": {
+            "value": 0.132,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C1148",
+            "size": 7,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-17T23:59:45.765046768Z",
+            "last_seen_ts": "2026-02-18T00:10:03.763798782Z",
+            "top_services": [
+              {
+                "service": "policy-engine-chart",
+                "count": 7
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 7
+            },
+            "example_events": [
+              "2026/02/17 23:59:45 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }",
+              "2026/02/18 00:02:45 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }",
+              "2026/02/18 00:03:18 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-18T00:04:52.77920242Z",
+            "service": "policy-engine-chart",
+            "response_code": null,
+            "text": "2026/02/18 00:04:52 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }"
+          }
+        },
+        {
+          "cluster_id": "C428",
+          "score": 7.049065550072173,
+          "confidence": {
+            "value": 0.128,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C428",
+            "size": 7,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-17T23:59:40.764184Z",
+            "last_seen_ts": "2026-02-18T00:09:58.76296Z",
+            "top_services": [
+              {
+                "service": "policy-engine-chart",
+                "count": 7
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 7
+            },
+            "example_events": [
+              "[job.JobService] Created gRPC connection to job-tracker:9090 with load balancing, keepalive (1m30s), and retry (max 10 attempts)"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-17T23:59:40.764184Z",
+            "service": "policy-engine-chart",
+            "response_code": null,
+            "text": "[job.JobService] Created gRPC connection to job-tracker:9090 with load balancing, keepalive (1m30s), and retry (max 10 attempts)"
+          }
+        }
+      ],
+      "timeline": [
+        {
+          "timestamp": "2026-02-17T23:59:40.512419Z",
+          "cluster_id": "C1028",
+          "score": 15.42030015578268,
+          "service": "policy-engine-chart",
+          "response_code": null,
+          "summary": "Initializing health probes"
+        },
+        {
+          "timestamp": "2026-02-17T23:59:40.512626Z",
+          "cluster_id": "C960",
+          "score": 13.42030015578268,
+          "service": "policy-engine-chart",
+          "response_code": null,
+          "summary": "HTTP server configured at ':8080' (probes only)"
+        },
+        {
+          "timestamp": "2026-02-17T23:59:40.512753Z",
+          "cluster_id": "C961",
+          "score": 14.127443012925538,
+          "service": "policy-engine-chart",
+          "response_code": null,
+          "summary": "HTTP server starting at ':8080'"
+        },
+        {
+          "timestamp": "2026-02-17T23:59:40.764184Z",
+          "cluster_id": "C428",
+          "score": 7.049065550072173,
+          "service": "policy-engine-chart",
+          "response_code": null,
+          "summary": "[job.JobService] Created gRPC connection to job-tracker:9090 with load balancing, keepalive (1m30s), and retry (max 10 attempts)"
+        },
+        {
+          "timestamp": "2026-02-17T23:59:45.765046768Z",
+          "cluster_id": "C1148",
+          "score": 8.071028272858497,
+          "service": "policy-engine-chart",
+          "response_code": null,
+          "summary": "2026/02/17 23:59:45 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }"
+        }
+      ],
+      "stats": {
+        "candidate_count": 5,
+        "has_root_cause": true
+      }
+    },
+    {
+      "incident_id": "I8",
+      "incident_window": {
+        "start_time": "2026-02-18T00:00:09.538476+00:00",
+        "end_time": "2026-02-18T00:12:54.543744+00:00"
+      },
+      "root_cause": {
+        "cluster_id": "C66",
+        "score": 7.187197881665908,
+        "confidence": {
+          "value": 0.129,
+          "label": "low"
+        },
+        "cluster_summary": {
+          "cluster_id": "C66",
+          "size": 52,
+          "cluster_type": "candidate",
+          "first_seen_ts": "2026-02-18T00:00:09.53847657Z",
+          "last_seen_ts": "2026-02-18T00:12:54.543744925Z",
+          "top_services": [
+            {
+              "service": "metrics-server",
+              "count": 52
+            }
+          ],
+          "http_class_counts": {
+            "unknown": 52
+          },
+          "example_events": [
+            "E0218 00:00:09.538378       1 scraper.go:149] \"Failed to scrape node\" err=\"Get \\\"https://192.168.113.135:10250/metrics/resource\\\": dial tcp 192.168.113.135:10250: connect: connection refused\" node=\"sti32-dcn-vsimrtp113-02\"",
+            "E0218 00:00:24.536732       1 scraper.go:149] \"Failed to scrape node\" err=\"Get \\\"https://192.168.113.135:10250/metrics/resource\\\": dial tcp 192.168.113.135:10250: connect: connection refused\" node=\"sti32-dcn-vsimrtp113-02\"",
+            "E0218 00:00:39.540960       1 scraper.go:149] \"Failed to scrape node\" err=\"Get \\\"https://192.168.113.135:10250/metrics/resource\\\": dial tcp 192.168.113.135:10250: connect: connection refused\" node=\"sti32-dcn-vsimrtp113-02\""
+          ]
+        },
+        "representative_event": {
+          "timestamp": "2026-02-18T00:08:54.532910184Z",
+          "service": "metrics-server",
+          "response_code": null,
+          "text": "E0218 00:08:54.532825       1 scraper.go:149] \"Failed to scrape node\" err=\"Get \\\"https://192.168.113.135:10250/metrics/resource\\\": dial tcp 192.168.113.135:10250: connect: connection refused\" node=\"sti32-dcn-vsimrtp113-02\""
+        },
+        "first_seen_event": {
+          "timestamp": "2026-02-18T00:00:09.53847657Z",
+          "service": "metrics-server",
+          "response_code": null,
+          "text": "E0218 00:00:09.538378       1 scraper.go:149] \"Failed to scrape node\" err=\"Get \\\"https://192.168.113.135:10250/metrics/resource\\\": dial tcp 192.168.113.135:10250: connect: connection refused\" node=\"sti32-dcn-vsimrtp113-02\""
+        },
+        "signals": {
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_proximity": 1.0,
+          "in_weight": 0.0,
+          "out_weight": 0.0,
+          "severity_counts": {
+            "ERROR": 52,
+            "WARN": 0,
+            "INFO": 0,
+            "OTHER": 0
+          },
+          "trigger_stats": {
+            "first_seen": "2026-02-18T00:00:09.538476+00:00",
+            "last_seen": "2026-02-18T00:12:54.543744+00:00",
+            "event_count": 52,
+            "error_count": 0,
+            "duration_seconds": 765.005268,
+            "error_rate": 0.0,
+            "severity": 0.2,
+            "cluster_rate_eps": 0.067973,
+            "global_rate_eps": 66.056206,
+            "burst_factor": 0.001029,
+            "trigger_score": 0.0
+          }
+        },
+        "graph_context": {
+          "incoming_edges": [],
+          "outgoing_edges": [],
+          "in_degree": 0,
+          "out_degree": 0
+        },
+        "why_ranked_first": [
+          "highest composite RCA score for this incident",
+          "strong downstream influence relative to incoming influence",
+          "appears early relative to incident onset",
+          "shows abnormal trigger/error behavior"
+        ]
+      },
+      "other_candidates": [],
+      "timeline": [
+        {
+          "timestamp": "2026-02-18T00:00:09.53847657Z",
+          "cluster_id": "C66",
+          "score": 7.187197881665908,
+          "service": "metrics-server",
+          "response_code": null,
+          "summary": "E0218 00:00:09.538378       1 scraper.go:149] \"Failed to scrape node\" err=\"Get \\\"https://192.168.113.135:10250/metrics/resource\\\": dial tcp 192.168.113.135:10250: connect: connection refused\" node=\"sti32-dcn-vsimrtp113-02\""
+        }
+      ],
+      "stats": {
+        "candidate_count": 1,
+        "has_root_cause": true
+      }
+    },
+    {
+      "incident_id": "I9",
+      "incident_window": {
+        "start_time": "2026-02-17T23:59:16.447354+00:00",
+        "end_time": "2026-02-18T00:11:42.798579+00:00"
+      },
+      "root_cause": {
+        "cluster_id": "C809",
+        "score": 14.127443012925538,
+        "confidence": {
+          "value": 0.307,
+          "label": "low"
+        },
+        "cluster_summary": {
+          "cluster_id": "C809",
+          "size": 7,
+          "cluster_type": "candidate",
+          "first_seen_ts": "2026-02-17T23:59:16.703964Z",
+          "last_seen_ts": "2026-02-18T00:10:07.789553Z",
+          "top_services": [
+            {
+              "service": "vector-store-chart",
+              "count": 7
+            }
+          ],
+          "http_class_counts": {
+            "unknown": 7
+          },
+          "example_events": [
+            "Initializing vector store services (Milvus, MongoDB, etc.)"
+          ]
+        },
+        "representative_event": {
+          "timestamp": "2026-02-17T23:59:16.703964Z",
+          "service": "vector-store-chart",
+          "response_code": null,
+          "text": "Initializing vector store services (Milvus, MongoDB, etc.)"
+        },
+        "first_seen_event": {
+          "timestamp": "2026-02-17T23:59:16.703964Z",
+          "service": "vector-store-chart",
+          "response_code": null,
+          "text": "Initializing vector store services (Milvus, MongoDB, etc.)"
+        },
+        "signals": {
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_proximity": 1.0,
+          "in_weight": 0.0,
+          "out_weight": 394.2,
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 7,
+            "OTHER": 0
+          },
+          "trigger_stats": {
+            "first_seen": "2026-02-17T23:59:16.703964+00:00",
+            "last_seen": "2026-02-18T00:10:07.789553+00:00",
+            "event_count": 7,
+            "error_count": 0,
+            "duration_seconds": 651.085589,
+            "error_rate": 0.0,
+            "severity": 0.2,
+            "cluster_rate_eps": 0.010751,
+            "global_rate_eps": 66.056206,
+            "burst_factor": 0.000163,
+            "trigger_score": 0.0
+          }
+        },
+        "graph_context": {
+          "incoming_edges": [],
+          "outgoing_edges": [],
+          "in_degree": 0,
+          "out_degree": 0
+        },
+        "why_ranked_first": [
+          "highest composite RCA score for this incident",
+          "strong downstream influence relative to incoming influence",
+          "appears early relative to incident onset",
+          "shows abnormal trigger/error behavior"
+        ]
+      },
+      "other_candidates": [
+        {
+          "cluster_id": "C864",
+          "score": 14.127443012925538,
+          "confidence": {
+            "value": 0.307,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C864",
+            "size": 7,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-17T23:59:16.453411Z",
+            "last_seen_ts": "2026-02-18T00:10:07.538453Z",
+            "top_services": [
+              {
+                "service": "vector-store-chart",
+                "count": 7
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 7
+            },
+            "example_events": [
+              "Waiting for HTTP server to be ready..."
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-17T23:59:16.453411Z",
+            "service": "vector-store-chart",
+            "response_code": null,
+            "text": "Waiting for HTTP server to be ready..."
+          }
+        },
+        {
+          "cluster_id": "C890",
+          "score": 14.127443012925538,
+          "confidence": {
+            "value": 0.307,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C890",
+            "size": 7,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-17T23:59:16.703904Z",
+            "last_seen_ts": "2026-02-18T00:10:07.789506Z",
+            "top_services": [
+              {
+                "service": "vector-store-chart",
+                "count": 7
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 7
+            },
+            "example_events": [
+              "HTTP server is ready and accepting connections"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-17T23:59:16.703904Z",
+            "service": "vector-store-chart",
+            "response_code": null,
+            "text": "HTTP server is ready and accepting connections"
+          }
+        },
+        {
+          "cluster_id": "C958",
+          "score": 13.167443012925537,
+          "confidence": {
+            "value": 0.213,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C958",
+            "size": 7,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-17T23:59:16.453488Z",
+            "last_seen_ts": "2026-02-18T00:10:07.538518Z",
+            "top_services": [
+              {
+                "service": "vector-store-chart",
+                "count": 7
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 7
+            },
+            "example_events": [
+              "HTTP server starting at ':8080'"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-18T00:10:07.538518Z",
+            "service": "vector-store-chart",
+            "response_code": null,
+            "text": "HTTP server starting at ':8080'"
+          }
+        },
+        {
+          "cluster_id": "C959",
+          "score": 13.167443012925537,
+          "confidence": {
+            "value": 0.213,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C959",
+            "size": 7,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-17T23:59:16.453389Z",
+            "last_seen_ts": "2026-02-18T00:10:07.538438Z",
+            "top_services": [
+              {
+                "service": "vector-store-chart",
+                "count": 7
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 7
+            },
+            "example_events": [
+              "HTTP server configured at ':8080' (probes only)"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-18T00:04:31.542149Z",
+            "service": "vector-store-chart",
+            "response_code": null,
+            "text": "HTTP server configured at ':8080' (probes only)"
+          }
+        }
+      ],
+      "timeline": [
+        {
+          "timestamp": "2026-02-17T23:59:16.453389Z",
+          "cluster_id": "C959",
+          "score": 13.167443012925537,
+          "service": "vector-store-chart",
+          "response_code": null,
+          "summary": "HTTP server configured at ':8080' (probes only)"
+        },
+        {
+          "timestamp": "2026-02-17T23:59:16.453411Z",
+          "cluster_id": "C864",
+          "score": 14.127443012925538,
+          "service": "vector-store-chart",
+          "response_code": null,
+          "summary": "Waiting for HTTP server to be ready..."
+        },
+        {
+          "timestamp": "2026-02-17T23:59:16.453488Z",
+          "cluster_id": "C958",
+          "score": 13.167443012925537,
+          "service": "vector-store-chart",
+          "response_code": null,
+          "summary": "HTTP server starting at ':8080'"
+        },
+        {
+          "timestamp": "2026-02-17T23:59:16.703904Z",
+          "cluster_id": "C890",
+          "score": 14.127443012925538,
+          "service": "vector-store-chart",
+          "response_code": null,
+          "summary": "HTTP server is ready and accepting connections"
+        },
+        {
+          "timestamp": "2026-02-17T23:59:16.703964Z",
+          "cluster_id": "C809",
+          "score": 14.127443012925538,
+          "service": "vector-store-chart",
+          "response_code": null,
+          "summary": "Initializing vector store services (Milvus, MongoDB, etc.)"
+        }
+      ],
+      "stats": {
+        "candidate_count": 5,
+        "has_root_cause": true
+      }
+    },
+    {
+      "incident_id": "I10",
+      "incident_window": {
+        "start_time": "2026-02-18T00:00:46.039785+00:00",
+        "end_time": "2026-02-18T00:11:14.199804+00:00"
+      },
+      "root_cause": {
+        "cluster_id": "C923",
+        "score": 14.127443012925538,
+        "confidence": {
+          "value": 0.307,
+          "label": "low"
+        },
+        "cluster_summary": {
+          "cluster_id": "C923",
+          "size": 7,
+          "cluster_type": "candidate",
+          "first_seen_ts": "2026-02-18T00:00:46.290357Z",
+          "last_seen_ts": "2026-02-18T00:11:09.198227Z",
+          "top_services": [
+            {
+              "service": "metadata-chart",
+              "count": 7
+            }
+          ],
+          "http_class_counts": {
+            "unknown": 7
+          },
+          "example_events": [
+            "HTTP server is ready and accepting connections"
+          ]
+        },
+        "representative_event": {
+          "timestamp": "2026-02-18T00:00:46.290357Z",
+          "service": "metadata-chart",
+          "response_code": null,
+          "text": "HTTP server is ready and accepting connections"
+        },
+        "first_seen_event": {
+          "timestamp": "2026-02-18T00:00:46.290357Z",
+          "service": "metadata-chart",
+          "response_code": null,
+          "text": "HTTP server is ready and accepting connections"
+        },
+        "signals": {
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_proximity": 1.0,
+          "in_weight": 0.0,
+          "out_weight": 711.7500000000002,
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 7,
+            "OTHER": 0
+          },
+          "trigger_stats": {
+            "first_seen": "2026-02-18T00:00:46.290357+00:00",
+            "last_seen": "2026-02-18T00:11:09.198227+00:00",
+            "event_count": 7,
+            "error_count": 0,
+            "duration_seconds": 622.90787,
+            "error_rate": 0.0,
+            "severity": 0.2,
+            "cluster_rate_eps": 0.011238,
+            "global_rate_eps": 66.056206,
+            "burst_factor": 0.00017,
+            "trigger_score": 0.0
+          }
+        },
+        "graph_context": {
+          "incoming_edges": [],
+          "outgoing_edges": [],
+          "in_degree": 0,
+          "out_degree": 0
+        },
+        "why_ranked_first": [
+          "highest composite RCA score for this incident",
+          "strong downstream influence relative to incoming influence",
+          "appears early relative to incident onset",
+          "shows abnormal trigger/error behavior"
+        ]
+      },
+      "other_candidates": [
+        {
+          "cluster_id": "C1079",
+          "score": 13.42030015578268,
+          "confidence": {
+            "value": 0.304,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C1079",
+            "size": 7,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-18T00:00:46.039838Z",
+            "last_seen_ts": "2026-02-18T00:11:08.94777Z",
+            "top_services": [
+              {
+                "service": "metadata-chart",
+                "count": 7
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 7
+            },
+            "example_events": [
+              "Initializing health probes"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-18T00:00:46.039838Z",
+            "service": "metadata-chart",
+            "response_code": null,
+            "text": "Initializing health probes"
+          }
+        },
+        {
+          "cluster_id": "C455",
+          "score": 8.73679916255413,
+          "confidence": {
+            "value": 0.135,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C455",
+            "size": 7,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-18T00:00:46.039785Z",
+            "last_seen_ts": "2026-02-18T00:11:08.947728Z",
+            "top_services": [
+              {
+                "service": "metadata-chart",
+                "count": 7
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 7
+            },
+            "example_events": [
+              "[job.JobService] Created gRPC connection to job-tracker:9090 with load balancing, keepalive (1m30s), and retry (max 10 attempts)"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-18T00:00:46.039785Z",
+            "service": "metadata-chart",
+            "response_code": null,
+            "text": "[job.JobService] Created gRPC connection to job-tracker:9090 with load balancing, keepalive (1m30s), and retry (max 10 attempts)"
+          }
+        },
+        {
+          "cluster_id": "C1171",
+          "score": 8.071028272858497,
+          "confidence": {
+            "value": 0.132,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C1171",
+            "size": 7,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-18T00:00:51.291103582Z",
+            "last_seen_ts": "2026-02-18T00:11:14.19980431Z",
+            "top_services": [
+              {
+                "service": "metadata-chart",
+                "count": 7
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 7
+            },
+            "example_events": [
+              "2026/02/18 00:00:51 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }",
+              "2026/02/18 00:02:21 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }",
+              "2026/02/18 00:03:16 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-18T00:08:38.262874218Z",
+            "service": "metadata-chart",
+            "response_code": null,
+            "text": "2026/02/18 00:08:38 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }"
+          }
+        },
+        {
+          "cluster_id": "C1031",
+          "score": 7.049065550072173,
+          "confidence": {
+            "value": 0.128,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C1031",
+            "size": 7,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-18T00:00:46.040055Z",
+            "last_seen_ts": "2026-02-18T00:11:08.948017Z",
+            "top_services": [
+              {
+                "service": "metadata-chart",
+                "count": 7
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 7
+            },
+            "example_events": [
+              "HTTP server starting at ':8080'"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-18T00:00:46.040055Z",
+            "service": "metadata-chart",
+            "response_code": null,
+            "text": "HTTP server starting at ':8080'"
+          }
+        }
+      ],
+      "timeline": [
+        {
+          "timestamp": "2026-02-18T00:00:46.039785Z",
+          "cluster_id": "C455",
+          "score": 8.73679916255413,
+          "service": "metadata-chart",
+          "response_code": null,
+          "summary": "[job.JobService] Created gRPC connection to job-tracker:9090 with load balancing, keepalive (1m30s), and retry (max 10 attempts)"
+        },
+        {
+          "timestamp": "2026-02-18T00:00:46.039838Z",
+          "cluster_id": "C1079",
+          "score": 13.42030015578268,
+          "service": "metadata-chart",
+          "response_code": null,
+          "summary": "Initializing health probes"
+        },
+        {
+          "timestamp": "2026-02-18T00:00:46.040055Z",
+          "cluster_id": "C1031",
+          "score": 7.049065550072173,
+          "service": "metadata-chart",
+          "response_code": null,
+          "summary": "HTTP server starting at ':8080'"
+        },
+        {
+          "timestamp": "2026-02-18T00:00:46.290357Z",
+          "cluster_id": "C923",
+          "score": 14.127443012925538,
+          "service": "metadata-chart",
+          "response_code": null,
+          "summary": "HTTP server is ready and accepting connections"
+        },
+        {
+          "timestamp": "2026-02-18T00:00:51.291103582Z",
+          "cluster_id": "C1171",
+          "score": 8.071028272858497,
+          "service": "metadata-chart",
+          "response_code": null,
+          "summary": "2026/02/18 00:00:51 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }"
+        }
+      ],
+      "stats": {
+        "candidate_count": 5,
+        "has_root_cause": true
+      }
+    },
+    {
+      "incident_id": "I11",
+      "incident_window": {
+        "start_time": "2026-02-18T00:00:25.564343+00:00",
+        "end_time": "2026-02-18T00:09:27.390826+00:00"
+      },
+      "root_cause": {
+        "cluster_id": "C957",
+        "score": 8.869667176665487,
+        "confidence": {
+          "value": 0.135,
+          "label": "low"
+        },
+        "cluster_summary": {
+          "cluster_id": "C957",
+          "size": 4,
+          "cluster_type": "candidate",
+          "first_seen_ts": "2026-02-18T00:00:25.564343Z",
+          "last_seen_ts": "2026-02-18T00:08:32.339057Z",
+          "top_services": [
+            {
+              "service": "ontap-monitor-chart",
+              "count": 4
+            }
+          ],
+          "http_class_counts": {
+            "unknown": 4
+          },
+          "example_events": [
+            "Health check endpoints registered"
+          ]
+        },
+        "representative_event": {
+          "timestamp": "2026-02-18T00:00:25.564343Z",
+          "service": "ontap-monitor-chart",
+          "response_code": null,
+          "text": "Health check endpoints registered"
+        },
+        "first_seen_event": {
+          "timestamp": "2026-02-18T00:00:25.564343Z",
+          "service": "ontap-monitor-chart",
+          "response_code": null,
+          "text": "Health check endpoints registered"
+        },
+        "signals": {
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "trigger_proximity": 1.0,
+          "in_weight": 0.0,
+          "out_weight": 0.0,
+          "severity_counts": {
+            "ERROR": 0,
+            "WARN": 0,
+            "INFO": 4,
+            "OTHER": 0
+          },
+          "trigger_stats": {
+            "first_seen": "2026-02-18T00:00:25.564343+00:00",
+            "last_seen": "2026-02-18T00:08:32.339057+00:00",
+            "event_count": 4,
+            "error_count": 0,
+            "duration_seconds": 486.774714,
+            "error_rate": 0.0,
+            "severity": 0.2,
+            "cluster_rate_eps": 0.008217,
+            "global_rate_eps": 66.056206,
+            "burst_factor": 0.000124,
+            "trigger_score": 0.0
+          }
+        },
+        "graph_context": {
+          "incoming_edges": [],
+          "outgoing_edges": [],
+          "in_degree": 0,
+          "out_degree": 0
+        },
+        "why_ranked_first": [
+          "highest composite RCA score for this incident",
+          "strong downstream influence relative to incoming influence",
+          "appears early relative to incident onset",
+          "shows abnormal trigger/error behavior"
+        ]
+      },
+      "other_candidates": [
+        {
+          "cluster_id": "C373",
+          "score": 6.869667176665487,
+          "confidence": {
+            "value": 0.127,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C373",
+            "size": 4,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-18T00:00:25.564509Z",
+            "last_seen_ts": "2026-02-18T00:08:32.339295Z",
+            "top_services": [
+              {
+                "service": "ontap-monitor-chart",
+                "count": 4
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 4
+            },
+            "example_events": [
+              "[file-metadata.SnapshotMetadataService] Created gRPC connection to file-metadata:9090 with load balancing, keepalive (1m30s), and retry (max 10 attempts)"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-18T00:00:25.564509Z",
+            "service": "ontap-monitor-chart",
+            "response_code": null,
+            "text": "[file-metadata.SnapshotMetadataService] Created gRPC connection to file-metadata:9090 with load balancing, keepalive (1m30s), and retry (max 10 attempts)"
+          }
+        },
+        {
+          "cluster_id": "C557",
+          "score": 6.869667176665487,
+          "confidence": {
+            "value": 0.127,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C557",
+            "size": 4,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-18T00:00:25.564519Z",
+            "last_seen_ts": "2026-02-18T00:08:32.339308Z",
+            "top_services": [
+              {
+                "service": "ontap-monitor-chart",
+                "count": 4
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 4
+            },
+            "example_events": [
+              "Initialized gRPC client to Snapshot Metadata Service"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-18T00:00:25.564519Z",
+            "service": "ontap-monitor-chart",
+            "response_code": null,
+            "text": "Initialized gRPC client to Snapshot Metadata Service"
+          }
+        },
+        {
+          "cluster_id": "C841",
+          "score": 6.869667176665487,
+          "confidence": {
+            "value": 0.127,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C841",
+            "size": 4,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-18T00:00:25.564523Z",
+            "last_seen_ts": "2026-02-18T00:08:32.339316Z",
+            "top_services": [
+              {
+                "service": "ontap-monitor-chart",
+                "count": 4
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 4
+            },
+            "example_events": [
+              "Initialized SnapPubSub Service"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-18T00:00:25.564523Z",
+            "service": "ontap-monitor-chart",
+            "response_code": null,
+            "text": "Initialized SnapPubSub Service"
+          }
+        },
+        {
+          "cluster_id": "C920",
+          "score": 6.869667176665487,
+          "confidence": {
+            "value": 0.127,
+            "label": "low"
+          },
+          "trigger_score": 0.0,
+          "error_count": 0,
+          "cluster_summary": {
+            "cluster_id": "C920",
+            "size": 4,
+            "cluster_type": "candidate",
+            "first_seen_ts": "2026-02-18T00:00:25.564528Z",
+            "last_seen_ts": "2026-02-18T00:08:32.339321Z",
+            "top_services": [
+              {
+                "service": "ontap-monitor-chart",
+                "count": 4
+              }
+            ],
+            "http_class_counts": {
+              "unknown": 4
+            },
+            "example_events": [
+              "Initialized ONTAP Monitor Services"
+            ]
+          },
+          "representative_event": {
+            "timestamp": "2026-02-18T00:00:25.564528Z",
+            "service": "ontap-monitor-chart",
+            "response_code": null,
+            "text": "Initialized ONTAP Monitor Services"
+          }
+        }
+      ],
+      "timeline": [
+        {
+          "timestamp": "2026-02-18T00:00:25.564343Z",
+          "cluster_id": "C957",
+          "score": 8.869667176665487,
+          "service": "ontap-monitor-chart",
+          "response_code": null,
+          "summary": "Health check endpoints registered"
+        },
+        {
+          "timestamp": "2026-02-18T00:00:25.564509Z",
+          "cluster_id": "C373",
+          "score": 6.869667176665487,
+          "service": "ontap-monitor-chart",
+          "response_code": null,
+          "summary": "[file-metadata.SnapshotMetadataService] Created gRPC connection to file-metadata:9090 with load balancing, keepalive (1m30s), and retry (max 10 attempts)"
+        },
+        {
+          "timestamp": "2026-02-18T00:00:25.564519Z",
+          "cluster_id": "C557",
+          "score": 6.869667176665487,
+          "service": "ontap-monitor-chart",
+          "response_code": null,
+          "summary": "Initialized gRPC client to Snapshot Metadata Service"
+        },
+        {
+          "timestamp": "2026-02-18T00:00:25.564523Z",
+          "cluster_id": "C841",
+          "score": 6.869667176665487,
+          "service": "ontap-monitor-chart",
+          "response_code": null,
+          "summary": "Initialized SnapPubSub Service"
+        },
+        {
+          "timestamp": "2026-02-18T00:00:25.564528Z",
+          "cluster_id": "C920",
+          "score": 6.869667176665487,
+          "service": "ontap-monitor-chart",
+          "response_code": null,
+          "summary": "Initialized ONTAP Monitor Services"
+        }
+      ],
+      "stats": {
+        "candidate_count": 5,
+        "has_root_cause": true
+      }
+    }
+  ]
+}

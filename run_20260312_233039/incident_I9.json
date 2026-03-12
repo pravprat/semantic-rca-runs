@@ -1,0 +1,272 @@
+{
+  "incident_id": "I9",
+  "incident_window": {
+    "start_time": "2026-02-17T23:59:16.447354+00:00",
+    "end_time": "2026-02-18T00:11:42.798579+00:00"
+  },
+  "root_cause": {
+    "cluster_id": "C809",
+    "score": 14.127443012925538,
+    "confidence": {
+      "value": 0.307,
+      "label": "low"
+    },
+    "cluster_summary": {
+      "cluster_id": "C809",
+      "size": 7,
+      "cluster_type": "candidate",
+      "first_seen_ts": "2026-02-17T23:59:16.703964Z",
+      "last_seen_ts": "2026-02-18T00:10:07.789553Z",
+      "top_services": [
+        {
+          "service": "vector-store-chart",
+          "count": 7
+        }
+      ],
+      "http_class_counts": {
+        "unknown": 7
+      },
+      "example_events": [
+        "Initializing vector store services (Milvus, MongoDB, etc.)"
+      ]
+    },
+    "representative_event": {
+      "timestamp": "2026-02-17T23:59:16.703964Z",
+      "service": "vector-store-chart",
+      "response_code": null,
+      "text": "Initializing vector store services (Milvus, MongoDB, etc.)"
+    },
+    "first_seen_event": {
+      "timestamp": "2026-02-17T23:59:16.703964Z",
+      "service": "vector-store-chart",
+      "response_code": null,
+      "text": "Initializing vector store services (Milvus, MongoDB, etc.)"
+    },
+    "signals": {
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "trigger_proximity": 1.0,
+      "in_weight": 0.0,
+      "out_weight": 394.2,
+      "severity_counts": {
+        "ERROR": 0,
+        "WARN": 0,
+        "INFO": 7,
+        "OTHER": 0
+      },
+      "trigger_stats": {
+        "first_seen": "2026-02-17T23:59:16.703964+00:00",
+        "last_seen": "2026-02-18T00:10:07.789553+00:00",
+        "event_count": 7,
+        "error_count": 0,
+        "duration_seconds": 651.085589,
+        "error_rate": 0.0,
+        "severity": 0.2,
+        "cluster_rate_eps": 0.010751,
+        "global_rate_eps": 66.056206,
+        "burst_factor": 0.000163,
+        "trigger_score": 0.0
+      }
+    },
+    "graph_context": {
+      "incoming_edges": [],
+      "outgoing_edges": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    "why_ranked_first": [
+      "highest composite RCA score for this incident",
+      "strong downstream influence relative to incoming influence",
+      "appears early relative to incident onset",
+      "shows abnormal trigger/error behavior"
+    ]
+  },
+  "other_candidates": [
+    {
+      "cluster_id": "C864",
+      "score": 14.127443012925538,
+      "confidence": {
+        "value": 0.307,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C864",
+        "size": 7,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-17T23:59:16.453411Z",
+        "last_seen_ts": "2026-02-18T00:10:07.538453Z",
+        "top_services": [
+          {
+            "service": "vector-store-chart",
+            "count": 7
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 7
+        },
+        "example_events": [
+          "Waiting for HTTP server to be ready..."
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-17T23:59:16.453411Z",
+        "service": "vector-store-chart",
+        "response_code": null,
+        "text": "Waiting for HTTP server to be ready..."
+      }
+    },
+    {
+      "cluster_id": "C890",
+      "score": 14.127443012925538,
+      "confidence": {
+        "value": 0.307,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C890",
+        "size": 7,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-17T23:59:16.703904Z",
+        "last_seen_ts": "2026-02-18T00:10:07.789506Z",
+        "top_services": [
+          {
+            "service": "vector-store-chart",
+            "count": 7
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 7
+        },
+        "example_events": [
+          "HTTP server is ready and accepting connections"
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-17T23:59:16.703904Z",
+        "service": "vector-store-chart",
+        "response_code": null,
+        "text": "HTTP server is ready and accepting connections"
+      }
+    },
+    {
+      "cluster_id": "C958",
+      "score": 13.167443012925537,
+      "confidence": {
+        "value": 0.213,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C958",
+        "size": 7,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-17T23:59:16.453488Z",
+        "last_seen_ts": "2026-02-18T00:10:07.538518Z",
+        "top_services": [
+          {
+            "service": "vector-store-chart",
+            "count": 7
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 7
+        },
+        "example_events": [
+          "HTTP server starting at ':8080'"
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-18T00:10:07.538518Z",
+        "service": "vector-store-chart",
+        "response_code": null,
+        "text": "HTTP server starting at ':8080'"
+      }
+    },
+    {
+      "cluster_id": "C959",
+      "score": 13.167443012925537,
+      "confidence": {
+        "value": 0.213,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C959",
+        "size": 7,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-17T23:59:16.453389Z",
+        "last_seen_ts": "2026-02-18T00:10:07.538438Z",
+        "top_services": [
+          {
+            "service": "vector-store-chart",
+            "count": 7
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 7
+        },
+        "example_events": [
+          "HTTP server configured at ':8080' (probes only)"
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-18T00:04:31.542149Z",
+        "service": "vector-store-chart",
+        "response_code": null,
+        "text": "HTTP server configured at ':8080' (probes only)"
+      }
+    }
+  ],
+  "timeline": [
+    {
+      "timestamp": "2026-02-17T23:59:16.453389Z",
+      "cluster_id": "C959",
+      "score": 13.167443012925537,
+      "service": "vector-store-chart",
+      "response_code": null,
+      "summary": "HTTP server configured at ':8080' (probes only)"
+    },
+    {
+      "timestamp": "2026-02-17T23:59:16.453411Z",
+      "cluster_id": "C864",
+      "score": 14.127443012925538,
+      "service": "vector-store-chart",
+      "response_code": null,
+      "summary": "Waiting for HTTP server to be ready..."
+    },
+    {
+      "timestamp": "2026-02-17T23:59:16.453488Z",
+      "cluster_id": "C958",
+      "score": 13.167443012925537,
+      "service": "vector-store-chart",
+      "response_code": null,
+      "summary": "HTTP server starting at ':8080'"
+    },
+    {
+      "timestamp": "2026-02-17T23:59:16.703904Z",
+      "cluster_id": "C890",
+      "score": 14.127443012925538,
+      "service": "vector-store-chart",
+      "response_code": null,
+      "summary": "HTTP server is ready and accepting connections"
+    },
+    {
+      "timestamp": "2026-02-17T23:59:16.703964Z",
+      "cluster_id": "C809",
+      "score": 14.127443012925538,
+      "service": "vector-store-chart",
+      "response_code": null,
+      "summary": "Initializing vector store services (Milvus, MongoDB, etc.)"
+    }
+  ],
+  "stats": {
+    "candidate_count": 5,
+    "has_root_cause": true
+  }
+}

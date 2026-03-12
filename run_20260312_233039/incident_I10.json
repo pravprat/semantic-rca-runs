@@ -1,0 +1,274 @@
+{
+  "incident_id": "I10",
+  "incident_window": {
+    "start_time": "2026-02-18T00:00:46.039785+00:00",
+    "end_time": "2026-02-18T00:11:14.199804+00:00"
+  },
+  "root_cause": {
+    "cluster_id": "C923",
+    "score": 14.127443012925538,
+    "confidence": {
+      "value": 0.307,
+      "label": "low"
+    },
+    "cluster_summary": {
+      "cluster_id": "C923",
+      "size": 7,
+      "cluster_type": "candidate",
+      "first_seen_ts": "2026-02-18T00:00:46.290357Z",
+      "last_seen_ts": "2026-02-18T00:11:09.198227Z",
+      "top_services": [
+        {
+          "service": "metadata-chart",
+          "count": 7
+        }
+      ],
+      "http_class_counts": {
+        "unknown": 7
+      },
+      "example_events": [
+        "HTTP server is ready and accepting connections"
+      ]
+    },
+    "representative_event": {
+      "timestamp": "2026-02-18T00:00:46.290357Z",
+      "service": "metadata-chart",
+      "response_code": null,
+      "text": "HTTP server is ready and accepting connections"
+    },
+    "first_seen_event": {
+      "timestamp": "2026-02-18T00:00:46.290357Z",
+      "service": "metadata-chart",
+      "response_code": null,
+      "text": "HTTP server is ready and accepting connections"
+    },
+    "signals": {
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "trigger_proximity": 1.0,
+      "in_weight": 0.0,
+      "out_weight": 711.7500000000002,
+      "severity_counts": {
+        "ERROR": 0,
+        "WARN": 0,
+        "INFO": 7,
+        "OTHER": 0
+      },
+      "trigger_stats": {
+        "first_seen": "2026-02-18T00:00:46.290357+00:00",
+        "last_seen": "2026-02-18T00:11:09.198227+00:00",
+        "event_count": 7,
+        "error_count": 0,
+        "duration_seconds": 622.90787,
+        "error_rate": 0.0,
+        "severity": 0.2,
+        "cluster_rate_eps": 0.011238,
+        "global_rate_eps": 66.056206,
+        "burst_factor": 0.00017,
+        "trigger_score": 0.0
+      }
+    },
+    "graph_context": {
+      "incoming_edges": [],
+      "outgoing_edges": [],
+      "in_degree": 0,
+      "out_degree": 0
+    },
+    "why_ranked_first": [
+      "highest composite RCA score for this incident",
+      "strong downstream influence relative to incoming influence",
+      "appears early relative to incident onset",
+      "shows abnormal trigger/error behavior"
+    ]
+  },
+  "other_candidates": [
+    {
+      "cluster_id": "C1079",
+      "score": 13.42030015578268,
+      "confidence": {
+        "value": 0.304,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C1079",
+        "size": 7,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-18T00:00:46.039838Z",
+        "last_seen_ts": "2026-02-18T00:11:08.94777Z",
+        "top_services": [
+          {
+            "service": "metadata-chart",
+            "count": 7
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 7
+        },
+        "example_events": [
+          "Initializing health probes"
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-18T00:00:46.039838Z",
+        "service": "metadata-chart",
+        "response_code": null,
+        "text": "Initializing health probes"
+      }
+    },
+    {
+      "cluster_id": "C455",
+      "score": 8.73679916255413,
+      "confidence": {
+        "value": 0.135,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C455",
+        "size": 7,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-18T00:00:46.039785Z",
+        "last_seen_ts": "2026-02-18T00:11:08.947728Z",
+        "top_services": [
+          {
+            "service": "metadata-chart",
+            "count": 7
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 7
+        },
+        "example_events": [
+          "[job.JobService] Created gRPC connection to job-tracker:9090 with load balancing, keepalive (1m30s), and retry (max 10 attempts)"
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-18T00:00:46.039785Z",
+        "service": "metadata-chart",
+        "response_code": null,
+        "text": "[job.JobService] Created gRPC connection to job-tracker:9090 with load balancing, keepalive (1m30s), and retry (max 10 attempts)"
+      }
+    },
+    {
+      "cluster_id": "C1171",
+      "score": 8.071028272858497,
+      "confidence": {
+        "value": 0.132,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C1171",
+        "size": 7,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-18T00:00:51.291103582Z",
+        "last_seen_ts": "2026-02-18T00:11:14.19980431Z",
+        "top_services": [
+          {
+            "service": "metadata-chart",
+            "count": 7
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 7
+        },
+        "example_events": [
+          "2026/02/18 00:00:51 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }",
+          "2026/02/18 00:02:21 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }",
+          "2026/02/18 00:03:16 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }"
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-18T00:08:38.262874218Z",
+        "service": "metadata-chart",
+        "response_code": null,
+        "text": "2026/02/18 00:08:38 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }"
+      }
+    },
+    {
+      "cluster_id": "C1031",
+      "score": 7.049065550072173,
+      "confidence": {
+        "value": 0.128,
+        "label": "low"
+      },
+      "trigger_score": 0.0,
+      "error_count": 0,
+      "cluster_summary": {
+        "cluster_id": "C1031",
+        "size": 7,
+        "cluster_type": "candidate",
+        "first_seen_ts": "2026-02-18T00:00:46.040055Z",
+        "last_seen_ts": "2026-02-18T00:11:08.948017Z",
+        "top_services": [
+          {
+            "service": "metadata-chart",
+            "count": 7
+          }
+        ],
+        "http_class_counts": {
+          "unknown": 7
+        },
+        "example_events": [
+          "HTTP server starting at ':8080'"
+        ]
+      },
+      "representative_event": {
+        "timestamp": "2026-02-18T00:00:46.040055Z",
+        "service": "metadata-chart",
+        "response_code": null,
+        "text": "HTTP server starting at ':8080'"
+      }
+    }
+  ],
+  "timeline": [
+    {
+      "timestamp": "2026-02-18T00:00:46.039785Z",
+      "cluster_id": "C455",
+      "score": 8.73679916255413,
+      "service": "metadata-chart",
+      "response_code": null,
+      "summary": "[job.JobService] Created gRPC connection to job-tracker:9090 with load balancing, keepalive (1m30s), and retry (max 10 attempts)"
+    },
+    {
+      "timestamp": "2026-02-18T00:00:46.039838Z",
+      "cluster_id": "C1079",
+      "score": 13.42030015578268,
+      "service": "metadata-chart",
+      "response_code": null,
+      "summary": "Initializing health probes"
+    },
+    {
+      "timestamp": "2026-02-18T00:00:46.040055Z",
+      "cluster_id": "C1031",
+      "score": 7.049065550072173,
+      "service": "metadata-chart",
+      "response_code": null,
+      "summary": "HTTP server starting at ':8080'"
+    },
+    {
+      "timestamp": "2026-02-18T00:00:46.290357Z",
+      "cluster_id": "C923",
+      "score": 14.127443012925538,
+      "service": "metadata-chart",
+      "response_code": null,
+      "summary": "HTTP server is ready and accepting connections"
+    },
+    {
+      "timestamp": "2026-02-18T00:00:51.291103582Z",
+      "cluster_id": "C1171",
+      "score": 8.071028272858497,
+      "service": "metadata-chart",
+      "response_code": null,
+      "summary": "2026/02/18 00:00:51 Failed to connect to MongoDB: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb-sharded:27017, Type: Unknown, Last error: dial tcp 10.43.252.183:27017: connect: connection refused }, ] }"
+    }
+  ],
+  "stats": {
+    "candidate_count": 5,
+    "has_root_cause": true
+  }
+}
