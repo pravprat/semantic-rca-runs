@@ -1,0 +1,19 @@
+{
+  "graph_version": "incident_graph.v2",
+  "max_gap_seconds": 300,
+  "node_count": 1,
+  "edge_count": 0,
+  "nodes": [
+    {
+      "incident_id": "I1",
+      "root_service": "kubernetes-admin",
+      "incident_type": "authorization_or_resource_access",
+      "start_time": "2023-01-27T18:28:08.127428+00:00",
+      "end_time": "2023-01-27T18:32:08.127428+00:00",
+      "parent_incidents": [],
+      "child_incidents": [],
+      "is_downstream_incident": false
+    }
+  ],
+  "edges": []
+}
