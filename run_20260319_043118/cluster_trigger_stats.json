@@ -1,0 +1,93 @@
+{
+  "C0": {
+    "first_seen": "2023-01-27T18:28:08.127428+00:00",
+    "last_seen": "2023-01-27T19:03:09.175524+00:00",
+    "event_count": 2643,
+    "error_count": 0,
+    "duration_seconds": 2101.048096,
+    "error_rate": 0.0,
+    "severity": 0.2,
+    "cluster_rate_eps": 1.257944,
+    "global_rate_eps": 44.738238,
+    "burst_factor": 0.028118,
+    "trigger_score": 0.0
+  },
+  "C5": {
+    "first_seen": "2023-01-27T18:28:08.127428+00:00",
+    "last_seen": "2023-01-27T19:03:15.653453+00:00",
+    "event_count": 87168,
+    "error_count": 0,
+    "duration_seconds": 2107.526025,
+    "error_rate": 0.0,
+    "severity": 0.2,
+    "cluster_rate_eps": 41.360343,
+    "global_rate_eps": 44.738238,
+    "burst_factor": 0.924496,
+    "trigger_score": 0.0
+  },
+  "C3": {
+    "first_seen": "2023-01-27T18:28:09.136005+00:00",
+    "last_seen": "2023-01-27T19:03:15.516370+00:00",
+    "event_count": 3320,
+    "error_count": 0,
+    "duration_seconds": 2106.380365,
+    "error_rate": 0.0,
+    "severity": 0.2,
+    "cluster_rate_eps": 1.576164,
+    "global_rate_eps": 44.738238,
+    "burst_factor": 0.035231,
+    "trigger_score": 0.0
+  },
+  "C4": {
+    "first_seen": "2023-01-27T18:28:11.937056+00:00",
+    "last_seen": "2023-01-27T18:48:03.082209+00:00",
+    "event_count": 342,
+    "error_count": 0,
+    "duration_seconds": 1191.145153,
+    "error_rate": 0.0,
+    "severity": 0.2,
+    "cluster_rate_eps": 0.287119,
+    "global_rate_eps": 44.738238,
+    "burst_factor": 0.006418,
+    "trigger_score": 0.0
+  },
+  "C1": {
+    "first_seen": "2023-01-27T18:28:11.948471+00:00",
+    "last_seen": "2023-01-27T18:55:47.969177+00:00",
+    "event_count": 4,
+    "error_count": 0,
+    "duration_seconds": 1656.020706,
+    "error_rate": 0.0,
+    "severity": 0.2,
+    "cluster_rate_eps": 0.002415,
+    "global_rate_eps": 44.738238,
+    "burst_factor": 5.4e-05,
+    "trigger_score": 0.0
+  },
+  "C2": {
+    "first_seen": "2023-01-27T18:28:31.822973+00:00",
+    "last_seen": "2023-01-27T19:03:10.433234+00:00",
+    "event_count": 613,
+    "error_count": 0,
+    "duration_seconds": 2078.610261,
+    "error_rate": 0.0,
+    "severity": 0.2,
+    "cluster_rate_eps": 0.294909,
+    "global_rate_eps": 44.738238,
+    "burst_factor": 0.006592,
+    "trigger_score": 0.0
+  },
+  "C6": {
+    "first_seen": "2023-01-27T18:28:48.425686+00:00",
+    "last_seen": "2023-01-27T18:43:12.700935+00:00",
+    "event_count": 7,
+    "error_count": 0,
+    "duration_seconds": 864.275249,
+    "error_rate": 0.0,
+    "severity": 0.2,
+    "cluster_rate_eps": 0.008099,
+    "global_rate_eps": 44.738238,
+    "burst_factor": 0.000181,
+    "trigger_score": 0.0
+  }
+}
