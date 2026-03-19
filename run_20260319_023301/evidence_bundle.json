@@ -1,0 +1,348 @@
+{
+  "bundle_version": "v2.step10.final",
+  "incidents": [
+    {
+      "incident_id": "I1",
+      "incident_window": {
+        "start_time": "2023-01-27T18:28:08.127428+00:00",
+        "end_time": "2023-01-27T18:29:18.127428+00:00"
+      },
+      "root_cause": {
+        "rank": 1,
+        "candidate_type": "authz",
+        "title": "Authorization / RBAC failure",
+        "summary": "Repeated authorization failures were detected. The earliest pattern is watch configmaps with 4xx. The failure affects 5 actor(s), including 7 control-plane pattern(s).",
+        "score": 0.99,
+        "confidence": {
+          "value": 0.99,
+          "label": "high"
+        },
+        "evidence_pattern_ids": [
+          "P186",
+          "P188",
+          "P36",
+          "P187",
+          "P181",
+          "P32",
+          "P175"
+        ],
+        "signals": {
+          "event_count": 59,
+          "error_count": 59,
+          "actor_diversity": 5,
+          "control_plane_count": 7,
+          "max_trigger_score": 3.413,
+          "earliest_pattern_id": "P186",
+          "earliest_first_seen": "2023-01-27T18:28:08.129781Z"
+        },
+        "supporting_patterns": [
+          {
+            "pattern_id": "P186",
+            "service": "system:node:k8s-node-1-perfspec",
+            "actor": "system:node:k8s-node-1-perfspec",
+            "verb": "watch",
+            "resource": "configmaps",
+            "http_class": "4xx",
+            "failure_domain": "authz",
+            "is_control_plane": true,
+            "cluster_ids": [
+              "C52"
+            ],
+            "event_count": 10,
+            "error_count": 10,
+            "severity_counts": {
+              "ERROR": 10,
+              "WARN": 0,
+              "INFO": 0,
+              "UNKNOWN": 0
+            },
+            "response_codes": {
+              "403": 10
+            },
+            "first_seen": "2023-01-27T18:28:08.129781Z",
+            "last_seen": "2023-01-27T18:28:08.135575Z",
+            "max_trigger_score": 3.412801,
+            "unique_actors": [
+              "system:node:k8s-node-1-perfspec"
+            ],
+            "examples": [
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.129781Z,system:node:k8s-node-1-perfspec,watch,configmaps,,kube-flannel-cfg,,/api/v1/namespaces/kube-flannel/configmaps?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dkube-flannel-cfg&resourceVersion=6577334&timeout=7m43s&timeoutSeconds=463&watch=true,a1b86d5d-6f8f-4058-9710-19f5cc40a68a,ResponseStarted,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.131024Z,system:node:k8s-node-1-perfspec,watch,configmaps,,kube-root-ca.crt,,/api/v1/namespaces/kube-system/configmaps?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dkube-root-ca.crt&resourceVersion=6577334&timeout=6m5s&timeoutSeconds=365&watch=true,b51f1a8c-e53e-4104-b1a6-e695a24ed43c,ResponseStarted,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.130396Z,system:node:k8s-node-1-perfspec,watch,configmaps,,kube-proxy,,/api/v1/namespaces/kube-system/configmaps?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dkube-proxy&resourceVersion=6577334&timeout=6m21s&timeoutSeconds=381&watch=true,3ba9cc6d-7d10-40c5-8ec7-da60a9b3627c,ResponseComplete,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.135575Z,system:node:k8s-node-1-perfspec,watch,configmaps,,kube-root-ca.crt,,/api/v1/namespaces/gatekeeper-system/configmaps?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dkube-root-ca.crt&resourceVersion=6577334&timeout=6m1s&timeoutSeconds=361&watch=true,3fc1ff11-bbd1-48c0-8149-dc0f89017797,ResponseComplete,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.129781Z,system:node:k8s-node-1-perfspec,watch,configmaps,,kube-flannel-cfg,,/api/v1/namespaces/kube-flannel/configmaps?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dkube-flannel-cfg&resourceVersion=6577334&timeout=7m43s&timeoutSeconds=463&watch=true,a1b86d5d-6f8f-4058-9710-19f5cc40a68a,ResponseComplete,403,,,"
+            ],
+            "actor_diversity": 1
+          },
+          {
+            "pattern_id": "P188",
+            "service": "system:node:k8s-node-1-perfspec",
+            "actor": "system:node:k8s-node-1-perfspec",
+            "verb": "watch",
+            "resource": "secrets",
+            "http_class": "4xx",
+            "failure_domain": "authz",
+            "is_control_plane": true,
+            "cluster_ids": [
+              "C54"
+            ],
+            "event_count": 4,
+            "error_count": 4,
+            "severity_counts": {
+              "ERROR": 4,
+              "WARN": 0,
+              "INFO": 0,
+              "UNKNOWN": 0
+            },
+            "response_codes": {
+              "403": 4
+            },
+            "first_seen": "2023-01-27T18:28:08.131819Z",
+            "last_seen": "2023-01-27T18:28:08.155565Z",
+            "max_trigger_score": 3.171994,
+            "unique_actors": [
+              "system:node:k8s-node-1-perfspec",
+              "system:node:k8s-node-2-perfspec"
+            ],
+            "examples": [
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.131819Z,system:node:k8s-node-1-perfspec,watch,secrets,,gatekeeper-webhook-server-cert,,/api/v1/namespaces/gatekeeper-system/secrets?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dgatekeeper-webhook-server-cert&resourceVersion=6577334&timeout=8m34s&timeoutSeconds=514&watch=true,daa0cf03-10b6-4022-8aca-40425aef114b,ResponseComplete,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.155565Z,system:node:k8s-node-2-perfspec,watch,secrets,,gatekeeper-webhook-server-cert,,/api/v1/namespaces/gatekeeper-system/secrets?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dgatekeeper-webhook-server-cert&resourceVersion=6577334&timeout=7m52s&timeoutSeconds=472&watch=true,c9b0dda4-977b-41df-b982-038ad5d3929e,ResponseComplete,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.131819Z,system:node:k8s-node-1-perfspec,watch,secrets,,gatekeeper-webhook-server-cert,,/api/v1/namespaces/gatekeeper-system/secrets?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dgatekeeper-webhook-server-cert&resourceVersion=6577334&timeout=8m34s&timeoutSeconds=514&watch=true,daa0cf03-10b6-4022-8aca-40425aef114b,ResponseStarted,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.155565Z,system:node:k8s-node-2-perfspec,watch,secrets,,gatekeeper-webhook-server-cert,,/api/v1/namespaces/gatekeeper-system/secrets?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dgatekeeper-webhook-server-cert&resourceVersion=6577334&timeout=7m52s&timeoutSeconds=472&watch=true,c9b0dda4-977b-41df-b982-038ad5d3929e,ResponseStarted,403,,,"
+            ],
+            "actor_diversity": 2
+          },
+          {
+            "pattern_id": "P36",
+            "service": "system:kube-scheduler",
+            "actor": "system:kube-scheduler",
+            "verb": "list",
+            "resource": "csidrivers",
+            "http_class": "4xx",
+            "failure_domain": "authz",
+            "is_control_plane": true,
+            "cluster_ids": [
+              "C141"
+            ],
+            "event_count": 7,
+            "error_count": 7,
+            "severity_counts": {
+              "ERROR": 7,
+              "WARN": 0,
+              "INFO": 0,
+              "UNKNOWN": 0
+            },
+            "response_codes": {
+              "403": 7
+            },
+            "first_seen": "2023-01-27T18:28:08.139829Z",
+            "last_seen": "2023-01-27T18:28:08.145084Z",
+            "max_trigger_score": 3.294813,
+            "unique_actors": [
+              "system:kube-scheduler"
+            ],
+            "examples": [
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.139829Z,system:kube-scheduler,list,csidrivers,,,,/apis/storage.k8s.io/v1/csidrivers?limit=500&resourceVersion=0,33f5dcf5-cd59-47ce-93e8-b8d006824591,ResponseComplete,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.142306Z,system:kube-scheduler,list,nodes,,,,/api/v1/nodes?limit=500&resourceVersion=0,8e6e8f52-3224-4af1-bb0f-ae0aa788ac40,ResponseComplete,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.141708Z,system:kube-scheduler,list,services,,,,/api/v1/services?limit=500&resourceVersion=0,682bcea2-b70f-40b2-8fbd-251db748d68d,ResponseComplete,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.145084Z,system:kube-scheduler,list,csinodes,,,,/apis/storage.k8s.io/v1/csinodes?limit=500&resourceVersion=0,48df75b2-e8f3-4463-96bc-660091f84558,ResponseComplete,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.144311Z,system:kube-scheduler,list,storageclasses,,,,/apis/storage.k8s.io/v1/storageclasses?limit=500&resourceVersion=0,3201a4d7-304a-49e3-b195-a31a4d151c92,ResponseComplete,403,,,"
+            ],
+            "actor_diversity": 1
+          },
+          {
+            "pattern_id": "P187",
+            "service": "system:node:k8s-node-2-perfspec",
+            "actor": "system:node:k8s-node-2-perfspec",
+            "verb": "watch",
+            "resource": "configmaps",
+            "http_class": "4xx",
+            "failure_domain": "authz",
+            "is_control_plane": true,
+            "cluster_ids": [
+              "C53"
+            ],
+            "event_count": 8,
+            "error_count": 8,
+            "severity_counts": {
+              "ERROR": 8,
+              "WARN": 0,
+              "INFO": 0,
+              "UNKNOWN": 0
+            },
+            "response_codes": {
+              "403": 8
+            },
+            "first_seen": "2023-01-27T18:28:08.156094Z",
+            "last_seen": "2023-01-27T18:28:08.159452Z",
+            "max_trigger_score": 3.33466,
+            "unique_actors": [
+              "system:node:k8s-node-2-perfspec"
+            ],
+            "examples": [
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.156094Z,system:node:k8s-node-2-perfspec,watch,configmaps,,kube-root-ca.crt,,/api/v1/namespaces/kube-system/configmaps?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dkube-root-ca.crt&resourceVersion=6577334&timeout=9m40s&timeoutSeconds=580&watch=true,0ddf6e1d-92e4-49f2-a5bb-efa1fc1bb921,ResponseStarted,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.157305Z,system:node:k8s-node-2-perfspec,watch,configmaps,,kube-flannel-cfg,,/api/v1/namespaces/kube-flannel/configmaps?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dkube-flannel-cfg&resourceVersion=6577334&timeout=8m11s&timeoutSeconds=491&watch=true,b9cb0a44-8655-4a7c-b826-5bb87e232bc5,ResponseComplete,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.157305Z,system:node:k8s-node-2-perfspec,watch,configmaps,,kube-flannel-cfg,,/api/v1/namespaces/kube-flannel/configmaps?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dkube-flannel-cfg&resourceVersion=6577334&timeout=8m11s&timeoutSeconds=491&watch=true,b9cb0a44-8655-4a7c-b826-5bb87e232bc5,ResponseStarted,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.156094Z,system:node:k8s-node-2-perfspec,watch,configmaps,,kube-root-ca.crt,,/api/v1/namespaces/kube-system/configmaps?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dkube-root-ca.crt&resourceVersion=6577334&timeout=9m40s&timeoutSeconds=580&watch=true,0ddf6e1d-92e4-49f2-a5bb-efa1fc1bb921,ResponseComplete,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.157978Z,system:node:k8s-node-2-perfspec,watch,configmaps,,kube-root-ca.crt,,/api/v1/namespaces/gatekeeper-system/configmaps?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dkube-root-ca.crt&resourceVersion=6577334&timeout=6m31s&timeoutSeconds=391&watch=true,aa2a782a-cfc1-4acd-a715-274109301459,ResponseComplete,403,,,"
+            ],
+            "actor_diversity": 1
+          },
+          {
+            "pattern_id": "P181",
+            "service": "system:node:k8s-master-perfspec",
+            "actor": "system:node:k8s-master-perfspec",
+            "verb": "watch",
+            "resource": "configmaps",
+            "http_class": "4xx",
+            "failure_domain": "authz",
+            "is_control_plane": true,
+            "cluster_ids": [
+              "C44"
+            ],
+            "event_count": 8,
+            "error_count": 8,
+            "severity_counts": {
+              "ERROR": 8,
+              "WARN": 0,
+              "INFO": 0,
+              "UNKNOWN": 0
+            },
+            "response_codes": {
+              "403": 8
+            },
+            "first_seen": "2023-01-27T18:28:08.164606Z",
+            "last_seen": "2023-01-27T18:28:08.174585Z",
+            "max_trigger_score": 3.33466,
+            "unique_actors": [
+              "system:node:k8s-master-perfspec"
+            ],
+            "examples": [
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.164606Z,system:node:k8s-master-perfspec,watch,configmaps,,kube-root-ca.crt,,/api/v1/namespaces/kube-system/configmaps?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dkube-root-ca.crt&resourceVersion=6577334&timeout=7m53s&timeoutSeconds=473&watch=true,98a960f4-57b2-42a9-ae27-b869f7f262b4,ResponseStarted,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.172381Z,system:node:k8s-master-perfspec,watch,configmaps,,kube-root-ca.crt,,/api/v1/namespaces/kube-flannel/configmaps?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dkube-root-ca.crt&resourceVersion=6577334&timeout=5m2s&timeoutSeconds=302&watch=true,3b91e0c4-24f4-47e0-bc27-73888511a506,ResponseStarted,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.172381Z,system:node:k8s-master-perfspec,watch,configmaps,,kube-root-ca.crt,,/api/v1/namespaces/kube-flannel/configmaps?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dkube-root-ca.crt&resourceVersion=6577334&timeout=5m2s&timeoutSeconds=302&watch=true,3b91e0c4-24f4-47e0-bc27-73888511a506,ResponseComplete,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.173387Z,system:node:k8s-master-perfspec,watch,configmaps,,kube-flannel-cfg,,/api/v1/namespaces/kube-flannel/configmaps?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dkube-flannel-cfg&resourceVersion=6577334&timeout=9m1s&timeoutSeconds=541&watch=true,be8b4254-946d-4d46-bb36-73f462aa03d5,ResponseComplete,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.174585Z,system:node:k8s-master-perfspec,watch,configmaps,,kube-proxy,,/api/v1/namespaces/kube-system/configmaps?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dkube-proxy&resourceVersion=6577334&timeout=7m58s&timeoutSeconds=478&watch=true,f1d39159-c9ea-46b0-891c-d8351094051c,ResponseComplete,403,,,"
+            ],
+            "actor_diversity": 1
+          },
+          {
+            "pattern_id": "P32",
+            "service": "system:serviceaccount:kube-system:replicaset-controller",
+            "actor": "system:serviceaccount:kube-system:replicaset-controller",
+            "verb": "create",
+            "resource": "pods",
+            "http_class": "4xx",
+            "failure_domain": "authz",
+            "is_control_plane": true,
+            "cluster_ids": [
+              "C138"
+            ],
+            "event_count": 16,
+            "error_count": 16,
+            "severity_counts": {
+              "ERROR": 16,
+              "WARN": 0,
+              "INFO": 0,
+              "UNKNOWN": 0
+            },
+            "response_codes": {
+              "403": 16
+            },
+            "first_seen": "2023-01-27T18:28:42.240231Z",
+            "last_seen": "2023-01-27T18:31:26.256834Z",
+            "max_trigger_score": 3.004314,
+            "unique_actors": [
+              "system:serviceaccount:kube-system:replicaset-controller"
+            ],
+            "examples": [
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:42.240231Z,system:serviceaccount:kube-system:replicaset-controller,create,pods,,,,/api/v1/namespaces/kube-system/pods,946864b4-1ff2-4d8c-887c-ad9982bad0d7,ResponseComplete,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:42.271754Z,system:serviceaccount:kube-system:replicaset-controller,create,pods,,,,/api/v1/namespaces/kube-system/pods,ccec6b5c-e995-49dc-bd21-967eb4515989,ResponseComplete,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:42.295434Z,system:serviceaccount:kube-system:replicaset-controller,create,pods,,,,/api/v1/namespaces/kube-system/pods,870d7dec-b860-476f-995c-41c0ed94c5d1,ResponseComplete,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:42.323163Z,system:serviceaccount:kube-system:replicaset-controller,create,pods,,,,/api/v1/namespaces/kube-system/pods,71b4dde2-f443-44c9-8444-515003ef47ce,ResponseComplete,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:42.381397Z,system:serviceaccount:kube-system:replicaset-controller,create,pods,,,,/api/v1/namespaces/kube-system/pods,a6e9d7ce-0681-43f5-a43d-0d6ce3fc51ee,ResponseComplete,403,,,"
+            ],
+            "actor_diversity": 1
+          },
+          {
+            "pattern_id": "P175",
+            "service": "system:node:k8s-node-1-perfspec",
+            "actor": "system:node:k8s-node-1-perfspec",
+            "verb": "list",
+            "resource": "configmaps",
+            "http_class": "4xx",
+            "failure_domain": "authz",
+            "is_control_plane": true,
+            "cluster_ids": [
+              "C33"
+            ],
+            "event_count": 6,
+            "error_count": 6,
+            "severity_counts": {
+              "ERROR": 6,
+              "WARN": 0,
+              "INFO": 0,
+              "UNKNOWN": 0
+            },
+            "response_codes": {
+              "403": 6
+            },
+            "first_seen": "2023-01-27T18:28:43.254658Z",
+            "last_seen": "2023-01-27T18:31:48.002380Z",
+            "max_trigger_score": 3.001437,
+            "unique_actors": [
+              "system:node:k8s-node-1-perfspec",
+              "system:node:k8s-node-2-perfspec"
+            ],
+            "examples": [
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:43.254658Z,system:node:k8s-node-1-perfspec,list,configmaps,,my-airflow-airflow-config,,/api/v1/namespaces/default/configmaps?fieldSelector=metadata.name%3Dmy-airflow-airflow-config&resourceVersion=6135895,0a48a281-dd2c-4f7b-b35f-19b8adf82ab3,ResponseComplete,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:29:08.354086Z,system:node:k8s-node-2-perfspec,list,configmaps,,kube-root-ca.crt,,/api/v1/namespaces/kube-prometheus-stack/configmaps?fieldSelector=metadata.name%3Dkube-root-ca.crt&limit=500&resourceVersion=0,4ab75fff-b8af-4845-93bd-1dce8226c372,ResponseComplete,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:29:13.920459Z,system:node:k8s-node-1-perfspec,list,configmaps,,my-airflow-airflow-config,,/api/v1/namespaces/default/configmaps?fieldSelector=metadata.name%3Dmy-airflow-airflow-config&resourceVersion=6135895,765b2097-7dc0-4d31-a2d1-1e5f58f0a3d2,ResponseComplete,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:30:12.749799Z,system:node:k8s-node-1-perfspec,list,configmaps,,my-airflow-airflow-config,,/api/v1/namespaces/default/configmaps?fieldSelector=metadata.name%3Dmy-airflow-airflow-config&resourceVersion=6135895,70294faf-9fa1-4d68-95ad-82587f31e02e,ResponseComplete,403,,,",
+              "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:30:49.221154Z,system:node:k8s-node-1-perfspec,list,configmaps,,my-airflow-airflow-config,,/api/v1/namespaces/default/configmaps?fieldSelector=metadata.name%3Dmy-airflow-airflow-config&resourceVersion=6135895,a094aee6-0536-4e7e-9ad9-f22d415f1aec,ResponseComplete,403,,,"
+            ],
+            "actor_diversity": 2
+          }
+        ],
+        "primary_pattern": {
+          "pattern_id": "P186",
+          "service": "system:node:k8s-node-1-perfspec",
+          "actor": "system:node:k8s-node-1-perfspec",
+          "verb": "watch",
+          "resource": "configmaps",
+          "http_class": "4xx",
+          "failure_domain": "authz",
+          "event_count": 10,
+          "error_count": 10,
+          "first_seen": "2023-01-27T18:28:08.129781Z",
+          "last_seen": "2023-01-27T18:28:08.135575Z",
+          "examples": [
+            "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.129781Z,system:node:k8s-node-1-perfspec,watch,configmaps,,kube-flannel-cfg,,/api/v1/namespaces/kube-flannel/configmaps?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dkube-flannel-cfg&resourceVersion=6577334&timeout=7m43s&timeoutSeconds=463&watch=true,a1b86d5d-6f8f-4058-9710-19f5cc40a68a,ResponseStarted,403,,,",
+            "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.131024Z,system:node:k8s-node-1-perfspec,watch,configmaps,,kube-root-ca.crt,,/api/v1/namespaces/kube-system/configmaps?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dkube-root-ca.crt&resourceVersion=6577334&timeout=6m5s&timeoutSeconds=365&watch=true,b51f1a8c-e53e-4104-b1a6-e695a24ed43c,ResponseStarted,403,,,",
+            "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.130396Z,system:node:k8s-node-1-perfspec,watch,configmaps,,kube-proxy,,/api/v1/namespaces/kube-system/configmaps?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dkube-proxy&resourceVersion=6577334&timeout=6m21s&timeoutSeconds=381&watch=true,3ba9cc6d-7d10-40c5-8ec7-da60a9b3627c,ResponseComplete,403,,,",
+            "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.135575Z,system:node:k8s-node-1-perfspec,watch,configmaps,,kube-root-ca.crt,,/api/v1/namespaces/gatekeeper-system/configmaps?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dkube-root-ca.crt&resourceVersion=6577334&timeout=6m1s&timeoutSeconds=361&watch=true,3fc1ff11-bbd1-48c0-8149-dc0f89017797,ResponseComplete,403,,,",
+            "\"{\"\"name\"\":\"\"k8s-master-perfspec\"\"}\",2023-01-27T18:28:08.129781Z,system:node:k8s-node-1-perfspec,watch,configmaps,,kube-flannel-cfg,,/api/v1/namespaces/kube-flannel/configmaps?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dkube-flannel-cfg&resourceVersion=6577334&timeout=7m43s&timeoutSeconds=463&watch=true,a1b86d5d-6f8f-4058-9710-19f5cc40a68a,ResponseComplete,403,,,"
+          ]
+        }
+      },
+      "other_candidates": [],
+      "stats": {
+        "candidate_count": 1,
+        "has_root_cause": true
+      }
+    },
+    {
+      "incident_id": "I2",
+      "incident_window": {
+        "start_time": "2023-01-27T18:30:38.127428+00:00",
+        "end_time": "2023-01-27T18:30:48.127428+00:00"
+      },
+      "root_cause": null,
+      "other_candidates": [],
+      "stats": {
+        "candidate_count": 0,
+        "has_root_cause": false
+      }
+    }
+  ]
+}
