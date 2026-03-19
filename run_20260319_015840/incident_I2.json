@@ -1,0 +1,13 @@
+{
+  "incident_id": "I2",
+  "incident_window": {
+    "start_time": "2023-01-27T18:30:38.127428+00:00",
+    "end_time": "2023-01-27T18:30:48.127428+00:00"
+  },
+  "root_cause": null,
+  "other_candidates": [],
+  "stats": {
+    "candidate_count": 0,
+    "has_root_cause": false
+  }
+}
