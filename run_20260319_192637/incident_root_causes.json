@@ -1,0 +1,1058 @@
+{
+  "incidents": [
+    {
+      "incident_id": "I1",
+      "start_time": "2023-01-27T18:28:08.127428+00:00",
+      "end_time": "2023-01-27T18:58:08.127428+00:00",
+      "root_cause_candidates": [
+        {
+          "rank": 1,
+          "candidate_type": "service_failure",
+          "title": "Control-plane / service failure",
+          "summary": "Repeated 5xx failures indicate an unstable or failing service. The earliest service-failure pattern is get unknown from system:serviceaccount:cert-manager:my-cert-manager-cainjector.",
+          "score": 0.99,
+          "confidence": {
+            "value": 0.99,
+            "label": "high"
+          },
+          "evidence_pattern_ids": [
+            "P592",
+            "P581",
+            "P551",
+            "P19",
+            "P281",
+            "P263",
+            "P287",
+            "P286",
+            "P254",
+            "P566",
+            "P565",
+            "P562"
+          ],
+          "signals": {
+            "event_count": 373.797582972583,
+            "error_count": 373.797582972583,
+            "actor_diversity": 12,
+            "control_plane_count": 11,
+            "max_trigger_score": 3.029,
+            "earliest_pattern_id": "P592",
+            "earliest_first_seen": "2023-01-27T18:34:01.592519Z"
+          },
+          "supporting_patterns": [
+            {
+              "pattern_id": "P592",
+              "service": "system:serviceaccount:cert-manager:my-cert-manager-cainjector",
+              "actor": "system:serviceaccount:cert-manager:my-cert-manager-cainjector",
+              "verb": "get",
+              "resource": "unknown",
+              "http_class": "5xx",
+              "failure_domain": "service_failure",
+              "is_control_plane": true,
+              "cluster_ids": [
+                "C66"
+              ],
+              "event_count": 244,
+              "error_count": 244,
+              "severity_counts": {
+                "ERROR": 244,
+                "WARN": 0,
+                "INFO": 0,
+                "UNKNOWN": 0
+              },
+              "response_codes": {
+                "503": 244
+              },
+              "first_seen": "2023-01-27T18:34:01.592519Z",
+              "last_seen": "2023-01-27T18:44:08.381118Z",
+              "max_trigger_score": 3.026844,
+              "unique_actors": [
+                "system:serviceaccount:cert-manager:my-cert-manager-cainjector"
+              ],
+              "examples": [
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"d6825e56-7657-4455-9be7-7caa14b4ae6c\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1?timeout=32s\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:cert-manager:my-cert-manager-cainjector\",\"uid\":\"aaca50d4-b3f9-4fd1-9e8d-869fe253f70b\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:cert-manager\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-cert-manager-cainjector-6fc6455885-zgw9d\"],\"authentication.kubernetes.io/pod-uid\":[\"799ed7ad-aa62-40ab-90a1-b1f3a19bceb1\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"cainjector/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:01.592519Z\",\"stageTimestamp\":\"2023-01-27T18:34:01.596947Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"67e16d50-c8e4-45b2-802d-12c5dab8cc17\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1?timeout=32s\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:cert-manager:my-cert-manager-cainjector\",\"uid\":\"aaca50d4-b3f9-4fd1-9e8d-869fe253f70b\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:cert-manager\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-cert-manager-cainjector-6fc6455885-zgw9d\"],\"authentication.kubernetes.io/pod-uid\":[\"799ed7ad-aa62-40ab-90a1-b1f3a19bceb1\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"cainjector/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:04.385773Z\",\"stageTimestamp\":\"2023-01-27T18:34:04.386099Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"e1c7f02c-752b-47e8-9615-006c5ebb6211\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1?timeout=32s\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:cert-manager:my-cert-manager-cainjector\",\"uid\":\"aaca50d4-b3f9-4fd1-9e8d-869fe253f70b\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:cert-manager\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-cert-manager-cainjector-6fc6455885-zgw9d\"],\"authentication.kubernetes.io/pod-uid\":[\"799ed7ad-aa62-40ab-90a1-b1f3a19bceb1\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"cainjector/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:05.034886Z\",\"stageTimestamp\":\"2023-01-27T18:34:05.035575Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"659b3f2d-386e-4c2a-9435-a289be955435\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1?timeout=32s\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:cert-manager:my-cert-manager-cainjector\",\"uid\":\"aaca50d4-b3f9-4fd1-9e8d-869fe253f70b\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:cert-manager\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-cert-manager-cainjector-6fc6455885-zgw9d\"],\"authentication.kubernetes.io/pod-uid\":[\"799ed7ad-aa62-40ab-90a1-b1f3a19bceb1\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"cainjector/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:07.437801Z\",\"stageTimestamp\":\"2023-01-27T18:34:07.439002Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"9e50354c-7d42-45f0-84d6-784e7a04e70b\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1?timeout=32s\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:cert-manager:my-cert-manager-cainjector\",\"uid\":\"aaca50d4-b3f9-4fd1-9e8d-869fe253f70b\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:cert-manager\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-cert-manager-cainjector-6fc6455885-zgw9d\"],\"authentication.kubernetes.io/pod-uid\":[\"799ed7ad-aa62-40ab-90a1-b1f3a19bceb1\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"cainjector/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:09.836379Z\",\"stageTimestamp\":\"2023-01-27T18:34:09.837644Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}"
+              ],
+              "actor_diversity": 1
+            },
+            {
+              "pattern_id": "P581",
+              "service": "system:serviceaccount:cert-manager:my-cert-manager-startupapicheck",
+              "actor": "system:serviceaccount:cert-manager:my-cert-manager-startupapicheck",
+              "verb": "get",
+              "resource": "unknown",
+              "http_class": "5xx",
+              "failure_domain": "service_failure",
+              "is_control_plane": true,
+              "cluster_ids": [
+                "C65"
+              ],
+              "event_count": 14,
+              "error_count": 14,
+              "severity_counts": {
+                "ERROR": 14,
+                "WARN": 0,
+                "INFO": 0,
+                "UNKNOWN": 0
+              },
+              "response_codes": {
+                "503": 14
+              },
+              "first_seen": "2023-01-27T18:34:04.350253Z",
+              "last_seen": "2023-01-27T18:35:55.372857Z",
+              "max_trigger_score": 3.008444,
+              "unique_actors": [
+                "system:serviceaccount:cert-manager:my-cert-manager-startupapicheck"
+              ],
+              "examples": [
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"2744521f-3610-44c5-a13c-3487ba089b13\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1?timeout=32s\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:cert-manager:my-cert-manager-startupapicheck\",\"uid\":\"eadf8c82-9fe8-46d9-be0c-fb90da876502\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:cert-manager\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-cert-manager-startupapicheck-vkvtm\"],\"authentication.kubernetes.io/pod-uid\":[\"7fc0a893-ab26-4b3b-89f1-0771a9c97320\"]}},\"sourceIPs\":[\"192.168.60.11\"],\"userAgent\":\"ctl/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:04.350253Z\",\"stageTimestamp\":\"2023-01-27T18:34:04.352470Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"7dadfb69-2857-4c0e-beed-6c00dc86d13b\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1?timeout=32s\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:cert-manager:my-cert-manager-startupapicheck\",\"uid\":\"eadf8c82-9fe8-46d9-be0c-fb90da876502\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:cert-manager\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-cert-manager-startupapicheck-vkvtm\"],\"authentication.kubernetes.io/pod-uid\":[\"7fc0a893-ab26-4b3b-89f1-0771a9c97320\"]}},\"sourceIPs\":[\"192.168.60.11\"],\"userAgent\":\"ctl/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:04.370086Z\",\"stageTimestamp\":\"2023-01-27T18:34:04.370316Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"40e2ea9e-e871-4934-83c9-dd6eaaceb16b\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1?timeout=32s\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:cert-manager:my-cert-manager-startupapicheck\",\"uid\":\"eadf8c82-9fe8-46d9-be0c-fb90da876502\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:cert-manager\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-cert-manager-startupapicheck-vkvtm\"],\"authentication.kubernetes.io/pod-uid\":[\"7fc0a893-ab26-4b3b-89f1-0771a9c97320\"]}},\"sourceIPs\":[\"192.168.60.11\"],\"userAgent\":\"ctl/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:09.346267Z\",\"stageTimestamp\":\"2023-01-27T18:34:09.349489Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"cf545379-897a-49ff-ae7e-f296351c22ef\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1?timeout=32s\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:cert-manager:my-cert-manager-startupapicheck\",\"uid\":\"eadf8c82-9fe8-46d9-be0c-fb90da876502\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:cert-manager\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-cert-manager-startupapicheck-vkvtm\"],\"authentication.kubernetes.io/pod-uid\":[\"7fc0a893-ab26-4b3b-89f1-0771a9c97320\"]}},\"sourceIPs\":[\"192.168.60.11\"],\"userAgent\":\"ctl/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:09.368536Z\",\"stageTimestamp\":\"2023-01-27T18:34:09.369907Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"a9efe8ac-9067-4ad4-876a-191c1c7a521c\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1?timeout=32s\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:cert-manager:my-cert-manager-startupapicheck\",\"uid\":\"eadf8c82-9fe8-46d9-be0c-fb90da876502\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:cert-manager\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-cert-manager-startupapicheck-vkvtm\"],\"authentication.kubernetes.io/pod-uid\":[\"7fc0a893-ab26-4b3b-89f1-0771a9c97320\"]}},\"sourceIPs\":[\"192.168.60.11\"],\"userAgent\":\"ctl/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:14.345391Z\",\"stageTimestamp\":\"2023-01-27T18:34:14.345712Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}"
+              ],
+              "actor_diversity": 1
+            },
+            {
+              "pattern_id": "P551",
+              "service": "kubernetes-admin",
+              "actor": "kubernetes-admin",
+              "verb": "get",
+              "resource": "unknown",
+              "http_class": "5xx",
+              "failure_domain": "service_failure",
+              "is_control_plane": false,
+              "cluster_ids": [
+                "C62"
+              ],
+              "event_count": 195,
+              "error_count": 195,
+              "severity_counts": {
+                "ERROR": 195,
+                "WARN": 0,
+                "INFO": 0,
+                "UNKNOWN": 0
+              },
+              "response_codes": {
+                "503": 195
+              },
+              "first_seen": "2023-01-27T18:34:11.658115Z",
+              "last_seen": "2023-01-27T18:45:51.760323Z",
+              "max_trigger_score": 3.018619,
+              "unique_actors": [
+                "kubernetes-admin"
+              ],
+              "examples": [
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"d453fded-969c-4ca4-93ae-ece50d0f62a2\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1?timeout=32s\",\"verb\":\"get\",\"user\":{\"username\":\"kubernetes-admin\",\"groups\":[\"system:masters\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"helm/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:11.658115Z\",\"stageTimestamp\":\"2023-01-27T18:34:11.658414Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"4729f0a5-25c6-4bb8-9b1b-d2854045b306\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1?timeout=32s\",\"verb\":\"get\",\"user\":{\"username\":\"kubernetes-admin\",\"groups\":[\"system:masters\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"helm/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:16.859084Z\",\"stageTimestamp\":\"2023-01-27T18:34:16.859500Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"ab4114be-13f0-473a-8e74-df6fe98d2189\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1?timeout=32s\",\"verb\":\"get\",\"user\":{\"username\":\"kubernetes-admin\",\"groups\":[\"system:masters\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"helm/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:17.026842Z\",\"stageTimestamp\":\"2023-01-27T18:34:17.027061Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"f3ebef08-b83d-4f22-aa16-969304de36d5\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1?timeout=32s\",\"verb\":\"get\",\"user\":{\"username\":\"kubernetes-admin\",\"groups\":[\"system:masters\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"helm/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:28.242988Z\",\"stageTimestamp\":\"2023-01-27T18:34:28.243263Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"7a6f9e0e-14ce-4a3f-a04f-ab2d77d90ecc\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1?timeout=32s\",\"verb\":\"get\",\"user\":{\"username\":\"kubernetes-admin\",\"groups\":[\"system:masters\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"helm/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:28.327463Z\",\"stageTimestamp\":\"2023-01-27T18:34:28.327740Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"\"}}"
+              ],
+              "actor_diversity": 1
+            },
+            {
+              "pattern_id": "P19",
+              "service": "system:serviceaccount:gatekeeper-system:gatekeeper-admin",
+              "actor": "system:serviceaccount:gatekeeper-system:gatekeeper-admin",
+              "verb": "get",
+              "resource": "unknown",
+              "http_class": "5xx",
+              "failure_domain": "service_failure",
+              "is_control_plane": true,
+              "cluster_ids": [
+                "C115"
+              ],
+              "event_count": 24,
+              "error_count": 24,
+              "severity_counts": {
+                "ERROR": 24,
+                "WARN": 0,
+                "INFO": 0,
+                "UNKNOWN": 0
+              },
+              "response_codes": {
+                "503": 24
+              },
+              "first_seen": "2023-01-27T18:34:11.857197Z",
+              "last_seen": "2023-01-27T18:45:13.102073Z",
+              "max_trigger_score": 3.002433,
+              "unique_actors": [
+                "system:serviceaccount:gatekeeper-system:gatekeeper-admin"
+              ],
+              "examples": [
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"1db36dba-1efc-4924-82ed-99608a003adb\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1?timeout=32s\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:gatekeeper-system:gatekeeper-admin\",\"uid\":\"7f67522f-f2cb-4bfc-89d7-70294ef394a7\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:gatekeeper-system\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"gatekeeper-audit-677645cd4d-6qkgp\"],\"authentication.kubernetes.io/pod-uid\":[\"f22609a0-a97e-400e-8560-0c8b3a073a64\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"gatekeeper/latest (linux/amd64) /\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:11.857197Z\",\"stageTimestamp\":\"2023-01-27T18:34:11.857497Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"679af636-6518-4044-b241-0b855c74afc2\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1?timeout=32s\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:gatekeeper-system:gatekeeper-admin\",\"uid\":\"7f67522f-f2cb-4bfc-89d7-70294ef394a7\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:gatekeeper-system\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"gatekeeper-audit-677645cd4d-6qkgp\"],\"authentication.kubernetes.io/pod-uid\":[\"f22609a0-a97e-400e-8560-0c8b3a073a64\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"gatekeeper/latest (linux/amd64) /\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:12.904597Z\",\"stageTimestamp\":\"2023-01-27T18:34:12.905186Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"fa1d05a4-873d-40ef-8384-9d877e3c3097\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1?timeout=32s\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:gatekeeper-system:gatekeeper-admin\",\"uid\":\"7f67522f-f2cb-4bfc-89d7-70294ef394a7\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:gatekeeper-system\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"gatekeeper-audit-677645cd4d-6qkgp\"],\"authentication.kubernetes.io/pod-uid\":[\"f22609a0-a97e-400e-8560-0c8b3a073a64\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"gatekeeper/latest (linux/amd64) /\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:35:11.857610Z\",\"stageTimestamp\":\"2023-01-27T18:35:11.858123Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"b1bb645f-825c-45ca-8357-f63478a7bcad\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1?timeout=32s\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:gatekeeper-system:gatekeeper-admin\",\"uid\":\"7f67522f-f2cb-4bfc-89d7-70294ef394a7\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:gatekeeper-system\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"gatekeeper-audit-677645cd4d-6qkgp\"],\"authentication.kubernetes.io/pod-uid\":[\"f22609a0-a97e-400e-8560-0c8b3a073a64\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"gatekeeper/latest (linux/amd64) /\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:35:12.902695Z\",\"stageTimestamp\":\"2023-01-27T18:35:12.903502Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"c39655e7-6c7a-433c-91d3-ab465d95befd\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1?timeout=32s\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:gatekeeper-system:gatekeeper-admin\",\"uid\":\"7f67522f-f2cb-4bfc-89d7-70294ef394a7\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:gatekeeper-system\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"gatekeeper-audit-677645cd4d-6qkgp\"],\"authentication.kubernetes.io/pod-uid\":[\"f22609a0-a97e-400e-8560-0c8b3a073a64\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"gatekeeper/latest (linux/amd64) /\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:36:11.860986Z\",\"stageTimestamp\":\"2023-01-27T18:36:11.861246Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}"
+              ],
+              "actor_diversity": 1
+            },
+            {
+              "pattern_id": "P281",
+              "service": "system:serviceaccount:kube-system:resourcequota-controller",
+              "actor": "system:serviceaccount:kube-system:resourcequota-controller",
+              "verb": "get",
+              "resource": "unknown",
+              "http_class": "5xx",
+              "failure_domain": "service_failure",
+              "is_control_plane": true,
+              "cluster_ids": [
+                "C363"
+              ],
+              "event_count": 24,
+              "error_count": 24,
+              "severity_counts": {
+                "ERROR": 24,
+                "WARN": 0,
+                "INFO": 0,
+                "UNKNOWN": 0
+              },
+              "response_codes": {
+                "503": 24
+              },
+              "first_seen": "2023-01-27T18:34:15.549238Z",
+              "last_seen": "2023-01-27T18:45:47.926127Z",
+              "max_trigger_score": 3.002324,
+              "unique_actors": [
+                "system:serviceaccount:kube-system:resourcequota-controller"
+              ],
+              "examples": [
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"2bea342b-184e-41f1-9932-be9f9c641897\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:kube-system:resourcequota-controller\",\"uid\":\"7306fdfb-5e54-4a11-9d97-3d9a80d28b33\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:resourcequota-controller\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:15.549238Z\",\"stageTimestamp\":\"2023-01-27T18:34:15.549464Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"19dfa2a0-1f0c-453e-ba5e-4fed1a68e6a3\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:kube-system:resourcequota-controller\",\"uid\":\"7306fdfb-5e54-4a11-9d97-3d9a80d28b33\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:resourcequota-controller\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:45.582138Z\",\"stageTimestamp\":\"2023-01-27T18:34:45.587827Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"d927e4fd-e057-4df7-bf54-f9b7615a0096\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:kube-system:resourcequota-controller\",\"uid\":\"7306fdfb-5e54-4a11-9d97-3d9a80d28b33\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:resourcequota-controller\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:35:15.611209Z\",\"stageTimestamp\":\"2023-01-27T18:35:15.611673Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"eafb1149-14f2-483d-90d9-04a476e80d9f\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:kube-system:resourcequota-controller\",\"uid\":\"7306fdfb-5e54-4a11-9d97-3d9a80d28b33\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:resourcequota-controller\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:35:45.631622Z\",\"stageTimestamp\":\"2023-01-27T18:35:45.631786Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"ce64c674-f8bf-4e7f-9719-3e491cf13054\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:kube-system:resourcequota-controller\",\"uid\":\"7306fdfb-5e54-4a11-9d97-3d9a80d28b33\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:resourcequota-controller\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:36:15.669532Z\",\"stageTimestamp\":\"2023-01-27T18:36:15.679192Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}"
+              ],
+              "actor_diversity": 1
+            },
+            {
+              "pattern_id": "P263",
+              "service": "system:serviceaccount:kube-system:generic-garbage-collector",
+              "actor": "system:serviceaccount:kube-system:generic-garbage-collector",
+              "verb": "get",
+              "resource": "unknown",
+              "http_class": "5xx",
+              "failure_domain": "service_failure",
+              "is_control_plane": true,
+              "cluster_ids": [
+                "C345"
+              ],
+              "event_count": 48,
+              "error_count": 48,
+              "severity_counts": {
+                "ERROR": 48,
+                "WARN": 0,
+                "INFO": 0,
+                "UNKNOWN": 0
+              },
+              "response_codes": {
+                "503": 48
+              },
+              "first_seen": "2023-01-27T18:34:15.614992Z",
+              "last_seen": "2023-01-27T18:45:48.052459Z",
+              "max_trigger_score": 3.004645,
+              "unique_actors": [
+                "system:serviceaccount:kube-system:generic-garbage-collector"
+              ],
+              "examples": [
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"3b68cf67-af65-4f95-bd1f-451de31412ad\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:kube-system:generic-garbage-collector\",\"uid\":\"e99f2a1d-6213-408e-ba67-8928acb0df9d\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:generic-garbage-collector\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:15.614992Z\",\"stageTimestamp\":\"2023-01-27T18:34:15.615376Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"3972ccbf-994b-48b2-b7a1-36301db38f0a\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:kube-system:generic-garbage-collector\",\"uid\":\"e99f2a1d-6213-408e-ba67-8928acb0df9d\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:generic-garbage-collector\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:15.631426Z\",\"stageTimestamp\":\"2023-01-27T18:34:15.631780Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"1a7c38f3-e61b-4aa4-b328-0842d5b57f77\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:kube-system:generic-garbage-collector\",\"uid\":\"e99f2a1d-6213-408e-ba67-8928acb0df9d\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:generic-garbage-collector\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:45.654021Z\",\"stageTimestamp\":\"2023-01-27T18:34:45.654517Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"9df7b641-f6d9-4b04-b1a7-a70738b025d5\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:kube-system:generic-garbage-collector\",\"uid\":\"e99f2a1d-6213-408e-ba67-8928acb0df9d\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:generic-garbage-collector\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:45.674843Z\",\"stageTimestamp\":\"2023-01-27T18:34:45.678477Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"012e563e-1e00-41bd-9650-6f8921af1900\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:kube-system:generic-garbage-collector\",\"uid\":\"e99f2a1d-6213-408e-ba67-8928acb0df9d\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:generic-garbage-collector\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:35:15.694474Z\",\"stageTimestamp\":\"2023-01-27T18:35:15.701954Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}"
+              ],
+              "actor_diversity": 1
+            },
+            {
+              "pattern_id": "P287",
+              "service": "system:kube-controller-manager",
+              "actor": "system:kube-controller-manager",
+              "verb": "get",
+              "resource": "unknown",
+              "http_class": "5xx",
+              "failure_domain": "service_failure",
+              "is_control_plane": true,
+              "cluster_ids": [
+                "C369"
+              ],
+              "event_count": 16,
+              "error_count": 16,
+              "severity_counts": {
+                "ERROR": 16,
+                "WARN": 0,
+                "INFO": 0,
+                "UNKNOWN": 0
+              },
+              "response_codes": {
+                "503": 16
+              },
+              "first_seen": "2023-01-27T18:37:10.834228Z",
+              "last_seen": "2023-01-27T18:45:32.423769Z",
+              "max_trigger_score": 3.002138,
+              "unique_actors": [
+                "system:kube-controller-manager"
+              ],
+              "examples": [
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"f319ba35-6dc4-4156-beb4-fb362690f7cc\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1\",\"verb\":\"get\",\"user\":{\"username\":\"system:kube-controller-manager\",\"groups\":[\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/controller-discovery\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:37:10.834228Z\",\"stageTimestamp\":\"2023-01-27T18:37:10.834673Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"f8ba295c-7987-45e5-8263-ad40fc35d057\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1\",\"verb\":\"get\",\"user\":{\"username\":\"system:kube-controller-manager\",\"groups\":[\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/controller-discovery\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:37:10.847728Z\",\"stageTimestamp\":\"2023-01-27T18:37:10.848099Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"918ea796-dc62-4b24-aa8b-dd999fd471b5\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1\",\"verb\":\"get\",\"user\":{\"username\":\"system:kube-controller-manager\",\"groups\":[\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/controller-discovery\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:40:16.194963Z\",\"stageTimestamp\":\"2023-01-27T18:40:16.195270Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"5eb6d201-883a-4906-865e-adfb77e1def4\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1\",\"verb\":\"get\",\"user\":{\"username\":\"system:kube-controller-manager\",\"groups\":[\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/controller-discovery\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:40:16.203932Z\",\"stageTimestamp\":\"2023-01-27T18:40:16.204328Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"d1cf4ef0-b063-4c03-a56b-1e26d28e5e43\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1\",\"verb\":\"get\",\"user\":{\"username\":\"system:kube-controller-manager\",\"groups\":[\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/controller-discovery\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:42:47.441997Z\",\"stageTimestamp\":\"2023-01-27T18:42:47.442385Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}"
+              ],
+              "actor_diversity": 1
+            },
+            {
+              "pattern_id": "P286",
+              "service": "system:serviceaccount:kube-system:namespace-controller",
+              "actor": "system:serviceaccount:kube-system:namespace-controller",
+              "verb": "get",
+              "resource": "unknown",
+              "http_class": "5xx",
+              "failure_domain": "service_failure",
+              "is_control_plane": true,
+              "cluster_ids": [
+                "C368"
+              ],
+              "event_count": 21,
+              "error_count": 21,
+              "severity_counts": {
+                "ERROR": 21,
+                "WARN": 0,
+                "INFO": 0,
+                "UNKNOWN": 0
+              },
+              "response_codes": {
+                "503": 21
+              },
+              "first_seen": "2023-01-27T18:38:47.146859Z",
+              "last_seen": "2023-01-27T18:45:48.460716Z",
+              "max_trigger_score": 3.003341,
+              "unique_actors": [
+                "system:serviceaccount:kube-system:namespace-controller"
+              ],
+              "examples": [
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"c28c5f34-d81a-4ffa-bc12-9ecb1b29123c\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:kube-system:namespace-controller\",\"uid\":\"3beb4ddf-edb9-43e2-8def-f13acfda3b2d\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:namespace-controller\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:38:47.146859Z\",\"stageTimestamp\":\"2023-01-27T18:38:47.147504Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"57262339-2e47-4b01-9472-96d5c549ee57\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:kube-system:namespace-controller\",\"uid\":\"3beb4ddf-edb9-43e2-8def-f13acfda3b2d\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:namespace-controller\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:38:47.721738Z\",\"stageTimestamp\":\"2023-01-27T18:38:47.722059Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"24bde831-4493-4eef-9a96-c2dccf98b5eb\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:kube-system:namespace-controller\",\"uid\":\"3beb4ddf-edb9-43e2-8def-f13acfda3b2d\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:namespace-controller\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:38:48.300637Z\",\"stageTimestamp\":\"2023-01-27T18:38:48.300858Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"e8332b18-9ab6-418e-8b2a-963b228214cf\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:kube-system:namespace-controller\",\"uid\":\"3beb4ddf-edb9-43e2-8def-f13acfda3b2d\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:namespace-controller\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:38:48.831055Z\",\"stageTimestamp\":\"2023-01-27T18:38:48.831383Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"d11ce613-22f1-418d-86f0-e338d93c46a9\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:kube-system:namespace-controller\",\"uid\":\"3beb4ddf-edb9-43e2-8def-f13acfda3b2d\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:namespace-controller\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:38:49.402101Z\",\"stageTimestamp\":\"2023-01-27T18:38:49.402374Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}"
+              ],
+              "actor_diversity": 1
+            },
+            {
+              "pattern_id": "P254",
+              "service": "system:serviceaccount:kube-system:replicaset-controller",
+              "actor": "system:serviceaccount:kube-system:replicaset-controller",
+              "verb": "create",
+              "resource": "pods",
+              "http_class": "5xx",
+              "failure_domain": "service_failure",
+              "is_control_plane": true,
+              "cluster_ids": [
+                "C335"
+              ],
+              "event_count": 202,
+              "error_count": 202,
+              "severity_counts": {
+                "ERROR": 202,
+                "WARN": 0,
+                "INFO": 0,
+                "UNKNOWN": 0
+              },
+              "response_codes": {
+                "500": 202
+              },
+              "first_seen": "2023-01-27T18:40:17.976180Z",
+              "last_seen": "2023-01-27T18:48:03.082209Z",
+              "max_trigger_score": 3.028983,
+              "unique_actors": [
+                "system:serviceaccount:kube-system:replicaset-controller"
+              ],
+              "examples": [
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"ea4548a1-7664-4bdd-858b-7233465d9290\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/thanos/pods\",\"verb\":\"create\",\"user\":{\"username\":\"system:serviceaccount:kube-system:replicaset-controller\",\"uid\":\"bd951d86-7847-46e4-8fa2-e630c7118288\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:replicaset-controller\",\"objectRef\":{\"resource\":\"pods\",\"namespace\":\"thanos\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"InternalError\",\"code\":500},\"requestReceivedTimestamp\":\"2023-01-27T18:40:17.977087Z\",\"stageTimestamp\":\"2023-01-27T18:40:19.010976Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:controller:replicaset-controller\\\" of ClusterRole \\\"system:controller:replicaset-controller\\\" to ServiceAccount \\\"replicaset-controller/kube-system\\\"\",\"mutation.webhook.admission.k8s.io/round_0_index_16\":\"{\\\"configuration\\\":\\\"my-consul-consul-connect-injector\\\",\\\"webhook\\\":\\\"my-consul-consul-connect-injector.consul.hashicorp.com\\\",\\\"mutated\\\":false}\",\"mutation.webhook.admission.k8s.io/round_0_index_3\":\"{\\\"configuration\\\":\\\"gatekeeper-mutating-webhook-configuration\\\",\\\"webhook\\\":\\\"mutation.gatekeeper.sh\\\",\\\"mutated\\\":false}\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"0b6670c9-b619-4616-9166-f33109430411\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/thanos/pods\",\"verb\":\"create\",\"user\":{\"username\":\"system:serviceaccount:kube-system:replicaset-controller\",\"uid\":\"bd951d86-7847-46e4-8fa2-e630c7118288\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:replicaset-controller\",\"objectRef\":{\"resource\":\"pods\",\"namespace\":\"thanos\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"InternalError\",\"code\":500},\"requestReceivedTimestamp\":\"2023-01-27T18:40:17.976180Z\",\"stageTimestamp\":\"2023-01-27T18:40:19.012043Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:controller:replicaset-controller\\\" of ClusterRole \\\"system:controller:replicaset-controller\\\" to ServiceAccount \\\"replicaset-controller/kube-system\\\"\",\"mutation.webhook.admission.k8s.io/round_0_index_16\":\"{\\\"configuration\\\":\\\"my-consul-consul-connect-injector\\\",\\\"webhook\\\":\\\"my-consul-consul-connect-injector.consul.hashicorp.com\\\",\\\"mutated\\\":false}\",\"mutation.webhook.admission.k8s.io/round_0_index_3\":\"{\\\"configuration\\\":\\\"gatekeeper-mutating-webhook-configuration\\\",\\\"webhook\\\":\\\"mutation.gatekeeper.sh\\\",\\\"mutated\\\":false}\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"0e189ab9-02c2-4f70-b162-6d659449db32\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/thanos/pods\",\"verb\":\"create\",\"user\":{\"username\":\"system:serviceaccount:kube-system:replicaset-controller\",\"uid\":\"bd951d86-7847-46e4-8fa2-e630c7118288\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:replicaset-controller\",\"objectRef\":{\"resource\":\"pods\",\"namespace\":\"thanos\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"InternalError\",\"code\":500},\"requestReceivedTimestamp\":\"2023-01-27T18:40:19.030936Z\",\"stageTimestamp\":\"2023-01-27T18:40:20.070968Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:controller:replicaset-controller\\\" of ClusterRole \\\"system:controller:replicaset-controller\\\" to ServiceAccount \\\"replicaset-controller/kube-system\\\"\",\"mutation.webhook.admission.k8s.io/round_0_index_16\":\"{\\\"configuration\\\":\\\"my-consul-consul-connect-injector\\\",\\\"webhook\\\":\\\"my-consul-consul-connect-injector.consul.hashicorp.com\\\",\\\"mutated\\\":false}\",\"mutation.webhook.admission.k8s.io/round_0_index_3\":\"{\\\"configuration\\\":\\\"gatekeeper-mutating-webhook-configuration\\\",\\\"webhook\\\":\\\"mutation.gatekeeper.sh\\\",\\\"mutated\\\":false}\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"cb11ab4f-cb69-44f0-8796-fc9ed67100d7\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/thanos/pods\",\"verb\":\"create\",\"user\":{\"username\":\"system:serviceaccount:kube-system:replicaset-controller\",\"uid\":\"bd951d86-7847-46e4-8fa2-e630c7118288\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:replicaset-controller\",\"objectRef\":{\"resource\":\"pods\",\"namespace\":\"thanos\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"InternalError\",\"code\":500},\"requestReceivedTimestamp\":\"2023-01-27T18:40:19.034360Z\",\"stageTimestamp\":\"2023-01-27T18:40:20.071202Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:controller:replicaset-controller\\\" of ClusterRole \\\"system:controller:replicaset-controller\\\" to ServiceAccount \\\"replicaset-controller/kube-system\\\"\",\"mutation.webhook.admission.k8s.io/round_0_index_16\":\"{\\\"configuration\\\":\\\"my-consul-consul-connect-injector\\\",\\\"webhook\\\":\\\"my-consul-consul-connect-injector.consul.hashicorp.com\\\",\\\"mutated\\\":false}\",\"mutation.webhook.admission.k8s.io/round_0_index_3\":\"{\\\"configuration\\\":\\\"gatekeeper-mutating-webhook-configuration\\\",\\\"webhook\\\":\\\"mutation.gatekeeper.sh\\\",\\\"mutated\\\":false}\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"00d66e65-e578-4f3d-9365-bde761963258\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/thanos/pods\",\"verb\":\"create\",\"user\":{\"username\":\"system:serviceaccount:kube-system:replicaset-controller\",\"uid\":\"bd951d86-7847-46e4-8fa2-e630c7118288\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:replicaset-controller\",\"objectRef\":{\"resource\":\"pods\",\"namespace\":\"thanos\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"InternalError\",\"code\":500},\"requestReceivedTimestamp\":\"2023-01-27T18:40:20.074341Z\",\"stageTimestamp\":\"2023-01-27T18:40:21.091674Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:controller:replicaset-controller\\\" of ClusterRole \\\"system:controller:replicaset-controller\\\" to ServiceAccount \\\"replicaset-controller/kube-system\\\"\",\"mutation.webhook.admission.k8s.io/round_0_index_16\":\"{\\\"configuration\\\":\\\"my-consul-consul-connect-injector\\\",\\\"webhook\\\":\\\"my-consul-consul-connect-injector.consul.hashicorp.com\\\",\\\"mutated\\\":false}\",\"mutation.webhook.admission.k8s.io/round_0_index_3\":\"{\\\"configuration\\\":\\\"gatekeeper-mutating-webhook-configuration\\\",\\\"webhook\\\":\\\"mutation.gatekeeper.sh\\\",\\\"mutated\\\":false}\"}}"
+              ],
+              "actor_diversity": 1
+            },
+            {
+              "pattern_id": "P566",
+              "service": "system:serviceaccount:kube-system:statefulset-controller",
+              "actor": "system:serviceaccount:kube-system:statefulset-controller",
+              "verb": "create",
+              "resource": "pods",
+              "http_class": "5xx",
+              "failure_domain": "service_failure",
+              "is_control_plane": true,
+              "cluster_ids": [
+                "C636"
+              ],
+              "event_count": 84,
+              "error_count": 84,
+              "severity_counts": {
+                "ERROR": 84,
+                "WARN": 0,
+                "INFO": 0,
+                "UNKNOWN": 0
+              },
+              "response_codes": {
+                "500": 84
+              },
+              "first_seen": "2023-01-27T18:40:52.287679Z",
+              "last_seen": "2023-01-27T18:47:45.199735Z",
+              "max_trigger_score": 3.013611,
+              "unique_actors": [
+                "system:serviceaccount:kube-system:statefulset-controller"
+              ],
+              "examples": [
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"f2e23928-43f3-4689-a1d9-2f7d8834e200\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/mariadb/pods\",\"verb\":\"create\",\"user\":{\"username\":\"system:serviceaccount:kube-system:statefulset-controller\",\"uid\":\"0c7fcfeb-f2b1-4876-8dd6-f4c91e1358a6\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:statefulset-controller\",\"objectRef\":{\"resource\":\"pods\",\"namespace\":\"mariadb\",\"name\":\"my-mariadb-0\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"InternalError\",\"code\":500},\"requestReceivedTimestamp\":\"2023-01-27T18:40:52.287679Z\",\"stageTimestamp\":\"2023-01-27T18:40:53.317997Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:controller:statefulset-controller\\\" of ClusterRole \\\"system:controller:statefulset-controller\\\" to ServiceAccount \\\"statefulset-controller/kube-system\\\"\",\"mutation.webhook.admission.k8s.io/round_0_index_16\":\"{\\\"configuration\\\":\\\"my-consul-consul-connect-injector\\\",\\\"webhook\\\":\\\"my-consul-consul-connect-injector.consul.hashicorp.com\\\",\\\"mutated\\\":false}\",\"mutation.webhook.admission.k8s.io/round_0_index_3\":\"{\\\"configuration\\\":\\\"gatekeeper-mutating-webhook-configuration\\\",\\\"webhook\\\":\\\"mutation.gatekeeper.sh\\\",\\\"mutated\\\":false}\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"3be56ce8-cfbe-4f1c-8d84-8768afdcd2c8\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/mariadb/pods\",\"verb\":\"create\",\"user\":{\"username\":\"system:serviceaccount:kube-system:statefulset-controller\",\"uid\":\"0c7fcfeb-f2b1-4876-8dd6-f4c91e1358a6\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:statefulset-controller\",\"objectRef\":{\"resource\":\"pods\",\"namespace\":\"mariadb\",\"name\":\"my-mariadb-0\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"InternalError\",\"code\":500},\"requestReceivedTimestamp\":\"2023-01-27T18:40:53.331637Z\",\"stageTimestamp\":\"2023-01-27T18:40:54.371072Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:controller:statefulset-controller\\\" of ClusterRole \\\"system:controller:statefulset-controller\\\" to ServiceAccount \\\"statefulset-controller/kube-system\\\"\",\"mutation.webhook.admission.k8s.io/round_0_index_16\":\"{\\\"configuration\\\":\\\"my-consul-consul-connect-injector\\\",\\\"webhook\\\":\\\"my-consul-consul-connect-injector.consul.hashicorp.com\\\",\\\"mutated\\\":false}\",\"mutation.webhook.admission.k8s.io/round_0_index_3\":\"{\\\"configuration\\\":\\\"gatekeeper-mutating-webhook-configuration\\\",\\\"webhook\\\":\\\"mutation.gatekeeper.sh\\\",\\\"mutated\\\":false}\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"5c90469e-86b4-4ffa-b957-c44952cca844\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/mariadb/pods\",\"verb\":\"create\",\"user\":{\"username\":\"system:serviceaccount:kube-system:statefulset-controller\",\"uid\":\"0c7fcfeb-f2b1-4876-8dd6-f4c91e1358a6\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:statefulset-controller\",\"objectRef\":{\"resource\":\"pods\",\"namespace\":\"mariadb\",\"name\":\"my-mariadb-0\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"InternalError\",\"code\":500},\"requestReceivedTimestamp\":\"2023-01-27T18:40:54.402669Z\",\"stageTimestamp\":\"2023-01-27T18:40:55.427370Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:controller:statefulset-controller\\\" of ClusterRole \\\"system:controller:statefulset-controller\\\" to ServiceAccount \\\"statefulset-controller/kube-system\\\"\",\"mutation.webhook.admission.k8s.io/round_0_index_16\":\"{\\\"configuration\\\":\\\"my-consul-consul-connect-injector\\\",\\\"webhook\\\":\\\"my-consul-consul-connect-injector.consul.hashicorp.com\\\",\\\"mutated\\\":false}\",\"mutation.webhook.admission.k8s.io/round_0_index_3\":\"{\\\"configuration\\\":\\\"gatekeeper-mutating-webhook-configuration\\\",\\\"webhook\\\":\\\"mutation.gatekeeper.sh\\\",\\\"mutated\\\":false}\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"d42b11c5-fec0-46b8-b0a6-88a3665db84d\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/mariadb/pods\",\"verb\":\"create\",\"user\":{\"username\":\"system:serviceaccount:kube-system:statefulset-controller\",\"uid\":\"0c7fcfeb-f2b1-4876-8dd6-f4c91e1358a6\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:statefulset-controller\",\"objectRef\":{\"resource\":\"pods\",\"namespace\":\"mariadb\",\"name\":\"my-mariadb-0\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"InternalError\",\"code\":500},\"requestReceivedTimestamp\":\"2023-01-27T18:40:55.453726Z\",\"stageTimestamp\":\"2023-01-27T18:40:56.484582Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:controller:statefulset-controller\\\" of ClusterRole \\\"system:controller:statefulset-controller\\\" to ServiceAccount \\\"statefulset-controller/kube-system\\\"\",\"mutation.webhook.admission.k8s.io/round_0_index_16\":\"{\\\"configuration\\\":\\\"my-consul-consul-connect-injector\\\",\\\"webhook\\\":\\\"my-consul-consul-connect-injector.consul.hashicorp.com\\\",\\\"mutated\\\":false}\",\"mutation.webhook.admission.k8s.io/round_0_index_3\":\"{\\\"configuration\\\":\\\"gatekeeper-mutating-webhook-configuration\\\",\\\"webhook\\\":\\\"mutation.gatekeeper.sh\\\",\\\"mutated\\\":false}\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"d2d2cf2a-6953-47bd-b224-d0a9e620983f\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/mariadb/pods\",\"verb\":\"create\",\"user\":{\"username\":\"system:serviceaccount:kube-system:statefulset-controller\",\"uid\":\"0c7fcfeb-f2b1-4876-8dd6-f4c91e1358a6\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:statefulset-controller\",\"objectRef\":{\"resource\":\"pods\",\"namespace\":\"mariadb\",\"name\":\"my-mariadb-0\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"InternalError\",\"code\":500},\"requestReceivedTimestamp\":\"2023-01-27T18:40:56.532628Z\",\"stageTimestamp\":\"2023-01-27T18:40:57.570695Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:controller:statefulset-controller\\\" of ClusterRole \\\"system:controller:statefulset-controller\\\" to ServiceAccount \\\"statefulset-controller/kube-system\\\"\",\"mutation.webhook.admission.k8s.io/round_0_index_16\":\"{\\\"configuration\\\":\\\"my-consul-consul-connect-injector\\\",\\\"webhook\\\":\\\"my-consul-consul-connect-injector.consul.hashicorp.com\\\",\\\"mutated\\\":false}\",\"mutation.webhook.admission.k8s.io/round_0_index_3\":\"{\\\"configuration\\\":\\\"gatekeeper-mutating-webhook-configuration\\\",\\\"webhook\\\":\\\"mutation.gatekeeper.sh\\\",\\\"mutated\\\":false}\"}}"
+              ],
+              "actor_diversity": 1
+            },
+            {
+              "pattern_id": "P565",
+              "service": "system:serviceaccount:kube-system:daemon-set-controller",
+              "actor": "system:serviceaccount:kube-system:daemon-set-controller",
+              "verb": "create",
+              "resource": "pods",
+              "http_class": "5xx",
+              "failure_domain": "service_failure",
+              "is_control_plane": true,
+              "cluster_ids": [
+                "C635"
+              ],
+              "event_count": 32,
+              "error_count": 32,
+              "severity_counts": {
+                "ERROR": 32,
+                "WARN": 0,
+                "INFO": 0,
+                "UNKNOWN": 0
+              },
+              "response_codes": {
+                "500": 32
+              },
+              "first_seen": "2023-01-27T18:42:35.458282Z",
+              "last_seen": "2023-01-27T18:45:46.569612Z",
+              "max_trigger_score": 3.011207,
+              "unique_actors": [
+                "system:serviceaccount:kube-system:daemon-set-controller"
+              ],
+              "examples": [
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"3fbc7e82-685d-4552-921c-c423a9f1e8a4\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/promtail/pods\",\"verb\":\"create\",\"user\":{\"username\":\"system:serviceaccount:kube-system:daemon-set-controller\",\"uid\":\"11f60616-f7a5-40ab-b16c-4ff4792c809f\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:daemon-set-controller\",\"objectRef\":{\"resource\":\"pods\",\"namespace\":\"promtail\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"InternalError\",\"code\":500},\"requestReceivedTimestamp\":\"2023-01-27T18:42:35.458282Z\",\"stageTimestamp\":\"2023-01-27T18:42:36.483761Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:controller:daemon-set-controller\\\" of ClusterRole \\\"system:controller:daemon-set-controller\\\" to ServiceAccount \\\"daemon-set-controller/kube-system\\\"\",\"mutation.webhook.admission.k8s.io/round_0_index_16\":\"{\\\"configuration\\\":\\\"my-consul-consul-connect-injector\\\",\\\"webhook\\\":\\\"my-consul-consul-connect-injector.consul.hashicorp.com\\\",\\\"mutated\\\":false}\",\"mutation.webhook.admission.k8s.io/round_0_index_3\":\"{\\\"configuration\\\":\\\"gatekeeper-mutating-webhook-configuration\\\",\\\"webhook\\\":\\\"mutation.gatekeeper.sh\\\",\\\"mutated\\\":false}\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"3fdd47d8-5ae2-46da-83e2-cfb7ef8e0a5e\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/promtail/pods\",\"verb\":\"create\",\"user\":{\"username\":\"system:serviceaccount:kube-system:daemon-set-controller\",\"uid\":\"11f60616-f7a5-40ab-b16c-4ff4792c809f\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:daemon-set-controller\",\"objectRef\":{\"resource\":\"pods\",\"namespace\":\"promtail\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"InternalError\",\"code\":500},\"requestReceivedTimestamp\":\"2023-01-27T18:42:36.495786Z\",\"stageTimestamp\":\"2023-01-27T18:42:37.507132Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:controller:daemon-set-controller\\\" of ClusterRole \\\"system:controller:daemon-set-controller\\\" to ServiceAccount \\\"daemon-set-controller/kube-system\\\"\",\"mutation.webhook.admission.k8s.io/round_0_index_16\":\"{\\\"configuration\\\":\\\"my-consul-consul-connect-injector\\\",\\\"webhook\\\":\\\"my-consul-consul-connect-injector.consul.hashicorp.com\\\",\\\"mutated\\\":false}\",\"mutation.webhook.admission.k8s.io/round_0_index_3\":\"{\\\"configuration\\\":\\\"gatekeeper-mutating-webhook-configuration\\\",\\\"webhook\\\":\\\"mutation.gatekeeper.sh\\\",\\\"mutated\\\":false}\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"6e7d0a21-e999-4afe-9d5a-d627875032f5\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/promtail/pods\",\"verb\":\"create\",\"user\":{\"username\":\"system:serviceaccount:kube-system:daemon-set-controller\",\"uid\":\"11f60616-f7a5-40ab-b16c-4ff4792c809f\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:daemon-set-controller\",\"objectRef\":{\"resource\":\"pods\",\"namespace\":\"promtail\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"InternalError\",\"code\":500},\"requestReceivedTimestamp\":\"2023-01-27T18:42:37.524123Z\",\"stageTimestamp\":\"2023-01-27T18:42:38.565867Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:controller:daemon-set-controller\\\" of ClusterRole \\\"system:controller:daemon-set-controller\\\" to ServiceAccount \\\"daemon-set-controller/kube-system\\\"\",\"mutation.webhook.admission.k8s.io/round_0_index_16\":\"{\\\"configuration\\\":\\\"my-consul-consul-connect-injector\\\",\\\"webhook\\\":\\\"my-consul-consul-connect-injector.consul.hashicorp.com\\\",\\\"mutated\\\":false}\",\"mutation.webhook.admission.k8s.io/round_0_index_3\":\"{\\\"configuration\\\":\\\"gatekeeper-mutating-webhook-configuration\\\",\\\"webhook\\\":\\\"mutation.gatekeeper.sh\\\",\\\"mutated\\\":false}\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"46f3d1f2-e8c3-44ab-91f1-ca10d6953b17\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/promtail/pods\",\"verb\":\"create\",\"user\":{\"username\":\"system:serviceaccount:kube-system:daemon-set-controller\",\"uid\":\"11f60616-f7a5-40ab-b16c-4ff4792c809f\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:daemon-set-controller\",\"objectRef\":{\"resource\":\"pods\",\"namespace\":\"promtail\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"InternalError\",\"code\":500},\"requestReceivedTimestamp\":\"2023-01-27T18:42:38.591178Z\",\"stageTimestamp\":\"2023-01-27T18:42:39.618676Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:controller:daemon-set-controller\\\" of ClusterRole \\\"system:controller:daemon-set-controller\\\" to ServiceAccount \\\"daemon-set-controller/kube-system\\\"\",\"mutation.webhook.admission.k8s.io/round_0_index_16\":\"{\\\"configuration\\\":\\\"my-consul-consul-connect-injector\\\",\\\"webhook\\\":\\\"my-consul-consul-connect-injector.consul.hashicorp.com\\\",\\\"mutated\\\":false}\",\"mutation.webhook.admission.k8s.io/round_0_index_3\":\"{\\\"configuration\\\":\\\"gatekeeper-mutating-webhook-configuration\\\",\\\"webhook\\\":\\\"mutation.gatekeeper.sh\\\",\\\"mutated\\\":false}\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"0a327020-45a2-491c-8d10-195d23cc3a7f\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/promtail/pods\",\"verb\":\"create\",\"user\":{\"username\":\"system:serviceaccount:kube-system:daemon-set-controller\",\"uid\":\"11f60616-f7a5-40ab-b16c-4ff4792c809f\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:daemon-set-controller\",\"objectRef\":{\"resource\":\"pods\",\"namespace\":\"promtail\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"InternalError\",\"code\":500},\"requestReceivedTimestamp\":\"2023-01-27T18:42:39.664759Z\",\"stageTimestamp\":\"2023-01-27T18:42:40.708704Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:controller:daemon-set-controller\\\" of ClusterRole \\\"system:controller:daemon-set-controller\\\" to ServiceAccount \\\"daemon-set-controller/kube-system\\\"\",\"mutation.webhook.admission.k8s.io/round_0_index_16\":\"{\\\"configuration\\\":\\\"my-consul-consul-connect-injector\\\",\\\"webhook\\\":\\\"my-consul-consul-connect-injector.consul.hashicorp.com\\\",\\\"mutated\\\":false}\",\"mutation.webhook.admission.k8s.io/round_0_index_3\":\"{\\\"configuration\\\":\\\"gatekeeper-mutating-webhook-configuration\\\",\\\"webhook\\\":\\\"mutation.gatekeeper.sh\\\",\\\"mutated\\\":false}\"}}"
+              ],
+              "actor_diversity": 1
+            },
+            {
+              "pattern_id": "P562",
+              "service": "system:serviceaccount:kube-system:job-controller",
+              "actor": "system:serviceaccount:kube-system:job-controller",
+              "verb": "create",
+              "resource": "pods",
+              "http_class": "5xx",
+              "failure_domain": "service_failure",
+              "is_control_plane": true,
+              "cluster_ids": [
+                "C632"
+              ],
+              "event_count": 4,
+              "error_count": 4,
+              "severity_counts": {
+                "ERROR": 4,
+                "WARN": 0,
+                "INFO": 0,
+                "UNKNOWN": 0
+              },
+              "response_codes": {
+                "500": 4
+              },
+              "first_seen": "2023-01-27T18:45:00.231597Z",
+              "last_seen": "2023-01-27T18:46:13.324295Z",
+              "max_trigger_score": 3.003667,
+              "unique_actors": [
+                "system:serviceaccount:kube-system:job-controller"
+              ],
+              "examples": [
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"cad97700-bd50-485d-98ed-e276d95b1626\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/artifact-hub/pods\",\"verb\":\"create\",\"user\":{\"username\":\"system:serviceaccount:kube-system:job-controller\",\"uid\":\"31f5e0ae-c90d-4e31-a280-96242045aa9b\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:job-controller\",\"objectRef\":{\"resource\":\"pods\",\"namespace\":\"artifact-hub\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"InternalError\",\"code\":500},\"requestReceivedTimestamp\":\"2023-01-27T18:45:00.231597Z\",\"stageTimestamp\":\"2023-01-27T18:45:01.251819Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:controller:job-controller\\\" of ClusterRole \\\"system:controller:job-controller\\\" to ServiceAccount \\\"job-controller/kube-system\\\"\",\"mutation.webhook.admission.k8s.io/round_0_index_15\":\"{\\\"configuration\\\":\\\"my-consul-consul-connect-injector\\\",\\\"webhook\\\":\\\"my-consul-consul-connect-injector.consul.hashicorp.com\\\",\\\"mutated\\\":false}\",\"mutation.webhook.admission.k8s.io/round_0_index_3\":\"{\\\"configuration\\\":\\\"gatekeeper-mutating-webhook-configuration\\\",\\\"webhook\\\":\\\"mutation.gatekeeper.sh\\\",\\\"mutated\\\":false}\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"94c38c7a-9cf9-441a-b82d-f4823c5710f9\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/artifact-hub/pods\",\"verb\":\"create\",\"user\":{\"username\":\"system:serviceaccount:kube-system:job-controller\",\"uid\":\"31f5e0ae-c90d-4e31-a280-96242045aa9b\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:job-controller\",\"objectRef\":{\"resource\":\"pods\",\"namespace\":\"artifact-hub\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"InternalError\",\"code\":500},\"requestReceivedTimestamp\":\"2023-01-27T18:45:11.257923Z\",\"stageTimestamp\":\"2023-01-27T18:45:12.293840Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:controller:job-controller\\\" of ClusterRole \\\"system:controller:job-controller\\\" to ServiceAccount \\\"job-controller/kube-system\\\"\",\"mutation.webhook.admission.k8s.io/round_0_index_15\":\"{\\\"configuration\\\":\\\"my-consul-consul-connect-injector\\\",\\\"webhook\\\":\\\"my-consul-consul-connect-injector.consul.hashicorp.com\\\",\\\"mutated\\\":false}\",\"mutation.webhook.admission.k8s.io/round_0_index_3\":\"{\\\"configuration\\\":\\\"gatekeeper-mutating-webhook-configuration\\\",\\\"webhook\\\":\\\"mutation.gatekeeper.sh\\\",\\\"mutated\\\":false}\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"1fc3e4fc-6fa6-45ee-8c84-3376da3fcfe4\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/artifact-hub/pods\",\"verb\":\"create\",\"user\":{\"username\":\"system:serviceaccount:kube-system:job-controller\",\"uid\":\"31f5e0ae-c90d-4e31-a280-96242045aa9b\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:job-controller\",\"objectRef\":{\"resource\":\"pods\",\"namespace\":\"artifact-hub\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"InternalError\",\"code\":500},\"requestReceivedTimestamp\":\"2023-01-27T18:45:32.297804Z\",\"stageTimestamp\":\"2023-01-27T18:45:33.319646Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:controller:job-controller\\\" of ClusterRole \\\"system:controller:job-controller\\\" to ServiceAccount \\\"job-controller/kube-system\\\"\",\"mutation.webhook.admission.k8s.io/round_0_index_15\":\"{\\\"configuration\\\":\\\"my-consul-consul-connect-injector\\\",\\\"webhook\\\":\\\"my-consul-consul-connect-injector.consul.hashicorp.com\\\",\\\"mutated\\\":false}\",\"mutation.webhook.admission.k8s.io/round_0_index_3\":\"{\\\"configuration\\\":\\\"gatekeeper-mutating-webhook-configuration\\\",\\\"webhook\\\":\\\"mutation.gatekeeper.sh\\\",\\\"mutated\\\":false}\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"1e36d114-c55c-4267-829b-0fa588746a9c\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/artifact-hub/pods\",\"verb\":\"create\",\"user\":{\"username\":\"system:serviceaccount:kube-system:job-controller\",\"uid\":\"31f5e0ae-c90d-4e31-a280-96242045aa9b\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:job-controller\",\"objectRef\":{\"resource\":\"pods\",\"namespace\":\"artifact-hub\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"InternalError\",\"code\":500},\"requestReceivedTimestamp\":\"2023-01-27T18:46:13.324295Z\",\"stageTimestamp\":\"2023-01-27T18:46:14.342813Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:controller:job-controller\\\" of ClusterRole \\\"system:controller:job-controller\\\" to ServiceAccount \\\"job-controller/kube-system\\\"\",\"mutation.webhook.admission.k8s.io/round_0_index_15\":\"{\\\"configuration\\\":\\\"my-consul-consul-connect-injector\\\",\\\"webhook\\\":\\\"my-consul-consul-connect-injector.consul.hashicorp.com\\\",\\\"mutated\\\":false}\",\"mutation.webhook.admission.k8s.io/round_0_index_3\":\"{\\\"configuration\\\":\\\"gatekeeper-mutating-webhook-configuration\\\",\\\"webhook\\\":\\\"mutation.gatekeeper.sh\\\",\\\"mutated\\\":false}\"}}"
+              ],
+              "actor_diversity": 1
+            }
+          ],
+          "primary_pattern": {
+            "pattern_id": "P592",
+            "service": "system:serviceaccount:cert-manager:my-cert-manager-cainjector",
+            "actor": "system:serviceaccount:cert-manager:my-cert-manager-cainjector",
+            "verb": "get",
+            "resource": "unknown",
+            "http_class": "5xx",
+            "failure_domain": "service_failure",
+            "event_count": 244,
+            "error_count": 244,
+            "first_seen": "2023-01-27T18:34:01.592519Z",
+            "last_seen": "2023-01-27T18:44:08.381118Z",
+            "examples": [
+              "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"d6825e56-7657-4455-9be7-7caa14b4ae6c\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1?timeout=32s\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:cert-manager:my-cert-manager-cainjector\",\"uid\":\"aaca50d4-b3f9-4fd1-9e8d-869fe253f70b\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:cert-manager\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-cert-manager-cainjector-6fc6455885-zgw9d\"],\"authentication.kubernetes.io/pod-uid\":[\"799ed7ad-aa62-40ab-90a1-b1f3a19bceb1\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"cainjector/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:01.592519Z\",\"stageTimestamp\":\"2023-01-27T18:34:01.596947Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+              "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"67e16d50-c8e4-45b2-802d-12c5dab8cc17\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1?timeout=32s\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:cert-manager:my-cert-manager-cainjector\",\"uid\":\"aaca50d4-b3f9-4fd1-9e8d-869fe253f70b\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:cert-manager\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-cert-manager-cainjector-6fc6455885-zgw9d\"],\"authentication.kubernetes.io/pod-uid\":[\"799ed7ad-aa62-40ab-90a1-b1f3a19bceb1\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"cainjector/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:04.385773Z\",\"stageTimestamp\":\"2023-01-27T18:34:04.386099Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+              "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"e1c7f02c-752b-47e8-9615-006c5ebb6211\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1?timeout=32s\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:cert-manager:my-cert-manager-cainjector\",\"uid\":\"aaca50d4-b3f9-4fd1-9e8d-869fe253f70b\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:cert-manager\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-cert-manager-cainjector-6fc6455885-zgw9d\"],\"authentication.kubernetes.io/pod-uid\":[\"799ed7ad-aa62-40ab-90a1-b1f3a19bceb1\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"cainjector/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:05.034886Z\",\"stageTimestamp\":\"2023-01-27T18:34:05.035575Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+              "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"659b3f2d-386e-4c2a-9435-a289be955435\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1?timeout=32s\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:cert-manager:my-cert-manager-cainjector\",\"uid\":\"aaca50d4-b3f9-4fd1-9e8d-869fe253f70b\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:cert-manager\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-cert-manager-cainjector-6fc6455885-zgw9d\"],\"authentication.kubernetes.io/pod-uid\":[\"799ed7ad-aa62-40ab-90a1-b1f3a19bceb1\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"cainjector/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:07.437801Z\",\"stageTimestamp\":\"2023-01-27T18:34:07.439002Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}",
+              "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"9e50354c-7d42-45f0-84d6-784e7a04e70b\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/metrics.k8s.io/v1beta1?timeout=32s\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:cert-manager:my-cert-manager-cainjector\",\"uid\":\"aaca50d4-b3f9-4fd1-9e8d-869fe253f70b\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:cert-manager\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-cert-manager-cainjector-6fc6455885-zgw9d\"],\"authentication.kubernetes.io/pod-uid\":[\"799ed7ad-aa62-40ab-90a1-b1f3a19bceb1\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"cainjector/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"code\":503},\"requestReceivedTimestamp\":\"2023-01-27T18:34:09.836379Z\",\"stageTimestamp\":\"2023-01-27T18:34:09.837644Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:discovery\\\" of ClusterRole \\\"system:discovery\\\" to Group \\\"system:authenticated\\\"\"}}"
+            ]
+          }
+        },
+        {
+          "rank": 2,
+          "candidate_type": "authz",
+          "title": "Authorization / RBAC failure",
+          "summary": "Repeated authorization failures were detected. The earliest pattern is watch configmaps with 4xx. The failure affects 8 actor(s), including 11 control-plane pattern(s).",
+          "score": 0.99,
+          "confidence": {
+            "value": 0.99,
+            "label": "high"
+          },
+          "evidence_pattern_ids": [
+            "P100",
+            "P44",
+            "P262",
+            "P101",
+            "P26",
+            "P253",
+            "P14",
+            "P360",
+            "P658",
+            "P669",
+            "P425",
+            "P24"
+          ],
+          "signals": {
+            "event_count": 31.78015873015873,
+            "error_count": 31.03015873015873,
+            "actor_diversity": 8,
+            "control_plane_count": 11,
+            "max_trigger_score": 3.88,
+            "earliest_pattern_id": "P100",
+            "earliest_first_seen": "2023-01-27T18:28:08.130396Z"
+          },
+          "supporting_patterns": [
+            {
+              "pattern_id": "P100",
+              "service": "system:node:k8s-node-1-perfspec",
+              "actor": "system:node:k8s-node-1-perfspec",
+              "verb": "watch",
+              "resource": "configmaps",
+              "http_class": "4xx",
+              "failure_domain": "authz",
+              "is_control_plane": true,
+              "cluster_ids": [
+                "C191"
+              ],
+              "event_count": 6,
+              "error_count": 6,
+              "severity_counts": {
+                "ERROR": 6,
+                "WARN": 0,
+                "INFO": 0,
+                "UNKNOWN": 0
+              },
+              "response_codes": {
+                "403": 6
+              },
+              "first_seen": "2023-01-27T18:28:08.130396Z",
+              "last_seen": "2023-01-27T18:28:08.135575Z",
+              "max_trigger_score": 3.377554,
+              "unique_actors": [
+                "system:node:k8s-node-1-perfspec"
+              ],
+              "examples": [
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"3ba9cc6d-7d10-40c5-8ec7-da60a9b3627c\",\"stage\":\"ResponseStarted\",\"requestURI\":\"/api/v1/namespaces/kube-system/configmaps?allowWatchBookmarks=true\\u0026fieldSelector=metadata.name%3Dkube-proxy\\u0026resourceVersion=6577334\\u0026timeout=6m21s\\u0026timeoutSeconds=381\\u0026watch=true\",\"verb\":\"watch\",\"user\":{\"username\":\"system:node:k8s-node-1-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.11\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"configmaps\",\"namespace\":\"kube-system\",\"name\":\"kube-proxy\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.130396Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.130648Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-node-1-perfspec' and this object\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"3ba9cc6d-7d10-40c5-8ec7-da60a9b3627c\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/kube-system/configmaps?allowWatchBookmarks=true\\u0026fieldSelector=metadata.name%3Dkube-proxy\\u0026resourceVersion=6577334\\u0026timeout=6m21s\\u0026timeoutSeconds=381\\u0026watch=true\",\"verb\":\"watch\",\"user\":{\"username\":\"system:node:k8s-node-1-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.11\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"configmaps\",\"namespace\":\"kube-system\",\"name\":\"kube-proxy\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.130396Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.130737Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-node-1-perfspec' and this object\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"b51f1a8c-e53e-4104-b1a6-e695a24ed43c\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/kube-system/configmaps?allowWatchBookmarks=true\\u0026fieldSelector=metadata.name%3Dkube-root-ca.crt\\u0026resourceVersion=6577334\\u0026timeout=6m5s\\u0026timeoutSeconds=365\\u0026watch=true\",\"verb\":\"watch\",\"user\":{\"username\":\"system:node:k8s-node-1-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.11\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"configmaps\",\"namespace\":\"kube-system\",\"name\":\"kube-root-ca.crt\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.131024Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.131611Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-node-1-perfspec' and this object\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"0531745c-ceae-47fa-b14b-3edaf386a0b3\",\"stage\":\"ResponseStarted\",\"requestURI\":\"/api/v1/namespaces/kube-flannel/configmaps?allowWatchBookmarks=true\\u0026fieldSelector=metadata.name%3Dkube-root-ca.crt\\u0026resourceVersion=6577334\\u0026timeout=7m10s\\u0026timeoutSeconds=430\\u0026watch=true\",\"verb\":\"watch\",\"user\":{\"username\":\"system:node:k8s-node-1-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.11\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"configmaps\",\"namespace\":\"kube-flannel\",\"name\":\"kube-root-ca.crt\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.135075Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.135360Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-node-1-perfspec' and this object\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"0531745c-ceae-47fa-b14b-3edaf386a0b3\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/kube-flannel/configmaps?allowWatchBookmarks=true\\u0026fieldSelector=metadata.name%3Dkube-root-ca.crt\\u0026resourceVersion=6577334\\u0026timeout=7m10s\\u0026timeoutSeconds=430\\u0026watch=true\",\"verb\":\"watch\",\"user\":{\"username\":\"system:node:k8s-node-1-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.11\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"configmaps\",\"namespace\":\"kube-flannel\",\"name\":\"kube-root-ca.crt\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.135075Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.135450Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-node-1-perfspec' and this object\"}}"
+              ],
+              "actor_diversity": 1
+            },
+            {
+              "pattern_id": "P44",
+              "service": "system:node:k8s-node-1-perfspec",
+              "actor": "system:node:k8s-node-1-perfspec",
+              "verb": "watch",
+              "resource": "secrets",
+              "http_class": "4xx",
+              "failure_domain": "authz",
+              "is_control_plane": true,
+              "cluster_ids": [
+                "C138"
+              ],
+              "event_count": 4,
+              "error_count": 4,
+              "severity_counts": {
+                "ERROR": 4,
+                "WARN": 0,
+                "INFO": 0,
+                "UNKNOWN": 0
+              },
+              "response_codes": {
+                "403": 4
+              },
+              "first_seen": "2023-01-27T18:28:08.131819Z",
+              "last_seen": "2023-01-27T18:28:08.155565Z",
+              "max_trigger_score": 3.256906,
+              "unique_actors": [
+                "system:node:k8s-node-1-perfspec",
+                "system:node:k8s-node-2-perfspec"
+              ],
+              "examples": [
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"daa0cf03-10b6-4022-8aca-40425aef114b\",\"stage\":\"ResponseStarted\",\"requestURI\":\"/api/v1/namespaces/gatekeeper-system/secrets?allowWatchBookmarks=true\\u0026fieldSelector=metadata.name%3Dgatekeeper-webhook-server-cert\\u0026resourceVersion=6577334\\u0026timeout=8m34s\\u0026timeoutSeconds=514\\u0026watch=true\",\"verb\":\"watch\",\"user\":{\"username\":\"system:node:k8s-node-1-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.11\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"secrets\",\"namespace\":\"gatekeeper-system\",\"name\":\"gatekeeper-webhook-server-cert\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.131819Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.132077Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-node-1-perfspec' and this object\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"daa0cf03-10b6-4022-8aca-40425aef114b\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/gatekeeper-system/secrets?allowWatchBookmarks=true\\u0026fieldSelector=metadata.name%3Dgatekeeper-webhook-server-cert\\u0026resourceVersion=6577334\\u0026timeout=8m34s\\u0026timeoutSeconds=514\\u0026watch=true\",\"verb\":\"watch\",\"user\":{\"username\":\"system:node:k8s-node-1-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.11\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"secrets\",\"namespace\":\"gatekeeper-system\",\"name\":\"gatekeeper-webhook-server-cert\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.131819Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.132166Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-node-1-perfspec' and this object\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"c9b0dda4-977b-41df-b982-038ad5d3929e\",\"stage\":\"ResponseStarted\",\"requestURI\":\"/api/v1/namespaces/gatekeeper-system/secrets?allowWatchBookmarks=true\\u0026fieldSelector=metadata.name%3Dgatekeeper-webhook-server-cert\\u0026resourceVersion=6577334\\u0026timeout=7m52s\\u0026timeoutSeconds=472\\u0026watch=true\",\"verb\":\"watch\",\"user\":{\"username\":\"system:node:k8s-node-2-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"secrets\",\"namespace\":\"gatekeeper-system\",\"name\":\"gatekeeper-webhook-server-cert\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.155565Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.155917Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-node-2-perfspec' and this object\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"c9b0dda4-977b-41df-b982-038ad5d3929e\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/gatekeeper-system/secrets?allowWatchBookmarks=true\\u0026fieldSelector=metadata.name%3Dgatekeeper-webhook-server-cert\\u0026resourceVersion=6577334\\u0026timeout=7m52s\\u0026timeoutSeconds=472\\u0026watch=true\",\"verb\":\"watch\",\"user\":{\"username\":\"system:node:k8s-node-2-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"secrets\",\"namespace\":\"gatekeeper-system\",\"name\":\"gatekeeper-webhook-server-cert\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.155565Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.156033Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-node-2-perfspec' and this object\"}}"
+              ],
+              "actor_diversity": 2
+            },
+            {
+              "pattern_id": "P262",
+              "service": "system:kube-scheduler",
+              "actor": "system:kube-scheduler",
+              "verb": "list",
+              "resource": "csidrivers",
+              "http_class": "4xx",
+              "failure_domain": "authz",
+              "is_control_plane": true,
+              "cluster_ids": [
+                "C344"
+              ],
+              "event_count": 7,
+              "error_count": 7,
+              "severity_counts": {
+                "ERROR": 7,
+                "WARN": 0,
+                "INFO": 0,
+                "UNKNOWN": 0
+              },
+              "response_codes": {
+                "403": 7
+              },
+              "first_seen": "2023-01-27T18:28:08.139829Z",
+              "last_seen": "2023-01-27T18:28:08.145084Z",
+              "max_trigger_score": 3.436106,
+              "unique_actors": [
+                "system:kube-scheduler"
+              ],
+              "examples": [
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"33f5dcf5-cd59-47ce-93e8-b8d006824591\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/storage.k8s.io/v1/csidrivers?limit=500\\u0026resourceVersion=0\",\"verb\":\"list\",\"user\":{\"username\":\"system:kube-scheduler\",\"groups\":[\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-scheduler/v1.23.15 (linux/amd64) kubernetes/b84cb8a/scheduler\",\"objectRef\":{\"resource\":\"csidrivers\",\"apiGroup\":\"storage.k8s.io\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.139829Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.140148Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"6c42299b-266a-4908-bdf1-84b4f6f15a13\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces?limit=500\\u0026resourceVersion=0\",\"verb\":\"list\",\"user\":{\"username\":\"system:kube-scheduler\",\"groups\":[\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-scheduler/v1.23.15 (linux/amd64) kubernetes/b84cb8a/scheduler\",\"objectRef\":{\"resource\":\"namespaces\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.140723Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.141557Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"682bcea2-b70f-40b2-8fbd-251db748d68d\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/services?limit=500\\u0026resourceVersion=0\",\"verb\":\"list\",\"user\":{\"username\":\"system:kube-scheduler\",\"groups\":[\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-scheduler/v1.23.15 (linux/amd64) kubernetes/b84cb8a/scheduler\",\"objectRef\":{\"resource\":\"services\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.141708Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.141973Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"8e6e8f52-3224-4af1-bb0f-ae0aa788ac40\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/nodes?limit=500\\u0026resourceVersion=0\",\"verb\":\"list\",\"user\":{\"username\":\"system:kube-scheduler\",\"groups\":[\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-scheduler/v1.23.15 (linux/amd64) kubernetes/b84cb8a/scheduler\",\"objectRef\":{\"resource\":\"nodes\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.142306Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.142569Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"3201a4d7-304a-49e3-b195-a31a4d151c92\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/storage.k8s.io/v1/storageclasses?limit=500\\u0026resourceVersion=0\",\"verb\":\"list\",\"user\":{\"username\":\"system:kube-scheduler\",\"groups\":[\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-scheduler/v1.23.15 (linux/amd64) kubernetes/b84cb8a/scheduler\",\"objectRef\":{\"resource\":\"storageclasses\",\"apiGroup\":\"storage.k8s.io\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.144311Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.144558Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"\"}}"
+              ],
+              "actor_diversity": 1
+            },
+            {
+              "pattern_id": "P101",
+              "service": "system:node:k8s-node-2-perfspec",
+              "actor": "system:node:k8s-node-2-perfspec",
+              "verb": "watch",
+              "resource": "configmaps",
+              "http_class": "4xx",
+              "failure_domain": "authz",
+              "is_control_plane": true,
+              "cluster_ids": [
+                "C192"
+              ],
+              "event_count": 8,
+              "error_count": 8,
+              "severity_counts": {
+                "ERROR": 8,
+                "WARN": 0,
+                "INFO": 0,
+                "UNKNOWN": 0
+              },
+              "response_codes": {
+                "403": 8
+              },
+              "first_seen": "2023-01-27T18:28:08.156094Z",
+              "last_seen": "2023-01-27T18:28:08.159452Z",
+              "max_trigger_score": 3.493537,
+              "unique_actors": [
+                "system:node:k8s-node-2-perfspec"
+              ],
+              "examples": [
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"0ddf6e1d-92e4-49f2-a5bb-efa1fc1bb921\",\"stage\":\"ResponseStarted\",\"requestURI\":\"/api/v1/namespaces/kube-system/configmaps?allowWatchBookmarks=true\\u0026fieldSelector=metadata.name%3Dkube-root-ca.crt\\u0026resourceVersion=6577334\\u0026timeout=9m40s\\u0026timeoutSeconds=580\\u0026watch=true\",\"verb\":\"watch\",\"user\":{\"username\":\"system:node:k8s-node-2-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"configmaps\",\"namespace\":\"kube-system\",\"name\":\"kube-root-ca.crt\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.156094Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.156329Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-node-2-perfspec' and this object\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"0ddf6e1d-92e4-49f2-a5bb-efa1fc1bb921\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/kube-system/configmaps?allowWatchBookmarks=true\\u0026fieldSelector=metadata.name%3Dkube-root-ca.crt\\u0026resourceVersion=6577334\\u0026timeout=9m40s\\u0026timeoutSeconds=580\\u0026watch=true\",\"verb\":\"watch\",\"user\":{\"username\":\"system:node:k8s-node-2-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"configmaps\",\"namespace\":\"kube-system\",\"name\":\"kube-root-ca.crt\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.156094Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.156408Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-node-2-perfspec' and this object\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"b9cb0a44-8655-4a7c-b826-5bb87e232bc5\",\"stage\":\"ResponseStarted\",\"requestURI\":\"/api/v1/namespaces/kube-flannel/configmaps?allowWatchBookmarks=true\\u0026fieldSelector=metadata.name%3Dkube-flannel-cfg\\u0026resourceVersion=6577334\\u0026timeout=8m11s\\u0026timeoutSeconds=491\\u0026watch=true\",\"verb\":\"watch\",\"user\":{\"username\":\"system:node:k8s-node-2-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"configmaps\",\"namespace\":\"kube-flannel\",\"name\":\"kube-flannel-cfg\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.157305Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.157681Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-node-2-perfspec' and this object\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"b9cb0a44-8655-4a7c-b826-5bb87e232bc5\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/kube-flannel/configmaps?allowWatchBookmarks=true\\u0026fieldSelector=metadata.name%3Dkube-flannel-cfg\\u0026resourceVersion=6577334\\u0026timeout=8m11s\\u0026timeoutSeconds=491\\u0026watch=true\",\"verb\":\"watch\",\"user\":{\"username\":\"system:node:k8s-node-2-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"configmaps\",\"namespace\":\"kube-flannel\",\"name\":\"kube-flannel-cfg\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.157305Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.157882Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-node-2-perfspec' and this object\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"aa2a782a-cfc1-4acd-a715-274109301459\",\"stage\":\"ResponseStarted\",\"requestURI\":\"/api/v1/namespaces/gatekeeper-system/configmaps?allowWatchBookmarks=true\\u0026fieldSelector=metadata.name%3Dkube-root-ca.crt\\u0026resourceVersion=6577334\\u0026timeout=6m31s\\u0026timeoutSeconds=391\\u0026watch=true\",\"verb\":\"watch\",\"user\":{\"username\":\"system:node:k8s-node-2-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"configmaps\",\"namespace\":\"gatekeeper-system\",\"name\":\"kube-root-ca.crt\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.157978Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.158237Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-node-2-perfspec' and this object\"}}"
+              ],
+              "actor_diversity": 1
+            },
+            {
+              "pattern_id": "P26",
+              "service": "system:node:k8s-master-perfspec",
+              "actor": "system:node:k8s-master-perfspec",
+              "verb": "watch",
+              "resource": "configmaps",
+              "http_class": "4xx",
+              "failure_domain": "authz",
+              "is_control_plane": true,
+              "cluster_ids": [
+                "C121"
+              ],
+              "event_count": 8,
+              "error_count": 8,
+              "severity_counts": {
+                "ERROR": 8,
+                "WARN": 0,
+                "INFO": 0,
+                "UNKNOWN": 0
+              },
+              "response_codes": {
+                "403": 8
+              },
+              "first_seen": "2023-01-27T18:28:08.164606Z",
+              "last_seen": "2023-01-27T18:28:08.174585Z",
+              "max_trigger_score": 3.493537,
+              "unique_actors": [
+                "system:node:k8s-master-perfspec"
+              ],
+              "examples": [
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"98a960f4-57b2-42a9-ae27-b869f7f262b4\",\"stage\":\"ResponseStarted\",\"requestURI\":\"/api/v1/namespaces/kube-system/configmaps?allowWatchBookmarks=true\\u0026fieldSelector=metadata.name%3Dkube-root-ca.crt\\u0026resourceVersion=6577334\\u0026timeout=7m53s\\u0026timeoutSeconds=473\\u0026watch=true\",\"verb\":\"watch\",\"user\":{\"username\":\"system:node:k8s-master-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"configmaps\",\"namespace\":\"kube-system\",\"name\":\"kube-root-ca.crt\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.164606Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.164924Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-master-perfspec' and this object\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"98a960f4-57b2-42a9-ae27-b869f7f262b4\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/kube-system/configmaps?allowWatchBookmarks=true\\u0026fieldSelector=metadata.name%3Dkube-root-ca.crt\\u0026resourceVersion=6577334\\u0026timeout=7m53s\\u0026timeoutSeconds=473\\u0026watch=true\",\"verb\":\"watch\",\"user\":{\"username\":\"system:node:k8s-master-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"configmaps\",\"namespace\":\"kube-system\",\"name\":\"kube-root-ca.crt\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.164606Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.165055Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-master-perfspec' and this object\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"3b91e0c4-24f4-47e0-bc27-73888511a506\",\"stage\":\"ResponseStarted\",\"requestURI\":\"/api/v1/namespaces/kube-flannel/configmaps?allowWatchBookmarks=true\\u0026fieldSelector=metadata.name%3Dkube-root-ca.crt\\u0026resourceVersion=6577334\\u0026timeout=5m2s\\u0026timeoutSeconds=302\\u0026watch=true\",\"verb\":\"watch\",\"user\":{\"username\":\"system:node:k8s-master-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"configmaps\",\"namespace\":\"kube-flannel\",\"name\":\"kube-root-ca.crt\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.172381Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.172695Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-master-perfspec' and this object\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"3b91e0c4-24f4-47e0-bc27-73888511a506\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/kube-flannel/configmaps?allowWatchBookmarks=true\\u0026fieldSelector=metadata.name%3Dkube-root-ca.crt\\u0026resourceVersion=6577334\\u0026timeout=5m2s\\u0026timeoutSeconds=302\\u0026watch=true\",\"verb\":\"watch\",\"user\":{\"username\":\"system:node:k8s-master-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"configmaps\",\"namespace\":\"kube-flannel\",\"name\":\"kube-root-ca.crt\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.172381Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.172798Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-master-perfspec' and this object\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"be8b4254-946d-4d46-bb36-73f462aa03d5\",\"stage\":\"ResponseStarted\",\"requestURI\":\"/api/v1/namespaces/kube-flannel/configmaps?allowWatchBookmarks=true\\u0026fieldSelector=metadata.name%3Dkube-flannel-cfg\\u0026resourceVersion=6577334\\u0026timeout=9m1s\\u0026timeoutSeconds=541\\u0026watch=true\",\"verb\":\"watch\",\"user\":{\"username\":\"system:node:k8s-master-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"configmaps\",\"namespace\":\"kube-flannel\",\"name\":\"kube-flannel-cfg\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.173387Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.173701Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-master-perfspec' and this object\"}}"
+              ],
+              "actor_diversity": 1
+            },
+            {
+              "pattern_id": "P253",
+              "service": "system:serviceaccount:kube-system:replicaset-controller",
+              "actor": "system:serviceaccount:kube-system:replicaset-controller",
+              "verb": "create",
+              "resource": "pods",
+              "http_class": "4xx",
+              "failure_domain": "authz",
+              "is_control_plane": true,
+              "cluster_ids": [
+                "C334"
+              ],
+              "event_count": 19,
+              "error_count": 19,
+              "severity_counts": {
+                "ERROR": 19,
+                "WARN": 0,
+                "INFO": 0,
+                "UNKNOWN": 0
+              },
+              "response_codes": {
+                "403": 19
+              },
+              "first_seen": "2023-01-27T18:28:42.240231Z",
+              "last_seen": "2023-01-27T18:50:33.192737Z",
+              "max_trigger_score": 3.000972,
+              "unique_actors": [
+                "system:serviceaccount:kube-system:replicaset-controller"
+              ],
+              "examples": [
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"946864b4-1ff2-4d8c-887c-ad9982bad0d7\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/kube-system/pods\",\"verb\":\"create\",\"user\":{\"username\":\"system:serviceaccount:kube-system:replicaset-controller\",\"uid\":\"bd951d86-7847-46e4-8fa2-e630c7118288\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:replicaset-controller\",\"objectRef\":{\"resource\":\"pods\",\"namespace\":\"kube-system\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:42.240231Z\",\"stageTimestamp\":\"2023-01-27T18:28:42.249570Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:controller:replicaset-controller\\\" of ClusterRole \\\"system:controller:replicaset-controller\\\" to ServiceAccount \\\"replicaset-controller/kube-system\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"ccec6b5c-e995-49dc-bd21-967eb4515989\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/kube-system/pods\",\"verb\":\"create\",\"user\":{\"username\":\"system:serviceaccount:kube-system:replicaset-controller\",\"uid\":\"bd951d86-7847-46e4-8fa2-e630c7118288\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:replicaset-controller\",\"objectRef\":{\"resource\":\"pods\",\"namespace\":\"kube-system\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:42.271754Z\",\"stageTimestamp\":\"2023-01-27T18:28:42.283094Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:controller:replicaset-controller\\\" of ClusterRole \\\"system:controller:replicaset-controller\\\" to ServiceAccount \\\"replicaset-controller/kube-system\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"870d7dec-b860-476f-995c-41c0ed94c5d1\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/kube-system/pods\",\"verb\":\"create\",\"user\":{\"username\":\"system:serviceaccount:kube-system:replicaset-controller\",\"uid\":\"bd951d86-7847-46e4-8fa2-e630c7118288\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:replicaset-controller\",\"objectRef\":{\"resource\":\"pods\",\"namespace\":\"kube-system\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:42.295434Z\",\"stageTimestamp\":\"2023-01-27T18:28:42.300423Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:controller:replicaset-controller\\\" of ClusterRole \\\"system:controller:replicaset-controller\\\" to ServiceAccount \\\"replicaset-controller/kube-system\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"71b4dde2-f443-44c9-8444-515003ef47ce\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/kube-system/pods\",\"verb\":\"create\",\"user\":{\"username\":\"system:serviceaccount:kube-system:replicaset-controller\",\"uid\":\"bd951d86-7847-46e4-8fa2-e630c7118288\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:replicaset-controller\",\"objectRef\":{\"resource\":\"pods\",\"namespace\":\"kube-system\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:42.323163Z\",\"stageTimestamp\":\"2023-01-27T18:28:42.337962Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:controller:replicaset-controller\\\" of ClusterRole \\\"system:controller:replicaset-controller\\\" to ServiceAccount \\\"replicaset-controller/kube-system\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"a6e9d7ce-0681-43f5-a43d-0d6ce3fc51ee\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/kube-system/pods\",\"verb\":\"create\",\"user\":{\"username\":\"system:serviceaccount:kube-system:replicaset-controller\",\"uid\":\"bd951d86-7847-46e4-8fa2-e630c7118288\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-system\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.10\"],\"userAgent\":\"kube-controller-manager/v1.23.15 (linux/amd64) kubernetes/b84cb8a/system:serviceaccount:kube-system:replicaset-controller\",\"objectRef\":{\"resource\":\"pods\",\"namespace\":\"kube-system\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:42.381397Z\",\"stageTimestamp\":\"2023-01-27T18:28:42.385456Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:controller:replicaset-controller\\\" of ClusterRole \\\"system:controller:replicaset-controller\\\" to ServiceAccount \\\"replicaset-controller/kube-system\\\"\"}}"
+              ],
+              "actor_diversity": 1
+            },
+            {
+              "pattern_id": "P14",
+              "service": "system:node:k8s-node-1-perfspec",
+              "actor": "system:node:k8s-node-1-perfspec",
+              "verb": "list",
+              "resource": "configmaps",
+              "http_class": "4xx",
+              "failure_domain": "authz",
+              "is_control_plane": true,
+              "cluster_ids": [
+                "C110"
+              ],
+              "event_count": 51,
+              "error_count": 51,
+              "severity_counts": {
+                "ERROR": 51,
+                "WARN": 0,
+                "INFO": 0,
+                "UNKNOWN": 0
+              },
+              "response_codes": {
+                "403": 51
+              },
+              "first_seen": "2023-01-27T18:28:43.254658Z",
+              "last_seen": "2023-01-27T19:03:06.801853Z",
+              "max_trigger_score": 3.001657,
+              "unique_actors": [
+                "system:node:k8s-master-perfspec",
+                "system:node:k8s-node-1-perfspec",
+                "system:node:k8s-node-2-perfspec"
+              ],
+              "examples": [
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"0a48a281-dd2c-4f7b-b35f-19b8adf82ab3\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/default/configmaps?fieldSelector=metadata.name%3Dmy-airflow-airflow-config\\u0026resourceVersion=6135895\",\"verb\":\"list\",\"user\":{\"username\":\"system:node:k8s-node-1-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.11\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"configmaps\",\"namespace\":\"default\",\"name\":\"my-airflow-airflow-config\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:43.254658Z\",\"stageTimestamp\":\"2023-01-27T18:28:43.267333Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-node-1-perfspec' and this object\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"4ab75fff-b8af-4845-93bd-1dce8226c372\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/kube-prometheus-stack/configmaps?fieldSelector=metadata.name%3Dkube-root-ca.crt\\u0026limit=500\\u0026resourceVersion=0\",\"verb\":\"list\",\"user\":{\"username\":\"system:node:k8s-node-2-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"configmaps\",\"namespace\":\"kube-prometheus-stack\",\"name\":\"kube-root-ca.crt\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:29:08.354086Z\",\"stageTimestamp\":\"2023-01-27T18:29:08.354548Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-node-2-perfspec' and this object\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"765b2097-7dc0-4d31-a2d1-1e5f58f0a3d2\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/default/configmaps?fieldSelector=metadata.name%3Dmy-airflow-airflow-config\\u0026resourceVersion=6135895\",\"verb\":\"list\",\"user\":{\"username\":\"system:node:k8s-node-1-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.11\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"configmaps\",\"namespace\":\"default\",\"name\":\"my-airflow-airflow-config\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:29:13.920459Z\",\"stageTimestamp\":\"2023-01-27T18:29:13.922994Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-node-1-perfspec' and this object\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"70294faf-9fa1-4d68-95ad-82587f31e02e\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/default/configmaps?fieldSelector=metadata.name%3Dmy-airflow-airflow-config\\u0026resourceVersion=6135895\",\"verb\":\"list\",\"user\":{\"username\":\"system:node:k8s-node-1-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.11\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"configmaps\",\"namespace\":\"default\",\"name\":\"my-airflow-airflow-config\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:30:12.749799Z\",\"stageTimestamp\":\"2023-01-27T18:30:12.764382Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-node-1-perfspec' and this object\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"a094aee6-0536-4e7e-9ad9-f22d415f1aec\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/default/configmaps?fieldSelector=metadata.name%3Dmy-airflow-airflow-config\\u0026resourceVersion=6135895\",\"verb\":\"list\",\"user\":{\"username\":\"system:node:k8s-node-1-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.11\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"configmaps\",\"namespace\":\"default\",\"name\":\"my-airflow-airflow-config\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:30:49.221154Z\",\"stageTimestamp\":\"2023-01-27T18:30:49.253142Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-node-1-perfspec' and this object\"}}"
+              ],
+              "actor_diversity": 3
+            },
+            {
+              "pattern_id": "P360",
+              "service": "system:serviceaccount:kube-prometheus-stack:my-kube-prometheus-stack-operator",
+              "actor": "system:serviceaccount:kube-prometheus-stack:my-kube-prometheus-stack-operator",
+              "verb": "get",
+              "resource": "secrets",
+              "http_class": "4xx",
+              "failure_domain": "authz",
+              "is_control_plane": true,
+              "cluster_ids": [
+                "C437",
+                "C498"
+              ],
+              "event_count": 10,
+              "error_count": 4,
+              "severity_counts": {
+                "ERROR": 4,
+                "WARN": 6,
+                "INFO": 0,
+                "UNKNOWN": 0
+              },
+              "response_codes": {
+                "403": 4,
+                "404": 6
+              },
+              "first_seen": "2023-01-27T18:29:11.179692Z",
+              "last_seen": "2023-01-27T18:43:53.838319Z",
+              "max_trigger_score": 3.377554,
+              "unique_actors": [
+                "system:serviceaccount:kube-prometheus-stack:my-kube-prometheus-stack-operator"
+              ],
+              "examples": [
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"bb069736-f3d7-4da0-b161-4c9241e801f9\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/kube-prometheus-stack/secrets/alertmanager-my-kube-prometheus-stack-alertmanager\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:kube-prometheus-stack:my-kube-prometheus-stack-operator\",\"uid\":\"619226bb-7a94-42be-b6ba-494ece423daf\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-prometheus-stack\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-kube-prometheus-stack-operator-647957cb6c-jfk9s\"],\"authentication.kubernetes.io/pod-uid\":[\"f95d7da2-5113-4a5a-891a-b88bfaeff0c2\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"PrometheusOperator/0.62.0\",\"objectRef\":{\"resource\":\"secrets\",\"namespace\":\"kube-prometheus-stack\",\"name\":\"alertmanager-my-kube-prometheus-stack-alertmanager\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:43:53.784415Z\",\"stageTimestamp\":\"2023-01-27T18:43:53.785550Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"ac3bf552-7af6-413f-9de9-fac2bb8079fd\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/kube-prometheus-stack/secrets/alertmanager-my-kube-prometheus-stack-alertmanager\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:kube-prometheus-stack:my-kube-prometheus-stack-operator\",\"uid\":\"619226bb-7a94-42be-b6ba-494ece423daf\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-prometheus-stack\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-kube-prometheus-stack-operator-647957cb6c-jfk9s\"],\"authentication.kubernetes.io/pod-uid\":[\"f95d7da2-5113-4a5a-891a-b88bfaeff0c2\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"PrometheusOperator/0.62.0\",\"objectRef\":{\"resource\":\"secrets\",\"namespace\":\"kube-prometheus-stack\",\"name\":\"alertmanager-my-kube-prometheus-stack-alertmanager\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:43:53.812147Z\",\"stageTimestamp\":\"2023-01-27T18:43:53.812565Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"b3dfa24f-7a84-4f1f-93ec-e2b5d0356c7a\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/kube-prometheus-stack/secrets/alertmanager-my-kube-prometheus-stack-alertmanager\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:kube-prometheus-stack:my-kube-prometheus-stack-operator\",\"uid\":\"619226bb-7a94-42be-b6ba-494ece423daf\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-prometheus-stack\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-kube-prometheus-stack-operator-647957cb6c-jfk9s\"],\"authentication.kubernetes.io/pod-uid\":[\"f95d7da2-5113-4a5a-891a-b88bfaeff0c2\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"PrometheusOperator/0.62.0\",\"objectRef\":{\"resource\":\"secrets\",\"namespace\":\"kube-prometheus-stack\",\"name\":\"alertmanager-my-kube-prometheus-stack-alertmanager\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:43:53.820500Z\",\"stageTimestamp\":\"2023-01-27T18:43:53.820903Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"73688c2d-3090-45c7-a027-17560ebe5a11\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/kube-prometheus-stack/secrets/alertmanager-my-kube-prometheus-stack-alertmanager\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:kube-prometheus-stack:my-kube-prometheus-stack-operator\",\"uid\":\"619226bb-7a94-42be-b6ba-494ece423daf\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-prometheus-stack\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-kube-prometheus-stack-operator-647957cb6c-jfk9s\"],\"authentication.kubernetes.io/pod-uid\":[\"f95d7da2-5113-4a5a-891a-b88bfaeff0c2\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"PrometheusOperator/0.62.0\",\"objectRef\":{\"resource\":\"secrets\",\"namespace\":\"kube-prometheus-stack\",\"name\":\"alertmanager-my-kube-prometheus-stack-alertmanager\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:43:53.838319Z\",\"stageTimestamp\":\"2023-01-27T18:43:53.839045Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"4722c6d5-0073-430f-b78e-355b1a7140fd\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/kube-prometheus-stack/secrets/alertmanager-my-kube-prometheus-stack-alertmanager-generated\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:kube-prometheus-stack:my-kube-prometheus-stack-operator\",\"uid\":\"619226bb-7a94-42be-b6ba-494ece423daf\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-prometheus-stack\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-kube-prometheus-stack-operator-647957cb6c-jfk9s\"],\"authentication.kubernetes.io/pod-uid\":[\"f95d7da2-5113-4a5a-891a-b88bfaeff0c2\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"PrometheusOperator/0.62.0\",\"objectRef\":{\"resource\":\"secrets\",\"namespace\":\"kube-prometheus-stack\",\"name\":\"alertmanager-my-kube-prometheus-stack-alertmanager-generated\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"NotFound\",\"code\":404},\"requestReceivedTimestamp\":\"2023-01-27T18:29:11.179692Z\",\"stageTimestamp\":\"2023-01-27T18:29:11.183694Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"my-kube-prometheus-stack-operator\\\" of ClusterRole \\\"my-kube-prometheus-stack-operator\\\" to ServiceAccount \\\"my-kube-prometheus-stack-operator/kube-prometheus-stack\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"4a6dd200-406a-496e-93e0-3984ded99e99\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/kube-prometheus-stack/secrets/alertmanager-my-kube-prometheus-stack-alertmanager-tls-assets-0\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:kube-prometheus-stack:my-kube-prometheus-stack-operator\",\"uid\":\"619226bb-7a94-42be-b6ba-494ece423daf\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-prometheus-stack\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-kube-prometheus-stack-operator-647957cb6c-jfk9s\"],\"authentication.kubernetes.io/pod-uid\":[\"f95d7da2-5113-4a5a-891a-b88bfaeff0c2\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"PrometheusOperator/0.62.0\",\"objectRef\":{\"resource\":\"secrets\",\"namespace\":\"kube-prometheus-stack\",\"name\":\"alertmanager-my-kube-prometheus-stack-alertmanager-tls-assets-0\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"NotFound\",\"code\":404},\"requestReceivedTimestamp\":\"2023-01-27T18:29:11.198816Z\",\"stageTimestamp\":\"2023-01-27T18:29:11.201150Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"my-kube-prometheus-stack-operator\\\" of ClusterRole \\\"my-kube-prometheus-stack-operator\\\" to ServiceAccount \\\"my-kube-prometheus-stack-operator/kube-prometheus-stack\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"62a89b07-8a5e-4dc7-ab10-ff4f89d01be7\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/kube-prometheus-stack/secrets/alertmanager-my-kube-prometheus-stack-alertmanager-web-config\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:kube-prometheus-stack:my-kube-prometheus-stack-operator\",\"uid\":\"619226bb-7a94-42be-b6ba-494ece423daf\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-prometheus-stack\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-kube-prometheus-stack-operator-647957cb6c-jfk9s\"],\"authentication.kubernetes.io/pod-uid\":[\"f95d7da2-5113-4a5a-891a-b88bfaeff0c2\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"PrometheusOperator/0.62.0\",\"objectRef\":{\"resource\":\"secrets\",\"namespace\":\"kube-prometheus-stack\",\"name\":\"alertmanager-my-kube-prometheus-stack-alertmanager-web-config\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"NotFound\",\"code\":404},\"requestReceivedTimestamp\":\"2023-01-27T18:29:11.219099Z\",\"stageTimestamp\":\"2023-01-27T18:29:11.220387Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"my-kube-prometheus-stack-operator\\\" of ClusterRole \\\"my-kube-prometheus-stack-operator\\\" to ServiceAccount \\\"my-kube-prometheus-stack-operator/kube-prometheus-stack\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"89133110-073c-4354-b12b-7919ef7ef80f\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/kube-prometheus-stack/secrets/prometheus-my-kube-prometheus-stack-prometheus\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:kube-prometheus-stack:my-kube-prometheus-stack-operator\",\"uid\":\"619226bb-7a94-42be-b6ba-494ece423daf\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-prometheus-stack\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-kube-prometheus-stack-operator-647957cb6c-jfk9s\"],\"authentication.kubernetes.io/pod-uid\":[\"f95d7da2-5113-4a5a-891a-b88bfaeff0c2\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"PrometheusOperator/0.62.0\",\"objectRef\":{\"resource\":\"secrets\",\"namespace\":\"kube-prometheus-stack\",\"name\":\"prometheus-my-kube-prometheus-stack-prometheus\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"NotFound\",\"code\":404},\"requestReceivedTimestamp\":\"2023-01-27T18:29:11.557293Z\",\"stageTimestamp\":\"2023-01-27T18:29:11.559449Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"my-kube-prometheus-stack-operator\\\" of ClusterRole \\\"my-kube-prometheus-stack-operator\\\" to ServiceAccount \\\"my-kube-prometheus-stack-operator/kube-prometheus-stack\\\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"aaf28491-fa40-43d0-a565-d3d894eebcdd\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/kube-prometheus-stack/secrets/prometheus-my-kube-prometheus-stack-prometheus-tls-assets-0\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:kube-prometheus-stack:my-kube-prometheus-stack-operator\",\"uid\":\"619226bb-7a94-42be-b6ba-494ece423daf\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:kube-prometheus-stack\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-kube-prometheus-stack-operator-647957cb6c-jfk9s\"],\"authentication.kubernetes.io/pod-uid\":[\"f95d7da2-5113-4a5a-891a-b88bfaeff0c2\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"PrometheusOperator/0.62.0\",\"objectRef\":{\"resource\":\"secrets\",\"namespace\":\"kube-prometheus-stack\",\"name\":\"prometheus-my-kube-prometheus-stack-prometheus-tls-assets-0\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"NotFound\",\"code\":404},\"requestReceivedTimestamp\":\"2023-01-27T18:29:11.575485Z\",\"stageTimestamp\":\"2023-01-27T18:29:11.577299Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"my-kube-prometheus-stack-operator\\\" of ClusterRole \\\"my-kube-prometheus-stack-operator\\\" to ServiceAccount \\\"my-kube-prometheus-stack-operator/kube-prometheus-stack\\\"\"}}"
+              ],
+              "actor_diversity": 1
+            },
+            {
+              "pattern_id": "P658",
+              "service": "system:node:k8s-node-1-perfspec",
+              "actor": "system:node:k8s-node-1-perfspec",
+              "verb": "create",
+              "resource": "events",
+              "http_class": "4xx",
+              "failure_domain": "authz",
+              "is_control_plane": true,
+              "cluster_ids": [
+                "C72"
+              ],
+              "event_count": 7,
+              "error_count": 7,
+              "severity_counts": {
+                "ERROR": 7,
+                "WARN": 0,
+                "INFO": 0,
+                "UNKNOWN": 0
+              },
+              "response_codes": {
+                "403": 7
+              },
+              "first_seen": "2023-01-27T18:31:26.285401Z",
+              "last_seen": "2023-01-27T19:01:26.282313Z",
+              "max_trigger_score": 3.000261,
+              "unique_actors": [
+                "system:node:k8s-node-1-perfspec"
+              ],
+              "examples": [
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"cd4c339c-5da5-4e36-842e-f51243096dcc\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/loki/events\",\"verb\":\"create\",\"user\":{\"username\":\"system:node:k8s-node-1-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.11\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"events\",\"namespace\":\"loki\",\"name\":\"my-loki-logs-8mj42.173e3c8107533d12\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:31:26.285401Z\",\"stageTimestamp\":\"2023-01-27T18:31:26.286394Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"4c9c283e-f850-436f-b4b9-80694a00fb42\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/loki/events\",\"verb\":\"create\",\"user\":{\"username\":\"system:node:k8s-node-1-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.11\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"events\",\"namespace\":\"loki\",\"name\":\"my-loki-logs-8mj42.173e3c8107533d12\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:36:26.276412Z\",\"stageTimestamp\":\"2023-01-27T18:36:26.277530Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"66045f26-8fc6-4ab4-a8c6-df3018739fd6\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/loki/events\",\"verb\":\"create\",\"user\":{\"username\":\"system:node:k8s-node-1-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.11\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"events\",\"namespace\":\"loki\",\"name\":\"my-loki-logs-8mj42.173e3c8107533d12\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:41:26.267558Z\",\"stageTimestamp\":\"2023-01-27T18:41:26.269231Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"d743827a-ac5c-4a34-a059-9d9e71562163\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/loki/events\",\"verb\":\"create\",\"user\":{\"username\":\"system:node:k8s-node-1-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.11\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"events\",\"namespace\":\"loki\",\"name\":\"my-loki-logs-8mj42.173e3c8107533d12\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:46:26.271361Z\",\"stageTimestamp\":\"2023-01-27T18:46:26.273158Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"6fcab9bd-ded4-4f60-993a-a0919f922c75\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/loki/events\",\"verb\":\"create\",\"user\":{\"username\":\"system:node:k8s-node-1-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.11\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"events\",\"namespace\":\"loki\",\"name\":\"my-loki-logs-8mj42.173e3c8107533d12\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:51:26.288523Z\",\"stageTimestamp\":\"2023-01-27T18:51:26.290237Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"\"}}"
+              ],
+              "actor_diversity": 1
+            },
+            {
+              "pattern_id": "P669",
+              "service": "system:node:k8s-node-2-perfspec",
+              "actor": "system:node:k8s-node-2-perfspec",
+              "verb": "create",
+              "resource": "events",
+              "http_class": "4xx",
+              "failure_domain": "authz",
+              "is_control_plane": true,
+              "cluster_ids": [
+                "C73"
+              ],
+              "event_count": 7,
+              "error_count": 7,
+              "severity_counts": {
+                "ERROR": 7,
+                "WARN": 0,
+                "INFO": 0,
+                "UNKNOWN": 0
+              },
+              "response_codes": {
+                "403": 7
+              },
+              "first_seen": "2023-01-27T18:31:26.299083Z",
+              "last_seen": "2023-01-27T19:01:26.298690Z",
+              "max_trigger_score": 3.000261,
+              "unique_actors": [
+                "system:node:k8s-node-2-perfspec"
+              ],
+              "examples": [
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"3031d898-139d-4a31-a557-1a611feefd98\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/loki/events\",\"verb\":\"create\",\"user\":{\"username\":\"system:node:k8s-node-2-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"events\",\"namespace\":\"loki\",\"name\":\"my-loki-logs-psflx.173e3bd1729e54a4\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:31:26.299083Z\",\"stageTimestamp\":\"2023-01-27T18:31:26.300049Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"7098d12e-735a-4a87-ba60-476fe17ec36e\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/loki/events\",\"verb\":\"create\",\"user\":{\"username\":\"system:node:k8s-node-2-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"events\",\"namespace\":\"loki\",\"name\":\"my-loki-logs-psflx.173e3bd1729e54a4\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:36:26.298817Z\",\"stageTimestamp\":\"2023-01-27T18:36:26.300182Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"68f550c2-e408-415a-aa43-046ae2e3cf1b\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/loki/events\",\"verb\":\"create\",\"user\":{\"username\":\"system:node:k8s-node-2-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"events\",\"namespace\":\"loki\",\"name\":\"my-loki-logs-psflx.173e3bd1729e54a4\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:41:26.301504Z\",\"stageTimestamp\":\"2023-01-27T18:41:26.302646Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"227994aa-5e59-4040-b7e7-c8e05802059c\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/loki/events\",\"verb\":\"create\",\"user\":{\"username\":\"system:node:k8s-node-2-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"events\",\"namespace\":\"loki\",\"name\":\"my-loki-logs-psflx.173e3bd1729e54a4\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:46:26.300946Z\",\"stageTimestamp\":\"2023-01-27T18:46:26.302064Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"f40526a5-0ab0-4347-84a1-aadcc695743d\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/loki/events\",\"verb\":\"create\",\"user\":{\"username\":\"system:node:k8s-node-2-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"events\",\"namespace\":\"loki\",\"name\":\"my-loki-logs-psflx.173e3bd1729e54a4\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:51:26.300343Z\",\"stageTimestamp\":\"2023-01-27T18:51:26.302259Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"\"}}"
+              ],
+              "actor_diversity": 1
+            },
+            {
+              "pattern_id": "P425",
+              "service": "unknown",
+              "actor": "unknown",
+              "verb": "get",
+              "resource": "unknown",
+              "http_class": "4xx",
+              "failure_domain": "authz",
+              "is_control_plane": false,
+              "cluster_ids": [
+                "C5",
+                "C6",
+                "C7"
+              ],
+              "event_count": 44,
+              "error_count": 44,
+              "severity_counts": {
+                "ERROR": 44,
+                "WARN": 0,
+                "INFO": 0,
+                "UNKNOWN": 0
+              },
+              "response_codes": {
+                "401": 44
+              },
+              "first_seen": "2023-01-27T18:44:08.782535Z",
+              "last_seen": "2023-01-27T18:44:10.930380Z",
+              "max_trigger_score": 3.879919,
+              "unique_actors": [
+                "unknown"
+              ],
+              "examples": [
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"06edbb0b-5ef0-4d97-8a6f-7c1ae2cf2bc0\",\"stage\":\"ResponseStarted\",\"requestURI\":\"/apis/policy/v1beta1?timeout=32s\",\"verb\":\"get\",\"user\":{},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"cainjector/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Unauthorized\",\"code\":401},\"requestReceivedTimestamp\":\"2023-01-27T18:44:09.231266Z\",\"stageTimestamp\":\"2023-01-27T18:44:09.236348Z\"}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"137f0f74-ebbf-4d91-9406-0adbaccb36d9\",\"stage\":\"ResponseStarted\",\"requestURI\":\"/apis/rbac.authorization.k8s.io/v1?timeout=32s\",\"verb\":\"get\",\"user\":{},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"cainjector/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Unauthorized\",\"code\":401},\"requestReceivedTimestamp\":\"2023-01-27T18:44:09.282141Z\",\"stageTimestamp\":\"2023-01-27T18:44:09.287130Z\"}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"400a5c90-2b81-4db9-8bb9-6936576e0716\",\"stage\":\"ResponseStarted\",\"requestURI\":\"/apis/storage.k8s.io/v1?timeout=32s\",\"verb\":\"get\",\"user\":{},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"cainjector/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Unauthorized\",\"code\":401},\"requestReceivedTimestamp\":\"2023-01-27T18:44:09.332040Z\",\"stageTimestamp\":\"2023-01-27T18:44:09.338571Z\"}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"6e61e917-2fef-4fb1-9ef1-f14ea0ab88ef\",\"stage\":\"ResponseStarted\",\"requestURI\":\"/apis/storage.k8s.io/v1beta1?timeout=32s\",\"verb\":\"get\",\"user\":{},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"cainjector/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Unauthorized\",\"code\":401},\"requestReceivedTimestamp\":\"2023-01-27T18:44:09.379720Z\",\"stageTimestamp\":\"2023-01-27T18:44:09.384604Z\"}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"351b34fa-058a-4749-8941-05829b9e8a43\",\"stage\":\"ResponseStarted\",\"requestURI\":\"/apis/monitoring.grafana.com/v1alpha1?timeout=32s\",\"verb\":\"get\",\"user\":{},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"cainjector/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Unauthorized\",\"code\":401},\"requestReceivedTimestamp\":\"2023-01-27T18:44:10.180618Z\",\"stageTimestamp\":\"2023-01-27T18:44:10.185259Z\"}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"59f16c11-7aec-4ae3-90d3-7ebe6e28164d\",\"stage\":\"ResponseStarted\",\"requestURI\":\"/apis/autoscaling/v2?timeout=32s\",\"verb\":\"get\",\"user\":{},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"cainjector/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Unauthorized\",\"code\":401},\"requestReceivedTimestamp\":\"2023-01-27T18:44:08.782535Z\",\"stageTimestamp\":\"2023-01-27T18:44:08.785610Z\"}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"5ad1b387-0a81-4d0c-8b51-bdbcab647338\",\"stage\":\"ResponseStarted\",\"requestURI\":\"/apis/autoscaling/v1?timeout=32s\",\"verb\":\"get\",\"user\":{},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"cainjector/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Unauthorized\",\"code\":401},\"requestReceivedTimestamp\":\"2023-01-27T18:44:08.830254Z\",\"stageTimestamp\":\"2023-01-27T18:44:08.835593Z\"}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"4aee0216-8462-40d0-9e4b-b8991ccb4fba\",\"stage\":\"ResponseStarted\",\"requestURI\":\"/apis/autoscaling/v2beta1?timeout=32s\",\"verb\":\"get\",\"user\":{},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"cainjector/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Unauthorized\",\"code\":401},\"requestReceivedTimestamp\":\"2023-01-27T18:44:08.880424Z\",\"stageTimestamp\":\"2023-01-27T18:44:08.884528Z\"}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"2424b82c-a5f9-4919-93c2-e272e7624db8\",\"stage\":\"ResponseStarted\",\"requestURI\":\"/apis/autoscaling/v2beta2?timeout=32s\",\"verb\":\"get\",\"user\":{},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"cainjector/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Unauthorized\",\"code\":401},\"requestReceivedTimestamp\":\"2023-01-27T18:44:08.930904Z\",\"stageTimestamp\":\"2023-01-27T18:44:08.935379Z\"}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"d233e659-2a07-4680-9b1f-838002510cf1\",\"stage\":\"ResponseStarted\",\"requestURI\":\"/apis/batch/v1?timeout=32s\",\"verb\":\"get\",\"user\":{},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"cainjector/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Unauthorized\",\"code\":401},\"requestReceivedTimestamp\":\"2023-01-27T18:44:08.980589Z\",\"stageTimestamp\":\"2023-01-27T18:44:08.984211Z\"}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"790ee9af-f8c6-412e-a5b5-f17ae440bb2f\",\"stage\":\"ResponseStarted\",\"requestURI\":\"/apis/monitoring.coreos.com/v1alpha1?timeout=32s\",\"verb\":\"get\",\"user\":{},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"cainjector/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Unauthorized\",\"code\":401},\"requestReceivedTimestamp\":\"2023-01-27T18:44:10.680543Z\",\"stageTimestamp\":\"2023-01-27T18:44:10.686166Z\"}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"a2642c1c-627c-4b90-929f-aa6eefabb528\",\"stage\":\"ResponseStarted\",\"requestURI\":\"/apis/k8s.nginx.org/v1alpha1?timeout=32s\",\"verb\":\"get\",\"user\":{},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"cainjector/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Unauthorized\",\"code\":401},\"requestReceivedTimestamp\":\"2023-01-27T18:44:10.731529Z\",\"stageTimestamp\":\"2023-01-27T18:44:10.738882Z\"}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"7cc3daaa-a068-4141-aecd-2902a079ad04\",\"stage\":\"ResponseStarted\",\"requestURI\":\"/apis/velero.io/v1?timeout=32s\",\"verb\":\"get\",\"user\":{},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"cainjector/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Unauthorized\",\"code\":401},\"requestReceivedTimestamp\":\"2023-01-27T18:44:10.780497Z\",\"stageTimestamp\":\"2023-01-27T18:44:10.786642Z\"}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"9c69d351-ad22-4a6d-92e5-4b3001a4992e\",\"stage\":\"ResponseStarted\",\"requestURI\":\"/api?timeout=32s\",\"verb\":\"get\",\"user\":{},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"cainjector/v0.0.0 (linux/amd64) kubernetes/$Format\",\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Unauthorized\",\"code\":401},\"requestReceivedTimestamp\":\"2023-01-27T18:44:10.930380Z\",\"stageTimestamp\":\"2023-01-27T18:44:10.935935Z\"}"
+              ],
+              "actor_diversity": 1
+            },
+            {
+              "pattern_id": "P24",
+              "service": "system:serviceaccount:consul:my-consul-consul-webhook-cert-manager",
+              "actor": "system:serviceaccount:consul:my-consul-consul-webhook-cert-manager",
+              "verb": "get",
+              "resource": "deployments",
+              "http_class": "4xx",
+              "failure_domain": "authz",
+              "is_control_plane": true,
+              "cluster_ids": [
+                "C12"
+              ],
+              "event_count": 8,
+              "error_count": 8,
+              "severity_counts": {
+                "ERROR": 8,
+                "WARN": 0,
+                "INFO": 0,
+                "UNKNOWN": 0
+              },
+              "response_codes": {
+                "403": 8
+              },
+              "first_seen": "2023-01-27T18:48:09.972288Z",
+              "last_seen": "2023-01-27T18:48:17.025796Z",
+              "max_trigger_score": 3.075107,
+              "unique_actors": [
+                "system:serviceaccount:consul:my-consul-consul-webhook-cert-manager"
+              ],
+              "examples": [
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"ebcacf7e-bea2-4a7b-b33a-a8c2c5477fb5\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/apps/v1/namespaces/consul/deployments/my-consul-consul-webhook-cert-manager\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:consul:my-consul-consul-webhook-cert-manager\",\"uid\":\"142b6ddc-7ba4-40d5-9671-b2a1042af2f1\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:consul\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-consul-consul-webhook-cert-manager-7c7c6c4764-78wq5\"],\"authentication.kubernetes.io/pod-uid\":[\"bb28a03d-3aaf-4677-9999-0a68e72c09bc\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"consul-k8s-control-plane/v0.0.0 (linux/amd64) kubernetes/$Format\",\"objectRef\":{\"resource\":\"deployments\",\"namespace\":\"consul\",\"name\":\"my-consul-consul-webhook-cert-manager\",\"apiGroup\":\"apps\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:48:09.972288Z\",\"stageTimestamp\":\"2023-01-27T18:48:09.978828Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"11a8bcb4-3093-43a4-adbc-f5e37cdecc23\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/apps/v1/namespaces/consul/deployments/my-consul-consul-webhook-cert-manager\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:consul:my-consul-consul-webhook-cert-manager\",\"uid\":\"142b6ddc-7ba4-40d5-9671-b2a1042af2f1\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:consul\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-consul-consul-webhook-cert-manager-7c7c6c4764-78wq5\"],\"authentication.kubernetes.io/pod-uid\":[\"bb28a03d-3aaf-4677-9999-0a68e72c09bc\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"consul-k8s-control-plane/v0.0.0 (linux/amd64) kubernetes/$Format\",\"objectRef\":{\"resource\":\"deployments\",\"namespace\":\"consul\",\"name\":\"my-consul-consul-webhook-cert-manager\",\"apiGroup\":\"apps\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:48:10.982376Z\",\"stageTimestamp\":\"2023-01-27T18:48:10.984024Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"99b806b5-6fae-4bb2-abef-4823d5dd203d\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/apps/v1/namespaces/consul/deployments/my-consul-consul-webhook-cert-manager\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:consul:my-consul-consul-webhook-cert-manager\",\"uid\":\"142b6ddc-7ba4-40d5-9671-b2a1042af2f1\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:consul\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-consul-consul-webhook-cert-manager-7c7c6c4764-78wq5\"],\"authentication.kubernetes.io/pod-uid\":[\"bb28a03d-3aaf-4677-9999-0a68e72c09bc\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"consul-k8s-control-plane/v0.0.0 (linux/amd64) kubernetes/$Format\",\"objectRef\":{\"resource\":\"deployments\",\"namespace\":\"consul\",\"name\":\"my-consul-consul-webhook-cert-manager\",\"apiGroup\":\"apps\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:48:11.987656Z\",\"stageTimestamp\":\"2023-01-27T18:48:11.988165Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"762e7d18-87d0-4b21-ae37-5105bb6e1b58\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/apps/v1/namespaces/consul/deployments/my-consul-consul-webhook-cert-manager\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:consul:my-consul-consul-webhook-cert-manager\",\"uid\":\"142b6ddc-7ba4-40d5-9671-b2a1042af2f1\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:consul\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-consul-consul-webhook-cert-manager-7c7c6c4764-78wq5\"],\"authentication.kubernetes.io/pod-uid\":[\"bb28a03d-3aaf-4677-9999-0a68e72c09bc\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"consul-k8s-control-plane/v0.0.0 (linux/amd64) kubernetes/$Format\",\"objectRef\":{\"resource\":\"deployments\",\"namespace\":\"consul\",\"name\":\"my-consul-consul-webhook-cert-manager\",\"apiGroup\":\"apps\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:48:12.991833Z\",\"stageTimestamp\":\"2023-01-27T18:48:12.993822Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"\"}}",
+                "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"39ee20da-e0d4-45fb-9932-230a52e25c0c\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/apis/apps/v1/namespaces/consul/deployments/my-consul-consul-webhook-cert-manager\",\"verb\":\"get\",\"user\":{\"username\":\"system:serviceaccount:consul:my-consul-consul-webhook-cert-manager\",\"uid\":\"142b6ddc-7ba4-40d5-9671-b2a1042af2f1\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:consul\",\"system:authenticated\"],\"extra\":{\"authentication.kubernetes.io/pod-name\":[\"my-consul-consul-webhook-cert-manager-7c7c6c4764-78wq5\"],\"authentication.kubernetes.io/pod-uid\":[\"bb28a03d-3aaf-4677-9999-0a68e72c09bc\"]}},\"sourceIPs\":[\"192.168.60.12\"],\"userAgent\":\"consul-k8s-control-plane/v0.0.0 (linux/amd64) kubernetes/$Format\",\"objectRef\":{\"resource\":\"deployments\",\"namespace\":\"consul\",\"name\":\"my-consul-consul-webhook-cert-manager\",\"apiGroup\":\"apps\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:48:13.997345Z\",\"stageTimestamp\":\"2023-01-27T18:48:14.003183Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"\"}}"
+              ],
+              "actor_diversity": 1
+            }
+          ],
+          "primary_pattern": {
+            "pattern_id": "P100",
+            "service": "system:node:k8s-node-1-perfspec",
+            "actor": "system:node:k8s-node-1-perfspec",
+            "verb": "watch",
+            "resource": "configmaps",
+            "http_class": "4xx",
+            "failure_domain": "authz",
+            "event_count": 6,
+            "error_count": 6,
+            "first_seen": "2023-01-27T18:28:08.130396Z",
+            "last_seen": "2023-01-27T18:28:08.135575Z",
+            "examples": [
+              "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"3ba9cc6d-7d10-40c5-8ec7-da60a9b3627c\",\"stage\":\"ResponseStarted\",\"requestURI\":\"/api/v1/namespaces/kube-system/configmaps?allowWatchBookmarks=true\\u0026fieldSelector=metadata.name%3Dkube-proxy\\u0026resourceVersion=6577334\\u0026timeout=6m21s\\u0026timeoutSeconds=381\\u0026watch=true\",\"verb\":\"watch\",\"user\":{\"username\":\"system:node:k8s-node-1-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.11\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"configmaps\",\"namespace\":\"kube-system\",\"name\":\"kube-proxy\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.130396Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.130648Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-node-1-perfspec' and this object\"}}",
+              "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"3ba9cc6d-7d10-40c5-8ec7-da60a9b3627c\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/kube-system/configmaps?allowWatchBookmarks=true\\u0026fieldSelector=metadata.name%3Dkube-proxy\\u0026resourceVersion=6577334\\u0026timeout=6m21s\\u0026timeoutSeconds=381\\u0026watch=true\",\"verb\":\"watch\",\"user\":{\"username\":\"system:node:k8s-node-1-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.11\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"configmaps\",\"namespace\":\"kube-system\",\"name\":\"kube-proxy\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.130396Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.130737Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-node-1-perfspec' and this object\"}}",
+              "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"b51f1a8c-e53e-4104-b1a6-e695a24ed43c\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/kube-system/configmaps?allowWatchBookmarks=true\\u0026fieldSelector=metadata.name%3Dkube-root-ca.crt\\u0026resourceVersion=6577334\\u0026timeout=6m5s\\u0026timeoutSeconds=365\\u0026watch=true\",\"verb\":\"watch\",\"user\":{\"username\":\"system:node:k8s-node-1-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.11\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"configmaps\",\"namespace\":\"kube-system\",\"name\":\"kube-root-ca.crt\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.131024Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.131611Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-node-1-perfspec' and this object\"}}",
+              "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"0531745c-ceae-47fa-b14b-3edaf386a0b3\",\"stage\":\"ResponseStarted\",\"requestURI\":\"/api/v1/namespaces/kube-flannel/configmaps?allowWatchBookmarks=true\\u0026fieldSelector=metadata.name%3Dkube-root-ca.crt\\u0026resourceVersion=6577334\\u0026timeout=7m10s\\u0026timeoutSeconds=430\\u0026watch=true\",\"verb\":\"watch\",\"user\":{\"username\":\"system:node:k8s-node-1-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.11\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"configmaps\",\"namespace\":\"kube-flannel\",\"name\":\"kube-root-ca.crt\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.135075Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.135360Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-node-1-perfspec' and this object\"}}",
+              "{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"0531745c-ceae-47fa-b14b-3edaf386a0b3\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/kube-flannel/configmaps?allowWatchBookmarks=true\\u0026fieldSelector=metadata.name%3Dkube-root-ca.crt\\u0026resourceVersion=6577334\\u0026timeout=7m10s\\u0026timeoutSeconds=430\\u0026watch=true\",\"verb\":\"watch\",\"user\":{\"username\":\"system:node:k8s-node-1-perfspec\",\"groups\":[\"system:nodes\",\"system:authenticated\"]},\"sourceIPs\":[\"192.168.60.11\"],\"userAgent\":\"kubelet/v1.23.14 (linux/amd64) kubernetes/3321ffc\",\"objectRef\":{\"resource\":\"configmaps\",\"namespace\":\"kube-flannel\",\"name\":\"kube-root-ca.crt\",\"apiVersion\":\"v1\"},\"responseStatus\":{\"metadata\":{},\"status\":\"Failure\",\"reason\":\"Forbidden\",\"code\":403},\"requestReceivedTimestamp\":\"2023-01-27T18:28:08.135075Z\",\"stageTimestamp\":\"2023-01-27T18:28:08.135450Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"forbid\",\"authorization.k8s.io/reason\":\"no relationship found between node 'k8s-node-1-perfspec' and this object\"}}"
+            ]
+          }
+        }
+      ],
+      "debug": {
+        "candidate_count": 2,
+        "top_score": 0.99,
+        "valid_root_cause": true
+      }
+    }
+  ]
+}
